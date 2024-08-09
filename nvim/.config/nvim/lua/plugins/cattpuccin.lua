@@ -4,6 +4,6 @@ return{
   priority = 100,
   config = function ()
     vim.cmd.colorscheme "catppuccin"
-    flavour = "latte"
+    flavour = "frappe"
   end
 }
