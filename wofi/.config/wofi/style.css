@@ -1,0 +1,36 @@
+@define-color base00 #232634;/*background*/
+@define-color base01 #292c3c;/*background-alt*/
+@define-color base02 #c6d0f5;/*foreground*/
+@define-color base03 #ca9ee6;/*primary*/
+@define-color base04 #f4b8e4;/*secondary*/
+@define-color base05 #a6d189;/*green*/
+@define-color base06 #e78284;/*red*/
+
+
+window {
+  background-color: @base00;
+  border: 2px solid @base03;
+  color: @base02;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#input {
+  border: 2px solid @base03;
+  background-color: @base01;
+  color: @base02;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#entry:selected {
+  background-color: @base03;
+}
+
+#text:selected {
+  color: @base01;
+}
+
+image {
+  margin-right: 0.25em;
+}
