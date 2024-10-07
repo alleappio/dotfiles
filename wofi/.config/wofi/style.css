@@ -1,7 +1,7 @@
 @define-color base00 #282828;/*background*/
 @define-color base01 #3c3836;/*background-alt*/
 @define-color base02 #ebdbb2;/*foreground*/
-@define-color base03 #458588;/*primary*/
+@define-color base03 #ebdbb2;/*primary*/
 @define-color base04 #d79921;/*secondary*/
 @define-color base05 #79740e;/*green*/
 @define-color base06 #cc241d;/*red*/
@@ -11,7 +11,7 @@ window {
   background-color: @base00;
   border: 2px solid @base03;
   color: @base02;
-  border-radius: 5px;
+  border-radius: 0px;
   font-size: 20px;
 }
 
@@ -19,7 +19,7 @@ window {
   border: 2px solid @base03;
   background-color: @base01;
   color: @base02;
-  border-radius: 5px;
+  border-radius: 0px;
   font-size: 20px;
 }
 
