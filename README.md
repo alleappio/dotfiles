@@ -1,10 +1,5 @@
 # dotfiles
-My personal dotfiles, every branch is a different colorscheme
-
-## Branches:
-- gruvbox
-- nordic -> default
-- cattpuccin
+My personal dotfiles. Current colorscheme: gruvbox
 
 ## Install:
 
@@ -38,15 +33,6 @@ Clone this repo:
 ```
 git clone https://github.com/alleappio/dotfiles
 cd dotfiles
-```
-change to the colorscheme branch that you prefer, you can choose either:
-- main (nordic)
-- gruvbox
-- nordic
-- cattpuccin
-to change the branch launch:
-```
-git checkout gruvbox #or wathever colorscheme you prefer
 ```
 and finally run the install script:
 ```
