@@ -17,7 +17,7 @@ window {
 
 #input {
   border: 2px solid @base03;
-  background-color: @base01;
+  background-color: @base00;
   color: @base02;
   border-radius: 0px;
   font-size: 20px;
