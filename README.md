@@ -20,6 +20,7 @@ To use hyprland as desktop environment you'll need:
 - hyprlock
 - waybar
 - swaybg
+- swaync
 
 To use i3 as desktop environment you'll need:
 - i3-wm
