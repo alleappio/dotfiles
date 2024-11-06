@@ -16,8 +16,8 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-* {
-    font:                        "Grape Nuts 14";
+{
+    font:                        "UbuntuMono Nerd Font 13";
 }
 
 /*****----- Main Window -----*****/

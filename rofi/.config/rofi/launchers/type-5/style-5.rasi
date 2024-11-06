@@ -21,7 +21,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Iosevka Nerd Font 10";
+    font:                        "UbuntuMono Nerd Font Mono 11";
 }
 
 /*****----- Main Window -----*****/
