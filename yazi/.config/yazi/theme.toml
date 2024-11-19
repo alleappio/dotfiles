@@ -14,15 +14,15 @@ use = ""
 # : Manager {{{
 
 [manager]
-cwd = { fg = "cyan" }
+cwd = { fg = "#ebdbb2" }
 
 # Hovered
 hovered         = { reversed = true }
 preview_hovered = { underline = true }
 
 # Find
-find_keyword  = { fg = "yellow", bold = true, italic = true, underline = true }
-find_position = { fg = "magenta", bg = "reset", bold = true, italic = true }
+find_keyword  = { fg = "#d79921", bold = true, italic = true, underline = true }
+find_position = { fg = "#b16286", bg = "reset", bold = true, italic = true }
 
 # Marker
 marker_copied   = { fg = "lightgreen",  bg = "lightgreen" }
@@ -53,18 +53,18 @@ syntect_theme = ""
 # : Status {{{
 
 [status]
-separator_open  = ""
-separator_close = ""
-separator_style = { fg = "gray", bg = "gray" }
+#separator_open  = ""
+#separator_close = ""
+separator_style = { fg = "#282828", bg = "#282828" }
 
 # Mode
-mode_normal = { bg = "blue", bold = true }
+mode_normal = { bg = "#282828", bold = true }
 mode_select = { bg = "red", bold = true }
 mode_unset  = { bg = "red", bold = true }
 
 # Progress
 progress_label  = { bold = true }
-progress_normal = { fg = "blue", bg = "black" }
+progress_normal = { fg = "#ebdbb2", bg = "black" }
 progress_error  = { fg = "red", bg = "black" }
 
 # Permissions
@@ -80,7 +80,7 @@ permissions_s = { fg = "darkgray" }
 # : Select {{{
 
 [select]
-border   = { fg = "blue" }
+border   = { fg = "#ebdbb2" }
 active   = { fg = "magenta", bold = true }
 inactive = {}
 
@@ -90,7 +90,7 @@ inactive = {}
 # : Input {{{
 
 [input]
-border   = { fg = "blue" }
+border   = { fg = "#ebdbb2" }
 title    = {}
 value    = {}
 selected = { reversed = true }
@@ -101,7 +101,7 @@ selected = { reversed = true }
 # : Completion {{{
 
 [completion]
-border   = { fg = "blue" }
+border   = { fg = "#ebdbb2" }
 active   = { reversed = true }
 inactive = {}
 
@@ -116,7 +116,7 @@ icon_command = ""
 # : Tasks {{{
 
 [tasks]
-border  = { fg = "blue" }
+border  = { fg = "#ebdbb2" }
 title   = {}
 hovered = { fg = "magenta", underline = true }
 
@@ -195,7 +195,7 @@ rules = [
 
 	# Fallback
 	# { name = "*", fg = "white" },
-	{ name = "*/", fg = "blue" }
+	{ name = "*/", fg = "#ebdbb2" }
 ]
 
 [icon]

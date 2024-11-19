@@ -81,6 +81,6 @@ source $ZSH/oh-my-zsh.sh
 fastfetch
 echo " "
 export PATH=$HOME/.local/bin:$PATH
-
+export EDITOR=nvim
 # nnn configs
 # alias nnn "nnn -e"
