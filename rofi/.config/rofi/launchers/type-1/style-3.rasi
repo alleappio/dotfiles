@@ -30,7 +30,7 @@ configuration {
     foreground-colour:           var(foreground);
     alternate-background:        var(background-alt);
     normal-background:           var(background);
-    normal-foreground:           var(foreground);
+    normal-foreground:           var(primary);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
     active-background:           var(active);
@@ -197,7 +197,7 @@ element {
 }
 element normal.normal {
     background-color:            var(normal-background);
-    text-color:                  var(normal-foreground);
+    text-color:                  var(foreground-colour);
 }
 element normal.urgent {
     background-color:            var(urgent-background);
