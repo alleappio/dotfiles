@@ -1,10 +1,10 @@
 @define-color base00 #1e2326;/*background*/
 @define-color base01 #272e33;/*background-alt*/
-@define-color base02 #ebdbb2;/*foreground*/
-@define-color base03 #ebdbb2;/*primary*/
-@define-color base04 #d79921;/*secondary*/
-@define-color base05 #79740e;/*green*/
-@define-color base06 #cc241d;/*red*/
+@define-color base02 #d3c6aa;/*foreground*/
+@define-color base03 #a7c080;/*primary*/
+@define-color base04 #83c092;/*secondary*/
+@define-color base05 #a7c080;/*green*/
+@define-color base06 #e67e80;/*red*/
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
