@@ -7,15 +7,15 @@
             "top": 2
         },
         "color": {
-          "1": "blue",
-          "2": "blue",
+          "1": "green",
+          "2": "green",
           "3": "blue",
           "4": "white"
         }
     },
     "display": {
-        "separator": " -> ",
-        "color": "blue"
+      "separator": " -> ",
+      "color": "blue"
     },
     "modules": [
         {
@@ -35,12 +35,12 @@
         "break",
         {
             "key": "    󰣇 OS           ",
-            "keyColor": "red",
+            "keyColor": "green",
             "type": "os"
         },
         {
             "key": "    󰌢 Machine      ",
-            "keyColor": "green",
+            "keyColor": "red",
             "type": "host"
         },
         {
@@ -50,7 +50,7 @@
         },
         {
             "key": "    󰅐 Uptime       ",
-            "keyColor": "red",
+            "keyColor": "green",
             "type": "uptime"
         },
         {
@@ -71,12 +71,12 @@
         },
         {
             "key": "     Shell        ",
-            "keyColor": "cyan",
+            "keyColor": "red",
             "type": "shell"
         },
         {
             "key": "     Terminal     ",
-            "keyColor": "red",
+            "keyColor": "green",
             "type": "terminal"
         },
         {
@@ -96,13 +96,13 @@
         },
         {
             "key": "    󰩟 Local IP     ",
-            "keyColor": "red",
+            "keyColor": "green",
             "type": "localip",
             "compact": true
         },
         {
             "key": "    󰩠 Public IP    ",
-            "keyColor": "cyan",
+            "keyColor": "red",
             "type": "publicip"
         },
         "break",
