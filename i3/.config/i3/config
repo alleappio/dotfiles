@@ -9,6 +9,17 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#[COLORS]
+set $color_background #272E33
+set $color_background-alt #272E33
+set $color_foreground #D3C6AA
+set $color_primary #A7C080
+set $color_primary_darker #3C4841
+set $color_secondary #7FBBB3
+set $color_alert #DBBC7F
+set $color_disabled #E67E80
+
+
 set $mod Mod4
 set $secondary_output HDMI-1-2
 # Font for window titles. Will also be used by the bar unless a different font
@@ -104,7 +115,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -204,10 +215,11 @@ exec_always --no-startup-id /usr/libexec/gsd-xsettings
 #exec_always --no-startup-id picom
 exec_always --no-startup-id ~/.config/i3/polybar.sh & 
 exec_always --no-startup-id setxkbmap -layout it
-default_border none
+#default_border none
 hide_edge_borders both
 
-client.focused #458588 #458588 #ebdbb2 #458588 #458588
+for_window [class=".*"] border pixel 1
+client.focused $color_primary $color_background $color_foreground $color_background $color_primary
 
 gaps inner 5
 gaps outer 5
