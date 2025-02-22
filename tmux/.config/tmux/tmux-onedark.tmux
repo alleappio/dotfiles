@@ -1,88 +1,60 @@
 #!/bin/bash
-onedark_black="#282c34"
-onedark_blue="#61afef"
-onedark_yellow="#e5c07b"
-onedark_red="#e06c75"
-onedark_white="#aab2bf"
-onedark_green="#98c379"
-onedark_visual_grey="#3e4452"
-onedark_comment_grey="#5c6370"
+set -g @onedark_black="#282c34"
+set -g @onedark_blue="#61afef"
+set -g @onedark_yellow="#e5c07b"
+set -g @onedark_red="#e06c75"
+set -g @onedark_white="#aab2bf"
+set -g @onedark_green="#98c379"
+set -g @onedark_visual_grey="#3e4452"
+set -g @onedark_comment_grey="#5c6370"
 
-get() {
-   local option=$1
-   local default_value=$2
-   local option_value="$(tmux show-option -gqv "$option")"
+## COLORSCHEME: gruvbox dark (medium)
+set-option -g status "on"
 
-   if [ -z "$option_value" ]; then
-      echo "$default_value"
-   else
-      echo "$option_value"
-   fi
-}
+# default statusbar color
+set-option -g status-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg1, fg=fg1
 
-set() {
-   local option=$1
-   local value=$2
-   tmux set-option -gq "$option" "$value"
-}
+# default window title colors
+set-window-option -g window-status-style bg='#{@onedark_yellow}',fg='#{@onedark_black}' # bg=yellow, fg=bg1
 
-setw() {
-   local option=$1
-   local value=$2
-   tmux set-window-option -gq "$option" "$value"
-}
+# default window with an activity alert
+set-window-option -g window-status-activity-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg1, fg=fg3
 
-set "status" "on"
-set "status-justify" "left"
+# active window title colors
+set-window-option -g window-status-current-style bg='#{@onedark_red}',fg='#{@onedark_black}' # fg=bg1
 
-set "status-left-length" "100"
-set "status-right-length" "100"
-set "status-right-attr" "none"
+# pane border
+set-option -g pane-active-border-style fg='#{@onedark_white}' #fg2
+set-option -g pane-border-style fg='#{@onedark_black}' #bg1
 
-set "message-fg" "$onedark_white"
-set "message-bg" "$onedark_black"
+# message infos
+set-option -g message-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg2, fg=fg1
 
-set "message-command-fg" "$onedark_white"
-set "message-command-bg" "$onedark_black"
+# writing commands inactive
+set-option -g message-command-style bg='#{@onedark_white}',fg='#{@onedark_black}' # bg=fg3, fg=bg1
 
-set "status-attr" "none"
-set "status-left-attr" "none"
+# pane number display
+set-option -g display-panes-active-colour '#{@onedark_white}' #fg2
+set-option -g display-panes-colour '#{@onedark_black}' #bg1
 
-setw "window-status-fg" "$onedark_black"
-setw "window-status-bg" "$onedark_black"
-setw "window-status-attr" "none"
+# clock
+set-window-option -g clock-mode-colour '#{@onedark_blue}' #blue
 
-setw "window-status-activity-bg" "$onedark_black"
-setw "window-status-activity-fg" "$onedark_black"
-setw "window-status-activity-attr" "none"
+# bell
+set-window-option -g window-status-bell-style bg='#{@onedark_red}',fg='#{@onedark_black}' # bg=red, fg=bg
 
-setw "window-status-separator" ""
+## Theme settings mixed with colors (unfortunately, but there is no cleaner way)
+set-option -g status-justify "left"
+set-option -g status-left-style none
+set-option -g status-left-length "80"
+set-option -g status-right-style none
+set-option -g status-right-length "80"
+set-window-option -g window-status-separator ""
 
-set "window-style" "fg=$onedark_comment_grey"
-set "window-active-style" "fg=$onedark_white"
+set-option -g status-left "#[bg='#{@onedark_black}',fg='#{@onedark_white}'] #S #[bg='#{@onedark_black}',fg='#{@onedark_white}',nobold,noitalics,nounderscore]"
+set-option -g status-right "#[bg='#{@onedark_black}',fg='#{@onedark_white}' nobold, nounderscore, noitalics]#[bg='#{@onedark_black}',fg='#{@onedark_white}'] %Y-%m-%d | %H:%M #[bg='#{@onedark_black}',fg='#{@onedark_white}',noitalics,nounderscore]#[bg='#{@onedark_white}',fg='#{@onedark_black}'] #h "
 
-set "pane-border-fg" "$onedark_white"
-set "pane-border-bg" "$onedark_black"
-set "pane-active-border-fg" "$onedark_green"
-set "pane-active-border-bg" "$onedark_black"
+set-window-option -g window-status-current-format "#[bg='#{@onedark_white}',fg='#{@onedark_black}',nobold,noitalics,nounderscore]#[bg='#{@onedark_white}',fg='#{@onedark_black}'] #I #[bg='#{@onedark_white}',fg='#{@onedark_black}',bold] #W#{?window_zoomed_flag,*Z,} #[bg='#{@onedark_black}',fg='#{@onedark_white}',nobold,noitalics,nounderscore]"
+set-window-option -g window-status-format "#[bg='#{@onedark_black}',fg='#{@onedark_white}',noitalics]#[bg='#{@onedark_black}',fg='#{@onedark_white}'] #I #[bg='#{@onedark_black}',fg='#{@onedark_white}'] #W #[bg='#{@onedark_visual_grey}',fg='#{@onedark_comment_grey}',noitalics]"
 
-set "display-panes-active-colour" "$onedark_yellow"
-set "display-panes-colour" "$onedark_blue"
-
-set "status-bg" "$onedark_black"
-set "status-fg" "$onedark_white"
-
-set "@prefix_highlight_fg" "$onedark_black"
-set "@prefix_highlight_bg" "$onedark_green"
-set "@prefix_highlight_copy_mode_attr" "fg=$onedark_black,bg=$onedark_green"
-set "@prefix_highlight_output_prefix" "  "
-
-status_widgets=$(get "@onedark_widgets")
-time_format=$(get "@onedark_time_format" "%R")
-date_format=$(get "@onedark_date_format" "%d/%m/%Y")
-
-set "status-right" "#[fg=$onedark_white,bg=$onedark_black,nounderscore,noitalics]${time_format}  ${date_format} #[fg=$onedark_visual_grey,bg=$onedark_black]#[fg=$onedark_visual_grey,bg=$onedark_visual_grey]#[fg=$onedark_white, bg=$onedark_visual_grey]${status_widgets} #[fg=$onedark_green,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_black,bg=$onedark_green,bold] #h #[fg=$onedark_yellow, bg=$onedark_green]#[fg=$onedark_red,bg=$onedark_yellow]"
-set "status-left" "#[fg=$onedark_black,bg=$onedark_green,bold] #S #{prefix_highlight}#[fg=$onedark_green,bg=$onedark_black,nobold,nounderscore,noitalics]"
-
-set "window-status-format" "#[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_black] #I  #W #[fg=$onedark_black,bg=$onedark_black,nobold,nounderscore,noitalics]"
-set "window-status-current-format" "#[fg=$onedark_black,bg=$onedark_visual_grey,nobold,nounderscore,noitalics]#[fg=$onedark_white,bg=$onedark_visual_grey,nobold] #I  #W #[fg=$onedark_visual_grey,bg=$onedark_black,nobold,nounderscore,noitalics]"
+# vim: set ft=tmux tw=0 nowrap:
