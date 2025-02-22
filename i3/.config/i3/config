@@ -10,15 +10,14 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 #[COLORS]
-set $color_background #272E33
-set $color_background-alt #272E33
-set $color_foreground #D3C6AA
-set $color_primary #A7C080
-set $color_primary_darker #3C4841
-set $color_secondary #7FBBB3
-set $color_alert #DBBC7F
-set $color_disabled #E67E80
-
+set $color_background #282c34
+set $color_background-alt #282c34
+set $color_foreground #aab2bf
+set $color_primary #61afef
+set $color_primary_darker #509ede
+set $color_secondary #aab2bf
+set $color_alert #e5c07b
+set $color_disabled #3e4452
 
 set $mod Mod4
 set $secondary_output HDMI-1-2
