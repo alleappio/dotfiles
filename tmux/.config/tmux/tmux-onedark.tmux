@@ -1,12 +1,12 @@
 #!/bin/bash
-set -g @onedark_black="#282c34"
-set -g @onedark_blue="#61afef"
-set -g @onedark_yellow="#e5c07b"
-set -g @onedark_red="#e06c75"
-set -g @onedark_white="#aab2bf"
-set -g @onedark_green="#98c379"
-set -g @onedark_visual_grey="#3e4452"
-set -g @onedark_comment_grey="#5c6370"
+set -g @onedark_black "#282c34"
+set -g @onedark_blue "#61afef"
+set -g @onedark_yellow "#e5c07b"
+set -g @onedark_red "#e06c75"
+set -g @onedark_white "#aab2bf"
+set -g @onedark_green "#98c379"
+set -g @onedark_visual_grey "#3e4452"
+set -g @onedark_comment_grey "#5c6370"
 
 ## COLORSCHEME: gruvbox dark (medium)
 set-option -g status "on"
@@ -15,13 +15,13 @@ set-option -g status "on"
 set-option -g status-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg1, fg=fg1
 
 # default window title colors
-set-window-option -g window-status-style bg='#{@onedark_yellow}',fg='#{@onedark_black}' # bg=yellow, fg=bg1
+set-window-option -g window-status-style bg='#{@onedark_white}',fg='#{@onedark_black}' # bg=yellow, fg=bg1
 
 # default window with an activity alert
 set-window-option -g window-status-activity-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg1, fg=fg3
 
 # active window title colors
-set-window-option -g window-status-current-style bg='#{@onedark_red}',fg='#{@onedark_black}' # fg=bg1
+set-window-option -g window-status-current-style bg='#{@onedark_blue}',fg='#{@onedark_black}' # fg=bg1
 
 # pane border
 set-option -g pane-active-border-style fg='#{@onedark_white}' #fg2
@@ -34,11 +34,11 @@ set-option -g message-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=b
 set-option -g message-command-style bg='#{@onedark_white}',fg='#{@onedark_black}' # bg=fg3, fg=bg1
 
 # pane number display
-set-option -g display-panes-active-colour '#{@onedark_white}' #fg2
-set-option -g display-panes-colour '#{@onedark_black}' #bg1
+set-option -g display-panes-active-colour "#aab2bf" #fg2
+set-option -g display-panes-colour "#282c34" #bg1
 
 # clock
-set-window-option -g clock-mode-colour '#{@onedark_blue}' #blue
+set-window-option -g clock-mode-colour "#61afef" #blue
 
 # bell
 set-window-option -g window-status-bell-style bg='#{@onedark_red}',fg='#{@onedark_black}' # bg=red, fg=bg
