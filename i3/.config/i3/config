@@ -218,7 +218,7 @@ exec_always --no-startup-id setxkbmap -layout it
 hide_edge_borders both
 
 for_window [class=".*"] border pixel 1
-client.focused $color_primary $color_background $color_foreground $color_background $color_primary
+client.focused $color_primary $color_background $color_foreground $color_primary $color_primary
 
 gaps inner 5
 gaps outer 5
