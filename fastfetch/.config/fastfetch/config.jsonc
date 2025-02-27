@@ -35,7 +35,7 @@
         "break",
         {
             "key": "    󰣇 OS           ",
-            "keyColor": "green",
+            "keyColor": "blue",
             "type": "os"
         },
         {
