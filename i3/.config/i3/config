@@ -204,7 +204,7 @@ bindsym $mod+r mode "resize"
 # My configurations
 #exec xrandr --output Virtual1 --mode 1920x1080
 exec_always --no-startup-id xrandr --auto 
-exec_always --no-startup-id xrandr --output $secondary_output --auto --right-of eDP-1 
+exec_always --no-startup-id xrandr --output $secondary_output --auto --right-of HDMI-1 
 
 exec_always --no-startup-id feh --bg-scale ~/.config/background
 exec_always --no-startup-id xinput set-prop 11 299 1
