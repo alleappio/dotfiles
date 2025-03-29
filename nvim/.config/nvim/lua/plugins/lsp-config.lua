@@ -10,7 +10,7 @@ return{
     config = function()
       require("mason-lspconfig").setup({
         --ensure_installed = { "lua_ls", "clangd", "cmake", "pylsp" }
-        ensure_installed = { "lua_ls", "clangd", "pylsp" }
+        ensure_installed = { "lua_ls", "clangd"}--, "pylsp" }
       })
     end
   },
@@ -28,9 +28,18 @@ return{
       lspconfig.cmake.setup({
         capabilities = capabilities
       })
-      lspconfig.pylsp.setup({
-        capabilities = capabilities
-      })
+      --lspconfig.pylsp.setup({
+      --  capabilities = capabilities,
+      --  settings = {
+      --    -- configure plugins in pylsp
+      --    pylsp = {
+      --     plugins = {
+      --        pyflakes = {enabled = false},
+      --        pylint = {enabled = false},
+      --      },
+      --    },
+      --  }
+      --})
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
