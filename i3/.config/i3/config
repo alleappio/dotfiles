@@ -209,6 +209,8 @@ exec_always --no-startup-id xrandr --output $secondary_output --auto --right-of 
 exec_always --no-startup-id feh --bg-scale ~/.config/background
 exec_always --no-startup-id xinput set-prop 11 299 1
 exec_always --no-startup-id xinput set-prop 11 300 1
+exec_always --no-startup-id xinput set-prop 11 307 1
+exec_always --no-startup-id xinput set-prop 12 307 1
 exec_always --no-startup-id xinput set-prop 14 360 1
 exec_always --no-startup-id /usr/libexec/gsd-xsettings 
 #exec_always --no-startup-id picom
