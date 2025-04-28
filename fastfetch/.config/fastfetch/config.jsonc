@@ -34,7 +34,7 @@
         },
         "break",
         {
-            "key": "    󰣇 OS           ",
+            "key": "     OS           ",
             "keyColor": "blue",
             "type": "os"
         },
