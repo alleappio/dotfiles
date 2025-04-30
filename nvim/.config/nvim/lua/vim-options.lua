@@ -5,6 +5,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 vim.cmd("set clipboard=unnamedplus")
+vim.cmd("set scrolloff=5")
 
 -- REMAPPINGS
 vim.g.mapleader=" "
