@@ -9,7 +9,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "space f": "file_finder::Toggle",
+      "space g": "pane::DeploySearch",
       "alt-.": "pane::ActivateNextItem",
       "alt-,": "pane::ActivatePreviousItem",
       "alt-c": "pane::CloseActiveItem"
@@ -18,7 +19,6 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
       "alt-.": "pane::ActivateNextItem",
       "alt-,": "pane::ActivatePreviousItem",
       "alt-c": "pane::CloseActiveItem"
