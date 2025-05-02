@@ -8,12 +8,17 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 13,
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "One Dark - Darkened"
   },
   "vim_mode": true,
-  "vertical_scroll_margin": 5
+  "vertical_scroll_margin": 5,
+  "auto_install_extensions": {
+    "html": true,
+    "one-dark-darkened": true,
+    "toml": true
+  }
 }
