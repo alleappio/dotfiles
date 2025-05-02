@@ -19,6 +19,8 @@
   "auto_install_extensions": {
     "html": true,
     "one-dark-darkened": true,
-    "toml": true
+    "toml": true,
+    "dockerfile": true,
+    "docker-compose": true
   }
 }
