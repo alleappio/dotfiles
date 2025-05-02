@@ -7,21 +7,24 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
     "bindings": {
-      "space f": "file_finder::Toggle",
-      "space g": "pane::DeploySearch",
       "alt-.": "pane::ActivateNextItem",
       "alt-,": "pane::ActivatePreviousItem",
       "alt-c": "pane::CloseActiveItem"
     }
   },
   {
-    "context": "Editor",
+    "context": "Workspace && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
-      "alt-.": "pane::ActivateNextItem",
-      "alt-,": "pane::ActivatePreviousItem",
-      "alt-c": "pane::CloseActiveItem"
+      "space f": "file_finder::Toggle",
+      "space g": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch"
     }
   }
 ]
