@@ -14,3 +14,4 @@ echo " "
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR=nvim
 export MANPAGER='nvim +Man!'
+#fortune | cowsay -f tux | lolcat --seed 124
