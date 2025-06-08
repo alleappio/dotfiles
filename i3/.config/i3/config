@@ -215,9 +215,9 @@ exec_always --no-startup-id xinput set-prop 11 307 1
 exec_always --no-startup-id xinput set-prop 12 307 1
 exec_always --no-startup-id xinput set-prop 14 360 1
 exec_always --no-startup-id /usr/libexec/gsd-xsettings
-#exec_always --no-startup-id picom
 exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id setxkbmap -layout it
+exec_always --no-startup-id dunst
 #default_border none
 hide_edge_borders both
 
