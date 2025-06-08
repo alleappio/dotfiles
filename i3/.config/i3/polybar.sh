@@ -11,11 +11,10 @@ polybar-msg cmd quit
 #polybar bar1 2>&1 | tee -a /tmp/polybar1.log & disown
 
 #echo "Bars launched..."
-
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m polybar --reload bar1 &
-    MONITOR=$m polybar --reload bar2 &
+    #MONITOR=$m polybar --reload bar2 &
   done
 else
   polybar --reload example &

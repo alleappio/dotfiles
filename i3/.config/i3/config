@@ -20,7 +20,8 @@ set $color_alert #e5c07b
 set $color_disabled #3e4452
 
 set $mod Mod4
-set $secondary_output HDMI-1-2
+set $secondary_output eDP-1
+set $primary_output HDMI-1-0
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
@@ -203,8 +204,9 @@ bindsym $mod+r mode "resize"
 
 # My configurations
 #exec xrandr --output Virtual1 --mode 1920x1080
-exec_always --no-startup-id xrandr --auto 
-exec_always --no-startup-id xrandr --output $secondary_output --auto --right-of HDMI-1 
+exec_always --no-startup-id xrandr --auto
+exec_always --no-startup-id xrandr --output $primary_output --primary --left-of $secondary_output
+#exec_always --no-startup-id xrandr --output $secondary_output --auto --left-of eDP-1
 
 exec_always --no-startup-id feh --bg-scale ~/.config/background
 exec_always --no-startup-id xinput set-prop 11 299 1
@@ -212,9 +214,9 @@ exec_always --no-startup-id xinput set-prop 11 300 1
 exec_always --no-startup-id xinput set-prop 11 307 1
 exec_always --no-startup-id xinput set-prop 12 307 1
 exec_always --no-startup-id xinput set-prop 14 360 1
-exec_always --no-startup-id /usr/libexec/gsd-xsettings 
+exec_always --no-startup-id /usr/libexec/gsd-xsettings
 #exec_always --no-startup-id picom
-exec_always --no-startup-id ~/.config/i3/polybar.sh & 
+exec_always --no-startup-id ~/.config/i3/polybar.sh &
 exec_always --no-startup-id setxkbmap -layout it
 #default_border none
 hide_edge_borders both
@@ -227,13 +229,13 @@ gaps outer 5
 gaps top 0
 
 bindsym $mod+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
-bindsym $mod+e exec kitty yazi
+bindsym $mod+e exec dolphin
 
-workspace 1 output eDP-1
-workspace 2 output eDP-1
-workspace 3 output eDP-1
-workspace 4 output eDP-1
-workspace 5 output eDP-1
+workspace 1 output $primary_output
+workspace 2 output $primary_output
+workspace 3 output $primary_output
+workspace 4 output $primary_output
+workspace 5 output $primary_output
 # workspace 6 output HDMI-1-2
 workspace 6 output $secondary_output
 workspace 7 output $secondary_output
