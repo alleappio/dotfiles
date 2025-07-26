@@ -12,7 +12,8 @@
         "hyprland/scratchpad",
     ],
     "modules-center": [
-        "sway/window"
+        "clock"
+        //"sway/window"
     ],
     "modules-right": [
         //"mpd",
@@ -29,7 +30,6 @@
         "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
         "tray"
         //"custom/power"
     ],
@@ -169,7 +169,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",

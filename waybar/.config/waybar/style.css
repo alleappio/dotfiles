@@ -1,5 +1,5 @@
 /* --COLORS--*/
-@define-color background rgba(40, 44, 52, 0.8);/*background*/
+@define-color background rgba(40, 44, 52, 0.9);/*background*/
 @define-color background-alt #282c34;/*background-alt*/
 @define-color foreground #aab2bf;/*foreground*/
 @define-color primary #e06c75;/*primary*/
@@ -69,6 +69,7 @@ button:hover {
     padding: 0 5px;
     background-color: @background;
     color: @foreground;
+    border-radius: 5px;
 }
 
 #workspaces button:hover {
@@ -86,8 +87,9 @@ button:hover {
 }
 
 #workspaces button.active {
-    border: 1px solid @primary;
-    border-radius: 5px;
+    /*border: 1px solid @primary;
+    border-radius: 5px;*/
+    color: @primary;
 }
 
 #mode {
@@ -95,7 +97,6 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-#clock,
 #battery,
 #cpu,
 #memory,
@@ -114,8 +115,11 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: @foreground;
-    background-color: @background;
-    border: 1px solid @primary;
+    /*background-color: @background;*/
+    /*border: 1px solid @primary;*/
+}
+
+#clock{
 }
 
 #window,
