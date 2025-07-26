@@ -1,63 +1,49 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top", // Waybar at top layer
+    // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    //"height": 4, // Waybar height (to be removed for auto height)wayba
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
-    "reload_style_on_change": true,
+    "height": 20, // Waybar height (to be removed for auto height)
+    "width": 1920, // Waybar width
+    "spacing": 5, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces"
-        //"sway/mode",
-        //"sway/scratchpad",
-        //"custom/media"
+        "hyprland/workspaces",
+        "hyprland/mode",
+        "hyprland/scratchpad",
     ],
     "modules-center": [
-        "hyprland/window"
+        "sway/window"
     ],
     "modules-right": [
-        "mpd",
+        //"mpd",
         //"idle_inhibitor",
+        "custom/media",
         "pulseaudio",
         "network",
-        //"power-profiles-daemon",
+        "power-profiles-daemon",
         //"cpu",
         //"memory",
-        "temperature",
+        //"temperature",
         "backlight",
         "keyboard-state",
-        //"sway/language",
+        "sway/language",
         "battery",
         "battery#bat2",
-        "clock"
-        //"tray",
+        "clock",
+        "tray"
         //"custom/power"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
-
+    //Modules configuration
     "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
         "format": "{name}",
-        "on-click": "activate",
-        "sort-by-number": true
+        "format-icons": {
+            "active": "",
+            "default": ""
+        }
     },
-
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -67,7 +53,6 @@
             "unlocked": ""
         }
     },
-
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
@@ -114,6 +99,10 @@
     "tray": {
         // "icon-size": 21,
         "spacing": 10
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
     },
     "clock": {
         // "timezone": "America/New_York",
@@ -144,12 +133,12 @@
         "states": {
             // "good": 95,
             "warning": 30,
-            "critical": 20
+            "critical": 15
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -159,11 +148,11 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
+      "format": "{icon}: {profile}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
-        "default": "",
+        "default": "",
         "performance": "",
         "balanced": "",
         "power-saver": ""
@@ -172,7 +161,7 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
@@ -184,10 +173,8 @@
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
-        //"format-source": "{volume}% ",
-        //"format-source-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -200,7 +187,7 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon} {text}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {

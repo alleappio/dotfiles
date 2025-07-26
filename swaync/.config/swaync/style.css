@@ -12,20 +12,21 @@
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
 
-@define-color base00 #1e2326;/*background*/
-@define-color base01 #272e33;/*background-alt*/
-@define-color base02 #d3c6aa;/*foreground*/
-@define-color base03 #a7c080;/*primary*/
-@define-color base04 #83c092;/*secondary*/
-@define-color base05 #a7c080;/*green*/
-@define-color base06 #e67e80;/*red*/
+@define-color background #282c34;/*background*/
+@define-color background-alt #282c34;/*background-alt*/
+@define-color foreground #aab2bf;/*foreground*/
+@define-color primary #e06c75;/*primary*/
+@define-color secondary #aab2bf;/*secondary*/
+@define-color green #98c379;/*green*/
+@define-color red #e06c75;/*red*/
+@define-color blue #61afef;/*blue*/
 
 .notification-row {
   outline: none;
 }
 
 .notification-row:focus, .notification-row:hover {
-  background: @base00;
+  background: @background;
 }
 
 .notification-row .notification-background {
@@ -35,7 +36,7 @@
 .notification-row .notification-background .close-button {
   /* The notification Close Button */
   background: @noti-close-bg;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
@@ -57,10 +58,10 @@
 .notification-row .notification-background .notification {
   /* The actual notification */
   border-radius: 12px;
-  border: 1px solid @base03;
+  border: 1px solid @primary;
   padding: 0;
   transition: background 0.15s ease-in-out;
-  background: @base00;
+  background: @background;
 }
 
 .notification-row .notification-background .notification.low {
@@ -81,13 +82,13 @@
   box-shadow: none;
   background: transparent;
   border: none;
-  color: @base02;
+  color: @foreground;
   transition: background 0.15s ease-in-out;
 }
 
 .notification-row .notification-background .notification .notification-action:hover, .notification-row .notification-background .notification .notification-default-action:hover {
   -gtk-icon-effect: none;
-  background: @base01;
+  background: @background-alt;
 }
 
 .notification-row .notification-background .notification .notification-default-action {
@@ -127,7 +128,7 @@
   font-size: 16px;
   font-weight: bold;
   background: transparent;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
 }
 
@@ -136,7 +137,7 @@
   font-size: 16px;
   font-weight: bold;
   background: transparent;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
   margin-right: 30px;
 }
@@ -146,7 +147,7 @@
   font-size: 15px;
   font-weight: normal;
   background: transparent;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
 }
 
@@ -169,37 +170,37 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-entry {
-  background: @base00;
-  color: @base02;
-  caret-color: @base02;
-  border: 1px solid @base03;
+  background: @background;
+  color: @foreground;
+  caret-color: @foreground;
+  border: 1px solid @primary;
   border-radius: 12px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
   margin-left: 4px;
-  background: @base00;
-  border: 1px solid @base03;
+  background: @background;
+  border: 1px solid @primary;
   border-radius: 12px;
-  color: @base02;
+  color: @foreground;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:disabled {
   background: initial;
-  color: @base02;
-  border: 1px solid @base03;
+  color: @foreground;
+  border: 1px solid @primary;
   border-color: transparent;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
-  background: @base01;
+  background: @background-alt;
 }
 
 .notification-row .notification-background .notification .notification-action {
   /* The alternative actions below the default action */
-  border-top: 1px solid @base03;
+  border-top: 1px solid @primary;
   border-radius: 0px;
-  border-right: 1px solid @base03;
+  border-right: 1px solid @primary;
 }
 
 .notification-row .notification-background .notification .notification-action:first-child {
@@ -230,7 +231,7 @@
 
 .notification-group .notification-group-buttons, .notification-group .notification-group-headers {
   margin: 0 16px;
-  color: @base02;
+  color: @foreground;
 }
 
 .notification-group .notification-group-headers {
@@ -238,11 +239,11 @@
 }
 
 .notification-group .notification-group-headers .notification-group-icon {
-  color: @base02;
+  color: @foreground;
 }
 
 .notification-group .notification-group-headers .notification-group-header {
-  color: @base02;
+  color: @foreground;
 }
 
 .notification-group .notification-group-buttons {
@@ -250,7 +251,7 @@
 }
 
 .notification-group.collapsed .notification-row .notification {
-  background-color: @base00;
+  background-color: @background;
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) {
@@ -264,13 +265,13 @@
 }
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-  background-color: @base01;
+  background-color: @background-alt;
 }
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
   background: @cc-bg;
-  color: @base02;
+  color: @foreground;
   border-radius: 12px;
 }
 
@@ -295,7 +296,7 @@
 
 .control-center .control-center-list .notification .notification-default-action:hover,
 .control-center .control-center-list .notification .notification-action:hover {
-  background-color: @base01;
+  background-color: @background-alt;
 }
 
 .blank-window {
@@ -314,28 +315,28 @@
 /*** Widgets ***/
 /* Title widget */
 .widget-title {
-  color: @base02;
+  color: @foreground;
   margin: 8px;
   font-size: 1.5rem;
 }
 
 .widget-title > button {
   font-size: initial;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
-  background: @base00;
-  border: 1px solid @base03;
+  background: @background;
+  border: 1px solid @primary;
   box-shadow: none;
   border-radius: 12px;
 }
 
 .widget-title > button:hover {
-  background: @base01;
+  background: @background-alt;
 }
 
 /* DND widget */
 .widget-dnd {
-  color: @base02;
+  color: @foreground;
   margin: 8px;
   font-size: 1.1rem;
 }
@@ -343,8 +344,8 @@
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 12px;
-  background: @base00;
-  border: 1px solid @base03;
+  background: @background;
+  border: 1px solid @primary;
   box-shadow: none;
 }
 
@@ -353,7 +354,7 @@
 }
 
 .widget-dnd > switch slider {
-  background: @base01;
+  background: @background-alt;
   border-radius: 12px;
 }
 
@@ -384,7 +385,7 @@
 
 .widget-mpris .widget-mpris-player button:hover {
   /* The media player buttons (play, pause, next, etc...) */
-  background: @base01;
+  background: @background-alt;
 }
 
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
@@ -422,11 +423,11 @@
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
-  background-color: @base00;
+  background-color: @background;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
-  background: @base00;
+  background: @background;
   border-radius: 12px;
 }
 
@@ -441,7 +442,7 @@
 }
 
 /* .AnyName { Name defined in config after #
-  background-color: @base00;
+  background-color: @background;
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
@@ -453,7 +454,7 @@
 }
 
 .AnyName>button:hover {
-  background-color: @base01;
+  background-color: @background-alt;
 } */
 .topbar-buttons > button {
   /* Name defined in config after # */
@@ -463,7 +464,7 @@
 
 /* Volume widget */
 .widget-volume {
-  background-color: @base00;
+  background-color: @background;
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
@@ -475,7 +476,7 @@
 }
 
 .per-app-volume {
-  background-color: @base00;
+  background-color: @background;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
   border-radius: 12px;
@@ -483,7 +484,7 @@
 
 /* Backlight widget */
 .widget-backlight {
-  background-color: @base00;
+  background-color: @background;
   padding: 8px;
   margin: 8px;
   border-radius: 12px;
@@ -497,14 +498,14 @@
 
 .widget-inhibitors > button {
   font-size: initial;
-  color: @base02;
+  color: @foreground;
   text-shadow: none;
-  background: @base00;
-  border: 1px solid @base03;
+  background: @background;
+  border: 1px solid @primary;
   box-shadow: none;
   border-radius: 12px;
 }
 
 .widget-inhibitors > button:hover {
-  background: @base01;
+  background: @background-alt;
 }
