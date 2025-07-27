@@ -18,6 +18,7 @@
     "modules-right": [
         //"mpd",
         //"idle_inhibitor",
+        "tray",
         "custom/media",
         "pulseaudio",
         "network",
@@ -29,8 +30,7 @@
         "keyboard-state",
         "sway/language",
         "battery",
-        "battery#bat2",
-        "tray"
+        "battery#bat2"
         //"custom/power"
     ],
     //Modules configuration
@@ -189,7 +189,7 @@
     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
-        "max-length": 40,
+        "max-length": 20,
         "format-icons": {
             "spotify": "",
             "default": "🎜"
