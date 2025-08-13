@@ -11,10 +11,10 @@
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
-        //"sway/window"
     ],
     "modules-right": [
         //"mpd",
@@ -36,7 +36,8 @@
     ],
     //Modules configuration
     "custom/fedora_logo":{
-      "format":" "
+      "format":" ",
+      "on-click":"~/.config/bemenu/bemenu.sh"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -47,6 +48,9 @@
             "active": "",
             "default": ""
         }
+    },
+    "hyprland/window": {
+      "max-length": 15
     },
     "keyboard-state": {
         "numlock": true,
@@ -152,7 +156,7 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}: {profile}",
+      "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
@@ -164,12 +168,13 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "format-wifi": "({signalStrength}%) ",
+        "format-ethernet": "󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-connection-editor"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
