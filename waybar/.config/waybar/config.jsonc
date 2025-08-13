@@ -7,6 +7,7 @@
     "spacing": 5, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+        "custom/fedora_logo",
         "hyprland/workspaces",
         "hyprland/mode",
         "hyprland/scratchpad",
@@ -30,10 +31,13 @@
         "keyboard-state",
         "sway/language",
         "battery",
-        "battery#bat2"
-        //"custom/power"
+        "battery#bat2",
+        "custom/power"
     ],
     //Modules configuration
+    "custom/fedora_logo":{
+      "format":" "
+    },
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -189,7 +193,7 @@
     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
-        "max-length": 20,
+        "max-length": 15,
         "format-icons": {
             "spotify": "",
             "default": "🎜"

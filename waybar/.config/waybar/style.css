@@ -349,3 +349,7 @@ label:focus {
 #privacy-item.audio-out {
     /*background-color: #0069d4;*/
 }
+#custom-fedora_logo{
+    font-size: 20px;
+    border-radius: 5px;
+}
