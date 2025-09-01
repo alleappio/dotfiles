@@ -12,6 +12,6 @@ for old_path in $flatpak_bin; do
   echo $old_path
   base_name=$(extract_flatpak_name $old_path)
   new_path="/usr/local/bin/$base_name"
-  sudo ln -s $old_path $new_path
+  sudo ln -s -f $old_path $new_path
   echo "--------------"
 done
