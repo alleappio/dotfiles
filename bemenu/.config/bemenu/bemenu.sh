@@ -1,11 +1,11 @@
 #!/bin/zsh
 BACKGROUND='#282c34f0'
 FOREGROUND='#aab2bfff'
-PRIMARY='#e06c75ff'
+PRIMARY='#61afefff'
 SECONDARY='#e06c75ff'
 GREEN='#98c379ff'
 RED='#e06c75ff'
-BLUE='#aab2bfff'
+BLUE='#61afefff'
 
  bemenu-run \
   --tb $BACKGROUND \

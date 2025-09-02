@@ -21,7 +21,7 @@ set-window-option -g window-status-style bg='#{@onedark_white}',fg='#{@onedark_b
 set-window-option -g window-status-activity-style bg='#{@onedark_black}',fg='#{@onedark_white}' # bg=bg1, fg=fg3
 
 # active window title colors
-set-window-option -g window-status-current-style bg='#{@onedark_red}',fg='#{@onedark_black}' # fg=bg1
+set-window-option -g window-status-current-style bg='#{@onedark_blue}',fg='#{@onedark_black}' # fg=bg1
 
 # pane border
 set-option -g pane-active-border-style fg='#{@onedark_white}' #fg2
@@ -38,10 +38,10 @@ set-option -g display-panes-active-colour "#aab2bf" #fg2
 set-option -g display-panes-colour "#282c34" #bg1
 
 # clock
-set-window-option -g clock-mode-colour "#e06c75" #red
+set-window-option -g clock-mode-colour "#61afef" #blue
 
 # bell
-set-window-option -g window-status-bell-style bg='#{@onedark_red}',fg='#{@onedark_black}' # bg=red, fg=bg
+set-window-option -g window-status-bell-style bg='#{@onedark_blue}',fg='#{@onedark_black}' # bg=blue, fg=bg
 
 ## Theme settings mixed with colors (unfortunately, but there is no cleaner way)
 set-option -g status-justify "left"
