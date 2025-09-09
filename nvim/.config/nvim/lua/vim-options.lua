@@ -11,6 +11,7 @@ vim.opt.signcolumn = "number"
 vim.opt.autoindent = true
 vim.cmd("colorscheme onedark")
 vim.opt.autoread = true
+vim.cmd("autocmd VimLeave * set guicursor=a:ver25")
 
 -- REMAPPINGS
 vim.keymap.set("n", "<leader>y", "\"+y")
