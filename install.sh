@@ -4,7 +4,8 @@ echo "enabling solopasha/hyprland copr"
 sudo dnf copr enable solopasha/hyprland
 
 echo "installing required packages"
-sudo dnf install -y zsh \
+sudo dnf install -y stow \
+  zsh \
   fastfetch \
   neovim \
   tmux \
