@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init
+
 echo "enabling solopasha/hyprland copr"
 sudo dnf copr enable solopasha/hyprland
 
