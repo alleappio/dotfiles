@@ -74,6 +74,7 @@
 
 .notification-row .notification-background .notification.critical {
   /* Critical Priority Notification */
+  border: 1px solid @red;
 }
 
 .notification-row .notification-background .notification .notification-action, .notification-row .notification-background .notification .notification-default-action {
@@ -227,6 +228,7 @@
 
 .notification-group.critical {
   /* Low Priority Group */
+  border: 1px solid @red;
 }
 
 .notification-group .notification-group-buttons, .notification-group .notification-group-headers {
