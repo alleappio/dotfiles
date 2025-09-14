@@ -26,8 +26,9 @@ BLUE='#61afefff'
   --af $FOREGROUND \
   --scb $BACKGROUND \
   --scf $FOREGROUND \
-  --prompt ">" \
+  --prompt " " \
   --border 1 \
   --border-radius 5 \
   --bdr $BACKGROUND \
-  --line-height 24
+  --line-height 24 \
+  --margin 5
