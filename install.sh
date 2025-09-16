@@ -56,7 +56,7 @@ echo "stowing swaync"
 stow swaync
 
 echo "copying wallpaper"
-cp wallpaper/.config/background ~/.config/background
+stow wallpaper
 
 echo "stowing hypr"
 stow hypr
