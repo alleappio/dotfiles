@@ -7,12 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "relative_line_numbers": true,
   "ui_font_size": 16,
   "buffer_font_size": 13,
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark - Darkened"
+    "dark": "One Dark Pro"
   },
   "vim_mode": true,
   "vertical_scroll_margin": 5,
