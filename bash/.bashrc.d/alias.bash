@@ -1,0 +1,6 @@
+#alias ssh="kitten ssh"
+alias android_studio="~/apps/android-studio/bin/studio"
+alias discord="~/apps/Discord/Discord"
+alias intellij="~/apps/idea-IU-251.25410.129/bin/idea"
+alias vim="nvim"
+alias la="ls -a"
