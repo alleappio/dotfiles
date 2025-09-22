@@ -7,7 +7,6 @@ sudo dnf copr enable solopasha/hyprland
 
 echo "installing required packages"
 sudo dnf install -y stow \
-  zsh \
   fastfetch \
   neovim \
   tmux \
@@ -26,13 +25,13 @@ sudo dnf install -y stow \
   pavucontrol \
   curl
 
-echo "installing oh-my-zsh, please follow the instructions provided by its installer"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#echo "installing oh-my-zsh, please follow the instructions provided by its installer"
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "copying zsh files"
-cp zsh/.zshrc ~
-cp -r zsh/.oh-my-zsh/custom/plugins/* ~/.oh-my-zsh/custom/plugins
-cp -r zsh/.oh-my-zsh/custom/themes/* ~/.oh-my-zsh/custom/themes
+#echo "copying zsh files"
+#cp zsh/.zshrc ~
+#cp -r zsh/.oh-my-zsh/custom/plugins/* ~/.oh-my-zsh/custom/plugins
+#cp -r zsh/.oh-my-zsh/custom/themes/* ~/.oh-my-zsh/custom/themes
 
 echo "stowing fastfetch"
 stow fastfetch
