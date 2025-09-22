@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 BACKGROUND='#282c34f0'
 FOREGROUND='#aab2bfff'
 PRIMARY='#61afefff'
