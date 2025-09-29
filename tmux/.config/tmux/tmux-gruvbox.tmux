@@ -1,5 +1,5 @@
 #!/bin/bash
-set -g @gruvbox_black "#1d2021"
+set -g @gruvbox_black "#282828"
 set -g @gruvbox_blue "#458588"
 set -g @gruvbox_yellow "#d79921"
 set -g @gruvbox_red "#cc241d"
