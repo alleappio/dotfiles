@@ -9,7 +9,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "number"
 vim.opt.autoindent = true
-vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme gruvbox")
 vim.opt.autoread = true
 vim.cmd("autocmd VimLeave * set guicursor=a:ver25")
 
