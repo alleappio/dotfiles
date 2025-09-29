@@ -1,13 +1,13 @@
 /* --COLORS--*/
-@define-color background rgba(40, 44, 52, 0.9);/*background*/
+@define-color background rgba(29, 32, 33, 0.9);/*background*/
 @define-color transparent rgba(0, 0, 0, 0);/*transparent*/
-@define-color background-alt #282c34;/*background-alt*/
-@define-color foreground #aab2bf;/*foreground*/
-@define-color primary #61afef;/*primary*/
-@define-color secondary #e06c75;/*secondary*/
-@define-color green #98c379;/*green*/
-@define-color red #e06c75;/*red*/
-@define-color blue #61afef;/*blue*/
+@define-color background-alt #282828;/*background-alt*/
+@define-color foreground #ebdbb2;/*foreground*/
+@define-color primary #458588;/*primary*/
+@define-color secondary #cc241d;/*secondary*/
+@define-color green #98971a;/*green*/
+@define-color red #cc241d;/*red*/
+@define-color blue #458588;/*blue*/
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */

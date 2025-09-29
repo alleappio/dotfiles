@@ -12,14 +12,16 @@
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
 
-@define-color background #282c34;/*background*/
-@define-color background-alt #282c34;/*background-alt*/
-@define-color foreground #aab2bf;/*foreground*/
-@define-color primary #61afef;/*primary*/
-@define-color secondary #aab2bf;/*secondary*/
-@define-color green #98c379;/*green*/
-@define-color red #e06c75;/*red*/
-@define-color blue #61afef;/*blue*/
+@define-color background #1d2021;/*background*/
+@define-color background-alt #282828;/*background-alt*/
+@define-color foreground #ebdbb2;/*foreground*/
+@define-color primary #458588;/*primary*/
+@define-color secondary #cc241d;/*secondary*/
+@define-color green #98971a;/*green*/
+@define-color red #cc241d;/*red*/
+@define-color blue #458588;/*blue*/
+
+
 
 .notification-row {
   outline: none;

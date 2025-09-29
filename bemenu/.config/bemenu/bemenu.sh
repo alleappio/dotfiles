@@ -1,11 +1,11 @@
 #!/bin/bash
-BACKGROUND='#282c34f0'
-FOREGROUND='#aab2bfff'
-PRIMARY='#61afefff'
-SECONDARY='#e06c75ff'
-GREEN='#98c379ff'
-RED='#e06c75ff'
-BLUE='#61afefff'
+BACKGROUND='#1d2021f0'
+FOREGROUND='#ebdbb2ff'
+PRIMARY='#458588ff'
+SECONDARY='#cc241dff'
+GREEN='#98971aff'
+RED='#cc241dff'
+BLUE='#458588ff'
 
  bemenu-run \
   --tb $BACKGROUND \
