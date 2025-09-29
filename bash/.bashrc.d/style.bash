@@ -15,10 +15,16 @@ git_status() {
     fi
 }
 
+invirtualenv() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    echo "${GREEN}(venv)${RESET}"
+  fi
+}
+
 update_prompt () {
   GIT_STATUS=$(git_status)
-  #PS1="${BLUE}\W${YELLOW}$GIT_BRANCH${GREEN} ->${RESET} "
-  PS1="[\u@\h ${BLUE}\W${RESET}$GIT_STATUS]${RESET}$ "
+  VENV_STATUS=$(invirtualenv)
+  PS1="[\u@\h ${BLUE}\W${RESET}$GIT_STATUS$VENV_STATUS]${RESET}$ "
 }
 
 PROMPT_COMMAND=update_prompt
