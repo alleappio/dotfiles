@@ -25,6 +25,8 @@ sudo dnf install -y stow \
   pavucontrol \
   curl \
   NetworkManager-tui \
+  gnome-extensions \
+  gnome-extensions-app
 
 #echo "installing oh-my-zsh, please follow the instructions provided by its installer"
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -63,6 +65,9 @@ stow wallpaper
 
 echo "stowing hypr"
 stow hypr
+
+echo "stowing gtk themes and icons"
+stow gtk --adopt
 
 echo "make flatpaks visible to bemenu"
 chmod +x extract_flatpak_bins.sh
