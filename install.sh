@@ -19,9 +19,7 @@ sudo dnf install -y stow \
   swaync \
   hypridle \
   hyprlock \
-  slurp \
-  grim \
-  xclip \
+  hyprshot \
   pavucontrol \
   curl \
   NetworkManager-tui \
