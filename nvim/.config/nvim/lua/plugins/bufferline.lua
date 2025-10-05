@@ -1,10 +1,23 @@
 return {
   "akinsho/bufferline.nvim",
-  requires = {
-    "nvim-tree/nvim-web-devicons"
+  event = "VeryLazy",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
   },
   config = function()
     local bufferline = require('bufferline')
-    bufferline.setup {}
+    bufferline.setup({
+      options = {
+        mode = "buffers",
+        themable = true,
+        separator_style = "thin",
+        show_buffer_close_icons = true,
+        show_close_icon = true,
+        color_icons = true,
+      },
+    })
+    vim.keymap.set('n', '<A-.>', "<cmd>BufferLineCycleNext<cr>", {})
+    vim.keymap.set('n', '<A-,>', "<cmd>BufferLineCyclePrev<cr>", {})
+    vim.keymap.set('n', '<A-c>', "<cmd>bd<cr>", {})
   end
 }
