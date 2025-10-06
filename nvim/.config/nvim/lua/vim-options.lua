@@ -14,6 +14,8 @@ vim.cmd("autocmd VimLeave * set guicursor=a:ver25")
 vim.opt.termguicolors = true
 vim.o.background = "dark"
 vim.cmd.colorscheme("gruvbox")
+vim.opt.showtabline = 2
+vim.opt.laststatus = 3
 
 -- REMAPPINGS
 vim.keymap.set("n", "<leader>y", "\"+y")
