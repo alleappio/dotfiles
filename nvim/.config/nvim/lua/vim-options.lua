@@ -1,6 +1,6 @@
 -- VIM OPTIONS
 vim.cmd("set clipboard=unnamedplus")
-vim.cmd("set scrolloff=10")
+vim.cmd("set scrolloff=15")
 vim.cmd("set shiftwidth=4 smarttab")
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=8 softtabstop=0")
