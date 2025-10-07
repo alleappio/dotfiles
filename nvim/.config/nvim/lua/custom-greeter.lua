@@ -26,12 +26,19 @@ local function show_greeting()
     vim.api.nvim_set_option_value('relativenumber', false, { scope = 'local', win = 0 })
 
     local header = {
-        "NeoVim",
-        "",
+        "                                        ",
+        "o    o               o     o  o         ",
+        "8b   8               8     8            ",
+        "8`b  8 .oPYo. .oPYo. 8     8 o8 ooYoYo. ",
+        "8 `b 8 8oooo8 8    8 `b   d'  8 8' 8  8 ",
+        "8  `b8 8.     8    8  `b d'   8 8  8  8 ",
+        "8   `8 `Yooo' `YooP'   `8'    8 8  8  8 ",
+        "..:::..:.....::.....::::..::::....:..:..",
+        "::::::::::::::::::::::::::::::::::::::::",
+        "::::::::::::::::::::::::::::::::::::::::",
     }
 
     local lines = {
-        "",
         "",
         "Hello There!",
     }
@@ -42,7 +49,7 @@ local function show_greeting()
     final_lines = center_lines(final_lines)
 
     local height = vim.api.nvim_get_option_value("lines", {})
-    local top_padding = math.floor((height/2)-(#final_lines/2)-1)
+    local top_padding = math.floor((height/2)-(#final_lines/2)-5)
     for _ = 1, top_padding do
         table.insert(final_lines, 1, "")
     end
