@@ -10,7 +10,7 @@ BLUE='#458588ff'
  bemenu-run \
   --tb $BACKGROUND \
   --tf $PRIMARY \
-  --fb $FOREGROUND \
+  --ff $FOREGROUND \
   --fb $BACKGROUND \
   --cb $BACKGROUND \
   --cf $FOREGROUND \
