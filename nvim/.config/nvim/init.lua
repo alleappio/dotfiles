@@ -15,4 +15,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 require("vim-options")
+require("vim-theme-options")
 require("custom-greeter")

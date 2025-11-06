@@ -3,15 +3,15 @@
 [profiles]
   [[default]]
     background_color = "#282c34"
-    foreground_color = "#aab2bf"
+    foreground_color = "#abb2bf"
     scrollbar_position = hidden
-    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
-    title_transmit_fg_color = "#ebdbb2"
-    title_transmit_bg_color = "#282828"
-    title_receive_fg_color = "#ebdbb2"
-    title_receive_bg_color = "#cc241d"
-    title_inactive_fg_color = "#282828"
-    title_inactive_bg_color = "#a89984"
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#abb2bf:#abb2bf:#e06c75:#e5c07b:#e5c07b:#56b6c2:#c678dd:#98c379:#abb2bf"
+    title_transmit_fg_color = "#abb2bf"
+    title_transmit_bg_color = "#282c34"
+    title_receive_fg_color = "#abb2bf"
+    title_receive_bg_color = "#e06c75"
+    title_inactive_fg_color = "#282c34"
+    title_inactive_bg_color = "#abb2bf"
     title_use_system_font = False
     title_font = AdwaitaMono Nerd Font Propo 9
 [layouts]
