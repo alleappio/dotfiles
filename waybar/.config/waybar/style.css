@@ -1,13 +1,4 @@
-/* --COLORS--*/
-@define-color background rgba(40, 40, 40, 0.9);/*background*/
-@define-color transparent rgba(0, 0, 0, 0);/*transparent*/
-@define-color background-alt #282828;/*background-alt*/
-@define-color foreground #ebdbb2;/*foreground*/
-@define-color primary #458588;/*primary*/
-@define-color secondary #cc241d;/*secondary*/
-@define-color green #98971a;/*green*/
-@define-color red #cc241d;/*red*/
-@define-color blue #458588;/*blue*/
+@import "colors.css";
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
