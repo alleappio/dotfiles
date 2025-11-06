@@ -1,0 +1,28 @@
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#272e33" # Everforest Dark Hard bg0
+    foreground_color = "#d3c6aa" # Everforest Dark Hard fg
+    scrollbar_position = hidden
+    # Everforest Dark Hard Palette:
+    # Black (#272e33), Red (#e67e80), Green (#a7c080), Yellow (#dbbc7f), Blue (#7fbbb3), Magenta/Purple (#d699b6), Cyan/Aqua (#83c092), White/Light Grey (#d3c6aa)
+    # Bright Black/Dark Grey (#495156), Bright Red (#e67e80), Bright Green (#a7c080), Bright Yellow (#dbbc7f), Bright Blue (#7fbbb3), Bright Magenta/Purple (#d699b6), Bright Cyan/Aqua (#83c092), Bright White/Light Grey (#d3c6aa)
+    palette = "#272e33:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa:#495156:#e67e80:#a7c080:#dbbc7f:#7fbbb3:#d699b6:#83c092:#d3c6aa"
+    title_transmit_fg_color = "#d3c6aa"
+    title_transmit_bg_color = "#272e33"
+    title_receive_fg_color = "#d3c6aa"
+    title_receive_bg_color = "#e67e80" # Using Red for receive for visibility, similar to the original config
+    title_inactive_fg_color = "#272e33"
+    title_inactive_bg_color = "#9da9a0" # Using grey2/mid grey for inactive title
+    title_use_system_font = False
+    title_font = AdwaitaMono Nerd Font Propo 9
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
