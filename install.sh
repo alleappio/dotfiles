@@ -64,9 +64,6 @@ stow wallpaper
 echo "stowing hypr"
 stow hypr
 
-echo "stowing gtk themes and icons"
-stow gtk --adopt
-
 echo "make flatpaks visible to bemenu"
 chmod +x extract_flatpak_bins.sh
 ./extract_flatpak_bins.sh
