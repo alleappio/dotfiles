@@ -8,9 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-3.5-sonnet"
+      "model": "claude-sonnet-4.5"
     },
     "model_parameters": []
   },
