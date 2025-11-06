@@ -1,11 +1,6 @@
 #!/bin/bash
-BACKGROUND='#282828f0'
-FOREGROUND='#ebdbb2ff'
-PRIMARY='#458588ff'
-SECONDARY='#cc241dff'
-GREEN='#98971aff'
-RED='#cc241dff'
-BLUE='#458588ff'
+
+source "$HOME/.config/bemenu/colors.sh"
 
  bemenu-run \
   --tb $BACKGROUND \
