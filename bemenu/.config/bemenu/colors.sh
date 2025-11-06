@@ -1,7 +1,1 @@
-BACKGROUND='#282828f0'
-FOREGROUND='#ebdbb2ff'
-GREEN='#98971aff'
-RED='#cc241dff'
-BLUE='#458588ff'
-PRIMARY=$BLUE
-SECONDARY=$RED
+/home/alle/dotfiles/themes/gruvbox/bemenu/colors.sh

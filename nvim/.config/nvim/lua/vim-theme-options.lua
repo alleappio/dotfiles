@@ -1,1 +1,1 @@
-vim.cmd.colorscheme("gruvbox")
+/home/alle/dotfiles/themes/gruvbox/nvim/vim-theme-options.lua

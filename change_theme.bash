@@ -30,32 +30,32 @@ change_theme(){
     local theme_location=$themes_location/${options[$1]};
     
     echo "updating bemenu...";
-    cp $theme_location/bemenu/colors.sh $dotfiles_location/bemenu/.config/bemenu;
+    ln -fs $theme_location/bemenu/colors.sh $dotfiles_location/bemenu/.config/bemenu/colors.sh;
 
     echo "updating hypr...";
-    cp $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr;
+    ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/colors.conf;
 
     echo "updating kitty...";
-    cp $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty;
+    ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
 
     echo "updating nvim...";
-    cp $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins;
-    cp $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua;
+    ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins/theme.lua;
+    ln -fs $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua/vim-theme-options.lua;
 
     echo "updating swaync...";
-    cp $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync;
+    ln -fs $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync/colors.css;
 
     echo "updating terminator...";
-    cp $theme_location/terminator/config $dotfiles_location/terminator/.config/terminator;
+    ln -fs $theme_location/terminator/config $dotfiles_location/terminator/.config/terminator/config;
 
     echo "updating tmux...";
-    cp $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux;
+    ln -fs $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux/tmux-theme.tmux;
 
     echo "updating wallpaper...";
-    cp $theme_location/wallpaper/background $dotfiles_location/wallpaper/.config/;
+    ln -fs $theme_location/wallpaper/background $dotfiles_location/wallpaper/.config/background;
 
     echo "updating waybar...";
-    cp $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/;
+    ln -fs $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/colors.css;
 
     echo "reload services";
 
@@ -67,7 +67,10 @@ change_theme(){
     hyprctl dispatch exec waybar;
 
     echo "reload swaybg...";
-    hyprctl dispatch exec "swaybg -i ~/.config/background";
+    pkill swaybg; hyprctl dispatch exec "swaybg -i ~/.config/background";
+
+    echo "reload swaync...";
+    pkill swaync; hyprctl dispatch exec swaync;
 
     echo "Press any key to continue...";
     read -rsn1;
@@ -97,6 +100,7 @@ while [ $flag -ne 0 ]; do
             flag=0;
         else
             change_theme $selection;
+            flag=0;
         fi;
     fi;
 done
