@@ -1,4 +1,9 @@
 #options=("option1" "option2" "option3" "Quit")
+BLUE="$(tput bold; tput setaf 4)"
+GREEN="$(tput bold; tput setaf 2)"
+YELLOW="$(tput sgr0; tput setaf 3)"
+RED="$(tput sgr0; tput setaf 1)"
+RESET="$(tput sgr0)"
 dotfiles_location="$HOME/dotfiles";
 themes_location="$HOME/dotfiles/themes";
 options=($(ls $themes_location));
@@ -16,7 +21,7 @@ display() {
     echo "Please choose an option:";
     for i in ${!options[@]}; do
         if [ $i -eq $1 ]; then
-            printf ">" 
+            printf "${GREEN}> ${RESET}" 
         else
             printf " "
         fi;
