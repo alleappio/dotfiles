@@ -7,24 +7,25 @@ sudo dnf copr enable solopasha/hyprland
 
 echo "installing required packages"
 sudo dnf install -y stow \
-  fastfetch \
-  neovim \
-  tmux \
-  kitty \
-  bemenu \
-  waybar \
-  swaync \
-  swaybg \
-  hyprland \
-  swaync \
-  hypridle \
-  hyprlock \
-  hyprshot \
-  pavucontrol \
-  curl \
-  NetworkManager-tui \
-  gnome-extensions \
-  gnome-extensions-app
+    fastfetch \
+    neovim \
+    tmux \
+    kitty \
+    bemenu \
+    waybar \
+    swaync \
+    swaybg \
+    hyprland \
+    swaync \
+    hypridle \
+    hyprlock \
+    hyprshot \
+    pavucontrol \
+    curl \
+    NetworkManager-tui \
+    gnome-extensions \
+    gnome-extensions-app \
+    hyprpolkitagent
 
 #echo "installing oh-my-zsh, please follow the instructions provided by its installer"
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
