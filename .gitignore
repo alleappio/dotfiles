@@ -1,2 +1,12 @@
 *.old
 *.lastd
+bemenu/.config/bemenu/colors.sh
+hypr/.config/hypr/colors.conf
+kitty/.config/kitty/colors.conf
+nvim/.config/nvim/lua/plugins/theme.lua
+nvim/.config/nvim/lua/vim-theme-options.lua
+swaync/.config/swaync/colors.css
+tmux/.config/tmux/tmux-theme.tmux
+wallpaper/.config/background
+waybar/.config/waybar/colors.css
+
