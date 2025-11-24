@@ -51,7 +51,7 @@ change_theme(){
     ln -fs $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync/colors.css;
 
     echo "updating terminator...";
-    ln -fs $theme_location/terminator/config $dotfiles_location/terminator/.config/terminator/config;
+    ln -fs $theme_location/terminator/config ~/.config/terminator/config;
 
     echo "updating tmux...";
     ln -fs $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux/tmux-theme.tmux;
