@@ -25,7 +25,8 @@ sudo dnf install -y stow \
     NetworkManager-tui \
     gnome-extensions \
     gnome-extensions-app \
-    hyprpolkitagent
+    hyprpolkitagent \
+    terminator
 
 #echo "installing oh-my-zsh, please follow the instructions provided by its installer"
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
