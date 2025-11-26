@@ -26,7 +26,11 @@ sudo dnf install -y stow \
     gnome-extensions \
     gnome-extensions-app \
     hyprpolkitagent \
-    terminator
+    terminator \
+    multimarkdown \
+    sxiv \
+    libtool \
+    libtool-tldl-devel
 
 #echo "installing oh-my-zsh, please follow the instructions provided by its installer"
 #sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
