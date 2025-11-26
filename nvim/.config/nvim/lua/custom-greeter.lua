@@ -40,7 +40,7 @@ local function show_greeting()
 
     local lines = {
         "",
-        "Hello There!",
+        "Hello there!",
     }
 
     local final_lines = {}
