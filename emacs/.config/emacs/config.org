@@ -1,0 +1,406 @@
+#+TITLE:GNU Emacs config
+#+STARTUP: showeverything
+#+OPTIONS: toc:2
+
+* TABLE OF CONTENTS :toc:
+- [[#backup][BACKUP]]
+- [[#important-programs-to-load-first][IMPORTANT PROGRAMS TO LOAD FIRST]]
+  - [[#load-script-folder-and-files][load script folder and files]]
+- [[#company][COMPANY]]
+- [[#dired][DIRED]]
+- [[#dashboard][DASHBOARD]]
+- [[#diminish][DIMINISH]]
+- [[#flycheck][FLYCHECK]]
+- [[#icons][ICONS]]
+- [[#fonts][FONTS]]
+- [[#graphical-user-interface-tweaks][GRAPHICAL USER INTERFACE TWEAKS]]
+  - [[#disable-menubar-toolbars-and-scrollbars][Disable Menubar, Toolbars and Scrollbars]]
+  - [[#display-line-numbers-and-truncated-lines][Display Line Numbers and Truncated Lines]]
+  - [[#welcome-screen][welcome screen]]
+  - [[#set-scroll-margin][set scroll margin]]
+  - [[#set-tab-as-4-spaces][set tab as 4 spaces]]
+- [[#ivy][IVY]]
+- [[#language-support][LANGUAGE SUPPORT]]
+- [[#modeline][MODELINE]]
+- [[#neotree][NEOTREE]]
+- [[#org-mode][ORG MODE]]
+  - [[#enabling-table-of-contents][Enabling Table of Contents]]
+  - [[#enabling-org-bullets][Enabling Org Bullets]]
+  - [[#disabling-elctric-indent][disabling elctric indent]]
+- [[#projectile][PROJECTILE]]
+- [[#rainbow-mode][RAINBOW MODE]]
+- [[#reload-emacs][RELOAD EMACS]]
+- [[#shells-and-terminals][SHELLS AND TERMINALS]]
+  - [[#vterm][Vterm]]
+  - [[#vterm-toggle][Vterm-Toggle]]
+- [[#theme][THEME]]
+- [[#which-key][WHICH-KEY]]
+
+* BACKUP
+#+begin_src emacs-lisp
+(setq backup-directory-alist '((".*" . "~/.config/emacs/.Trash")))
+#+end_src
+
+* IMPORTANT PROGRAMS TO LOAD FIRST
+** load script folder and files
+#+begin_src emacs-lisp
+  (add-to-list 'load-path "~/.config/emacs/scripts/")
+
+  (require 'elpaca-setup)
+  (require 'evil-setup)
+  (require 'general-keybindings-setup)
+#+end_src
+
+* COMPANY
+Company is a text completion framework for Emacs. The name stands for “complete anything”.  Completion will start automatically after you type a few letters. Use M-n and M-p to select, <return> to complete or <tab> to complete the common part.
+#+begin_src emacs-lisp
+(use-package company
+  :defer 2
+  :diminish
+  :custom
+  (company-begin-commands '(self-insert-command))
+  (company-idle-delay .1)
+  (company-minimum-prefix-length 2)
+  (company-show-numbers t)
+  (company-tooltip-align-annotations 't)
+  (global-company-mode t))
+
+(use-package company-box
+  :after company
+  :diminish
+  :hook (company-mode . company-box-mode))
+#+end_src
+
+* DIRED
+#+begin_src emacs-lisp
+  (use-package dired-open
+  :config
+  (setq dired-open-extensions '(("gif" . "sxiv")
+  			      ("jpg" . "sxiv")
+  			      ("png" . "sxiv")
+  			      ("mkv" . "mpv")
+  			      ("mp4" . "mpv"))))
+  (use-package peep-dired
+    :after dired
+    :hook (evil-normalize-keymaps . peep-dired-hook))
+#+end_src
+
+* DASHBOARD
+Emacs Dashboard is an extensible startup screen showing you recent files, bookmarks, agenda items and an Emacs banner.
+
+#+begin_src emacs-lisp
+  (use-package dashboard
+    :ensure t 
+    :init
+    (setq initial-buffer-choice 'dashboard-open)
+    (setq dashboard-set-heading-icons t)
+    (setq dashboard-set-file-icons t)
+    (setq dashboard-banner-logo-title "Hello there!")
+    ;;(setq dashboard-startup-banner 'logo) ;; use standard emacs logo as banner
+    (setq dashboard-startup-banner "/home/alle/.config/emacs/emacs_banner.txt")  ;; use custom image as banner
+    (setq dashboard-center-content t) ;; set to 't' for centered content
+    (setq dashboard-items nil)
+    (setq dashboard-startupify-list '(dashboard-insert-banner
+                                    dashboard-insert-newline
+                                    dashboard-insert-banner-title
+                                    dashboard-insert-newline
+                                    dashboard-insert-navigator
+                                    dashboard-insert-newline
+  				  dashboard-insert-init-info
+                                    dashboard-insert-newline))
+    :custom
+    (dashboard-modify-heading-icons '((recents . "file-text")
+                                      (bookmarks . "book")))
+    :config
+    (dashboard-setup-startup-hook))
+#+end_src
+
+* DIMINISH
+#+begin_src emacs-lisp
+(use-package diminish)
+#+end_src
+
+* FLYCHECK
+#+begin_src emacs-lisp
+(use-package flycheck
+:ensure t
+:defer t
+:diminish
+:init (global-flycheck-mode))
+#+end_src
+
+* ICONS
+#+begin_src emacs-lisp
+  (use-package all-the-icons
+    :ensure t
+    :if (display-graphic-p))
+
+  (use-package all-the-icons-dired
+    :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
+#+end_src
+
+
+* FONTS
+Defining the various fonts that Emacs will use.
+
+#+begin_src emacs-lisp
+  (set-face-attribute 'default nil
+    :font "AdwaitaMono Nerd Font Mono"
+    :height 110
+    :weight 'medium)
+  ;; Makes commented text and keywords italics.
+  ;; This is working in emacsclient but not emacs.
+  ;; Your font must have an italic face available.
+  (set-face-attribute 'font-lock-comment-face nil
+    :slant 'italic)
+  (set-face-attribute 'font-lock-keyword-face nil
+    :slant 'italic)
+
+  ;; This sets the default font on all graphical frames created after restarting Emacs.
+  ;; Does the same thing as 'set-face-attribute default' above, but emacsclient fonts
+  ;; are not right unless I also add this method of setting the default font.
+  (add-to-list 'default-frame-alist '(font . "AdwaitaMono Nerd Font Mono-11"))
+
+  ;; Uncomment the following line if line spacing needs adjusting.
+  (setq-default line-spacing 0.12)
+
+#+end_src
+
+
+* GRAPHICAL USER INTERFACE TWEAKS
+Let's make GNU Emacs look a little better.
+
+** Disable Menubar, Toolbars and Scrollbars
+#+begin_src emacs-lisp
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+#+end_src
+
+** Display Line Numbers and Truncated Lines
+#+begin_src emacs-lisp
+  (setq display-line-numbers-type 'relative)
+  (global-display-line-numbers-mode 1)
+  (global-visual-line-mode t)
+#+end_src
+
+** welcome screen
+#+begin_src emacs-lisp
+  (setq inhibit-startup-screen t)
+#+end_src
+
+** set scroll margin
+#+begin_src emacs-lisp
+(setq scroll-margin 15)
+(setq scroll-conservatively 101)
+(setq scroll-step 1)
+(setq next-line-add-newlines nil)
+#+end_src
+
+** set tab as 4 spaces
+#+begin_src emacs-lisp
+  (setq indent-tabs-mode nil)
+  ;;(setq tab-width 4)
+#+end_src
+
+
+
+* IVY
++ Ivy, a generic completion mechanism for Emacs.
++ Counsel, a collection of Ivy-enhanced versions of common Emacs commands.
++ Ivy-rich allows us to add descriptions alongside the commands in M-x.
+
+#+begin_src emacs-lisp
+  (use-package counsel
+    :after ivy
+    :diminish
+    :config (counsel-mode))
+
+  (use-package ivy
+    :bind
+    ;; ivy-resume resumes the last Ivy-based completion.
+    (("C-c C-r" . ivy-resume)
+     ("C-x B" . ivy-switch-buffer-other-window))
+    :custom
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-count-format "(%d/%d) ")
+    (setq enable-recursive-minibuffers t)
+    :config
+    :diminish
+    (ivy-mode))
+
+  (use-package all-the-icons-ivy-rich
+    :ensure t
+    :diminish
+    :init (all-the-icons-ivy-rich-mode 1))
+
+  (use-package ivy-rich
+    :diminish
+    :after ivy
+    :ensure t
+    :init (ivy-rich-mode 1) ;; this gets us descriptions in M-x.
+    :custom
+    (ivy-virtual-abbreviate 'full
+     ivy-rich-switch-buffer-align-virtual-buffer t
+     ivy-rich-path-style 'abbrev)
+    :config
+    (ivy-set-display-transformer 'ivy-switch-buffer
+                                 'ivy-rich-switch-buffer-transformer))
+
+#+end_src
+
+* LANGUAGE SUPPORT
+#+begin_src emacs-lisp
+  (use-package lua-mode)
+  (use-package haskell-mode)
+  (use-package rust-mode)
+  (use-package markdown-mode
+    :ensure t
+    :mode ("README.md" . gfm-mode)
+    :init (setq markdown-command "multimarkdown"))
+#+end_src
+
+* MODELINE
+#+begin_src emacs-lisp
+    (use-package doom-modeline
+        :ensure t
+        :init (doom-modeline-mode 1)
+        :config
+        (setq doom-modeline-height 10
+            doom-modeline-bar-width 5
+            doom.modeline-persp-name t
+            doom-modeline-persp-icon t))
+#+end_src
+
+* NEOTREE
+#+begin_src emacs-lisp 
+    (use-package neotree
+      :config
+      (setq neo-smart-open t
+            neo-show-hidden-files t
+            neo-window-width 30 
+            neo-window-fixed-size nil
+            inhibit-compacting-font-caches t
+            projectile-switch-project-action 'neotree-projectile-action) 
+            ;; truncate long file names in neotree
+            (add-hook 'neo-after-create-hook
+               #'(lambda (_)
+                   (with-current-buffer (get-buffer neo-buffer-name)
+                     (setq truncate-lines t)
+                     (setq word-wrap nil)
+                     (make-local-variable 'auto-hscroll-mode)
+                     (setq auto-hscroll-mode nil)))))
+    (setq neo-theme (if (display-graphic-p) 'ascii))
+  ;;(message "graphics: " (display-graphic-p))
+#+end_src
+
+* ORG MODE
+** Enabling Table of Contents
+#+begin_src emacs-lisp
+  (use-package toc-org
+      :commands toc-org-enable
+      :diminish
+      :init (add-hook 'org-mode-hook 'toc-org-enable))
+#+end_src
+
+** Enabling Org Bullets
+Org-bullets gives us attractive bullets rather than asterisks.
+
+#+begin_src emacs-lisp
+  (add-hook 'org-mode-hook 'org-indent-mode)
+  (use-package org-bullets)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+#+end_src
+
+** disabling elctric indent
+#+begin_src emacs-lisp
+  (electric-indent-mode -1)
+#+end_src
+
+#+begin_src emacs-lisp
+  (require 'org-tempo)
+#+end_src
+
+* PROJECTILE
+#+begin_src emacs-lisp
+(use-package projectile
+    :config
+    (projectile-mode 1)
+    :diminish
+    )
+#+end_src
+
+* RAINBOW MODE
+#+begin_src emacs-lisp
+  (use-package rainbow-mode
+    :diminish
+    :hook org-mode prog-mode)
+#+end_src
+
+* RELOAD EMACS
+#+begin_src emacs-lisp
+  (defun reload-init-file ()
+    (interactive)
+    (load-file "~/.config/emacs/init.el")
+    (load-file "~/.config/emacs/init.el"))
+#+end_src
+
+* SHELLS AND TERMINALS
+** Vterm
+#+begin_src emacs-lisp
+(use-package vterm
+:config
+(setq shell-file-name "/bin/bash"
+      vterm-max-scrollback 5000))
+#+end_src
+
+** Vterm-Toggle
+#+begin_src emacs-lisp
+(use-package vterm-toggle
+  :after vterm
+  :config
+  (setq vterm-toggle-fullscreen-p nil)
+  (setq vterm-toggle-scope 'project)
+  (add-to-list 'display-buffer-alist
+               '((lambda (buffer-or-name _)
+                     (let ((buffer (get-buffer buffer-or-name)))
+                       (with-current-buffer buffer
+                         (or (equal major-mode 'vterm-mode)
+                             (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
+                  (display-buffer-reuse-window display-buffer-at-bottom)
+                  ;;(display-buffer-reuse-window display-buffer-in-direction)
+                  ;;display-buffer-in-direction/direction/dedicated is added in emacs27
+                  ;;(direction . bottom)
+                  ;;(dedicated . t) ;dedicated is supported in emacs27
+                  (reusable-frames . visible)
+                  (window-height . 0.3))))
+#+end_src
+
+
+* THEME
+#+begin_src emacs-lisp
+  (load "~/.config/emacs/theme.el")
+#+end_src
+
+* WHICH-KEY
+#+begin_src emacs-lisp
+  (use-package which-key
+    :init
+      (which-key-mode 1)
+    :config
+    (setq which-key-side-window-location 'bottom
+	  which-key-sort-order #'which-key-key-order-alpha
+	  which-key-sort-uppercase-first nil
+	  which-key-add-column-padding 1
+	  which-key-max-display-columns nil
+	  which-key-min-display-lines 6
+	  which-key-side-window-slot -10
+	  which-key-side-window-max-height 0.25
+	  which-key-idle-delay 0.8
+	  which-key-max-description-length 25
+	  which-key-allow-imprecise-window-fit t
+	  which-key-separator " → " )
+    :diminish
+)
+#+end_src
+
