@@ -19,7 +19,7 @@
       "b" '(:ignore t :wk "buffer")
       "bb" '(switch-to-buffer :wk "Switch buffer")
       "bi" '(ibuffer :wk "ibuffer")
-      "bk" '(kill-this-buffer :wk "Kill this buffer")
+      "bk" '(kill-current-buffer :wk "Kill current buffer")
       "bn" '(next-buffer :wk "Next buffer")
       "bp" '(previous-buffer :wk "Previous buffer")
       "br" '(revert-buffer :wk "Reload buffer"))
