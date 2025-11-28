@@ -1,28 +1,43 @@
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>o", "o<ESC>k")
-vim.keymap.set("n", "<leader>O", "O<ESC>j")
+local wk = require("which-key")
+
+-- Copy and paste from and to system clipboard
+wk.add({
+    { "<leader>y", "\"+y", mode = {"n", "v"}, desc = "Yank to system clipboard" },
+    { "<leader>p", "+p", mode = "n", desc = "Paste from system clipboard" },
+    { "<leader>o", "o<ESC>k", mode = "n", desc = "Open new line below" },
+    { "<leader>O", "O<ESC>j", mode = "n", desc = "Open new line above" },
+})
 
 -- Bufferline navigation and close
-vim.keymap.set('n', '<A-.>', "<cmd>BufferLineCycleNext<cr>", {})
-vim.keymap.set('n', '<A-,>', "<cmd>BufferLineCyclePrev<cr>", {})
-vim.keymap.set('n', '<A-c>', "<cmd>bd<cr>", {})
+wk.add({
+    { "<A-.>", "<cmd>BufferLineCycleNext<cr>", mode = "n" },
+    { "<A-,>", "<cmd>BufferLineCyclePrev<cr>", mode = "n" },
+    { "<A-c>", "<cmd>bd<cr>", mode = "n" },
+})
 
 -- Copilot
-vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-vim.keymap.set("n", "<leader>cc", ':CopilotChat<CR>', {})
+wk.add({
+    { "<leader>c", group = "Copilot" },
+    { "<C-j>", "Accept Copilot suggestion", mode = "i" },
+    { "<leader>cc", "Open Copilot Chat", mode = "n" },
+})
 
 -- Neo-tree toggle
-vim.keymap.set('n', '<C-n>', ':Neotree toggle left<CR>', {})
+wk.add({
+  { "<leader>e", ":Neotree toggle left<CR>", desc = "Toggle Neotree", mode = "n" },
+})
 
 -- lsp actions
-vim.keymap.set("n", "<leader>K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+wk.add({
+  { "<leader>l", group = "lsp" },
+  { "<leader>lh", vim.lsp.hover, desc = "lsp hover", mode = "n" },
+  { "<leader>la", vim.lsp.code_action, desc = "lsp code actions", mode = "n" },
+  { "<leader>ld", vim.lsp.definition, desc = "lsp definition", mode = "n" },
+})
 
 -- Telescope keybindings
-vim.keymap.set('n', '<leader>ff', "<cmd>Telescope find_files<CR>", {})
-vim.keymap.set('n', '<leader>fg', "<cmd>Telescope live_grep<CR>", {})
-
-
+wk.add({
+  { "<leader>f", group = "file" },
+  { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
+  { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
+})
