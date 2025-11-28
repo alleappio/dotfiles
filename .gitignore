@@ -10,3 +10,7 @@ tmux/.config/tmux/tmux-theme.tmux
 wallpaper/.config/background
 waybar/.config/waybar/colors.css
 terminator/.config/terminator/config
+emacs/.config/emacs/elpaca
+emacs/.config/emacs/config.el
+emacs/.config/emacs/eln-cache
+emacs/.config/emacs/projectile-bookmarks.eld
