@@ -15,6 +15,6 @@
 		    (setq word-wrap nil)
 		    (make-local-variable 'auto-hscroll-mode)
 		    (setq auto-hscroll-mode nil)))))
-(setq neo-theme (if (display-graphic-p) 'ascii))
+(setq neo-theme (if (display-graphic-p) 'arrow))
 
 (provide 'neotree-setup)
