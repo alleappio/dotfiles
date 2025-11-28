@@ -7,7 +7,6 @@ return {
             width = { min = 10, max = 20 },
             spacing = 1,
         },
-        sort = "group",
     },
     keys = {
         {
