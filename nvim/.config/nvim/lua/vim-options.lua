@@ -14,10 +14,3 @@ vim.opt.termguicolors = true
 vim.o.background = "dark"
 vim.opt.showtabline = 2
 vim.opt.laststatus = 3
-
--- REMAPPINGS
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>p", '"+p', { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>o", "o<ESC>k")
-vim.keymap.set("n", "<leader>O", "O<ESC>j")

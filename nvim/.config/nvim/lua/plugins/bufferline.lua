@@ -27,8 +27,5 @@ return {
       },
 
     })
-    vim.keymap.set('n', '<A-.>', "<cmd>BufferLineCycleNext<cr>", {})
-    vim.keymap.set('n', '<A-,>', "<cmd>BufferLineCyclePrev<cr>", {})
-    vim.keymap.set('n', '<A-c>', "<cmd>bd<cr>", {})
   end
 }
