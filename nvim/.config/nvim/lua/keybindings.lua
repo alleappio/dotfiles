@@ -18,8 +18,9 @@ wk.add({
 -- Copilot
 wk.add({
     { "<leader>c", group = "Copilot" },
-    { "<C-j>", "Accept Copilot suggestion", mode = "i" },
-    { "<leader>cc", "Open Copilot Chat", mode = "n" },
+    { "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc="Open copilot chat", mode = "n" },
+    { "<leader>cm", "<cmd>CopilotChatModel<CR>", desc="Choose copilot model", mode = "n" },
+    { "<C-j>", 'copilot#Accept("\\<CR>")', mode = "i", expr = true, replace_keycodes = false, desc = "Accept Copilot suggestion" },
 })
 
 -- Neo-tree toggle
@@ -41,3 +42,4 @@ wk.add({
   { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
   { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
 })
+
