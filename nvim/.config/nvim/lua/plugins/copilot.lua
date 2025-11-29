@@ -20,10 +20,8 @@ return {
     build = "make tiktoken",
     config = function()
       require("CopilotChat").setup({
-            model = 'claude-3.5-sonnet',
             window = {
-                layout = 'vertical',
-                width = 0.25,
+                layout = 'float',
             },
             auto_insert_mode = true,
         })
