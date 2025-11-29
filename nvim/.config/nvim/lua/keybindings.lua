@@ -18,8 +18,10 @@ wk.add({
 -- Copilot
 wk.add({
     { "<leader>c", group = "Copilot" },
-    { "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc="Open copilot chat", mode = "n" },
+    { "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc="Open copilot chat", mode = {"n", "v"} },
     { "<leader>cm", "<cmd>CopilotChatModel<CR>", desc="Choose copilot model", mode = "n" },
+    { "<leader>ce", "<cmd>Copilot enable<CR>", desc="Enable copilot suggestions", mode = "n" },
+    { "<leader>cd", "<cmd>Copilot disable<CR>", desc="Disable copilot suggestions", mode = "n" },
     { "<C-j>", 'copilot#Accept("\\<CR>")', mode = "i", expr = true, replace_keycodes = false, desc = "Accept Copilot suggestion" },
 })
 

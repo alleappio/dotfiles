@@ -14,18 +14,16 @@ return {
         show_buffer_close_icons = true,
         show_close_icon = true,
         color_icons = true,
-        always_show_bufferline = true,
-        offset = {
+        always_show_bufferline = false,
+        offsets = {
           {
-            filetype={ "neo-tree", "neo-tree-popup", "notify" },
-            text="neo-tree",
-            highlight="directory",
-            text_align="left",
-            separator=true,
+            filetype = "neo-tree",
+            text = "Neotree",
+            text_align = "left",
+            separator = true,
           },
         },
       },
-
     })
   end
 }

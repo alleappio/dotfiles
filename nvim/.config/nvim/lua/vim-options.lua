@@ -6,7 +6,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=8 softtabstop=0")
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
+vim.opt.signcolumn = "yes"
 vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.cmd("autocmd VimLeave * set guicursor=a:ver25")
