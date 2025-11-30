@@ -21,13 +21,12 @@ return {
                     "lua_ls",
                     "rust_analyzer",
                     "pyright",
-                    "clangd",
                     "bashls",
                     "clangd",
                     "docker_compose_language_service",
                     "dockerls",
                     "html",
-                    "yamlls"
+                    "yamlls",
                 }
             })
         end
@@ -56,7 +55,7 @@ return {
             -- Default list of enabled providers defined so that you can extend it
             -- elsewhere in your config, without redefining it, due to `opts_extend`
             sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
+                default = { 'buffer', 'path', 'snippets', 'lsp'  },
             },
             fuzzy = { implementation = "prefer_rust_with_warning" }
         },

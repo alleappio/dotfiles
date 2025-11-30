@@ -36,6 +36,7 @@ wk.add({
     { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
     { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
     { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
+    { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp definition", mode = "n" },
 })
 
 -- Telescope keybindings
