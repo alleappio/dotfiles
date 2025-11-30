@@ -1,0 +1,8 @@
+BACKGROUND='#1e1e2ef0'
+FOREGROUND='#cdd6f4ff'
+GREEN='#a6e3a1ff'
+RED='#f38ba8ff'
+BLUE='#89b4faff'
+PURPLE='#cba6f7ff'
+PRIMARY=$PURPLE
+SECONDARY=$BLUE
