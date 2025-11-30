@@ -27,21 +27,21 @@ wk.add({
 
 -- Neo-tree toggle
 wk.add({
-  { "<leader>e", ":Neotree toggle left<CR>", desc = "Toggle Neotree", mode = "n" },
+    { "<leader>e", ":Neotree toggle left<CR>", desc = "Toggle Neotree", mode = "n" },
 })
 
 -- lsp actions
 wk.add({
-  { "<leader>l", group = "lsp" },
-  { "<leader>lh", vim.lsp.hover, desc = "lsp hover", mode = "n" },
-  { "<leader>la", vim.lsp.code_action, desc = "lsp code actions", mode = "n" },
-  { "<leader>ld", vim.lsp.definition, desc = "lsp definition", mode = "n" },
+    { "<leader>l", group = "lsp" },
+    { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
+    { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
+    { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
 })
 
 -- Telescope keybindings
 wk.add({
-  { "<leader>f", group = "file" },
-  { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
-  { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
+    { "<leader>f", group = "file" },
+    { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
+    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
 })
 

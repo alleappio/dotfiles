@@ -1,47 +1,65 @@
 return {
-  {
-      "mason-org/mason.nvim",
-      config = function()
-        require("mason").setup()
-      end
-  },
-  {
-    "mason-org/mason-lspconfig.nvim",
-    opts = {},
-    dependencies = {
-        { "mason-org/mason.nvim", opts = {} },
+    {
+        "mason-org/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end
+    },
+    {
         "neovim/nvim-lspconfig",
     },
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "rust_analyzer",
-          "pyright",
-          "clangd",
-          "bashls",
-          "clangd",
-          "docker_compose_language_service",
-          "dockerls",
-          "html",
-          "yamlls"
-        }
-      })
-    end
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      vim.lsp.config("lua_ls", {})
-      vim.lsp.config("rust_analyzer", {})
-      vim.lsp.config("pyright", {})
-      vim.lsp.config("clangd", {})
-      vim.lsp.config("bashls", {})
-      vim.lsp.config("clangd", {})
-      vim.lsp.config("docker_compose_language_service", {})
-      vim.lsp.config("dockerls", {})
-      vim.lsp.config("html", {})
-      vim.lsp.config("yamlls", {})
-    end
-  }
+    {
+        "mason-org/mason-lspconfig.nvim",
+        opts = {},
+        dependencies = {
+            { "mason-org/mason.nvim", opts = {} },
+            "neovim/nvim-lspconfig",
+        },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "rust_analyzer",
+                    "pyright",
+                    "clangd",
+                    "bashls",
+                    "clangd",
+                    "docker_compose_language_service",
+                    "dockerls",
+                    "html",
+                    "yamlls"
+                }
+            })
+        end
+    },
+    {
+        'saghen/blink.cmp',
+        dependencies = { 'rafamadriz/friendly-snippets' },
+
+        version = '1.*',
+        opts = {
+            -- All presets have the following mappings:
+            -- C-space: Open menu or open docs if already open
+            -- C-n/C-p or Up/Down: Select next/previous item
+            -- C-e: Hide menu
+            -- C-k: Toggle signature help (if signature.enabled = true)
+            --
+            -- See :h blink-cmp-config-keymap for defining your own keymap
+            keymap = { preset = 'default' },
+
+            appearance = {
+                nerd_font_variant = 'mono'
+            },
+
+            completion = { documentation = { auto_show = false } },
+
+            -- Default list of enabled providers defined so that you can extend it
+            -- elsewhere in your config, without redefining it, due to `opts_extend`
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+            fuzzy = { implementation = "prefer_rust_with_warning" }
+        },
+        opts_extend = { "sources.default" }
+    }
 }
