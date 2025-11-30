@@ -107,7 +107,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: @foreground;
-    /*background-color: @background;*/
+    background-color: @transparent;
     /*border: 1px solid @primary;*/
 }
 
@@ -298,8 +298,9 @@ label:focus {
 }
 
 #keyboard-state {
-    background: @background;
-    color: @background;
+    background: @transparent;
+    color: @transparent;
+    border: none;
     /*padding: 0 10px;*/
     /*margin: 0 5px;
     min-width: 16px;*/
@@ -312,6 +313,7 @@ label:focus {
 #keyboard-state > label.locked {
     padding: 0 10px;
     background: @foreground;
+    color: @background;
     border-radius: 0px;
 }
 
