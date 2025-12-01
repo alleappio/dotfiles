@@ -26,6 +26,7 @@ sudo dnf install -y stow \
     gnome-extensions \
     gnome-extensions-app \
     hyprpolkitagent \
+    utftex \
 
 echo "stowing bash"
 stow bash
