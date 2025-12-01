@@ -6,14 +6,14 @@ return {
             completions = { lsp = { enabled = true } },
             preset = "obsidian",
             heading = {
-                backgrounds = {
-                    nil,
-                    nil,
-                    nil,
-                    nil,
-                    nil,
-                    nil,
-                },
+--                backgrounds = {
+--                    nil,
+--                    nil,
+--                    nil,
+--                    nil,
+--                    nil,
+--                    nil,
+--                },
             },
             latex = {
                 enabled = true,
