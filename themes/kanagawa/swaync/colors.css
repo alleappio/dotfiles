@@ -16,8 +16,8 @@
 @define-color background-alt #1F1F28;/*background-alt*/
 @define-color foreground #DCD7BA;/*foreground*/
 @define-color green #76946A;/*green*/
-@define-color red #E82424;/*red*/
-@define-color blue #658594;/*blue*/
+@define-color red #C34043;/*red*/
+@define-color blue #7E9CD8;/*blue*/
 @define-color purple #957FB8;/*purple*/
 @define-color primary @blue;/*primary*/
 @define-color secondary @red;/*secondary*/

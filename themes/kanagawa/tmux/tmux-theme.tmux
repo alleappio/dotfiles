@@ -1,7 +1,7 @@
 set -g @kanagawa_black "#1f1f28"         # sumiInk0
-set -g @kanagawa_blue "#658594"          # fujiBlue
-set -g @kanagawa_yellow "#e6c384"        # autumnYellow
-set -g @kanagawa_red "#e82424"           # samuraiRed
+set -g @kanagawa_blue "#7E9CD8"          # fujiBlue
+set -g @kanagawa_yellow "#C0A36E"        # autumnYellow
+set -g @kanagawa_red "#C34043"           # samuraiRed
 set -g @kanagawa_white "#dcd7ba"         # fujiWhite
 set -g @kanagawa_green "#76946a"         # springGreen
 set -g @kanagawa_visual_grey "#2a2a37"   # waveBlue1
