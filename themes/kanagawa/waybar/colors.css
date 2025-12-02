@@ -1,0 +1,11 @@
+/* --COLORS--*/
+@define-color background rgba(31, 30, 40, 0.9);/*background*/
+@define-color transparent rgba(0, 0, 0, 0);/*transparent*/
+@define-color background-alt #1F1F28;/*background-alt*/
+@define-color foreground #DCD7BA;/*foreground*/
+@define-color green #76946A;/*green*/
+@define-color red #E82424;/*red*/
+@define-color blue #658594;/*blue*/
+@define-color purple #957FB8;/*purple*/
+@define-color primary @blue;/*primary*/
+@define-color secondary @red;/*secondary*/
