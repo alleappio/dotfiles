@@ -12,7 +12,7 @@
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
 
-@define-color background #1F1F28F0;/*background*/
+@define-color background #1F1F28;/*background*/
 @define-color background-alt #1F1F28;/*background-alt*/
 @define-color foreground #DCD7BA;/*foreground*/
 @define-color green #76946A;/*green*/
