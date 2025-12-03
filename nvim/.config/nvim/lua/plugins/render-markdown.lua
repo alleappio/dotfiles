@@ -6,14 +6,7 @@ return {
             completions = { lsp = { enabled = true } },
             preset = "obsidian",
             heading = {
---                backgrounds = {
---                    nil,
---                    nil,
---                    nil,
---                    nil,
---                    nil,
---                    nil,
---                },
+                border = true,
             },
             latex = {
                 enabled = true,
