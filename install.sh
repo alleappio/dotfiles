@@ -2,8 +2,8 @@
 
 git submodule update --init
 
-echo "enabling solopasha/hyprland copr"
-sudo dnf copr enable solopasha/hyprland
+echo "enabling lionheartp/Hyprland copr"
+sudo dnf copr enable lionheartp/Hyprland 
 
 echo "installing required packages"
 sudo dnf install -y stow \
@@ -27,6 +27,7 @@ sudo dnf install -y stow \
     gnome-extensions-app \
     hyprpolkitagent \
     utftex \
+    hyprland-guiutils \
 
 echo "stowing bash"
 stow bash
