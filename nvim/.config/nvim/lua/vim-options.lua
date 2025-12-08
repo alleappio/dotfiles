@@ -16,6 +16,7 @@ vim.opt.showtabline = 2
 vim.opt.laststatus = 3
 
 local severity = vim.diagnostic.severity
+vim.diagnostic.enable = true
 vim.diagnostic.config({
     signs = {
         text = {
