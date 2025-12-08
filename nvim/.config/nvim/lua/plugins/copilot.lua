@@ -22,8 +22,8 @@ return {
       require("CopilotChat").setup({
             window = {
                 layout = 'float',
-                model = 'claude-sonnet-4.5'
             },
+            model = 'claude-sonnet-4.5',
             auto_insert_mode = true,
         })
     end,
