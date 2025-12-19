@@ -14,6 +14,7 @@ vim.opt.termguicolors = true
 vim.o.background = "dark"
 vim.opt.showtabline = 2
 vim.opt.laststatus = 3
+vim.opt.wrap=false
 
 local severity = vim.diagnostic.severity
 vim.diagnostic.enable = true
