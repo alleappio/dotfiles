@@ -11,10 +11,11 @@ vim.opt.autoindent = true
 vim.opt.autoread = true
 vim.cmd("autocmd VimLeave * set guicursor=a:ver25")
 vim.opt.termguicolors = true
-vim.o.background = "dark"
+vim.opt.background = "dark"
 vim.opt.showtabline = 2
 vim.opt.laststatus = 3
 vim.opt.wrap=false
+vim.opt.winborder = "rounded"
 
 local severity = vim.diagnostic.severity
 vim.diagnostic.enable = true
