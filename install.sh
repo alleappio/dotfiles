@@ -28,6 +28,7 @@ sudo dnf install -y stow \
     hyprpolkitagent \
     utftex \
     hyprland-guiutils \
+    luarocks \
 
 echo "stowing bash"
 stow bash
