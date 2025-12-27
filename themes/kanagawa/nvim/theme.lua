@@ -11,6 +11,8 @@ return{
             require('lualine').setup({
                options = {
                   theme= 'kanagawa',
+                  section_separators = '', 
+                  component_separators = '' 
                 }
             })
         end
