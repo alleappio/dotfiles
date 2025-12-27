@@ -11,6 +11,9 @@ return {
             },
             indent = {
                 char = "┆",
+            },
+            exclude = {
+                filetypes = { "dashboard" }
             }
         })
     end,
