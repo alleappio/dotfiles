@@ -67,6 +67,9 @@ vim.o.splitbelow = true
 -- Show confirmation dialog for unsaved changes
 vim.o.confirm = true
 
+-- Set cursor line
+vim.opt.cursorline = true
+
 -- Disable diagnostic display signs (they are annoying)
 local severity = vim.diagnostic.severity
 vim.diagnostic.enable = true
