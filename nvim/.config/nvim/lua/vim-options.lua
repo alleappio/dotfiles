@@ -70,6 +70,9 @@ vim.o.confirm = true
 -- Set cursor line
 vim.opt.cursorline = true
 
+-- Clear search highlights on <Esc>
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- Disable diagnostic display signs (they are annoying)
 local severity = vim.diagnostic.severity
 vim.diagnostic.enable = true
