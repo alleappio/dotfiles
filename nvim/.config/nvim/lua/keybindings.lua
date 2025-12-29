@@ -45,5 +45,7 @@ wk.add({
     { "<leader>f", group = "file" },
     { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
     { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
+    { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers", mode = "n" },
+    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
 })
 
