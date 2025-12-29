@@ -2,11 +2,12 @@ return {
     "folke/which-key.nvim",
     event = "VeryLazy",
     opts = {
-        delay=2500,
+        delay=2000,
         layout = {
-            width = { min = 10, max = 20 },
+            width = { min = 10, max = 30 },
             spacing = 1,
         },
+        preset="helix",
     },
     keys = {
         {

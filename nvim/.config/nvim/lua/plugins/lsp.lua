@@ -23,6 +23,7 @@ return {
                     "pyright",
                     "bashls",
                     "clangd",
+                    "cmake",
                     "docker_compose_language_service",
                     "dockerls",
                     "html",
