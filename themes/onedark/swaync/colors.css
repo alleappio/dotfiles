@@ -18,6 +18,6 @@
 @define-color green #98c379;/*green*/
 @define-color red #e06c75;/*red*/
 @define-color blue #61afef;/*blue*/
-@define-color primary @blue;/*primary*/
-@define-color secondary @red;/*secondary*/
+@define-color primary @red;/*primary*/
+@define-color secondary @blue;/*secondary*/
 
