@@ -8,6 +8,8 @@ vim.opt.smarttab = true
 
 -- Convert tabs to spaces
 vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.smarttab = true
 
 -- Set tab display width to 8 and disable softtabstop
 vim.opt.tabstop = 8

@@ -27,16 +27,17 @@ wk.add({
 
 -- Neo-tree toggle
 wk.add({
-    { "<leader>e", ":Neotree toggle left<CR>", desc = "Toggle Neotree", mode = "n" },
+    { "<leader>e", "<cmd>NvimTreeToggle<CR>" , desc = "Toggle Nvim tree", mode = "n" },
 })
 
 -- lsp actions
 wk.add({
     { "<leader>l", group = "lsp" },
-    { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
     { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
-    { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
     { "<leader>lc", vim.diagnostic.open_float, desc = "lsp diagnostics", mode = "n" },
+    { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
+    { "<leader>lf", function() vim.lsp.buf.format() end, desc = "lsp format code", mode = "n" },
+    { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
     { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
 })
 
