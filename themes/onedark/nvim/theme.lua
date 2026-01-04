@@ -1,17 +1,13 @@
 return{
     {
-      "olimorris/onedarkpro.nvim",
-      priority = 1000, -- Ensure it loads first
-      lazy=true,
-      config = function()
-        require("onedarkpro").setup({
-          colors = {
-            onedark = {
-              bg = "#282C34"
-            }
-          }
-        })
-      end
+        "navarasu/onedark.nvim",
+          priority = 1000, -- make sure to load this before all the other start plugins
+          config = function()
+            require('onedark').setup({
+--              style = 'darker'
+            })
+            require('onedark').load()
+          end
     },
     {
         'nvim-lualine/lualine.nvim',
