@@ -25,11 +25,6 @@ wk.add({
     { "<C-j>", 'copilot#Accept("\\<CR>")', mode = "i", expr = true, replace_keycodes = false, desc = "Accept Copilot suggestion" },
 })
 
--- Neo-tree toggle
-wk.add({
-    { "<leader>e", "<cmd>NvimTreeToggle<CR>" , desc = "Toggle Nvim tree", mode = "n" },
-})
-
 -- lsp actions
 wk.add({
     { "<leader>l", group = "lsp" },
@@ -42,11 +37,16 @@ wk.add({
 })
 
 -- Telescope keybindings
+local telescope_builtin = require('telescope.builtin')
 wk.add({
     { "<leader>f", group = "file" },
-    { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find file", mode = "n" },
-    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Live grep", mode = "n" },
+    { "<leader>ff", function() telescope_builtin.find_files({hidden=true}) end, desc = "Find file", mode = "n" },
+    { "<leader>fg", function() telescope_builtin.live_grep({hidden=true}) end, desc = "Live grep", mode = "n" },
     { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers", mode = "n" },
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
 })
 
+-- Open oil file explorer
+wk.add({
+    { "<leader>e", function() require("oil").toggle_float() end, desc = "Open Oil file explorer", mode = "n" },
+})
