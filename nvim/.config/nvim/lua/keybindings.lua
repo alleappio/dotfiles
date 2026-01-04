@@ -50,3 +50,12 @@ wk.add({
 wk.add({
     { "<leader>e", function() require("oil").toggle_float() end, desc = "Open Oil file explorer", mode = "n" },
 })
+
+-- Quickfix keybindings
+wk.add({
+    { "<leader>q", group = "Quickfix" },
+    { "<leader>qc", "<cmd>cclose<cr>", desc = "Next quickfix entry", mode="n" },
+    { "<leader>qn", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode="n" },
+    { "<leader>qo", "<cmd>copen<cr>", desc = "Next quickfix entry", mode="n" },
+    { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode="n" },
+})
