@@ -59,3 +59,11 @@ wk.add({
     { "<leader>qo", "<cmd>copen<cr>", desc = "Next quickfix entry", mode="n" },
     { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode="n" },
 })
+
+-- terminal stuff
+wk.add({
+    { "<leader>t", group = "Terminal" },
+    { "<leader>tf", "<cmd>TerminalEmulator float<cr>", desc = "Open floating terminal", mode = {"n","t"} },
+    { "<leader>tt", "<cmd>TerminalEmulator split<cr>", desc = "Open split terminal", mode = {"n","t"} },
+    { "<esc><esc>", "<c-\\><c-n>", desc = "Go into normal mode from terminal", mode = "t" },
+})

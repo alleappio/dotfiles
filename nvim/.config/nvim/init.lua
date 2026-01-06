@@ -24,3 +24,4 @@ require("lazy").setup({
 require("vim-options")
 require("vim-theme-options")
 require("keybindings")
+require("terminal_emulator")
