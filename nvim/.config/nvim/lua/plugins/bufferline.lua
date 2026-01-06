@@ -8,21 +8,14 @@ return {
     local bufferline = require('bufferline')
     bufferline.setup({
       options = {
+        style_preset = bufferline.style_preset.default,
         mode = "buffers",
         themable = true,
         separator_style = "thin",
-        show_buffer_close_icons = true,
-        show_close_icon = true,
+        show_buffer_close_icons = false,
+        show_close_icon = false,
         color_icons = true,
         always_show_bufferline = false,
-        offsets = {
-          {
-            filetype = "neo-tree",
-            text = "Neotree",
-            text_align = "left",
-            separator = true,
-          },
-        },
       },
     })
   end
