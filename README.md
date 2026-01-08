@@ -12,8 +12,7 @@ The packages used by this configuration are:
 - nerd-fonts
 - stow
 - terminator
-- hyprland
-- hyprlock
+- sway
 - waybar
 - swaybg
 - swaync
