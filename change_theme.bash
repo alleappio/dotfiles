@@ -37,9 +37,6 @@ change_theme(){
     echo "updating bemenu...";
     ln -fs $theme_location/bemenu/colors.sh $dotfiles_location/bemenu/.config/bemenu/colors.sh;
 
-    echo "updating hypr...";
-    ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/colors.conf;
-
     echo "updating sway...";
     ln -fs $theme_location/sway/colors.conf $dotfiles_location/sway/.config/sway/colors.conf;
 
@@ -64,18 +61,18 @@ change_theme(){
 
     echo "reload services";
 
-    echo "reload hyprland...";
-    hyprctl reload;
+    echo "reload sway...";
+    swaymsg reload;
 
     echo "relaod waybar...";
     pkill waybar;
-    hyprctl dispatch exec waybar;
+    swaymsg "exec waybar";
 
     echo "reload swaybg...";
-    pkill swaybg; hyprctl dispatch exec "swaybg -i ~/.config/background";
+    pkill swaybg; swaymsg "exec swaybg -i ~/.config/background";
 
     echo "reload swaync...";
-    pkill swaync; hyprctl dispatch exec swaync;
+    pkill swaync; swaymsg "exec swaync";
 
     echo "Press any key to continue...";
     read -rsn1;
