@@ -2,9 +2,6 @@
 
 git submodule update --init
 
-echo "enabling lionheartp/Hyprland copr"
-sudo dnf copr enable lionheartp/Hyprland 
-
 echo "installing required packages"
 sudo dnf install -y stow \
     fastfetch \
