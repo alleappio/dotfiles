@@ -40,6 +40,9 @@ change_theme(){
     echo "updating hypr...";
     ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/colors.conf;
 
+    echo "updating sway...";
+    ln -fs $theme_location/sway/colors.conf $dotfiles_location/sway/.config/sway/colors.conf;
+
     echo "updating kitty...";
     ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
 
