@@ -15,7 +15,7 @@ sudo dnf install -y stow \
     waybar \
     swaync \
     swaybg \
-    hyprland \
+    sway \
     swaync \
     hypridle \
     hyprlock \
@@ -25,9 +25,7 @@ sudo dnf install -y stow \
     NetworkManager-tui \
     gnome-extensions \
     gnome-extensions-app \
-    hyprpolkitagent \
     utftex \
-    hyprland-guiutils \
     luarocks \
 
 echo "stowing bash"
@@ -57,8 +55,8 @@ stow swaync
 echo "copying wallpaper"
 stow wallpaper
 
-echo "stowing hypr"
-stow hypr
+echo "stowing sway"
+stow sway
 
 echo "make flatpaks visible to bemenu"
 chmod +x extract_flatpak_bins.sh
