@@ -17,9 +17,6 @@ sudo dnf install -y stow \
     swaybg \
     sway \
     swaync \
-    hypridle \
-    hyprlock \
-    hyprshot \
     pavucontrol \
     curl \
     NetworkManager-tui \
