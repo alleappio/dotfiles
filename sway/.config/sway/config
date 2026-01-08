@@ -24,6 +24,9 @@ set $menu ~/.config/bemenu/bemenu.sh
 # Lock screen
 set $lock 'swaylock -i ~/.config/background -e -f'
 
+# File manager
+set $fileManager nautilus
+
 # include colors
 include ~/.config/sway/colors.conf
 
@@ -79,8 +82,11 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 bindsym $mod+d exec $menu
 
-# Start your launcher
+# lock screen
 bindsym $mod+l exec $lock
+
+# open file manager
+bindsym $mod+Shift+e exec $fileManager
 
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
@@ -90,10 +96,11 @@ bindsym $mod+l exec $lock
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+r reload
 
 # Exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -215,7 +222,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 #
 # Utilities:
 #
