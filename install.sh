@@ -21,6 +21,7 @@ sudo dnf install -y stow \
     gnome-extensions-app \
     utftex \
     luarocks \
+    grimshot
 
 echo "stowing bash"
 stow bash
