@@ -1,7 +1,7 @@
 *.old
 *.lastd
 bemenu/.config/bemenu/colors.sh
-hypr/.config/hypr/colors.conf
+sway/.config/sway/colors.conf
 kitty/.config/kitty/colors.conf
 nvim/.config/nvim/lua/plugins/theme.lua
 nvim/.config/nvim/lua/vim-theme-options.lua
@@ -9,13 +9,3 @@ swaync/.config/swaync/colors.css
 tmux/.config/tmux/tmux-theme.tmux
 wallpaper/.config/background
 waybar/.config/waybar/colors.css
-terminator/.config/terminator/config
-emacs/.config/emacs/elpaca
-emacs/.config/emacs/config.el
-emacs/.config/emacs/eln-cache
-emacs/.config/emacs/projectile-bookmarks.eld
-emacs/.config/emacs/.Trash
-emacs/.config/emacs/elpa
-emacs/.config/emacs/auto-save-list
-emacs/.config/emacs/tramp
-emacs/.config/emacs/url

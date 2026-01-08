@@ -2,9 +2,6 @@
 
 git submodule update --init
 
-echo "enabling lionheartp/Hyprland copr"
-sudo dnf copr enable lionheartp/Hyprland 
-
 echo "installing required packages"
 sudo dnf install -y stow \
     fastfetch \
@@ -15,19 +12,14 @@ sudo dnf install -y stow \
     waybar \
     swaync \
     swaybg \
-    hyprland \
+    sway \
     swaync \
-    hypridle \
-    hyprlock \
-    hyprshot \
     pavucontrol \
     curl \
     NetworkManager-tui \
     gnome-extensions \
     gnome-extensions-app \
-    hyprpolkitagent \
     utftex \
-    hyprland-guiutils \
     luarocks \
 
 echo "stowing bash"
@@ -57,8 +49,8 @@ stow swaync
 echo "copying wallpaper"
 stow wallpaper
 
-echo "stowing hypr"
-stow hypr
+echo "stowing sway"
+stow sway
 
 echo "make flatpaks visible to bemenu"
 chmod +x extract_flatpak_bins.sh

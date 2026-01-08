@@ -9,10 +9,10 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/fedora_logo",
-        "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "hyprland/window"
+        "sway/workspaces",
+        "sway/mode",
+        "sway/scratchpad",
+        "sway/window"
     ],
     "modules-center": [
         "clock"
@@ -30,7 +30,7 @@
         //"memory",
         //"temperature",
         "backlight",
-        "sway/language",
+        // "sway/language",
         "battery",
         "battery#bat2",
         "custom/power"
@@ -40,7 +40,7 @@
       "format":" ",
       "on-click":"~/.config/bemenu/bemenu.sh"
     },
-    "hyprland/workspaces": {
+    "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -50,7 +50,7 @@
             "default": ""
         }
     },
-    "hyprland/window": {
+    "sway/window": {
       "max-length": 15
     },
     "keyboard-state": {
@@ -174,7 +174,7 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "hyprctl dispatch exec \"kitty --class nmtui-float -e nmtui\""
+        "on-click": "kitty --class nmtui-float -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
