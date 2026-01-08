@@ -46,7 +46,7 @@ exec_always swayidle -w timeout 600 $lock timeout 600 'swaymsg "output * power o
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
-exec ~/.config/sway/batteryNotify -b BAT1 -t 20
+exec ~/.config/sway/batteryNotify -b BAT0 -t 20
 exec swaync
 ### Input configuration
 #
