@@ -8,4 +8,5 @@ nvim/.config/nvim/lua/vim-theme-options.lua
 swaync/.config/swaync/colors.css
 tmux/.config/tmux/tmux-theme.tmux
 wallpaper/.config/background
+wallpaper/.config/blurred_background
 waybar/.config/waybar/colors.css

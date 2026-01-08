@@ -55,6 +55,7 @@ change_theme(){
 
     echo "updating wallpaper...";
     ln -fs $theme_location/wallpaper/background $dotfiles_location/wallpaper/.config/background;
+    ln -fs $theme_location/wallpaper/blurred_background $dotfiles_location/wallpaper/.config/blurred_background;
 
     echo "updating waybar...";
     ln -fs $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/colors.css;
