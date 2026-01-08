@@ -17,7 +17,7 @@ set $term kitty
 set $menu ~/.config/bemenu/bemenu.sh
 
 # Lock screen
-set $lock 'swaylock -i ~/.config/background -e -f'
+set $lock 'swaylock -i ~/.config/blurred_background -e -f'
 
 # File manager
 set $fileManager nautilus
