@@ -25,16 +25,6 @@ wk.add({
     { "<C-j>", 'copilot#Accept("\\<CR>")', mode = "i", expr = true, replace_keycodes = false, desc = "Accept Copilot suggestion" },
 })
 
--- lsp actions
-wk.add({
-    { "<leader>l", group = "lsp" },
-    { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
-    { "<leader>lc", vim.diagnostic.open_float, desc = "lsp diagnostics", mode = "n" },
-    { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
-    { "<leader>lf", function() vim.lsp.buf.format() end, desc = "lsp format code", mode = "n" },
-    { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
-    { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
-})
 
 -- Telescope keybindings
 local telescope_builtin = require('telescope.builtin')
@@ -51,12 +41,30 @@ wk.add({
     { "<leader>e", function() require("oil").toggle_float() end, desc = "Open Oil file explorer", mode = "n" },
 })
 
+-- lsp actions
+wk.add({
+    { "<leader>l", group = "lsp" },
+    { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
+    { "<leader>lc", vim.diagnostic.open_float, desc = "lsp diagnostics", mode = "n" },
+    { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
+    { "<leader>lf", function() vim.lsp.buf.format() end, desc = "lsp format code", mode = "n" },
+    { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
+    { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
+})
+
+-- Markdown
+wk.add({
+    {"<leader>m", group = "Markdown"},
+    {"<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle markdown preview", mode = "n"},
+    {"<leader>mb", "<cmd>MarkdownBrowserPreview<cr>", desc ="custom open markdown in browser", mode = "n"},
+})
+
 -- Quickfix keybindings
 wk.add({
     { "<leader>q", group = "Quickfix" },
-    { "<leader>qc", "<cmd>cclose<cr>", desc = "Next quickfix entry", mode="n" },
+    { "<leader>qc", "<cmd>cclose<cr>", desc = "Close quickfix", mode="n" },
     { "<leader>qn", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode="n" },
-    { "<leader>qo", "<cmd>copen<cr>", desc = "Next quickfix entry", mode="n" },
+    { "<leader>qo", "<cmd>copen<cr>", desc = "Open quickfix", mode="n" },
     { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode="n" },
 })
 
