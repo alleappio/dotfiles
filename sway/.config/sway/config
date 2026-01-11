@@ -25,6 +25,9 @@ set $fileManager nautilus
 # include colors
 include ~/.config/sway/colors.conf
 
+# relaod command
+set $reload_cmd 'pkill waybar; swaymsg reload; waybar &'
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
@@ -94,7 +97,7 @@ bindsym $mod+p exec grimshot savecopy --notify area
 floating_modifier $mod normal
 
 # Reload the configuration file
-bindsym $mod+Shift+r reload
+bindsym $mod+Shift+r exec $reload_cmd
 
 # Exit sway (logs you out of your Wayland session)
 bindsym $mod+m exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
