@@ -55,7 +55,8 @@ wk.add({
 -- Markdown
 wk.add({
     {"<leader>m", group = "Markdown"},
-    {"<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle markdown preview", mode = "n"},
+    {"<leader>mc", "<cmd>PeekClose<cr>", desc = "Toggle markdown preview", mode = "n"},
+    {"<leader>mp", "<cmd>PeekOpen<cr>", desc = "Toggle markdown preview", mode = "n"},
 })
 
 -- Quickfix keybindings
