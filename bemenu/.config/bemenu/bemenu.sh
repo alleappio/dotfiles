@@ -22,8 +22,9 @@ source "$HOME/.config/bemenu/colors.sh"
   --scb $BACKGROUND \
   --scf $FOREGROUND \
   --prompt " " \
-  --border 1 \
-  --border-radius 5 \
-  --bdr $BACKGROUND \
-  --line-height 24 \
-  --margin 5
+  --border 5 \
+  --border-radius 0 \
+  --bdr $TRANSPARENT \
+  --line-height 20 \
+  --margin 5 \
+  --ignorecase \

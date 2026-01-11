@@ -1,5 +1,5 @@
 /* --COLORS--*/
-@define-color background rgba(40, 44, 52, 0.9);/*background*/
+@define-color background rgba(40, 44, 52, 1.0);/*background*/
 @define-color transparent rgba(0, 0, 0, 0);/*transparent*/
 @define-color background-alt #282c34;/*background-alt*/
 @define-color foreground #aab2bf;/*foreground*/
