@@ -1,45 +1,24 @@
 return {
     {
-        "ellisonleao/gruvbox.nvim",
+        'f4z3r/gruvbox-material.nvim',
+        name = 'gruvbox-material',
         lazy = false,
         priority = 1000,
-        config = function()
-            require("gruvbox").setup({
-                terminal_colors = true,
-                undercurl = true,
-                underline = true,
-                bold = true,
-                italic = {
-                    strings = true,
-                    emphasis = true,
-                    comments = true,
-                    operators = false,
-                    folds = true,
-                },
-                strikethrough = true,
-                invert_selection = false,
-                invert_signs = false,
-                invert_tabline = false,
-                invert_intend_guides = false,
-                inverse = true,
-                contrast = "",
-                palette_overrides = {},
-                overrides = {},
-                dim_inactive = false,
-                transparent_mode = false,
-            })
-            vim.cmd.colorscheme("gruvbox")
-        end,
+        opts = {},
     },
     {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
             require('lualine').setup({
-               options = {
-                  theme = 'gruvbox',
-                  section_separators = '', 
-                  component_separators = '' 
+                options = {
+                    theme = require("gruvbox-material.lualine").theme("medium"),
+                    section_separators = '', 
+                    component_separators = '' 
+                },
+
+                sections = { 
+                    lualine_a = { {'mode', fmt = function(str) return str:sub(1,1) end} }
                 }
             })
         end

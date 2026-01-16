@@ -1,10 +1,10 @@
 #!/bin/bash
 set -g @gruvbox_black "#282828"
-set -g @gruvbox_blue "#458588"
-set -g @gruvbox_yellow "#d79921"
-set -g @gruvbox_red "#cc241d"
-set -g @gruvbox_white "#ebdbb2"
-set -g @gruvbox_green "#98971a"
+set -g @gruvbox_blue "#7daea3"
+set -g @gruvbox_yellow "#d8a657"
+set -g @gruvbox_red "#ea6962"
+set -g @gruvbox_white "#d4Be98"
+set -g @gruvbox_green "#a9b665"
 set -g @gruvbox_visual_grey "#282828"
 set -g @gruvbox_comment_grey "#504945"
 
