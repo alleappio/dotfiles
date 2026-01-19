@@ -51,6 +51,7 @@ exec_always swayidle -w timeout 600 $lock timeout 600 'swaymsg "output * power o
 
 exec ~/.config/sway/batteryNotify -b BAT0 -t 20
 exec swaync
+exec lxpolkit
 ### Input configuration
 #
 input type:touchpad {
