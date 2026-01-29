@@ -8,4 +8,4 @@ alias ll="ls -l"
 alias l="ls -l"
 alias start-ssh-agent='eval $(ssh-agent -s)'
 alias stop-ssh-agent='eval $(ssh-agent -k)'
-alias ssh='kitten ssh'
+#alias ssh='kitten ssh'
