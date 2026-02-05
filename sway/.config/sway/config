@@ -82,6 +82,9 @@ bindsym $mod+Shift+q kill
 # Start your launcher
 bindsym $mod+d exec $menu
 
+# Open dotfiles
+bindsym $mod+Shift+d exec "kitty --class dotfiles -e nvim ~/dotfiles"
+
 # lock screen
 bindsym $mod+l exec $lock
 
@@ -262,5 +265,14 @@ exec waybar
 # Particular window rules:
 #
 for_window [app_id="nmtui-float"] floating enable, resize set 800 600
+for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 800 600
+for_window [app_id="dotfiles"] floating enable, resize set 800 600
+
+
+#
+# Assignments
+#
+assign [app_id="kitty"] workspace number 1
+assign [app_id="firefox"] workspace number 2
 
 include /etc/sway/config.d/*
