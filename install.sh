@@ -27,26 +27,26 @@ if command -v dnf &>/dev/null; then
         lxpolkit
 elif command -v yay &>/dev/null; then
     echo "yay command detected, running install trough yay and pacman"
-    pacman -S stow  
-    pacman -S fastfetch  
-    pacman -S neovim  
-    pacman -S tmux  
-    pacman -S kitty  
-    pacman -S bemenu  
-    pacman -S waybar  
-    pacman -S swaync  
-    pacman -S swaybg  
-    pacman -S sway  
-    pacman -S swaync  
-    pacman -S pavucontrol  
-    pacman -S curl  
-    pacman -S luarocks  
+    sudo pacman -S stow  
+    sudo pacman -S fastfetch  
+    sudo pacman -S neovim  
+    sudo pacman -S tmux  
+    sudo pacman -S kitty  
+    sudo pacman -S bemenu  
+    sudo pacman -S waybar  
+    sudo pacman -S swaync  
+    sudo pacman -S swaybg  
+    sudo pacman -S sway  
+    sudo pacman -S swaync  
+    sudo pacman -S pavucontrol  
+    sudo pacman -S curl  
+    sudo pacman -S luarocks  
     yay -S grimshot  
     yay -S lxpolkit
-    pacman -S tree-sitter
-    pacman -S tree-sitter-cli
-    pacman -S npm
-    pacman -S ripgrep
+    sudo pacman -S tree-sitter
+    sudo pacman -S tree-sitter-cli
+    sudo pacman -S npm
+    sudo pacman -S ripgrep
 else
     echo "nor yay and dnf detected, make sure that one of those exist and rerun this command"
     exit
