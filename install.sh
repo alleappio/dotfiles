@@ -27,7 +27,7 @@ if command -v dnf &>/dev/null; then
         lxpolkit
 elif command -v yay &>/dev/null; then
     echo "yay command detected, running install trhough yay"
-    sudo yay -S stow \
+    yay -S stow \
         fastfetch \
         neovim \
         tmux \
