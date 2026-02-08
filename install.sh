@@ -3,26 +3,54 @@
 git submodule update --init
 
 echo "installing required packages"
-sudo dnf install -y stow \
-    fastfetch \
-    neovim \
-    tmux \
-    kitty \
-    bemenu \
-    waybar \
-    swaync \
-    swaybg \
-    sway \
-    swaync \
-    pavucontrol \
-    curl \
-    NetworkManager-tui \
-    gnome-extensions \
-    gnome-extensions-app \
-    utftex \
-    luarocks \
-    grimshot \
-    lxpolkit
+if command -v dnf &>/dev/null; then
+    echo "dnf command detected, running install trhough dnf"
+    sudo dnf install -y stow \
+        fastfetch \
+        neovim \
+        tmux \
+        kitty \
+        bemenu \
+        waybar \
+        swaync \
+        swaybg \
+        sway \
+        swaync \
+        pavucontrol \
+        curl \
+        NetworkManager-tui \
+        gnome-extensions \
+        gnome-extensions-app \
+        utftex \
+        luarocks \
+        grimshot \
+        lxpolkit
+elif command -v yay &>/dev/null; then
+    echo "yay command detected, running install trhough yay"
+    sudo yay -S stow \
+        fastfetch \
+        neovim \
+        tmux \
+        kitty \
+        bemenu \
+        waybar \
+        swaync \
+        swaybg \
+        sway \
+        swaync \
+        pavucontrol \
+        curl \
+        NetworkManager-tui \
+        gnome-extensions \
+        gnome-extensions-app \
+        utftex \
+        luarocks \
+        grimshot \
+        lxpolkit
+else
+    echo "nor yay and dnf detected, make sure that one of those exist and rerun this command"
+    exit
+fi
 
 echo "stowing bash"
 stow bash
