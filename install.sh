@@ -26,27 +26,27 @@ if command -v dnf &>/dev/null; then
         grimshot \
         lxpolkit
 elif command -v yay &>/dev/null; then
-    echo "yay command detected, running install trhough yay"
-    yay -S stow  
-    yay -S fastfetch  
-    yay -S neovim  
-    yay -S tmux  
-    yay -S kitty  
-    yay -S bemenu  
-    yay -S waybar  
-    yay -S swaync  
-    yay -S swaybg  
-    yay -S sway  
-    yay -S swaync  
-    yay -S pavucontrol  
-    yay -S curl  
-    yay -S NetworkManager-tui  
-    yay -S gnome-extensions  
-    yay -S gnome-extensions-app  
-    yay -S utftex  
-    yay -S luarocks  
+    echo "yay command detected, running install trough yay and pacman"
+    pacman -S stow  
+    pacman -S fastfetch  
+    pacman -S neovim  
+    pacman -S tmux  
+    pacman -S kitty  
+    pacman -S bemenu  
+    pacman -S waybar  
+    pacman -S swaync  
+    pacman -S swaybg  
+    pacman -S sway  
+    pacman -S swaync  
+    pacman -S pavucontrol  
+    pacman -S curl  
+    pacman -S luarocks  
     yay -S grimshot  
     yay -S lxpolkit
+    pacman -S tree-sitter
+    pacman -S tree-sitter-cli
+    pacman -S npm
+    pacman -S ripgrep
 else
     echo "nor yay and dnf detected, make sure that one of those exist and rerun this command"
     exit
