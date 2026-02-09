@@ -14,13 +14,7 @@ if command -v dnf &>/dev/null; then
         waybar \
         swaync \
         swaybg \
-        hyprland \
-        hypridle \
-        hyprlock \
-        hyprpolkitagent \
-        hyprland-guiutils \
-        hyprlauncher \
-        hyprshot \
+        sway \
         swaync \
         pavucontrol \
         curl \
@@ -28,9 +22,11 @@ if command -v dnf &>/dev/null; then
         gnome-extensions \
         gnome-extensions-app \
         utftex \
-        luarocks
-elif command -v pacman &>/dev/null; then
-    echo "pacman command detected, running install trough pacman"
+        luarocks \
+        grimshot \
+        lxpolkit
+elif command -v yay &>/dev/null; then
+    echo "yay command detected, running install trough yay and pacman"
     sudo pacman -S stow  
     sudo pacman -S fastfetch  
     sudo pacman -S neovim  
@@ -40,23 +36,19 @@ elif command -v pacman &>/dev/null; then
     sudo pacman -S waybar  
     sudo pacman -S swaync  
     sudo pacman -S swaybg  
-    sudo pacman -S hyprland  
-    sudo pacman -S hypridle  
-    sudo pacman -S hyprlock  
-    sudo pacman -S hyprpolkitagent  
-    sudo pacman -S hyprland-guiutils  
-    sudo pacman -S hyprlauncher  
-    sudo pacman -S hyprshot  
+    sudo pacman -S sway  
     sudo pacman -S swaync  
     sudo pacman -S pavucontrol  
     sudo pacman -S curl  
-    sudo pacman -S NetworkManager-tui  
-    sudo pacman -S gnome-extensions  
-    sudo pacman -S gnome-extensions-app  
-    sudo pacman -S utftex  
-    sudo pacman -S luarocks
+    sudo pacman -S luarocks  
+    yay -S grimshot  
+    yay -S lxpolkit
+    sudo pacman -S tree-sitter
+    sudo pacman -S tree-sitter-cli
+    sudo pacman -S npm
+    sudo pacman -S ripgrep
 else
-    echo "nor pacman and dnf detected, make sure that one of those exist and rerun this command"
+    echo "nor yay and dnf detected, make sure that one of those exist and rerun this command"
     exit
 fi
 
@@ -87,13 +79,9 @@ stow swaync
 echo "copying wallpaper"
 stow wallpaper
 
-echo "stowing hyprland"
-stow hypr
+echo "stowing sway"
+stow sway
 
 echo "make flatpaks visible to bemenu"
 chmod +x extract_flatpak_bins.sh
 ./extract_flatpak_bins.sh
-
-echo "Select a theme"
-chmod +x change_theme.sh
-./change_theme.sh
