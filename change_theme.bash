@@ -37,6 +37,9 @@ change_theme(){
     echo "updating bemenu...";
     ln -fs $theme_location/bemenu/colors.sh $dotfiles_location/bemenu/.config/bemenu/colors.sh;
 
+    echo "updating fuzzel...";
+    ln -fs $theme_location/fuzzel/colors.ini $dotfiles_location/fuzzel/.config/fuzzel/colors.ini;
+
     echo "updating sway...";
     ln -fs $theme_location/sway/colors.conf $dotfiles_location/sway/.config/sway/colors.conf;
 
