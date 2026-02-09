@@ -17,8 +17,8 @@ hyprshot
 swaync  
 pavucontrol  
 curl  
-luarock 
-fuzze 
-tree-sitter-cl 
-nodej 
+luarocks 
+fuzzel 
+tree-sitter-cli
+nodejs 
 npm

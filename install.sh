@@ -32,7 +32,7 @@ if command -v dnf &>/dev/null; then
         fuzzel
 elif command -v pacman &>/dev/null; then
     echo "pacman command detected, running install trough pacman"
-    sudo pacman -S - < arch_pkglist.txt
+    sudo pacman -S --needed $(cat arch_pkglist.txt)
 else
     echo "nor pacman and dnf detected, make sure that one of those exist and rerun this command"
     exit
