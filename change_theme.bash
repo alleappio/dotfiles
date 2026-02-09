@@ -68,18 +68,18 @@ change_theme(){
 
     echo "reload services";
 
-    echo "reload sway...";
-    swaymsg reload;
+    echo "reload hyprland...";
+    hyprctl reload;
 
     echo "relaod waybar...";
     pkill waybar;
-    swaymsg "exec waybar";
+    hyprctl dispatch exec waybar;
 
     echo "reload swaybg...";
-    pkill swaybg; swaymsg "exec swaybg -i ~/.config/background";
+    pkill swaybg; hyprctl dispatch exec "swaybg -i ~/.config/background";
 
     echo "reload swaync...";
-    pkill swaync; swaymsg "exec swaync";
+    pkill swaync; hyprctl dispatch exec swaync;
 
     echo "Press any key to continue...";
     read -rsn1;

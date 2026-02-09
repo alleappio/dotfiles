@@ -12,3 +12,4 @@ wallpaper/.config/blurred_background
 waybar/.config/waybar/colors.css
 sway/.config/sway/colors.conf
 sway/.config/sway/config
+fuzzel/.config/fuzzel/colors.ini
