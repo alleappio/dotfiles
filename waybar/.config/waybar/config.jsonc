@@ -37,7 +37,7 @@
     ],
     //Modules configuration
     "custom/fedora_logo":{
-      "format":" ",
+      "format":" 󰣇",
       "on-click":"~/.config/bemenu/bemenu.sh"
     },
     "hyprland/workspaces": {
