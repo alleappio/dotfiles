@@ -28,7 +28,8 @@ if command -v dnf &>/dev/null; then
         gnome-extensions \
         gnome-extensions-app \
         utftex \
-        luarocks
+        luarocks \
+        fuzzel
 elif command -v pacman &>/dev/null; then
     echo "pacman command detected, running install trough pacman"
     sudo pacman -S stow  
@@ -55,6 +56,10 @@ elif command -v pacman &>/dev/null; then
     sudo pacman -S gnome-extensions-app  
     sudo pacman -S utftex  
     sudo pacman -S luarocks
+    sudo pacman -S fuzzel
+    sudo pacman -S tree-sitter-cli
+    sudo pacman -S nodejs
+    sudo pacman -S npm
 else
     echo "nor pacman and dnf detected, make sure that one of those exist and rerun this command"
     exit
@@ -96,4 +101,4 @@ chmod +x extract_flatpak_bins.sh
 
 echo "Select a theme"
 chmod +x change_theme.sh
-./change_theme.sh
+./change_theme.bash
