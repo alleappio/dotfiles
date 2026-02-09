@@ -9,10 +9,10 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/fedora_logo",
-        "sway/workspaces",
-        "sway/mode",
-        "sway/scratchpad",
-        "sway/window"
+        "hyprland/workspaces",
+        "hyprland/mode",
+        "hyprland/scratchpad",
+        "hyprland/window"
     ],
     "modules-center": [
         "clock"
@@ -40,7 +40,7 @@
       "format":" ",
       "on-click":"~/.config/bemenu/bemenu.sh"
     },
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
@@ -50,7 +50,7 @@
             "default": ""
         }
     },
-    "sway/window": {
+    "hyprland/window": {
       "max-length": 15
     },
     "keyboard-state": {
@@ -61,10 +61,10 @@
             "unlocked": ""
         }
     },
-    "sway/mode": {
+    "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "sway/scratchpad": {
+    "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
         "format-icons": ["", ""],
