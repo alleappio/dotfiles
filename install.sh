@@ -32,30 +32,7 @@ if command -v dnf &>/dev/null; then
         fuzzel
 elif command -v pacman &>/dev/null; then
     echo "pacman command detected, running install trough pacman"
-    sudo pacman -S stow \
-     fastfetch \
-     neovim \
-     tmux \
-     kitty \
-     bemenu \
-     waybar \
-     swaync \
-     swaybg \
-     hyprland \
-     hypridle \
-     hyprlock \
-     hyprpolkitagent \
-     hyprland-guiutils \
-     hyprlauncher \
-     hyprshot \
-     swaync \
-     pavucontrol \
-     curl \
-     luarock\
-     fuzze\
-     tree-sitter-cl\
-     nodej\
-     npm
+    sudo pacman -S - < arch_pkglist.txt
 else
     echo "nor pacman and dnf detected, make sure that one of those exist and rerun this command"
     exit
