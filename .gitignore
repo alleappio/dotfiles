@@ -2,6 +2,7 @@
 *.lastd
 bemenu/.config/bemenu/colors.sh
 sway/.config/sway/colors.conf
+hypr/.config/hypr/colors.conf
 kitty/.config/kitty/colors.conf
 nvim/.config/nvim/lua/plugins/theme.lua
 nvim/.config/nvim/lua/vim-theme-options.lua
