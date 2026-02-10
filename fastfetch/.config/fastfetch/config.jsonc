@@ -100,11 +100,11 @@
             "type": "localip",
             "compact": true
         },
-        {
-            "key": "    󰩠 Public IP    ",
-            "keyColor": "red",
-            "type": "publicip"
-        },
+        //{
+        //    "key": "    󰩠 Public IP    ",
+        //    "keyColor": "red",
+        //    "type": "publicip"
+        //},
         "break",
         {
             "type": "custom",
