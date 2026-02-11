@@ -21,7 +21,7 @@ source "$HOME/.config/bemenu/colors.sh"
   --af $FOREGROUND \
   --scb $BACKGROUND \
   --scf $FOREGROUND \
-  --prompt " " \
+  --prompt " 󰣇" \
   --border 5 \
   --border-radius 0 \
   --bdr $TRANSPARENT \
