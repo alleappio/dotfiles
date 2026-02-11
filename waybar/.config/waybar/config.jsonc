@@ -38,7 +38,7 @@
     //Modules configuration
     "custom/fedora_logo":{
       "format":" 󰣇",
-      "on-click":"~/.config/bemenu/bemenu.sh"
+      "on-click":"fuzzel"
     },
     "hyprland/workspaces": {
         "disable-scroll": true,
