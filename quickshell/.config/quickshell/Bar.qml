@@ -85,17 +85,32 @@ PanelWindow {
             }
             
             // Right side widgets
-            Widgets.PowerProfile {
+            Widgets.Network {
+                Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
             }
+
+            Rectangle { width: 1; height: 16; color: theme.colFg }
+
+            Widgets.PowerProfile {
+                Layout.alignment: Qt.AlignRight
+                textColor: theme.colFg
+                fontFamily: theme.fontFamily
+                fontSize: theme.fontSize
+            }
+
+            Rectangle { width: 1; height: 16; color: theme.colFg }
+
             Widgets.Brightness{
                 Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
             }
+
+            Rectangle { width: 1; height: 16; color: theme.colFg }
 
             Widgets.Battery {
                 Layout.alignment: Qt.AlignRight
@@ -106,9 +121,14 @@ PanelWindow {
                 fontSize: theme.fontSize
             }
 
+            Rectangle { width: 1; height: 16; color: theme.colFg }
             
-            Widgets.SystemTray {
+            Widgets.Poweroff {
                 Layout.alignment: Qt.AlignRight
+                logoColor: theme.colFg
+                
+                fontFamily: theme.fontFamily
+                fontSize: theme.fontSize
             }
         }
     }
