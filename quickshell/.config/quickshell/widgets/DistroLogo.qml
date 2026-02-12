@@ -1,5 +1,6 @@
 import Quickshell
 import Quickshell.Io
+import Quickshell.Hyprland
 import QtQuick
 
 Text {
@@ -10,6 +11,6 @@ Text {
     font { pixelSize: fontSize }
     MouseArea {
         anchors.fill: parent
-        onClicked: ["bash", "fuzzel"]
+        onClicked: Hyprland.dispatch("exec fuzzel")
     }
 }

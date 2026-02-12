@@ -38,7 +38,7 @@ PanelWindow {
         RowLayout {
             anchors.fill: parent
             anchors.margins: 5
-            spacing: 12
+            spacing: 10
             
             // Left side widgets
             Widgets.DistroLogo {
@@ -75,10 +75,16 @@ PanelWindow {
             Item { Layout.fillWidth: true }
             
             // Right side widgets
+            Widgets.Brightness{
+                textColor: theme.colFg
+                fontFamily: theme.fontFamily
+                fontSize: theme.fontSize
+            }
+
             Widgets.Battery {
                 dischargeColor: theme.colFg
                 chargeColor: theme.colGreen
-                lowColor: theme.colYellow
+                lowColor: theme.colRed
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
             }
