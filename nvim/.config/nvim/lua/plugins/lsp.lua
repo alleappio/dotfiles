@@ -7,6 +7,8 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
+        config = function()
+        end
     },
     {
         "mason-org/mason-lspconfig.nvim",
@@ -24,7 +26,6 @@ return {
                     "pyright",
                     "bashls",
                     "clangd",
-                    "cmake",
                     "docker_compose_language_service",
                     "dockerls",
                     "html",
