@@ -13,7 +13,7 @@ Text {
     property int fontSize: 15
     
     color: textColor
-    font { family: fontFamily; pixelSize: fontSize; bold: true }
+    font { family: fontFamily; pixelSize: fontSize; bold: false }
     text: Qt.formatDateTime(new Date(), showDate ? dateFormat : hourFormat)
     
     Timer {

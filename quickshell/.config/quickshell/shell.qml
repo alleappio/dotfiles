@@ -1,5 +1,7 @@
 // shell.qml
 import Quickshell
+import Quickshell.Hyprland
+import "menus"
 
 ShellRoot {
     Variants {
@@ -9,4 +11,15 @@ ShellRoot {
             screenObj: modelData
         }
     }
+
+    AppLauncher {
+        id: launcher
+    }
+
+    GlobalShortcut {
+        name: "launcher"
+
+        onPressed: launcher.toggle()
+    }
 }
+
