@@ -9,6 +9,6 @@ QtObject {
     readonly property color colRed: "#f7768e"
     readonly property color colPurple: "#bb9af7"
     readonly property color colYellow: "#e0af68"
-    readonly property string fontFamily: "AdwaitaMono nerd font mono"
+    readonly property string fontFamily: "AdwaitaMono Nerd Font"
     readonly property int fontSize: 15
 }

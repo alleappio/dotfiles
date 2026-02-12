@@ -23,6 +23,7 @@ Text {
     }
     
     font { family: fontFamily; pixelSize: fontSize }
+    renderType: Text.NativeRendering
     
     text: {
         if (!UPower.displayDevice) return "";

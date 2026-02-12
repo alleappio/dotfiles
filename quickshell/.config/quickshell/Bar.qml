@@ -42,11 +42,13 @@ PanelWindow {
             
             // Left side widgets
             Widgets.DistroLogo {
+                Layout.alignment: Qt.AlignLeft
                 logoColor: theme.colFg
                 fontSize: theme.fontSize
             }
 
             Widgets.Workspaces {
+                Layout.alignment: Qt.AlignLeft
                 focusColor: theme.colPurple
                 activeColor: theme.colBlue
                 inactiveColor: theme.colFg
@@ -55,33 +57,43 @@ PanelWindow {
             }
 
             Widgets.ActiveWindow {
+                Layout.alignment: Qt.AlignLeft
                 textColor: theme.colFg
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
-                maxWidth: 400
+                maxWidth: 10
             }
             
             // Spacer
-            Item { Layout.fillWidth: true }
+            Rectangle { 
+                Layout.fillWidth: true
+                color: "transparent"
+            }
 
             //Center
             Widgets.Clock {
+                Layout.alignment: Qt.AlignCenter
                 textColor: theme.colFg
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
             }
 
             // Spacer
-            Item { Layout.fillWidth: true }
+            Rectangle { 
+                Layout.fillWidth: true
+                color: "transparent"
+            }
             
             // Right side widgets
             Widgets.Brightness{
+                Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg
                 fontFamily: theme.fontFamily
                 fontSize: theme.fontSize
             }
 
             Widgets.Battery {
+                Layout.alignment: Qt.AlignRight
                 dischargeColor: theme.colFg
                 chargeColor: theme.colGreen
                 lowColor: theme.colRed
@@ -90,7 +102,9 @@ PanelWindow {
             }
 
             
-            Widgets.SystemTray {}
+            Widgets.SystemTray {
+                Layout.alignment: Qt.AlignRight
+            }
         }
     }
 }

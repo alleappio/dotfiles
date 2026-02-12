@@ -16,6 +16,7 @@ Item {
     implicitHeight: brightnessWidgetLabel.implicitHeight
     Text {
         id: brightnessWidgetLabel
+        renderType: Text.NativeRendering
         property int brightness: 100
         text: brightness
         color: brightnessWidget.textColor

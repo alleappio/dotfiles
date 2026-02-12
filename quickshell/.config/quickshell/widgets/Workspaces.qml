@@ -17,6 +17,7 @@ Repeater {
         text: index + 1
         color: isActive ? focusColor : (ws ? activeColor : inactiveColor)
         font { family: fontFamily; pixelSize: fontSize; bold: false }
+        renderType: Text.NativeRendering
         MouseArea {
             anchors.fill: parent
             onClicked: Hyprland.dispatch("workspace " + (index + 1))

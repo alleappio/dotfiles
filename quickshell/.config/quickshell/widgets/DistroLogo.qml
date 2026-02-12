@@ -9,6 +9,7 @@ Text {
     text: " 󰣇"
     color: logoColor
     font { pixelSize: fontSize }
+    renderType: Text.NativeRendering
     MouseArea {
         anchors.fill: parent
         onClicked: Hyprland.dispatch("exec fuzzel")

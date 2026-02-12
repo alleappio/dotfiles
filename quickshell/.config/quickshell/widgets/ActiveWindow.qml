@@ -1,20 +1,26 @@
 import QtQuick
 import Quickshell.Hyprland
+import Quickshell
 
 Text {
+    required property color textColor
+    required property string fontFamily
+    required property int fontSize
+    required property int maxWidth
+
     id: activeWindow
     
-    property color textColor: "#a9b1d6"
-    property string fontFamily: "monospace"
-    property int fontSize: 15
-    property int maxWidth: 400
-    
     color: textColor
+    renderType: Text.NativeRendering
     font { family: fontFamily; pixelSize: fontSize }
     
     text: {
-        const window = Hyprland.focusedWindow;
-        return window ? window.title : "Desktop";
+        const window = Hyprland.activeToplevel.title;
+        var toDisplay = window.slice(0,maxWidth)
+        if(window.length>toDisplay.length){
+            toDisplay = toDisplay+"..."
+        }
+        return toDisplay ? toDisplay : "Desktop";
     }
     
     elide: Text.ElideRight

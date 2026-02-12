@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 
 Text {
+    anchors.centerIn: parent
     id: clock
     property string hourFormat: "HH:mm"
     property string dateFormat: "dd/MMM/yyyy"
@@ -16,6 +17,7 @@ Text {
     font { family: fontFamily; pixelSize: fontSize; bold: false }
     text: Qt.formatDateTime(new Date(), showDate ? dateFormat : hourFormat)
     
+    renderType: Text.NativeRendering
     Timer {
         interval: 1000
         running: true

@@ -5,4 +5,5 @@ import Quickshell.Services.SystemTray
 
 Text {
     text: "cazzo"
+    renderType: Text.NativeRendering
 }
