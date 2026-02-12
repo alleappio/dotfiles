@@ -47,6 +47,7 @@ PanelWindow {
             text: ">"
             color: theme.colPurple
             font { family: theme.fontFamily; pixelSize: 20; bold: true }
+            renderType: Text.NativeRendering
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: 20
@@ -55,6 +56,7 @@ PanelWindow {
         }
         TextField {
             font { family: theme.fontFamily; pixelSize: 20; bold: false }
+            renderType: Text.NativeRendering
             id: searchField
             width: parent.width * 0.8
 

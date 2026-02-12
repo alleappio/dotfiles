@@ -85,6 +85,11 @@ PanelWindow {
             }
             
             // Right side widgets
+            Widgets.PowerProfile {
+                textColor: theme.colFg
+                fontFamily: theme.fontFamily
+                fontSize: theme.fontSize
+            }
             Widgets.Brightness{
                 Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg
