@@ -8,8 +8,6 @@ import qs.menus.appLauncher
 
 Rectangle {
     color: "transparent"
-    width: parent.width
-    height: searchField.implicitHeight*2 
     required property color textColor
     required property color bgColor
     required property color primaryColor
@@ -17,6 +15,7 @@ Rectangle {
     required property int fontSize
     id: prompt
     focus:true
+    border.width: 0
     Text {
         text: ">"
         color: prompt.primaryColor
@@ -46,7 +45,7 @@ Rectangle {
             anchors.fill: parent
             
             color: prompt.bgColor
-            border.width: 2
+            border.width: 1
             border.color: prompt.primaryColor
         }
     }

@@ -12,7 +12,6 @@ FloatingWindow {
     visible: false
 
     Theme {id: theme}
-    ApplicationProvider{ id:applicationProvider }
 
     title: "appMenu"
 
@@ -21,7 +20,7 @@ FloatingWindow {
 
         if (visible) {
             Qt.callLater(() => {
-                searchField.textField.forceActiveFocus()
+                prompt.textField.forceActiveFocus()
             })
         }
     }
@@ -39,14 +38,36 @@ FloatingWindow {
         border.color: theme.colPurple
         border.width: 1
         focus: true
-        
-        Prompt{
-            id:searchField
-            textColor: theme.colFg
-            bgColor:  theme.colBg
-            primaryColor:  theme.colPurple
-            fontFamily: theme.fontFamily
-            fontSize: launcher.fontSize
+        ColumnLayout {
+            anchors.fill: parent
+            anchors.margins: 0
+            spacing: 0
+
+            Prompt{
+                id: prompt
+                Layout.fillWidth: true
+                Layout.preferredHeight: prompt.textField.implicitHeight*2+30
+                textColor: theme.colFg
+                bgColor:  theme.colBg
+                primaryColor:  theme.colPurple
+                fontFamily: theme.fontFamily
+                fontSize: launcher.fontSize
+
+                textField.onTextChanged: {
+                    applist.fuzzyQuery(textField.text)
+                }
+            }
+
+            Apps{
+                id: applist
+                Layout.fillHeight: true 
+                Layout.fillWidth: true
+                textColor: theme.colFg
+                bgColor:  theme.colBg
+                primaryColor:  theme.colPurple
+                fontFamily: theme.fontFamily
+                fontSize: 20
+            }
         }
 
         Keys.onPressed: (event) => {
