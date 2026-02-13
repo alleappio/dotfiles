@@ -51,7 +51,7 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: function(){Hyprland.dispatch("exec poweroff")}
+                clickAction: function(){Quickshell.execDetached(["bash", "-c", `systemctl poweroff || loginctl poweroff`])}
             }
 
             PowerButton {
@@ -61,7 +61,7 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: function(){Hyprland.dispatch("exec reboot")}
+                clickAction: function(){Quickshell.execDetached(["bash", "-c", `reboot || loginctl reboot`])}
             }
 
             PowerButton {
