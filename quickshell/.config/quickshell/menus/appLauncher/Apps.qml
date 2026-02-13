@@ -75,7 +75,7 @@ Item {
                         anchors.verticalCenter: parent.verticalCenter
                         width: 24
                         height: 24
-                        source: Quickshell.iconPath(modelData.icon)
+                        source: Quickshell.iconPath(modelData.icon,true)
                         fillMode: Image.PreserveAspectFit
                     }
                 }
