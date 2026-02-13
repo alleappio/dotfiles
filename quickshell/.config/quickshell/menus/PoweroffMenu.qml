@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import Quickshell.Hyprland
 import Quickshell
 import qs.theme
 import qs.menus
@@ -50,7 +51,7 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: Hyprland.dispatch("exec poweroff")
+                clickAction: function(){Hyprland.dispatch("exec poweroff")}
             }
 
             PowerButton {
@@ -60,7 +61,7 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: Hyprland.dispatch("exec reboot")
+                clickAction: function(){Hyprland.dispatch("exec reboot")}
             }
 
             PowerButton {
@@ -70,7 +71,7 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: Hyprland.dispatch("exit")
+                clickAction: function(){Hyprland.dispatch("exit")}
             }
         }
     }

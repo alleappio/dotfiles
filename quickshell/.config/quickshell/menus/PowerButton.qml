@@ -1,4 +1,5 @@
 import QtQuick
+import Quickshell.Hyprland
 import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
@@ -29,7 +30,7 @@ Rectangle{
 
     MouseArea {
         anchors.fill:parent
-        onClicked: clickAction
+        onClicked: clickAction()
     }
 
     HoverHandler {
