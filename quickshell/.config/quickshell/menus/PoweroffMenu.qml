@@ -51,7 +51,9 @@ FloatingWindow {
                 colBg: theme.colBg
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
-                clickAction: function(){Quickshell.execDetached(["bash", "-c", `systemctl poweroff || loginctl poweroff`])}
+                clickAction: function(){
+                    Quickshell.execDetached(["bash", "-c", `systemctl poweroff || loginctl poweroff`])
+                }
             }
 
             PowerButton {

@@ -85,6 +85,15 @@ PanelWindow {
             }
             
             // Right side widgets
+            Widgets.Audio {
+                Layout.alignment: Qt.AlignRight
+                textColor: theme.colFg
+                fontFamily: theme.fontFamily
+                fontSize: theme.fontSize
+            }
+
+            Rectangle { width: 1; height: 16; color: theme.colFg }
+
             Widgets.Network {
                 Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg
