@@ -1,7 +1,7 @@
 // shell.qml
 import Quickshell
 import Quickshell.Hyprland
-import "menus"
+import qs.menus.appLauncher as App
 
 ShellRoot {
     Variants {
@@ -12,7 +12,7 @@ ShellRoot {
         }
     }
 
-    AppLauncher {
+    App.AppLauncher {
         id: launcher
     }
 
