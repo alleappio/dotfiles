@@ -58,13 +58,25 @@ Item {
                     border.color: apps.primaryColor
                     color: "transparent"
                     Text {
-                        anchors.left: parent.left
+                        anchors.left: appIcon.right
                         anchors.leftMargin: 20
                         anchors.verticalCenter: parent.verticalCenter
                         font { family: apps.fontFamily; pixelSize: apps.fontSize; bold: true }
                         renderType: Text.NativeRendering
                         color:apps.textColor
-                        text: modelData.name
+                        text:{
+                            return modelData.name
+                        }
+                    }
+                    Image {
+                        id: appIcon
+                        anchors.left: parent.left
+                        anchors.leftMargin: 10
+                        anchors.verticalCenter: parent.verticalCenter
+                        width: 24
+                        height: 24
+                        source: Quickshell.iconPath(modelData.icon)
+                        fillMode: Image.PreserveAspectFit
                     }
                 }
             }
@@ -73,5 +85,6 @@ Item {
 
     Component.onCompleted: {
         fuzzyQuery("")
+        
     }
 }

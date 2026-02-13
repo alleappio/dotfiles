@@ -38,7 +38,6 @@ Item {
 
                if(key_value[0] == "wifi" && !key_value[1].includes("disconnected")){
                    networkWidgetLabel.text = ""
-                   console.log(key_value)
                }
             }
         }
