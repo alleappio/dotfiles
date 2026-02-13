@@ -1,9 +1,9 @@
 import QtQuick
 import QtQuick.Controls
 import Quickshell
-import "../theme"
+import qs.theme
 
-PanelWindow {
+FloatingWindow {
     id: launcher
 
     visible: false
@@ -12,15 +12,7 @@ PanelWindow {
         id: theme
     }
 
-    //anchors {
-    //    top: true
-    //    bottom: true
-    //    left: true
-    //    right: true
-    //}
-
-    //exclusiveZone: -1   // VERY important → makes it float
-    focusable: true
+    title: "appMenu"
 
     function toggle() {
         visible = !visible
@@ -42,6 +34,7 @@ PanelWindow {
         color: theme.colBg
         border.color: theme.colPurple
         border.width: 1
+        focus: true
 
         Text {
             text: ">"
@@ -73,6 +66,13 @@ PanelWindow {
                 color: theme.colBg
                 border.width: 2
                 border.color: theme.colBg
+            }
+        }
+
+        Keys.onPressed: (event) => {
+            if (event.key === Qt.Key_Escape) {
+                launcher.toggle();
+                event.accepted = true;
             }
         }
     }

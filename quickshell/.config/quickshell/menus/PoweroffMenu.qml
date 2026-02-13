@@ -1,11 +1,14 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
 import Quickshell
 import qs.theme
 import qs.menus
 
 FloatingWindow {
     id: poweroffMenu
+
+    property int fontSize: 30
 
     visible: false
 
@@ -19,8 +22,8 @@ FloatingWindow {
         visible = !visible
     }
 
-    implicitWidth: 500
-    implicitHeight: 600
+    implicitWidth: 400
+    implicitHeight: 200
     color:"transparent"
 
     Rectangle {
@@ -28,12 +31,46 @@ FloatingWindow {
         radius: 5
         color: theme.colBg
         border.color: theme.colPurple
-        border.width: 1
+        border.width: 0
         focus: true
         Keys.onPressed: (event) => {
             if (event.key === Qt.Key_Escape) {
                 poweroffMenu.toggle();
                 event.accepted = true;
+            }
+        }
+        RowLayout {
+            anchors.fill: parent
+            spacing: 2
+
+            PowerButton {
+                icon: "⏻"
+                colButton: theme.colLightBg 
+                colIcon: theme.colFg
+                colBg: theme.colBg
+                fontFamily: theme.fontFamily 
+                iconSize: fontSize 
+                clickAction: Hyprland.dispatch("exec poweroff")
+            }
+
+            PowerButton {
+                icon: ""
+                colButton: theme.colLightBg 
+                colIcon: theme.colFg
+                colBg: theme.colBg
+                fontFamily: theme.fontFamily 
+                iconSize: fontSize 
+                clickAction: Hyprland.dispatch("exec reboot")
+            }
+
+            PowerButton {
+                icon: "󰗽"
+                colButton: theme.colLightBg 
+                colIcon: theme.colFg
+                colBg: theme.colBg
+                fontFamily: theme.fontFamily 
+                iconSize: fontSize 
+                clickAction: Hyprland.dispatch("exit")
             }
         }
     }
