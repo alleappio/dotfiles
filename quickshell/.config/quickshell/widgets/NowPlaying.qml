@@ -35,7 +35,7 @@ Item {
     Process {
         id: getNowPlaying
         running: true
-        command: ["bash", "-c", Quickshell.configDir+"/scripts/playing.bash"]
+        command: ["bash", "-c", Quickshell.shellDir+"/scripts/playing.bash"]
         stdout: SplitParser {
             onRead: data => {
                 if (!data){

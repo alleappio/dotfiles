@@ -35,6 +35,13 @@ PanelWindow {
         color: theme.colBg
         radius: 10
         
+        //Center
+        Widgets.Clock {
+            anchors.centerIn: parent
+            textColor: theme.colFg
+            fontFamily: theme.fontFamily
+            fontSize: theme.fontSize
+        }
         RowLayout {
             anchors.fill: parent
             anchors.margins: 5
@@ -64,20 +71,6 @@ PanelWindow {
                 maxWidth: 10
             }
             
-            // Spacer
-            Rectangle { 
-                Layout.fillWidth: true
-                color: "transparent"
-            }
-
-            //Center
-            Widgets.Clock {
-                Layout.alignment: Qt.AlignCenter
-                textColor: theme.colFg
-                fontFamily: theme.fontFamily
-                fontSize: theme.fontSize
-            }
-
             // Spacer
             Rectangle { 
                 Layout.fillWidth: true
