@@ -28,7 +28,9 @@ Item {
         anchors.fill: parent
         
         onClicked: () => {
-            console.log("ciaoo")
+            Quickshell.execDetached(["bash", "-c", "playerctl play-pause"])
+            getNowPlaying.running = false
+            getNowPlaying.running = true
         }
     }
 

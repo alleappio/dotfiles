@@ -15,11 +15,13 @@ Rectangle{
     required property string fontFamily 
     required property int iconSize 
     required property var clickAction
+    required property string shortcutButton
+    property bool selected
 
     radius: 5
     Layout.fillWidth: true
     Layout.fillHeight: true
-    color: mouse.hovered? colButton : colBg
+    color: selected? colButton : colBg
 
     Text {
         anchors.centerIn: parent
@@ -29,14 +31,24 @@ Rectangle{
         color: theme.colFg
     }
 
+    Text {
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: shortcutButton
+        font { family: fontFamily; pixelSize: iconSize/2; bold: true }
+        renderType: Text.NativeRendering
+        color: theme.colFg
+    }
+
     MouseArea {
         anchors.fill:parent
         onClicked: clickAction()
-    }
-
-    HoverHandler {
-        id: mouse
-        acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
-        cursorShape: Qt.PointingHandCursor
+        hoverEnabled: true
+        onEntered: {
+            selected = true
+        }
+        onExited: {
+            selected = false
+        }
     }
 }

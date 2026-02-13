@@ -9,12 +9,12 @@ Repeater {
     required property string fontFamily
     required property int fontSize
 
-    model: 9
+    model: 10
 
     Text {
         property var ws: Hyprland.workspaces.values.find(w => w.id === index + 1)
         property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
-        text: index + 1
+        text: index != 9? index + 1 : 0
         color: isActive ? focusColor : (ws ? activeColor : inactiveColor)
         font { family: fontFamily; pixelSize: fontSize; bold: false }
         renderType: Text.NativeRendering

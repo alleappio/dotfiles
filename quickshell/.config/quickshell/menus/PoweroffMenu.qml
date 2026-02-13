@@ -34,17 +34,31 @@ FloatingWindow {
         border.color: theme.colPurple
         border.width: 0
         focus: true
+
         Keys.onPressed: (event) => {
             if (event.key === Qt.Key_Escape) {
                 poweroffMenu.toggle();
                 event.accepted = true;
+                return
+            }
+            console.log(event.key)
+            if (event.key === 81) {
+                poweroffButton.clickAction();
+            }
+            if (event.key === 82) {
+                rebootButton.clickAction();
+            }
+            if (event.key === 76) {
+                logoutButton.clickAction();
             }
         }
+
         RowLayout {
             anchors.fill: parent
             spacing: 2
 
             PowerButton {
+                id: poweroffButton
                 icon: "⏻"
                 colButton: theme.colLightBg 
                 colIcon: theme.colFg
@@ -54,9 +68,11 @@ FloatingWindow {
                 clickAction: function(){
                     Quickshell.execDetached(["bash", "-c", `systemctl poweroff || loginctl poweroff`])
                 }
+                shortcutButton: "Q"
             }
 
             PowerButton {
+                id: rebootButton
                 icon: ""
                 colButton: theme.colLightBg 
                 colIcon: theme.colFg
@@ -64,9 +80,11 @@ FloatingWindow {
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
                 clickAction: function(){Quickshell.execDetached(["bash", "-c", `reboot || loginctl reboot`])}
+                shortcutButton: "R"
             }
 
             PowerButton {
+                id: logoutButton
                 icon: "󰗽"
                 colButton: theme.colLightBg 
                 colIcon: theme.colFg
@@ -74,6 +92,7 @@ FloatingWindow {
                 fontFamily: theme.fontFamily 
                 iconSize: fontSize 
                 clickAction: function(){Hyprland.dispatch("exit")}
+                shortcutButton: "L"
             }
         }
     }

@@ -78,6 +78,15 @@ PanelWindow {
             }
             
             // Right side widgets
+            Widgets.SystemTray{
+                Layout.alignment: Qt.AlignRight
+                Layout.fillHeight: true
+                bgColor: theme.colBg
+                iconDimension: 22
+            }
+
+            Rectangle { width: 1; height: 16; color: theme.colFg }
+
             Widgets.NowPlaying {
                 Layout.alignment: Qt.AlignRight
                 textColor: theme.colFg

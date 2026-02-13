@@ -53,4 +53,14 @@ Item {
         getNetworkType.running=true
     }
 
+    Timer {
+        interval: 5000
+        running: true
+        repeat: true
+        onTriggered: {
+            getNetworkType.running=false
+            getNetworkType.running=true
+        }
+    }
+
 }
