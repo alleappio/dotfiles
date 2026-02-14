@@ -34,11 +34,8 @@ change_theme(){
     echo "Installing theme: ${options[$1]}";
     local theme_location=$themes_location/${options[$1]};
     
-    echo "updating bemenu...";
-    ln -fs $theme_location/bemenu/colors.sh $dotfiles_location/bemenu/.config/bemenu/colors.sh;
-
-    echo "updating fuzzel...";
-    ln -fs $theme_location/fuzzel/colors.ini $dotfiles_location/fuzzel/.config/fuzzel/colors.ini;
+    echo "updating walker...";
+    ln -fs $theme_location/walker/colors.css $dotfiles_location/walker/.config/walker/themes/default/colors.css;
 
     echo "updating sway...";
     ln -fs $theme_location/sway/colors.conf $dotfiles_location/sway/.config/sway/colors.conf;
