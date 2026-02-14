@@ -2,6 +2,7 @@
 import Quickshell
 import Quickshell.Hyprland
 import qs.menus.appLauncher as App
+import qs.menus as Menus
 
 ShellRoot {
     Variants {
@@ -12,6 +13,10 @@ ShellRoot {
         }
     }
 
+    Menus.PoweroffMenu {
+        id: poweroffMenu
+    }
+
     App.AppLauncher {
         id: launcher
     }
@@ -20,6 +25,12 @@ ShellRoot {
         name: "launcher"
 
         onPressed: launcher.toggle()
+    }
+
+    GlobalShortcut {
+        name: "poweroff_menu"
+
+        onPressed: poweroffMenu.toggle()
     }
 }
 

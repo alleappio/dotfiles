@@ -27,10 +27,14 @@ Item {
 
         text: {
             const volume = Math.round(audioWidget.node.audio.volume*100)
-            var icon = " "
-            if(volume < 20){icon = " "}
-            if(volume > 70){icon = " "}
-            return icon + volume + "%"
+            var icon = ""
+            if(audioWidget.node.name.includes("blue")){
+                icon = " "
+            }
+            if(volume < 20){icon = icon + " "}
+            else if(volume > 70){icon = icon + " "}
+            else{icon = icon + ""}
+            return icon + " " + volume + "%"
         }
     }
 

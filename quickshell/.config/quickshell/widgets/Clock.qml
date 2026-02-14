@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Controls
 
 Text {
-//    anchors.centerIn: parent
     id: clock
     property string hourFormat: "HH:mm"
     property string dateFormat: "dd/MMM/yyyy"
@@ -29,6 +28,9 @@ Text {
     
     MouseArea {
         anchors.fill: parent
-        onClicked: clock.showDate = !clock.showDate
+        onClicked: {
+            clock.showDate = !clock.showDate
+            clock.text = Qt.formatDateTime(new Date(), clock.showDate ? clock.dateFormat : clock.hourFormat)
+        }
     }
 }

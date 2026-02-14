@@ -41,7 +41,6 @@ FloatingWindow {
                 event.accepted = true;
                 return
             }
-            console.log(event.key)
             if (event.key === 81) {
                 poweroffButton.clickAction();
             }

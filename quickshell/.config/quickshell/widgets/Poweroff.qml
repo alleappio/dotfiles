@@ -1,4 +1,5 @@
 import Quickshell
+import Quickshell.Hyprland
 import QtQuick
 import qs.menus
 
@@ -11,9 +12,6 @@ Item {
     implicitWidth: poweroffWidgetLabel.implicitWidth
     implicitHeight: poweroffWidgetLabel.implicitHeight
 
-    PoweroffMenu {
-        id: poweroffMenu
-    }
 
     Text {
         anchors.fill: parent
@@ -27,4 +25,5 @@ Item {
             onClicked: poweroffMenu.toggle()
         }
     }
+
 }
