@@ -9,4 +9,5 @@ alias ll="ls -l"
 alias l="ls -l"
 alias start-ssh-agent='eval $(ssh-agent -s)'
 alias stop-ssh-agent='eval $(ssh-agent -k)'
+alias change-theme='~/.config/walker/scripts/change_theme.bash'
 #alias ssh='kitten ssh'
