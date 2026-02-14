@@ -32,7 +32,6 @@
         "backlight",
         // "sway/language",
         "battery",
-        "battery#bat2",
         "custom/power"
     ],
     //Modules configuration
