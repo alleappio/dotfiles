@@ -44,49 +44,54 @@
             "type": "host"
         },
         {
-            "key": "     Kernel       ",
+            "key": "     Packages     ",
             "keyColor": "magenta",
+            "type": "packages"
+        },
+        {
+            "key": "     Kernel       ",
+            "keyColor": "green",
             "type": "kernel"
         },
         {
             "key": "    󰅐 Uptime       ",
-            "keyColor": "green",
+            "keyColor": "yellow",
             "type": "uptime"
         },
         {
             "key": "    󰍹 Resolution   ",
-            "keyColor": "yellow",
+            "keyColor": "blue",
             "type": "display",
             "compactType": "original-with-refresh-rate"
         },
         {
             "key": "     WM           ",
-            "keyColor": "blue",
+            "keyColor": "red",
             "type": "wm"
         },
         {
             "key": "     DE           ",
-            "keyColor": "green",
+            "keyColor": "magenta",
             "type": "de"
         },
         {
             "key": "     Shell        ",
-            "keyColor": "red",
+            "keyColor": "green",
             "type": "shell"
         },
         {
             "key": "     Terminal     ",
-            "keyColor": "green",
+            "keyColor": "yellow",
             "type": "terminal"
         },
         {
             "key": "    󰻠 CPU          ",
-            "keyColor": "yellow",
+            "keyColor": "blue",
             "type": "cpu"
         },
         {
             "key": "    󰍛 GPU          ",
-            "keyColor": "blue",
+            "keyColor": "red",
             "type": "gpu"
         },
         {
@@ -100,11 +105,6 @@
             "type": "localip",
             "compact": true
         },
-        //{
-        //    "key": "    󰩠 Public IP    ",
-        //    "keyColor": "red",
-        //    "type": "publicip"
-        //},
         "break",
         {
             "type": "custom",
