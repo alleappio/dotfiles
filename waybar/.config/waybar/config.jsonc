@@ -28,7 +28,6 @@
         //"memory",
         //"temperature",
         "backlight",
-        // "sway/language",
         "battery",
         "custom/power"
     ],
@@ -41,10 +40,14 @@
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
+        "active-only": false,
         "format": "{name}",
         "format-icons": {
             "active": "",
             "default": ""
+        },
+        "persistent-workspaces": {
+            "*": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
         }
     },
     "hyprland/window": {
@@ -112,7 +115,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d/%m/%Y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -201,8 +204,8 @@
             "default": ""
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
+        "on-click": "playerctl play-pause"
     },
     "custom/power": {
         "format" : "⏻ ",
