@@ -123,7 +123,8 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "python $HOME/.config/walker/scripts/wifiMenu.py"
+        "on-click": "python $HOME/.config/walker/scripts/wifiMenu.py",
+        "on-click-right": "kitty --class kitty-nmtui -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
