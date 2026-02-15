@@ -59,10 +59,10 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 1px;
     background-color: @transparent;
     color: @foreground;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 
 #workspaces button:hover {
