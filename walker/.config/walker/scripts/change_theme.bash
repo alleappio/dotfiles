@@ -35,7 +35,7 @@ change_theme(){
     ln -fs $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux/tmux-theme.tmux;
 
     echo "updating wallpaper...";
-    cp $theme_location/wallpaper/background ~/.config/background;
+    ln -fs $theme_location/wallpaper/background ~/.config/background;
 
     echo "updating waybar...";
     ln -fs $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/colors.css;
@@ -50,7 +50,7 @@ change_theme(){
     hyprctl dispatch exec waybar;
 
     echo "reload swaybg...";
-    pkill swaybg; hyprctl dispatch exec "swaybg -i ~/.config/background";
+    pkill hyprpaper; hyprctl dispatch exec "hyprpaper";
 
     echo "reload swaync...";
     pkill swaync; hyprctl dispatch exec swaync;

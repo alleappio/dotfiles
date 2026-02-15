@@ -6,7 +6,7 @@ kitty
 bemenu
 waybar
 swaync
-swaybg
+hyprpaper
 hyprland
 hypridle
 hyprlock
