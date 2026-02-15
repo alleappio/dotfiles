@@ -4,6 +4,7 @@
     "width": 1910, // Waybar width
     "spacing": 5, // Gaps between modules (4px)
     "margin-top": 2,
+    "font-family": "AdwaitaMono Nerd Font",
     // Choose the order of the modules
     "modules-left": [
         "custom/distro_logo",
@@ -170,8 +171,8 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "({signalStrength}%) ",
         "format-ethernet": "󰈀",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click": "kitty --class nmtui-float -e nmtui"
@@ -181,7 +182,7 @@
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "{volume}% ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
@@ -196,13 +197,9 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "{icon} {text}",
+        "format": "{text}",
         "return-type": "json",
         "max-length": 15,
-        "format-icons": {
-            "spotify": "",
-            "default": ""
-        },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
         "on-click": "playerctl play-pause"
