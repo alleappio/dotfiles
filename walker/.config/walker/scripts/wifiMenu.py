@@ -76,6 +76,15 @@ class AccessPoint:
 
         return aps
 
+def notify(message):
+    subprocess.Popen(
+        ["notify-send", "-i", "network-wireless", "wifi menu", message],
+        stdin=subprocess.PIPE,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        text=True
+    )
+
 def is_known_network(ssid):
     result = subprocess.run(
         ["nmcli", "-t", "-f", "NAME", "connection", "show"],
@@ -157,24 +166,49 @@ def call_walker(access_points):
         print("no network chosen")
         return  # user cancelled
 
-    chosen_one = access_points[remap_list.index(selected)]
-
-    if not chosen_one:
+    try:
+        chosen_one = access_points[remap_list.index(selected)]
+    except ValueError:
+        notify(f"No network with SSID {selected} found")
         return
-    if chosen_one.in_use:
-        disconnect(chosen_one)
-    elif chosen_one.security in ("--", "", None) or is_known_network(chosen_one.ssid):
-        connect_without_password(chosen_one)
-    else:
-        connect_with_password(chosen_one)
 
 
+    try:
+        if not chosen_one:
+            return
+        if chosen_one.in_use:
+            disconnect(chosen_one)
+        elif chosen_one.security in ("--", "", None) or is_known_network(chosen_one.ssid):
+            connect_without_password(chosen_one)
+        else:
+            connect_with_password(chosen_one)
+    except subprocess.CalledProcessError:
+        notify(f"Could not connect to {chosen_one.ssid}")
+
+
+def scan_with_feedback():
+    """
+    Scan for wifi networks while showing a walker instance with feedback.
+    """
+    # Start walker feedback in a separate thread
+    notify("Scanning wifi networks")
+    
+    # Perform the actual scan
+    listProcess = subprocess.run(
+        ["nmcli", "-f", "IN-USE,BSSID,SSID,FREQ,SIGNAL,SECURITY", "-c", "no", "-m", "tabular", "device", "wifi", "list", "--rescan", "yes"],
+        text=True,
+        capture_output=True
+    )
+    
+    # Close the walker feedback
+    return listProcess.stdout
 
 
 
 def main():
-    listProcess = subprocess.run(["nmcli", "-f", "IN-USE,BSSID,SSID,FREQ,SIGNAL,SECURITY" ,"-c", "no", "-m", "tabular", "device", "wifi", "list"], text=True, capture_output=True) 
-    access_points = AccessPoint.parse_output(listProcess.stdout)
+    #listProcess = subprocess.run(["nmcli", "-f", "IN-USE,BSSID,SSID,FREQ,SIGNAL,SECURITY" ,"-c", "no", "-m", "tabular", "device", "wifi", "list"], text=True, capture_output=True) 
+    listProcess = scan_with_feedback()
+    access_points = AccessPoint.parse_output(listProcess)
     call_walker(access_points)
 
 if __name__ == '__main__':
