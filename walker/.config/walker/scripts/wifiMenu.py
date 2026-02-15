@@ -143,7 +143,6 @@ def call_walker(access_points):
             stringified+=" "
         stringified+="\n"
     remap_list=stringified.split("\n")
-    print(remap_list)
 
     walker_subprocess = subprocess.run(
         ["walker", "--dmenu", "--minheight", "1", "-p", "Choose wifi network"],
@@ -153,7 +152,6 @@ def call_walker(access_points):
     )
 
     selected = walker_subprocess.stdout.strip()
-    print(selected)
 
     if not selected:
         print("no network chosen")
