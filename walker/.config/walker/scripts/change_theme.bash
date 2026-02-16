@@ -49,7 +49,7 @@ change_theme(){
     pkill waybar;
     hyprctl dispatch exec waybar;
 
-    echo "reload swaybg...";
+    echo "reload hyprpaper...";
     pkill hyprpaper; hyprctl dispatch exec "hyprpaper";
 
     echo "reload swaync...";
