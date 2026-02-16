@@ -21,8 +21,8 @@
         "pulseaudio",
         "network",
         "power-profiles-daemon",
-        //"cpu",
-        //"memory",
+        "cpu",
+        "memory",
         //"temperature",
         "backlight",
         "battery",
@@ -71,7 +71,7 @@
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% "
     },
     "temperature": {
         // "thermal-zone": 2,
