@@ -33,8 +33,8 @@ stow swaync
 echo "stowing hyprland"
 stow hypr
 
-echo "stowing walker"
-stow walker
+echo "stowing rofi"
+stow rofi
 
 echo "Select a theme"
 chmod +x change_theme.sh

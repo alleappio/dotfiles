@@ -22,11 +22,5 @@ fuzzel
 tree-sitter-cli
 nodejs
 npm
-walker
-elephant
-elephant
-elephant-calc
-elephant-debug
-elephant-desktopapplications
-elephant-providerlist
-elephant-runner
+rofi
+xdg-desktop-portal-hyprland
