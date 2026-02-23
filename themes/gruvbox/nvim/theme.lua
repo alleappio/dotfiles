@@ -1,10 +1,16 @@
 return {
     {
-        'f4z3r/gruvbox-material.nvim',
-        name = 'gruvbox-material',
+        'ellisonleao/gruvbox.nvim',
+        name = 'gruvbox',
         lazy = false,
         priority = 1000,
-        opts = {},
+        config = function()
+            require("gruvbox").setup({
+                terminal_colors = true,
+                contrast = "hard",
+            })
+            vim.cmd.colorscheme("gruvbox")
+        end,
     },
     {
         'nvim-lualine/lualine.nvim',
@@ -12,7 +18,7 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = require("gruvbox-material.lualine").theme("medium"),
+                    theme = "gruvbox",
                     section_separators = '', 
                     component_separators = '' 
                 },
