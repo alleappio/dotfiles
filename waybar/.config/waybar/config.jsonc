@@ -123,8 +123,8 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected ⚠",
         //"format-alt": "{ifname}: {ipaddr}/{cidr}",
-        "on-click": "~/.config/rofi/scripts/wifiMenu.py",
-        "on-click-right": "kitty --class kitty-nmtui -e nmtui"
+        "on-click": "kitty --class nmtui -e nmtui",
+        "on-click-right": "kitty --class nmtui -e nmtui"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
