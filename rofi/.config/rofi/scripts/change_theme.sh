@@ -32,7 +32,8 @@ change_theme(){
     ln -fs $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux/tmux-theme.tmux;
 
     echo "updating wallpaper...";
-    ln -fs $theme_location/wallpaper/background ~/.config/background;
+    actual_file=$(ls "$dotfiles_location/wallpaper/$1/background_$1"*); 
+    ln -fs "$actual_file" ~/.config/background;
 
     echo "updating waybar...";
     ln -fs $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/colors.css;
@@ -55,6 +56,7 @@ change_theme(){
 
 rofi_cmd() {
 	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
+                -p "Themes" \
 		-config ~/.config/rofi/config.rasi \
 		-dmenu
 }

@@ -9,5 +9,5 @@ alias ll="ls -l"
 alias l="ls -l"
 alias start-ssh-agent='eval $(ssh-agent -s)'
 alias stop-ssh-agent='eval $(ssh-agent -k)'
-alias change-theme='~/.config/rofi/scripts/change_theme.sh'
+alias style='~/.config/rofi/scripts/style.sh'
 #alias ssh='kitten ssh'
