@@ -36,9 +36,10 @@ wk.add({
     { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
 })
 
--- Open oil file explorer
+-- Open file explorer
+local fyler = require("fyler")
 wk.add({
-    { "<leader>e", function() require("oil").toggle_float() end, desc = "Open Oil file explorer", mode = "n" },
+    { "<leader>e", function() fyler.toggle({ kind = "split_left" }) end, desc = "Open file explorer", mode = "n" },
 })
 
 -- lsp actions
