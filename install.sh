@@ -36,6 +36,12 @@ stow hypr
 echo "stowing rofi"
 stow rofi
 
+echo "stowing systemd services"
+stow systemd
+systemctl --user daemon-reload
+systemctl --user enable ssh-agent
+systemctl --user start ssh-agent
+
 echo "Select a theme"
 chmod +x change_theme.sh
 ./change_theme.bash
