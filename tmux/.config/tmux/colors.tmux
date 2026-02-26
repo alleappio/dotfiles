@@ -1,0 +1,1 @@
+/home/alle/dotfiles/themes/gruvbox/tmux/colors.tmux

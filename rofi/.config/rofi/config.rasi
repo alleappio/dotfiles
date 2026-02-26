@@ -3,7 +3,7 @@ configuration {
     font: "AdwaitaMono Nerd Font 12";
     show-icons: true;
     icon-theme: "Adwaita";
-    terminal: "kitty";
+    terminal: "alacritty";
 
   timeout {
       action: "kb-cancel";

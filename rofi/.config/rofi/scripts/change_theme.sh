@@ -21,6 +21,9 @@ change_theme(){
     echo "updating kitty...";
     ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
 
+    echo "updating alacritty...";
+    ln -fs $theme_location/alacritty/theme.toml $dotfiles_location/alacritty/.config/alacritty/theme.toml;
+
     echo "updating nvim...";
     ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins/theme.lua;
     ln -fs $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua/vim-theme-options.lua;
@@ -29,7 +32,7 @@ change_theme(){
     ln -fs $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync/colors.css;
 
     echo "updating tmux...";
-    ln -fs $theme_location/tmux/tmux-theme.tmux $dotfiles_location/tmux/.config/tmux/tmux-theme.tmux;
+    ln -fs $theme_location/tmux/colors.tmux $dotfiles_location/tmux/.config/tmux/colors.tmux;
 
     echo "updating wallpaper...";
     actual_file=$(ls "$dotfiles_location/wallpaper/$1/background_$1"*); 
