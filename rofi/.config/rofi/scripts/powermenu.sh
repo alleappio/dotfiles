@@ -12,7 +12,7 @@ output=$(echo -e $items|rofi_cmd)
 if [[ $output == "⏻ Poweroff" ]];then
     poweroff
 elif [[ $output == " Reboot" ]];then
-    reboot now
+    systemctl reboot
 elif [[ $output == "󰗽 Logout" ]];then
     hyprctl dispatch exit
 else
