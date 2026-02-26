@@ -6,7 +6,7 @@ kitty/.config/kitty/colors.conf
 nvim/.config/nvim/lua/plugins/theme.lua
 nvim/.config/nvim/lua/vim-theme-options.lua
 swaync/.config/swaync/colors.css
-tmux/.config/tmux/tmux-theme.tmux
+tmux/.config/tmux/colors.tmux
 wallpaper/.config/background
 wallpaper/.config/blurred_background
 rofi/.config/rofi/colors.css
