@@ -37,4 +37,4 @@ setw -g window-status-format ' #I #[fg=white]#W #[fg=white]#F '
 setw -g window-status-bell-style 'fg=white bg=#{@primary}' 
 
 # messages 
-set -g message-style 'fg=black bg=#{@primary}'
+set -g message-style 'fg=white bg=black'
