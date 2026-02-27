@@ -17,5 +17,14 @@ size = 11
 
 [keyboard]
 bindings = [
-    {key="Back", mods="Control", chars="\u001b\u007f"}
+    {key="Back", mods="Control", chars="\u001b\u007f"},
+
+    { key = "E", mods = "Control|Shift", chars = "\u0002%" },
+    { key = "O", mods = "Control|Shift", chars = "\u0002\"" },
+
+    # Pane navigation
+    { key = "Left",  mods = "Alt", chars = "\u0002\u001b[D" },
+    { key = "Right", mods = "Alt", chars = "\u0002\u001b[C" },
+    { key = "Up",    mods = "Alt", chars = "\u0002\u001b[A" },
+    { key = "Down",  mods = "Alt", chars = "\u0002\u001b[B" }
 ]
