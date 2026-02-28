@@ -37,9 +37,8 @@ wk.add({
 })
 
 -- Open file explorer
-local fyler = require("fyler")
 wk.add({
-    { "<leader>e", function() fyler.toggle({ kind = "split_left" }) end, desc = "Open file explorer", mode = "n" },
+    { "<leader>e", function() require("oil").toggle_float() end, desc = "Open file explorer", mode = "n" },
 })
 
 -- lsp actions
