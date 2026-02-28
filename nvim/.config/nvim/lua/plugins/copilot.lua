@@ -22,7 +22,7 @@ return {
     config = function()
       require("CopilotChat").setup({
             window = {
-                layout = 'float',
+                layout = 'vertical',
             },
             model = 'claude-sonnet-4.5',
         })
