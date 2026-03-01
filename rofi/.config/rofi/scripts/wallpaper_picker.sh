@@ -14,4 +14,7 @@ rofi_command(){
 }
 
 new_wallpaper=$(rofi_command);
-change_wallpaper $new_wallpaper;
+
+if [[ $new_wallpaper != "" ]];then
+    change_wallpaper $new_wallpaper;
+fi
