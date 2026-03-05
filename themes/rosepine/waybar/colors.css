@@ -1,0 +1,11 @@
+/* --GRUVBOX COLORS--*/
+@define-color background #191724;/*background*/
+@define-color transparent rgba(0, 0, 0, 0);/*transparent*/
+@define-color background-alt #26233a;/*background-alt*/
+@define-color foreground #e0def4;/*foreground*/
+@define-color green #9ccfd8;/*green*/
+@define-color red #eb6f92;/*red*/
+@define-color blue #31748f;/*blue*/
+@define-color pink #ebbcba;/*blue*/
+@define-color primary @pink;/*primary*/
+@define-color secondary @red;/*secondary*/

@@ -1,0 +1,13 @@
+* {
+    background:     #191724;
+    background-alt: #26233a;
+    foreground:     #e0def4;
+    red:            #eb6f92;
+    blue:           #31748f;
+    green:          #9ccfd8;
+    purple:         #c4a7e7;
+    pink:           #ebbcba;
+    primary:        var(pink);
+    selected:       var(pink);
+    urgent:         var(red);
+}

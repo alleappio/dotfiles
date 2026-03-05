@@ -1,6 +1,6 @@
 *.old
 *.lastd
-bemenu/.config/bemenu/colors.sh
+alacritty/.config/alacritty/theme.toml
 hypr/.config/hypr/colors.conf
 kitty/.config/kitty/colors.conf
 nvim/.config/nvim/lua/plugins/theme.lua
@@ -9,5 +9,5 @@ swaync/.config/swaync/colors.css
 tmux/.config/tmux/colors.tmux
 wallpaper/.config/background
 wallpaper/.config/blurred_background
-rofi/.config/rofi/colors.css
-walker/.config/walker/themes/default/colors.css
+rofi/.config/rofi/colors.rasi
+waybar/.config/waybar/colors.css
