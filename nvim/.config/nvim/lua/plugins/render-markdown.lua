@@ -1,12 +1,11 @@
 return {
     'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },            -- if you use the mini.nvim suite
+    dependencies = { 'nvim-treesitter/nvim-treesitter'},
     config = function()
         require('render-markdown').setup({
             completions = { lsp = { enabled = true } },
-            preset = "obsidian",
+            file_types = { 'markdown', 'copilot-chat' },
             heading = {
-                --border = true,
                 backgrounds = {
                     nil,
                     nil,

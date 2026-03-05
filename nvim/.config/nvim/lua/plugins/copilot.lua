@@ -21,10 +21,15 @@ return {
     build = "make tiktoken",
     config = function()
       require("CopilotChat").setup({
+            debug = true,
+            show_help = true,
             window = {
                 layout = 'vertical',
             },
-            model = 'claude-sonnet-4.5',
+            model = 'claude-sonnet-4.6',
+            highlight_headers = false,
+            separator = '---',
+            error_header = '> [!ERROR] Error',
         })
     end,
   },
