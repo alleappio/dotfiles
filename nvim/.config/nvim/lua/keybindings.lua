@@ -68,6 +68,15 @@ wk.add({
     { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode="n" },
 })
 
+-- sshfs keybindings
+wk.add({
+    { "<leader>r", group = "Remote" },
+    { "<leader>rb", "<cmd>SSHBrowse<cr>", desc = "Browse remote filesystem", mode="n" },
+    { "<leader>rc", "<cmd>SSHConnect<cr>", desc = "Connect to remote", mode="n" },
+    { "<leader>rd", "<cmd>SSHDisconnect<cr>", desc = "Disconnect from remote", mode="n" },
+    { "<leader>rt", "<cmd>SSHTerminal<cr>", desc = "Open terminal inside remote", mode="n" },
+})
+
 -- terminal stuff
 wk.add({
     { "<leader>t", group = "Terminal" },
