@@ -16,7 +16,7 @@ change_theme(){
     ln -fs $theme_location/rofi/colors.rasi $dotfiles_location/rofi/.config/rofi/colors.rasi;
 
     echo "updating hypr...";
-    ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/colors.conf;
+    ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/hyprland/colors.conf;
 
     echo "updating kitty...";
     ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
