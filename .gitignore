@@ -1,7 +1,8 @@
 *.old
 *.lastd
 alacritty/.config/alacritty/theme.toml
-hypr/.config/hypr/colors.conf
+hypr/.config/hypr/hyprland/colors.conf
+hypr/.config/hypr/hyprland/monitors.conf
 kitty/.config/kitty/colors.conf
 nvim/.config/nvim/lua/plugins/theme.lua
 nvim/.config/nvim/lua/vim-theme-options.lua
