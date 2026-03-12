@@ -14,15 +14,19 @@ local logo = [[
 return {
   'nvimdev/dashboard-nvim',
   event = 'VimEnter',
+  dependencies = { {'nvim-tree/nvim-web-devicons'}},
+
   config = function()
+    local fortune = vim.system({'fortune', '-s'}, { text = true }):wait();
+    fortune = vim.split(fortune.stdout:gsub("\t", ""), '\n');
     require('dashboard').setup {
         theme = 'doom',
         config = {
             header = vim.split(logo, "\n"),
             center={},
-            footer = {"Hello there!"}
+            footer = #fortune > 0 and fortune or {"Hello there!\n\t- General Kenobi"}
+            -- footer = {"Hello there!"}
         }
     }
   end,
-  dependencies = { {'nvim-tree/nvim-web-devicons'}}
 }
