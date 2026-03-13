@@ -15,15 +15,13 @@
         "clock"
     ],
     "modules-right": [
-        "keyboard-state",
         "tray",
-        "custom/media",
+        "custom/notification-center",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
         "cpu",
         "memory",
-        //"temperature",
         "backlight",
         "battery",
         "custom/power"
@@ -129,7 +127,7 @@
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}",
-        "format-bluetooth-muted": " {icon}",
+        "format-bluetooth-muted": "  {icon}",
         "format-muted": "{volume}% ",
         "format-source": "{volume}% ",
         "format-source-muted": "",
@@ -144,16 +142,12 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{text}",
-        "return-type": "json",
-        "max-length": 15,
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
-        "on-click": "playerctl play-pause"
-    },
     "custom/power": {
         "format" : "⏻ ",
         "on-click": "~/.config/rofi/scripts/powermenu.sh"
+    },
+    "custom/notification-center": {
+        "format" : " ",
+        "on-click": "swaync-client -t"
     }
 }

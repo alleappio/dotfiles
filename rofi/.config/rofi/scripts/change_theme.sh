@@ -26,7 +26,7 @@ change_theme(){
 
     echo "updating nvim...";
     ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins/theme.lua;
-    ln -fs $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua/vim-theme-options.lua;
+#    ln -fs $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua/vim-theme-options.lua;
 
     echo "updating swaync...";
     ln -fs $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync/colors.css;

@@ -475,6 +475,11 @@ notificationwindow, blankwindow {
   /* style given to the active toggle button */
 }
 
+.widget-buttons-grid>flowbox>flowboxchild>button:checked {
+  background: @primary;
+  color: @primary;
+}
+
 /* Menubar widget */
 .widget-menubar {
   /* The revealer buttons */
