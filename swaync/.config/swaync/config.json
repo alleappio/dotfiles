@@ -92,11 +92,11 @@
       "image-radius": 8
     },
     "buttons-grid": {
-      "buttons-per-row": 4,
+      "buttons-per-row": 5,
       "actions": [
         {
           "label": "󰐥",
-          "command": "systemctl poweroff"
+          "command": "~/.config/rofi/scripts/powermenu.sh"
         },
         {
           "label": "󰜉",
@@ -127,6 +127,10 @@
         {
           "label": "󰂯",
           "command": "swaync-client -cp; alacritty --class bluetui -e bluetui"
+        },
+        {
+          "label": "󰏘",
+          "command": "swaync-client -cp; ~/.config/rofi/scripts/style.sh"
         }
       ]
     },
