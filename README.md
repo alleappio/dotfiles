@@ -4,18 +4,7 @@ My personal dotfiles.
 ## Install:
 
 ### Dependencies:
-The packages used by this configuration are:
-- fastfetch
-- tmux
-- kitty
-- nvim
-- nerd-fonts
-- stow
-- terminator
-- hyprland
-- waybar
-- swaybg
-- swaync
+The packages used by this configuration are listed in `arch_pkglist.txt`:
 
 ### Install:
 To install all the configs:
@@ -31,22 +20,10 @@ chmod +x install.sh
 ```
 
 ## Change theme
-To change the current theme, run the provided script
+To change the current theme, run the rofi script
 ```bash
-./change_theme.bash
+./rofi/.config/rofi/scripts/style.sh
 ```
 
 Done!
-
-## Troubleshooting
-If sway doesn't start from gdm, edit `/usr/share/wayland-sessions/sway.desktop` or copy it to something like `sway-nvidia.desktop` and add the flag `--unsupported-gpu` to the `exec` field
-Example:
-```desktop
-[Desktop Entry]
-Name=Sway
-Comment=An i3-compatible Wayland compositor
-Exec=sway --unsupported-gpu
-Type=Application
-DesktopNames=sway;wlroots
-```
 
