@@ -9,6 +9,7 @@ return{
           -- use the night style
           style = "night",
         })
+        vim.cmd.colorscheme('tokyonight')
       end
     },
     {
