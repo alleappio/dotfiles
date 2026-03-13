@@ -22,7 +22,7 @@ require("lazy").setup({
     },
 })
 require("vim-options")
-require("vim-theme-options")
+-- require("vim-theme-options")
 require("keybindings")
 require("terminal_emulator")
 require("allow_wrap_in_md")
