@@ -39,69 +39,76 @@
             "type": "os"
         },
         {
-            "key": "    󰌢 Machine      ",
+            "type": "disk",
+            "key": "    󰥔 Age          ",
             "keyColor": "red",
+            "folders": "/",
+            "format": "{days} days"  // {6} = install date
+        },
+        {
+            "key": "    󰌢 Machine      ",
+            "keyColor": "magenta",
             "type": "host"
         },
         {
             "key": "     Packages     ",
-            "keyColor": "magenta",
+            "keyColor": "green",
             "type": "packages"
         },
         {
             "key": "     Kernel       ",
-            "keyColor": "green",
+            "keyColor": "yellow",
             "type": "kernel"
         },
         {
             "key": "    󰅐 Uptime       ",
-            "keyColor": "yellow",
+            "keyColor": "blue",
             "type": "uptime"
         },
         {
             "key": "    󰍹 Resolution   ",
-            "keyColor": "blue",
+            "keyColor": "red",
             "type": "display",
             "compactType": "original-with-refresh-rate"
         },
         {
             "key": "     WM           ",
-            "keyColor": "red",
+            "keyColor": "magenta",
             "type": "wm"
         },
         {
             "key": "     DE           ",
-            "keyColor": "magenta",
+            "keyColor": "green",
             "type": "de"
         },
         {
             "key": "     Shell        ",
-            "keyColor": "green",
+            "keyColor": "yellow",
             "type": "shell"
         },
         {
             "key": "     Terminal     ",
-            "keyColor": "yellow",
+            "keyColor": "blue",
             "type": "terminal"
         },
         {
             "key": "    󰻠 CPU          ",
-            "keyColor": "blue",
+            "keyColor": "red",
             "type": "cpu"
         },
         {
             "key": "    󰍛 GPU          ",
-            "keyColor": "red",
+            "keyColor": "magenta",
             "type": "gpu"
         },
         {
             "key": "    󰑭 Memory       ",
-            "keyColor": "magenta",
+            "keyColor": "green",
             "type": "memory"
         },
         {
             "key": "    󰩟 Local IP     ",
-            "keyColor": "green",
+            "keyColor": "yellow",
             "type": "localip",
             "compact": true
         },
