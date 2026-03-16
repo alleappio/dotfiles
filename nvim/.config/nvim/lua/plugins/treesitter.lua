@@ -21,13 +21,13 @@ return{
             "rust",
             "latex",
             "markdown",
-            "markdown_inline"
+            "markdown_inline",
+            "zig"
         }
-
         require('nvim-treesitter').install(language_list)
 
         vim.api.nvim_create_autocmd('FileType', {
-            pattern = language_list,
+            pattern = require("nvim-treesitter").get_installed('parsers'),
             callback = function() vim.treesitter.start() end,
         })
         vim.api.nvim_create_autocmd("FileType", {
