@@ -26,7 +26,6 @@ return {
             window = {
                 layout = 'vertical',
             },
-            model = 'claude-sonnet-4.6',
             highlight_headers = false,
             separator = '---',
             error_header = '> [!ERROR] Error',
