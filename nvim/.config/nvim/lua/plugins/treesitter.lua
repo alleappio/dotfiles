@@ -7,7 +7,7 @@ return{
             -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
             install_dir = vim.fn.stdpath('data') .. '/site'
         }
-        require('nvim-treesitter').install({
+        local language_list ={
             "cmake",
             "c",
             "lua",
@@ -22,12 +22,18 @@ return{
             "latex",
             "markdown",
             "markdown_inline"
-        })
+        }
 
+        require('nvim-treesitter').install(language_list)
+
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = language_list,
+            callback = function() vim.treesitter.start() end,
+        })
         vim.api.nvim_create_autocmd("FileType", {
             pattern = { "markdown", "copilot-chat" },
             callback = function(ev)
-            vim.treesitter.start(ev.buf)
+                vim.treesitter.start(ev.buf)
             end,
         })
     end
