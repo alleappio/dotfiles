@@ -93,8 +93,9 @@ wk.add({
 -- Markdown
 wk.add({
 	{ "<leader>m", group = "Markdown" },
-	{ "<leader>mc", "<cmd>PeekClose<cr>", desc = "Toggle markdown preview", mode = "n" },
-	{ "<leader>mp", "<cmd>PeekOpen<cr>", desc = "Toggle markdown preview", mode = "n" },
+	{ "<leader>mh", "<cmd>Pandoc html<cr>", desc = "Generate html from current md file", mode = "n" },
+	{ "<leader>mp", "<cmd>Pandoc pdf<cr>", desc = "Generate a pdf from current md file", mode = "n" },
+	{ "<leader>ms", "<cmd>Pandoc slides<cr>", desc = "Generate slides from current md file", mode = "n" },
 })
 
 -- Quickfix keybindings
