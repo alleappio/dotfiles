@@ -24,4 +24,3 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 . "$HOME/.cargo/env"
-. "/home/alle/.deno/env"
