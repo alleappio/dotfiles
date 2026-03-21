@@ -90,7 +90,7 @@ vim.diagnostic.config({
 })
 
 -- Disable arrows to get better
-local hardmode = true
+local hardmode = false
 if hardmode then
     -- Show an error message if a disabled key is pressed
     local msg = [[<cmd>echohl Error | echo "KEY DISABLED" | echohl None<CR>]]
@@ -127,4 +127,11 @@ vim.api.nvim_create_autocmd('FileType', {
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true  -- optional: break at word boundaries
   end,
+})
+
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function() vim.hl.on_yank({higroup="Substitute", timeout=200}) end,
 })
