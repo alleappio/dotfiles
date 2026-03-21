@@ -1,15 +1,13 @@
 return {
     {
-        'ellisonleao/gruvbox.nvim',
-        name = 'gruvbox',
+        'sainnhe/gruvbox-material',
         lazy = false,
         priority = 1000,
+        dependencies = {'nvim-treesitter/nvim-treesitter'},
         config = function()
-            require("gruvbox").setup({
-                terminal_colors = true,
-                contrast = "hard",
-            })
-            vim.cmd.colorscheme("gruvbox")
+            vim.g.gruvbox_material_background = "hard"
+            vim.g.gruvbox_material_foreground = "material"
+            vim.cmd.colorscheme("gruvbox-material")
         end,
     },
     {
@@ -18,9 +16,9 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = "gruvbox",
-                    section_separators = '', 
-                    component_separators = '' 
+                    theme = "gruvbox-material",
+                    section_separators = '',
+                    component_separators = ''
                 },
 
                 sections = { 

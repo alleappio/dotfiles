@@ -1,11 +1,11 @@
 * {
     background:     #282828;
-    background-alt: #3c3836;
-    foreground:     #ebdbb2;
-    red:            #cc241d;
-    blue:           #458588;
-    green:          #98971a;
-    purple:         #b16286;
+    background-alt: #32302f;
+    foreground:     #d4be98;
+    red:            #ea6962;
+    blue:           #7daea3;
+    green:          #a9b665;
+    purple:         #d3869b;
     primary:        var(blue);
     selected:       var(blue);
     urgent:         var(red);
