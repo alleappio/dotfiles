@@ -4,7 +4,13 @@ return {
         lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd.colorscheme("kanso-mist")
+            require("kanso").setup({
+                background = {
+                    dark = "mist",
+                },
+                foreground = "saturated",
+            })
+            vim.cmd.colorscheme("kanso")
         end,
     },
     {
