@@ -21,8 +21,8 @@ change_theme(){
     echo "updating kitty...";
     ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
 
-    echo "updating alacritty...";
-    ln -fs $theme_location/alacritty/theme.toml $dotfiles_location/alacritty/.config/alacritty/theme.toml;
+    echo "updating ghostty...";
+    ln -fs $theme_location/ghostty/theme.ghostty $dotfiles_location/ghostty/.config/ghostty/theme.ghostty;
 
     echo "updating nvim...";
     ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins/theme.lua;
