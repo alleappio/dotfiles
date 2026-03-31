@@ -5,3 +5,4 @@ env = TERM=xterm-256color
 cursor-style = bar
 cursor-style-blink = true
 font-size = 11
+keybind = ctrl+backspace=text:\x1b\x7f
