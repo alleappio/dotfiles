@@ -4,12 +4,11 @@ alacritty/.config/alacritty/theme.toml
 hypr/.config/hypr/hyprland/colors.conf
 hypr/.config/hypr/hyprland/monitors.conf
 kitty/.config/kitty/colors.conf
-nvim/.config/nvim/lua/plugins/theme.lua
-nvim/.config/nvim/lua/vim-theme-options.lua
+nvim/.config/nvim/plugin/theme.lua
 swaync/.config/swaync/colors.css
 tmux/.config/tmux/colors.tmux
 wallpaper/.config/background
 wallpaper/.config/blurred_background
 rofi/.config/rofi/colors.rasi
 waybar/.config/waybar/colors.css
-nvim/.config/nvim/lazy-lock.json
+nvim/.config/nvim/nvim-pack-lock.json

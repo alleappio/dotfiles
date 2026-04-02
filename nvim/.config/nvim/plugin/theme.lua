@@ -1,1 +1,0 @@
-/home/alle/dotfiles/themes/everforest/nvim/theme.lua
