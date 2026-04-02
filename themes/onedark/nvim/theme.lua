@@ -1,31 +1,23 @@
-return{
-    {
-        "navarasu/onedark.nvim",
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            require('onedark').setup({
-              -- style = 'darker'
-            })
-            require('onedark').load()
-            vim.cmd.colorscheme('onedark')
-        end
+vim.pack.add({
+    "http://github.com/navarasu/onedark.nvim",
+    'http://github.com/nvim-tree/nvim-web-devicons',
+    'http://github.com/nvim-lualine/lualine.nvim',
+})
+
+require('onedark').setup({
+  -- style = 'darker'
+})
+require('onedark').load()
+vim.cmd.colorscheme('onedark')
+
+require('lualine').setup({
+    options = {
+        theme = "onedark",
+        section_separators = '',
+        component_separators = ''
     },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require('lualine').setup({
-               options = {
-                  theme = 'onedark',
-                  section_separators = '', 
-                  component_separators = '' 
-                },
 
-                sections = { 
-                    lualine_a = { {'mode', fmt = function(str) return str:sub(1,1) end} }
-                }
-
-            })
-        end
+    sections = { 
+        lualine_a = { {'mode', fmt = function(str) return str:sub(1,1) end} }
     }
-}
+})

@@ -1,135 +1,135 @@
-local wk = require("which-key")
+    local wk = require("which-key")
 
--- Copy and paste from and to system clipboard
-wk.add({
-	{ "<leader>y", '"+y', mode = { "n", "v" }, desc = "Yank to system clipboard" },
-	{ "<leader>p", "+p", mode = "n", desc = "Paste from system clipboard" },
-	{ "<leader>o", "o<ESC>k", mode = "n", desc = "Open new line below" },
-	{ "<leader>O", "O<ESC>j", mode = "n", desc = "Open new line above" },
-})
+    -- Copy and paste from and to system clipboard
+    wk.add({
+            { "<leader>y", '"+y', mode = { "n", "v" }, desc = "Yank to system clipboard" },
+            { "<leader>p", "+p", mode = "n", desc = "Paste from system clipboard" },
+            { "<leader>o", "o<ESC>k", mode = "n", desc = "Open new line below" },
+            { "<leader>O", "O<ESC>j", mode = "n", desc = "Open new line above" },
+    })
 
--- Bufferline navigation and close
-wk.add({
-	{ "<A-.>", "<cmd>BufferLineCycleNext<cr>", mode = "n" },
-	{ "<A-,>", "<cmd>BufferLineCyclePrev<cr>", mode = "n" },
-	{ "<A-c>", "<cmd>bd<cr>", mode = "n" },
-})
+    -- Bufferline navigation and close
+    wk.add({
+            { "<A-.>", "<cmd>BufferLineCycleNext<cr>", mode = "n" },
+            { "<A-,>", "<cmd>BufferLineCyclePrev<cr>", mode = "n" },
+            { "<A-c>", "<cmd>bd<cr>", mode = "n" },
+    })
 
--- Copilot
-wk.add({
-	{ "<leader>c", group = "Copilot" },
-	{ "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc = "Open copilot chat", mode = { "n", "v" } },
-	{ "<leader>cm", "<cmd>CopilotChatModel<CR>", desc = "Choose copilot model", mode = "n" },
-	{ "<leader>ce", "<cmd>Copilot enable<CR>", desc = "Enable copilot suggestions", mode = "n" },
-	{ "<leader>cd", "<cmd>Copilot disable<CR>", desc = "Disable copilot suggestions", mode = "n" },
-	{
-		"<C-j>",
-		'copilot#Accept("\\<CR>")',
-		mode = "i",
-		expr = true,
-		replace_keycodes = false,
-		desc = "Accept Copilot suggestion",
-	},
-})
+    -- Copilot
+    wk.add({
+            { "<leader>c", group = "Copilot" },
+            { "<leader>cc", "<cmd>CopilotChatToggle<CR>", desc = "Open copilot chat", mode = { "n", "v" } },
+            { "<leader>cm", "<cmd>CopilotChatModel<CR>", desc = "Choose copilot model", mode = "n" },
+            { "<leader>ce", "<cmd>Copilot enable<CR>", desc = "Enable copilot suggestions", mode = "n" },
+            { "<leader>cd", "<cmd>Copilot disable<CR>", desc = "Disable copilot suggestions", mode = "n" },
+            {
+                    "<C-j>",
+                    'copilot#Accept("\\<CR>")',
+                    mode = "i",
+                    expr = true,
+                    replace_keycodes = false,
+                    desc = "Accept Copilot suggestion",
+            },
+    })
 
--- Telescope keybindings
-local telescope_builtin = require("telescope.builtin")
-wk.add({
-	{ "<leader>f", group = "file" },
-	{
-		"<leader>ff",
-		function()
-			telescope_builtin.find_files({ hidden = true })
-		end,
-		desc = "Find file",
-		mode = "n",
-	},
-	{
-		"<leader>fg",
-		function()
-			telescope_builtin.live_grep({ hidden = true })
-		end,
-		desc = "Live grep",
-		mode = "n",
-	},
-	{ "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers", mode = "n" },
-	{ "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
-})
+    -- Telescope keybindings
+    local telescope_builtin = require("telescope.builtin")
+    wk.add({
+            { "<leader>f", group = "file" },
+            {
+                    "<leader>ff",
+                    function()
+                            telescope_builtin.find_files({ hidden = true })
+                    end,
+                    desc = "Find file",
+                    mode = "n",
+            },
+            {
+                    "<leader>fg",
+                    function()
+                            telescope_builtin.live_grep({ hidden = true })
+                    end,
+                    desc = "Live grep",
+                    mode = "n",
+            },
+            { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Find buffers", mode = "n" },
+            { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
+    })
 
--- Open file explorer
-wk.add({
-    {
-        "<leader>e",
-        function()
-            if vim.bo.filetype == "oil" then
-                require("oil").close()
-            else
-                require("oil").open()
-            end
-        end,
-        desc = "Open file explorer",
-        mode = "n",
-    },
-})
+    -- Open file explorer
+    wk.add({
+        {
+            "<leader>e",
+            function()
+                if vim.bo.filetype == "oil" then
+                    require("oil").close()
+                else
+                    require("oil").open()
+                end
+            end,
+            desc = "Open file explorer",
+            mode = "n",
+        },
+    })
 
--- lsp actions
-wk.add({
-	{ "<leader>l", group = "lsp" },
-	{ "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
-	{ "<leader>lc", vim.diagnostic.open_float, desc = "lsp diagnostics", mode = "n" },
-	{ "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
-	{
-		"<leader>lf",
-		function()
-			vim.lsp.buf.format()
-		end,
-		desc = "lsp format code",
-		mode = "n",
-	},
-	{ "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
-	{ "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
-})
+    -- lsp actions
+    wk.add({
+            { "<leader>l", group = "lsp" },
+            { "<leader>la", vim.lsp.buf.code_action, desc = "lsp code actions", mode = "n" },
+            { "<leader>lc", vim.diagnostic.open_float, desc = "lsp diagnostics", mode = "n" },
+            { "<leader>ld", vim.lsp.buf.definition, desc = "lsp definition", mode = "n" },
+            {
+                    "<leader>lf",
+                    function()
+                            vim.lsp.buf.format()
+                    end,
+                    desc = "lsp format code",
+                    mode = "n",
+            },
+            { "<leader>lh", vim.lsp.buf.hover, desc = "lsp hover", mode = "n" },
+            { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
+    })
 
--- Markdown
-wk.add({
-	{ "<leader>m", group = "Markdown" },
-	{ "<leader>mh", "<cmd>Pandoc html<cr>", desc = "Generate html from current md file", mode = "n" },
-	{ "<leader>mp", "<cmd>Pandoc pdf<cr>", desc = "Generate a pdf from current md file", mode = "n" },
-	{ "<leader>ms", "<cmd>Pandoc slides<cr>", desc = "Generate slides from current md file", mode = "n" },
-})
+    -- Markdown
+    wk.add({
+            { "<leader>m", group = "Markdown" },
+            { "<leader>mh", "<cmd>Pandoc html<cr>", desc = "Generate html from current md file", mode = "n" },
+            { "<leader>mp", "<cmd>Pandoc pdf<cr>", desc = "Generate a pdf from current md file", mode = "n" },
+            { "<leader>ms", "<cmd>Pandoc slides<cr>", desc = "Generate slides from current md file", mode = "n" },
+    })
 
--- Quickfix keybindings
-wk.add({
-	{ "<leader>q", group = "Quickfix" },
-	{ "<leader>qc", "<cmd>cclose<cr>", desc = "Close quickfix", mode = "n" },
-	{ "<leader>qn", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode = "n" },
-	{ "<leader>qo", "<cmd>copen<cr>", desc = "Open quickfix", mode = "n" },
-	{ "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode = "n" },
-})
+    -- Quickfix keybindings
+    wk.add({
+            { "<leader>q", group = "Quickfix" },
+            { "<leader>qc", "<cmd>cclose<cr>", desc = "Close quickfix", mode = "n" },
+            { "<leader>qn", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode = "n" },
+            { "<leader>qo", "<cmd>copen<cr>", desc = "Open quickfix", mode = "n" },
+            { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode = "n" },
+    })
 
--- sshfs keybindings
-wk.add({
-	{ "<leader>r", group = "Remote" },
-	{ "<leader>rb", "<cmd>SSHBrowse<cr>", desc = "Browse remote filesystem", mode = "n" },
-	{ "<leader>rc", "<cmd>SSHConnect<cr>", desc = "Connect to remote", mode = "n" },
-	{ "<leader>rd", "<cmd>SSHDisconnect<cr>", desc = "Disconnect from remote", mode = "n" },
-	{ "<leader>rt", "<cmd>SSHTerminal<cr>", desc = "Open terminal inside remote", mode = "n" },
-})
+    -- sshfs keybindings
+    wk.add({
+            { "<leader>r", group = "Remote" },
+            { "<leader>rb", "<cmd>SSHBrowse<cr>", desc = "Browse remote filesystem", mode = "n" },
+            { "<leader>rc", "<cmd>SSHConnect<cr>", desc = "Connect to remote", mode = "n" },
+            { "<leader>rd", "<cmd>SSHDisconnect<cr>", desc = "Disconnect from remote", mode = "n" },
+            { "<leader>rt", "<cmd>SSHTerminal<cr>", desc = "Open terminal inside remote", mode = "n" },
+    })
 
--- terminal stuff
-wk.add({
-	{ "<leader>t", group = "Terminal" },
-	{
-		"<leader>tf",
-		"<cmd>TerminalEmulator float<cr>",
-		desc = "Open floating terminal",
-		mode = { "n", "t" },
-	},
-	{
-		"<leader>tt",
-		"<cmd>TerminalEmulator split<cr>",
-		desc = "Open split terminal",
-		mode = { "n", "t" },
-	},
-	{ "<esc><esc>", "<c-\\><c-n>", desc = "Go into normal mode from terminal", mode = "t" },
-})
+    -- terminal stuff
+    wk.add({
+            { "<leader>t", group = "Terminal" },
+            {
+                    "<leader>tf",
+                    "<cmd>TerminalEmulator float<cr>",
+                    desc = "Open floating terminal",
+                    mode = { "n", "t" },
+            },
+            {
+                    "<leader>tt",
+                    "<cmd>TerminalEmulator split<cr>",
+                    desc = "Open split terminal",
+                    mode = { "n", "t" },
+            },
+            { "<esc><esc>", "<c-\\><c-n>", desc = "Go into normal mode from terminal", mode = "t" },
+    })

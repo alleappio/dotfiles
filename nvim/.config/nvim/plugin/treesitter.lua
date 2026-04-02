@@ -1,0 +1,46 @@
+vim.pack.add({
+    "https://github.com/nvim-treesitter/nvim-treesitter",
+})
+
+vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
+  local name, kind = ev.data.spec.name, ev.data.kind
+  if name == 'nvim-treesitter' and kind == 'update' then
+    if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
+    vim.cmd('TSUpdate')
+  end
+end })
+
+require('nvim-treesitter').setup {
+    -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+    install_dir = vim.fn.stdpath('data') .. '/site'
+}
+local language_list ={
+    "cmake",
+    "c",
+    "lua",
+    "vim",
+    "vimdoc",
+    "query",
+    "javascript",
+    "html",
+    "cpp",
+    "python",
+    "rust",
+    "latex",
+    "markdown",
+    "markdown_inline",
+    "zig"
+}
+require('nvim-treesitter').install(language_list)
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = require("nvim-treesitter").get_installed('parsers'),
+    callback = function() vim.treesitter.start() end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "markdown", "copilot-chat" },
+    callback = function(ev)
+        vim.treesitter.start(ev.buf)
+    end,
+})
+

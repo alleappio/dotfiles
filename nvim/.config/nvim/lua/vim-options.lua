@@ -111,23 +111,6 @@ if hardmode then
     -- vim.api.nvim_set_keymap('n', '<BS>', msg, { noremap = true, silent = false })
 end
 
--- Enable wrapping for text and markdown files
-local text_wrap_group = vim.api.nvim_create_augroup('TextWrap', { clear = true })
-
-vim.api.nvim_create_autocmd('FileType', {
-  group = text_wrap_group,
-  pattern = {
-        'text',
-        'markdown',
-        'md',
-        'tex',
-        'rst',
-    },
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.linebreak = true  -- optional: break at word boundaries
-  end,
-})
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {

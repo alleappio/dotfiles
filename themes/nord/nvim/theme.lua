@@ -1,30 +1,21 @@
-return{
-    {
-        "shaunsingh/nord.nvim",
-        name = "nord",
-        priority = 1000,
-        config = function()
-            vim.g.nord_borders=true
-            require("nord").set()
-            vim.cmd.colorscheme('nord')
-        end,
+vim.pack.add({
+    "http://github.com/shaunsingh/nord.nvim",
+    'http://github.com/nvim-tree/nvim-web-devicons',
+    'http://github.com/nvim-lualine/lualine.nvim',
+})
+
+vim.g.nord_borders=true
+require("nord").set()
+vim.cmd.colorscheme('nord')
+
+require('lualine').setup({
+    options = {
+        theme = "nord",
+        section_separators = '',
+        component_separators = ''
     },
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require('lualine').setup({
-               options = {
-                  theme= 'nord',
-                  section_separators = '', 
-                  component_separators = '' 
-                },
 
-                sections = { 
-                    lualine_a = { {'mode', fmt = function(str) return str:sub(1,1) end} }
-                }
-
-            })
-        end
+    sections = { 
+        lualine_a = { {'mode', fmt = function(str) return str:sub(1,1) end} }
     }
-}
+})

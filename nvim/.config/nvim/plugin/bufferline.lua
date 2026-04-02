@@ -1,13 +1,14 @@
-return {
-  "akinsho/bufferline.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
-  config = function()
-    local bufferline = require('bufferline')
-    bufferline.setup({
-      options = {
+vim.pack.add({
+    "https://github.com/nvim-tree/nvim-web-devicons",
+    {
+        src="https://github.com/akinsho/bufferline.nvim",
+        name="bufferline",
+    },
+})
+
+local bufferline = require('bufferline')
+bufferline.setup({
+    options = {
         style_preset = bufferline.style_preset.default,
         mode = "buffers",
         themable = true,
@@ -16,7 +17,5 @@ return {
         show_close_icon = false,
         color_icons = true,
         always_show_bufferline = false,
-      },
-    })
-  end
-}
+    },
+})
