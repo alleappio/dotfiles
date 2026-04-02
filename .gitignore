@@ -12,3 +12,4 @@ wallpaper/.config/blurred_background
 rofi/.config/rofi/colors.rasi
 waybar/.config/waybar/colors.css
 nvim/.config/nvim/nvim-pack-lock.json
+ghostty/.config/ghostty/theme.ghostty
