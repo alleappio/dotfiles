@@ -10,9 +10,9 @@
 
     -- Bufferline navigation and close
     wk.add({
-            { "<A-.>", "<cmd>BufferLineCycleNext<cr>", mode = "n" },
-            { "<A-,>", "<cmd>BufferLineCyclePrev<cr>", mode = "n" },
-            { "<A-c>", "<cmd>bd<cr>", mode = "n" },
+            { "<C-h>", "<cmd>bprevious<cr>", mode = "n" },
+            { "<C-l>", "<cmd>bnext<cr>", mode = "n" },
+            { "<C-c>", "<cmd>bd<cr>", mode = "n" },
     })
 
     -- Copilot
@@ -90,21 +90,13 @@
             { "<leader>lw", vim.lsp.buf.add_workspace_folder, desc = "lsp add workspace folder", mode = "n" },
     })
 
-    -- Markdown
-    wk.add({
-            { "<leader>m", group = "Markdown" },
-            { "<leader>mh", "<cmd>Pandoc html<cr>", desc = "Generate html from current md file", mode = "n" },
-            { "<leader>mp", "<cmd>Pandoc pdf<cr>", desc = "Generate a pdf from current md file", mode = "n" },
-            { "<leader>ms", "<cmd>Pandoc slides<cr>", desc = "Generate slides from current md file", mode = "n" },
-    })
-
     -- Quickfix keybindings
     wk.add({
             { "<leader>q", group = "Quickfix" },
             { "<leader>qc", "<cmd>cclose<cr>", desc = "Close quickfix", mode = "n" },
-            { "<leader>qn", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode = "n" },
+            { "<C-j>", "<cmd>cnext<cr>", desc = "Next quickfix entry", mode = "n" },
+            { "<C-k>", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode = "n" },
             { "<leader>qo", "<cmd>copen<cr>", desc = "Open quickfix", mode = "n" },
-            { "<leader>qp", "<cmd>cprev<cr>", desc = "Prev quickfix entry", mode = "n" },
     })
 
     -- sshfs keybindings
