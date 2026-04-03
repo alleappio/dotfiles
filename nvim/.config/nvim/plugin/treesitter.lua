@@ -34,9 +34,10 @@ local language_list ={
 require('nvim-treesitter').install(language_list)
 
 vim.api.nvim_create_autocmd('FileType', {
-    pattern = require("nvim-treesitter").get_installed('parsers'),
+    pattern = language_list,
     callback = function() vim.treesitter.start() end,
 })
+
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "markdown", "copilot-chat" },
     callback = function(ev)
