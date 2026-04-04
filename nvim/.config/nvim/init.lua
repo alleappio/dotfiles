@@ -7,8 +7,11 @@ vim.api.nvim_create_user_command("Packupdate", function()
     vim.pack.update()
 end, {})
 
+require("plugins")
+
 require("vim-options")
 vim.schedule(function()
     require("keybindings")
 end)
 require("terminal_emulator")
+require("welcome")
