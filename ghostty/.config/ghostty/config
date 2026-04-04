@@ -1,5 +1,5 @@
 gtk-titlebar = false
-font-family = "AdwaitaMono Nerd Font"
+font-family = "JetbrainsMono Nerd Font"
 config-file = ?theme.ghostty
 env = TERM=xterm-256color
 cursor-style = bar

@@ -4,7 +4,7 @@
     "width": 1910, // Waybar width
     "spacing": 5, // Gaps between modules (4px)
     "margin-top": 2,
-    "font-family": "AdwaitaMono Nerd Font",
+    "font-family": "JetbrainsMono Nerd Font",
     // Choose the order of the modules
     "modules-left": [
         "custom/distro_logo",

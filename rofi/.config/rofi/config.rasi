@@ -1,9 +1,9 @@
 configuration {
     modes: "drun,run,ssh,window";
-    font: "AdwaitaMono Nerd Font 12";
+    font: "JetbrainsMono Nerd Font 12";
     show-icons: true;
-    icon-theme: "Adwaita";
-    terminal: "alacritty";
+    icon-theme: "Breeze";
+    terminal: "ghostty";
 
   timeout {
       action: "kb-cancel";

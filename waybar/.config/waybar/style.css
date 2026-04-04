@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "AdwaitaMono Nerd Font";
+    font-family: "JetbrainsMono Nerd Font";
     font-size: 15px;
     border-radius: 5px;
 }
@@ -59,7 +59,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 1px;
+    padding: 0 4px;
     background-color: @transparent;
     color: @foreground;
     /*border-radius: 5px;*/
@@ -172,7 +172,7 @@ button:hover {
 }
 
 #power-profiles-daemon {
-    padding-right: 15px;
+    padding-right: 0px;
 }
 
 #power-profiles-daemon.performance {

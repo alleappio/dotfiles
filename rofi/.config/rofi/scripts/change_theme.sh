@@ -25,7 +25,7 @@ change_theme(){
     ln -fs $theme_location/ghostty/theme.ghostty $dotfiles_location/ghostty/.config/ghostty/theme.ghostty;
 
     echo "updating nvim...";
-    ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/plugin/theme.lua;
+    ln -fs $theme_location/nvim/theme.lua $dotfiles_location/nvim/.config/nvim/lua/plugins/theme.lua;
 #    ln -fs $theme_location/nvim/vim-theme-options.lua $dotfiles_location/nvim/.config/nvim/lua/vim-theme-options.lua;
 
     echo "updating swaync...";
