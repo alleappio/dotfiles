@@ -23,6 +23,7 @@ require('lualine').setup({
             {
                 "buffers",
                 max_length = vim.o.columns - 1,
+                use_mode_colors = true,
             }
         },
         lualine_z = {get_workspace},
