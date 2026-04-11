@@ -32,7 +32,7 @@ change_theme(){
     ln -fs $theme_location/swaync/colors.css $dotfiles_location/swaync/.config/swaync/colors.css;
 
     echo "updating tmux...";
-    ln -fs $theme_location/tmux/colors.tmux $dotfiles_location/tmux/.config/tmux/colors.tmux;
+    ln -fs $theme_location/tmux/tmux-colors.conf $dotfiles_location/tmux/.config/tmux/tmux-colors.conf;
 
     echo "updating wallpaper...";
     actual_file=$(ls "$dotfiles_location/wallpaper/$1/background_$1"*); 

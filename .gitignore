@@ -6,7 +6,7 @@ hypr/.config/hypr/hyprland/monitors.conf
 kitty/.config/kitty/colors.conf
 nvim/.config/nvim/plugin/theme.lua
 swaync/.config/swaync/colors.css
-tmux/.config/tmux/colors.tmux
+tmux/.config/tmux/tmux-colors.conf
 wallpaper/.config/background
 wallpaper/.config/blurred_background
 rofi/.config/rofi/colors.rasi
