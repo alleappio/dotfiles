@@ -24,3 +24,4 @@ nodejs
 npm
 rofi
 xdg-desktop-portal-hyprland
+archlinux-xdg-menu
