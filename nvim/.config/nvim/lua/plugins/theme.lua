@@ -1,1 +1,0 @@
-/home/alle/dotfiles/themes/gruvbox/nvim/theme.lua
