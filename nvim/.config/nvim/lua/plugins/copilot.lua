@@ -14,6 +14,8 @@ require("CopilotChat").setup({
     show_help = true,
     window = {
             layout = "vertical",
+            width = 0.3,
+            border = 'rounded',
     },
     highlight_headers = false,
     separator = "---",
