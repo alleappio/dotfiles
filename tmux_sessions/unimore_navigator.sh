@@ -2,7 +2,8 @@
 
 SESSION_NAME="unimore_navigator"
 cd ~/DATA/f1tenth/workspace/unimore_navigator/
-tmux new-session -d -s $SESSION_NAME "nvim"
+tmux new-session -d -s $SESSION_NAME
+tmux send-keys -t $SESSION_NAME:1 "nvim" C-m
 tmux new-window -t $SESSION_NAME:2 -n 'distrobox'
 tmux new-window -t $SESSION_NAME:3 -n 'generic'
 # tmux select-window -t $SESSION_NAME:2
