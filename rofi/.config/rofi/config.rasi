@@ -3,7 +3,7 @@ configuration {
     font: "JetbrainsMono Nerd Font 12";
     show-icons: true;
     icon-theme: "Breeze";
-    terminal: "ghostty";
+    terminal: "alacritty";
 
   timeout {
       action: "kb-cancel";

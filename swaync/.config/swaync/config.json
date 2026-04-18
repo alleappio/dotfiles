@@ -122,15 +122,15 @@
         },
         {
           "label": "󰖩",
-          "command": "swaync-client -cp; alacritty --class nmtui -e nmtui"
+          "command": "swaync-client -cp;alacritty --class nmtui -e nmtui"
         },
         {
           "label": "󰂯",
-          "command": "swaync-client -cp; alacritty --class bluetui -e bluetui"
+          "command": "swaync-client -cp;alacritty --class bluetui -e bluetui"
         },
         {
           "label": "󰏘",
-          "command": "swaync-client -cp; ~/.config/rofi/scripts/style.sh"
+          "command": "swaync-client -cp;~/.config/rofi/scripts/style.sh"
         }
       ]
     },

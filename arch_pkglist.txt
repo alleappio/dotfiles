@@ -2,7 +2,7 @@ stow
 fastfetch
 neovim
 tmux
-kitty
+alacritty
 bemenu
 waybar
 swaync
@@ -15,7 +15,7 @@ hyprland-guiutils
 hyprlauncher
 hyprshot
 swaync
-pavucontrol
+pavucontrol-qt
 curl
 luarocks
 fuzzel
