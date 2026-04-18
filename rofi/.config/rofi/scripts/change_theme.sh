@@ -41,6 +41,11 @@ change_theme(){
     echo "updating waybar...";
     ln -fs $theme_location/waybar/colors.css $dotfiles_location/waybar/.config/waybar/colors.css;
 
+    echo "updating plasma...";
+    if [[ ! -e "$HOME/.local/share/color-schemes/$1.colors" ]];then
+         ~/dotfiles/plasma/plasma_colors.py $1
+    fi
+
     echo "reload services";
 
     echo "reload hyprland...";
@@ -55,6 +60,9 @@ change_theme(){
 
     echo "reload swaync...";
     pkill swaync; hyprctl dispatch exec swaync;
+
+    echo "reload plasma...";
+    plasma-apply-colorscheme $1
 }
 
 rofi_cmd() {
