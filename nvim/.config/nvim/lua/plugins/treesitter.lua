@@ -29,7 +29,8 @@ local language_list ={
     "latex",
     "markdown",
     "markdown_inline",
-    "zig"
+    "zig",
+    "kotlin"
 }
 require('nvim-treesitter').install(language_list)
 
