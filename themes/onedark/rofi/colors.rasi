@@ -6,7 +6,8 @@
     blue:           #61afef;
     green:          #98c379;
     purple:         #c678dd;
-    primary:        var(red);
-    selected:       var(red);
+    yellow:         #d19a66; 
+    primary:        var(green);
+    selected:       var(blue);
     urgent:         var(purple);
 }
