@@ -131,6 +131,10 @@
         {
           "label": "󰏘",
           "command": "swaync-client -cp;~/.config/rofi/scripts/style.sh"
+        },
+        {
+          "label": "",
+          "command": "swaync-client -cp;~/.config/rofi/scripts/password-store.sh"
         }
       ]
     },
