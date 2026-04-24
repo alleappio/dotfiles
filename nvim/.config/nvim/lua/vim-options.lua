@@ -76,18 +76,18 @@ vim.opt.cursorline = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Disable diagnostic display signs (they are annoying)
-local severity = vim.diagnostic.severity
-vim.diagnostic.enable = true
-vim.diagnostic.config({
-    signs = {
-        text = {
-            -- [severity.ERROR] = "",
-            [severity.WARN] = "",
-            [severity.INFO] = "",
-            [severity.HINT] = "",
-        },
-    },
-})
+-- local severity = vim.diagnostic.severity
+-- vim.diagnostic.enable = true
+-- vim.diagnostic.config({
+--     signs = {
+--         text = {
+--             -- [severity.ERROR] = "",
+--             [severity.WARN] = "",
+--             [severity.INFO] = "",
+--             [severity.HINT] = "",
+--         },
+--     },
+-- })
 
 -- Disable arrows to get better
 local hardmode = false
@@ -117,4 +117,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
   callback = function() vim.hl.on_yank({higroup="Substitute", timeout=200}) end,
+})
+
+-- Enable core.ui2
+require("vim._core.ui2").enable({
+    enable=true
 })
