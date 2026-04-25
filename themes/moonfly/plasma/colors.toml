@@ -1,0 +1,17 @@
+[description]
+id="gruboxmaterialdark"
+name="Gruvbox Material Dark"
+
+[colors]
+background = '#080808'
+background_alt = '#323437'
+foreground = '#bdbdbd'
+black = "#323437"
+blue = "#80a0ff"
+cyan = "#79dac8"
+green = "#8cc85f"
+magenta = "#cf87e8"
+red = "#ff5d5d"
+white = "#c6c6c6"
+yellow = "#e3c78a"
+primary = "blue"

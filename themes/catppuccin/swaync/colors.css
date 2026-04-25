@@ -1,9 +1,0 @@
-@define-color background #1e1e2e;/*background*/
-@define-color background-alt #1e1e2e;/*background-alt*/
-@define-color foreground #cdd6f4;/*foreground*/
-@define-color green #a6e3a1;/*green*/
-@define-color red #f38ba8;/*red*/
-@define-color blue #7fbbb3;/*blue*/
-@define-color purple #cba6f7;/*purple*/
-@define-color primary @purple;/*primary*/
-@define-color secondary @blue;/*secondary*/

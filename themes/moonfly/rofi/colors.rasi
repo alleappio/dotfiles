@@ -1,0 +1,12 @@
+* {
+    background:     #080808;
+    background-alt: #323437;
+    foreground:     #bdbdbd;
+    red:            #ff5d5d;
+    blue:           #80a0ff;
+    green:          #8cc85f;
+    purple:         #cf87e8;
+    primary:        var(blue);
+    selected:       var(blue);
+    urgent:         var(red);
+}
