@@ -123,3 +123,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require("vim._core.ui2").enable({
     enable=true
 })
+
+-- native packages
+vim.cmd.packadd("nvim.undotree")
+vim.cmd.packadd("nvim.difftool")
+vim.cmd.packadd("nvim.tohtml")

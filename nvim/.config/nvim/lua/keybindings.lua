@@ -108,3 +108,8 @@
             { "<leader>tf", "<cmd>:term<cr>", desc = "Open terminal fullscreen", mode = { "n", "t" }, },
             { "<esc><esc>", "<c-\\><c-n>", desc = "Go into normal mode from terminal", mode = "t" },
     })
+
+    -- undotree
+    wk.add({
+        {"<leader>u", "<cmd>Undotree<cr>", desc="Undotree"},
+    })
