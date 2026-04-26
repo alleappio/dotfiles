@@ -1,13 +1,5 @@
     local wk = require("which-key")
 
-    -- Copy and paste from and to system clipboard
-    wk.add({
-            { "<leader>y", '"+y', mode = { "n", "v" }, desc = "Yank to system clipboard" },
-            { "<leader>p", "+p", mode = "n", desc = "Paste from system clipboard" },
-            { "<leader>o", "o<ESC>k", mode = "n", desc = "Open new line below" },
-            { "<leader>O", "O<ESC>j", mode = "n", desc = "Open new line above" },
-    })
-
     -- Bufferline navigation and close
     wk.add({
             { "<C-h>", "<cmd>bprevious<cr>", mode = "n" },
@@ -30,6 +22,22 @@
                     replace_keycodes = false,
                     desc = "Accept Copilot suggestion",
             },
+    })
+
+    -- Open file explorer
+    wk.add({
+        {
+            "<leader>e",
+            function()
+                if vim.bo.filetype == "oil" then
+                    require("oil").close()
+                else
+                    require("oil").open()
+                end
+            end,
+            desc = "Open file explorer",
+            mode = "n",
+        },
     })
 
     -- Telescope keybindings
@@ -56,20 +64,14 @@
             { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help tags", mode = "n" },
     })
 
-    -- Open file explorer
+    -- git stuff
     wk.add({
-        {
-            "<leader>e",
-            function()
-                if vim.bo.filetype == "oil" then
-                    require("oil").close()
-                else
-                    require("oil").open()
-                end
-            end,
-            desc = "Open file explorer",
-            mode = "n",
-        },
+        { "<leader>g", group = "git"},
+        { "<leader>gl", "<cmd>ResolveOurs<cr>", desc = "accept local changes in this conflict"},
+        { "<leader>gr", "<cmd>ResolveTheirs<cr>", desc = "accept remote changes in this conflict"},
+        { "<leader>gb", "<cmd>ResolveBoth<cr>", desc = "accept both changes in this conflict"},
+        { "<leader>gn", "<cmd>ResolveNone<cr>", desc = "accept no change in this conflict"},
+        { "<leader>gq", "<cmd>ResolveList<cr>", desc = "put conflict in quickfix list"},
     })
 
     -- lsp actions
