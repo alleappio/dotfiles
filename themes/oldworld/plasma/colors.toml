@@ -1,3 +1,6 @@
+[description]
+id="oldworld"
+name="oldworld"
 [colors]
 background = '#161617'
 background_alt = '#27272a'
