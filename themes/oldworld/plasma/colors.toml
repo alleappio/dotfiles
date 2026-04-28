@@ -1,0 +1,14 @@
+[colors]
+background = '#161617'
+background_alt = '#27272a'
+foreground = '#c9c7cd'
+black = '#27272a'
+blue = '#9ca2cf'
+cyan = '#85b5ba'
+green = '#90b99f'
+magenta = '#e29eca'
+red = '#ea83a5'
+white = '#c9c7cd'
+yellow = '#e6b99d'
+primary = "blue"
+secondary = "red"
