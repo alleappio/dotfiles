@@ -4,7 +4,6 @@ vim.pack.add({
     'https://github.com/nvim-telescope/telescope-ui-select.nvim' ,
     'https://github.com/nvim-lua/plenary.nvim' ,
     'https://github.com/folke/which-key.nvim' ,
-    'https://github.com/nvim-treesitter/nvim-treesitter',
     'https://github.com/anurag3301/nvim-platformio.lua',
 })
 
