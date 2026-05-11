@@ -1,0 +1,1 @@
+/home/alle/dotfiles/themes/tokyonight/hypr/colors.lua
