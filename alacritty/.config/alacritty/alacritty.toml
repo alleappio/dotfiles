@@ -14,6 +14,7 @@ normal = { family="JetbrainsMono Nerd Font" }
 bold = { family="JetbrainsMono Nerd Font" }
 italic = { family="JetbrainsMono Nerd Font" }
 size = 11
+offset.y = 1
 
 [keyboard]
 bindings = [
