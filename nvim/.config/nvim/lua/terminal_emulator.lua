@@ -1,11 +1,11 @@
-local state = {
+local M = {
     current = {
         buf = -1,
         win = -1,
     }
 }
 
-local function create_split_window(opts)
+M.create_split_window = function(opts)
     opts = opts or {}
 
     -- Get editor height for calculating split size
@@ -38,18 +38,19 @@ local function create_split_window(opts)
     return { buf = buf, win = win }
 end
 
-local function toggle_split_terminal()
-    if not vim.api.nvim_win_is_valid(state.current.win) then
-        state.current = create_split_window({ buf = state.current.buf })
-        if vim.bo[state.current.buf].buftype ~= "terminal" then
+M.toggle_split_terminal = function()
+    if not vim.api.nvim_win_is_valid(M.current.win) then
+        M.current = M.create_split_window({ buf = M.current.buf })
+        if vim.bo[M.current.buf].buftype ~= "terminal" then
             vim.cmd.terminal()
         end
         vim.cmd('startinsert')
     else
-        vim.api.nvim_win_hide(state.current.win)
+        vim.api.nvim_win_hide(M.current.win)
     end
 end
 
-vim.api.nvim_create_user_command("TerminalEmulator", function()
-    toggle_split_terminal()
-end, {})
+return M
+-- vim.api.nvim_create_user_command("TerminalEmulator", function()
+--     toggle_split_terminal()
+-- end, {})

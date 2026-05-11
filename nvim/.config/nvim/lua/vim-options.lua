@@ -120,9 +120,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Enable core.ui2
-require("vim._core.ui2").enable({
-    enable=true
-})
+-- require("vim._core.ui2").enable({
+--     enable=true
+-- })
 
 -- native packages
 vim.cmd.packadd("nvim.undotree")
