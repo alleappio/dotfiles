@@ -13,6 +13,7 @@ change_theme(){
 
     echo "updating hypr...";
     ln -fs $theme_location/hypr/colors.conf $dotfiles_location/hypr/.config/hypr/hyprland/colors.conf;
+    ln -fs $theme_location/hypr/colors.lua $dotfiles_location/hypr/.config/hypr/hyprland/colors.lua;
 
     echo "updating kitty...";
     ln -fs $theme_location/kitty/colors.conf $dotfiles_location/kitty/.config/kitty/colors.conf;
@@ -43,19 +44,9 @@ change_theme(){
     fi
 
     echo "reload services";
-
+    
     echo "reload hyprland...";
-    hyprctl reload;
-
-    echo "relaod waybar...";
-    pkill waybar;
-    hyprctl dispatch exec waybar;
-
-    echo "reload hyprpaper...";
-    pkill hyprpaper; hyprctl dispatch exec "hyprpaper";
-
-    echo "reload swaync...";
-    pkill swaync; hyprctl dispatch exec swaync;
+    hyprctl eval "reload_fn()"
 
     echo "reload plasma...";
     plasma-apply-colorscheme $1
