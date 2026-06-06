@@ -44,4 +44,4 @@ systemctl --user start ssh-agent
 
 echo "Select a theme"
 chmod +x change_theme.sh
-./change_theme.bash
+./select_theme.sh gruvbox
