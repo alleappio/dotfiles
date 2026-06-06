@@ -1,1 +1,1 @@
-/home/alle/dotfiles/themes/tokyonight/hypr/colors.lua
+/home/alle/dotfiles/themes/gruvbox/hypr/colors.lua

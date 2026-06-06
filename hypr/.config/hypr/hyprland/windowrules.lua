@@ -31,7 +31,7 @@ hl.window_rule({
 
 -- menus
 hl.window_rule({ float = true, center = true, size = { 800, 600 }, pin = true, match = { class = '^(.*pavucontrol.*)$' } })
-hl.window_rule({ float = true, center = true, size = { 800, 600 }, pin = true, match = { class = '^.*tui$' } })
+hl.window_rule({ float = true, center = true, size = { 800, 500 }, pin = true, match = { class = '^.*tui$' } })
 
 hl.window_rule({ workspace = 1, match = { class = 'Alacritty' } })
 hl.window_rule({ workspace = 1, match = { class = 'com.mitchellh.ghostty' } })
