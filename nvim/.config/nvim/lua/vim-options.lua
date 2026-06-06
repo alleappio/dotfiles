@@ -25,7 +25,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 15
 
 -- Always show sign column to prevent text shifting
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "auto:2"
 
 -- Automatically indent new lines based on previous line
 vim.opt.autoindent = true
