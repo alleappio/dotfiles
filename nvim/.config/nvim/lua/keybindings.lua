@@ -88,6 +88,8 @@ wk.add({
 -- git stuff
 wk.add({
     { '<leader>g', group = 'git' },
+    { '<leader>g+', '<cmd>Gitsigns stage_hunk<cr>', desc = 'stage current hunk' },
+    { '<leader>g-', '<cmd>Gitsigns undo_stage_hunk<cr>', desc = 'unstage current hunk' },
     { '<leader>gl', '<cmd>ResolveOurs<cr>', desc = 'accept local changes in this conflict' },
     { '<leader>gr', '<cmd>ResolveTheirs<cr>', desc = 'accept remote changes in this conflict' },
     { '<leader>gb', '<cmd>ResolveBoth<cr>', desc = 'accept both changes in this conflict' },
