@@ -1,0 +1,17 @@
+[description]
+id="vague"
+name="vague"
+
+[colors]
+background = '#141415'
+background_alt = '#252530'
+foreground = '#cdcdcd'
+black = '#252530'
+red = '#d8647e'
+green = '#7fa563'
+yellow = '#f3be7c'
+blue = '#6e94b2'
+magenta = '#bb9dbd'
+cyan = '#aeaed1'
+white = '#cdcdcd'
+primary = "magenta"

@@ -1,0 +1,9 @@
+background_color = "rgb(141415)"
+foreground_color = "rgb(cdcdcd)"
+green_color = "rgb(7fa563)"
+red_color = "rgb(d8647e)"
+blue_color = "rgb(6e94b2)"
+magenta_color = "rgb(bb9dbd)"
+primary_color = magenta_color
+secondary_color = blue_color
+
