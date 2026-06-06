@@ -5,6 +5,8 @@ git submodule update --init
 echo "installing required packages"
 yay -S --needed $(cat arch_pkglist.txt)
 
+cd /home/alle/dotfiles
+
 echo "stowing bash"
 rm ~/.bashrc
 if [ -d ~/.bashrc.d ]; then
