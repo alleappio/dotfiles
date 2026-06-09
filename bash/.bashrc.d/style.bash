@@ -11,13 +11,13 @@ git_status() {
       if [[ -n $(git status --porcelain 2>/dev/null) ]]; then
             dirty="*"
         fi
-        echo "${YELLOW}($branch${RED}$dirty${YELLOW})${RESET} "
+        echo "${YELLOW}$branch${RED}$dirty${YELLOW}${RESET} "
     fi
 }
 
 invirtualenv() {
   if [[ -n "$VIRTUAL_ENV" ]]; then
-      echo "${GREEN}(venv)${RESET} "
+      echo "${GREEN}venv${RESET} "
   fi
 }
 
@@ -26,7 +26,7 @@ bira() {
 }
 
 custom() {
-  PS1="${BLUE}\w $GIT_STATUS$VENV_STATUS${GREEN}${RESET} "
+  PS1="${BLUE}\w $GIT_STATUS$VENV_STATUS\n${GREEN}${RESET} "
 }
 
 update_prompt () {
