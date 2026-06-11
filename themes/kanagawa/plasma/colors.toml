@@ -1,0 +1,17 @@
+[description]
+id="kanagawa"
+name="kanagawa"
+
+[colors]
+background = '#181616'
+foreground = '#c5c9c5'
+background_alt = '#0d0c0c'
+black = '#0d0c0c'
+red = '#c4746e'
+green = '#8a9a7b'
+yellow = '#c4b28a'
+blue = '#8ba4b0'
+magenta = '#a292a3'
+cyan = '#8ea4a2'
+white = '#c8c093'
+primary = "blue"
