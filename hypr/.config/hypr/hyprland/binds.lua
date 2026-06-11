@@ -12,7 +12,8 @@ hl.bind(mainMod .. ' + P', hl.dsp.window.pseudo())
 hl.bind(mainMod .. ' + J', hl.dsp.layout('togglesplit')) -- dwindle only
 hl.bind(mainMod .. ' + L', hl.dsp.exec_cmd('hyprlock'))
 hl.bind(mainMod .. ' + P', hl.dsp.exec_cmd('hyprshot -m region'))
-hl.bind(mainMod .. ' + N', hl.dsp.exec_cmd('swaync-client -t'))
+hl.bind(mainMod .. ' + N', hl.dsp.exec_cmd('~/.config/rofi/scripts/main_menu.sh'))
+hl.bind(mainMod .. ' + SHIFT + N', hl.dsp.exec_cmd('swaync-client -t'))
 hl.bind(mainMod .. ' + SHIFT + R', reload_fn)
 
 -- Move focus with mainMod + arrow keys
