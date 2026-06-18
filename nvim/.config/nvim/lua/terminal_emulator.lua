@@ -2,7 +2,7 @@ local M = {
     current = {
         buf = -1,
         win = -1,
-    }
+    },
 }
 
 M.create_split_window = function(opts)
@@ -41,7 +41,7 @@ end
 M.toggle_split_terminal = function()
     if not vim.api.nvim_win_is_valid(M.current.win) then
         M.current = M.create_split_window({ buf = M.current.buf })
-        if vim.bo[M.current.buf].buftype ~= "terminal" then
+        if vim.bo[M.current.buf].buftype ~= 'terminal' then
             vim.cmd.terminal()
         end
         vim.cmd('startinsert')
@@ -50,7 +50,14 @@ M.toggle_split_terminal = function()
     end
 end
 
+M.toggle_full_screen_terminal = function()
+    if vim.api.nvim_buf_is_valid(M.current.buf) then
+        vim.api.nvim_win_set_buf(0, M.current.buf)
+    else
+        vim.cmd('term')
+        M.current.buf = vim.api.nvim_get_current_buf()
+    end
+    vim.cmd('startinsert')
+end
+
 return M
--- vim.api.nvim_create_user_command("TerminalEmulator", function()
---     toggle_split_terminal()
--- end, {})
