@@ -5,6 +5,7 @@ vim.pack.add({
 
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
+local telescope_builtin = require('telescope.builtin')
 
 require('telescope').setup({
     defaults = {
@@ -21,3 +22,13 @@ require('telescope').setup({
         },
     },
 })
+
+function telescope_find_files()
+    telescope_builtin.find_files(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = false, layout_config = { height = 10 } }))
+end
+function telescope_live_grep()
+    telescope_builtin.live_grep(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = true, layout_config = { height = 20 } }))
+end
+function telescope_keymaps()
+    telescope_builtin.keymaps(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = true, layout_config = { height = 20 } }))
+end
