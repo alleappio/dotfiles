@@ -24,7 +24,7 @@ require('telescope').setup({
 })
 
 function telescope_find_files()
-    telescope_builtin.find_files(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = false, layout_config = { height = 10 } }))
+    telescope_builtin.find_files(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = false, layout_config = { height = 20 } }))
 end
 function telescope_live_grep()
     telescope_builtin.live_grep(require('telescope.themes').get_ivy({ hidden = true, no_ignore = true, preview = true, layout_config = { height = 20 } }))
