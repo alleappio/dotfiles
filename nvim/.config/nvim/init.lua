@@ -1,3 +1,4 @@
+vim.g.start_time = vim.uv.now()
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
@@ -18,8 +19,7 @@ end, {})
 require("plugins")
 
 require("vim-options")
-vim.schedule(function()
-    require("keybindings")
-end)
+require("keybindings")
 require("terminal_emulator")
+
 require("welcome")
