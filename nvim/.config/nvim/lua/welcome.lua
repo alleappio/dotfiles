@@ -120,5 +120,11 @@ end
 
 vim.api.nvim_create_autocmd('VimEnter', {
     once = true,
-    callback = open_dashboard,
+    callback = function()
+        if vim.fn.argc() ~= 0 then
+            return
+        end
+
+        open_dashboard()
+    end,
 })
