@@ -8,7 +8,7 @@ rofi_cmd() {
 		-dmenu
 }
 
-items=$'Launcher\nChange theme\nPassword store\npowermenu\nWallpaper picker'
+items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nWallpaper picker'
 
 output=$(printf "%b" "$items" | rofi_cmd)
 
@@ -31,6 +31,12 @@ case "$output" in
         ;;
     "Wallpaper picker")
         ~/.config/rofi/scripts/wallpaper_picker.sh
+        ;;
+    "htop")
+        alacritty --class htoptui -e htop  
+        ;;
+    "nmtui")
+        alacritty --class nmtui -e nmtui  
         ;;
     *)
         exit 0
