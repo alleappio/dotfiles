@@ -4,7 +4,7 @@ vim.pack.add({
 
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
-    file_types = { 'markdown', 'copilot-chat' },
+    file_types = { 'markdown', 'codecompanion' },
     heading = {
         backgrounds = {
             nil,
