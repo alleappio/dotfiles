@@ -23,12 +23,15 @@ end
 
 local function build_lines(width)
     local logo = {
-        '  _   _                 _           ',
-        ' | \\ | |               (_)          ',
-        ' |  \\| | ___  _____   ___ _ __ ___  ',
-        ' | . ` |/ _ \\/ _ \\ \\ / / | \'_ ` _ \\ ',
-        ' | |\\  |  __/ (_) \\ V /| | | | | | |',
-        ' \\_| \\_/\\___|\\___/ \\_/ |_|_| |_| |_|',
+        'o    o                       o         ',
+        '8b   8                                 ',
+        '8`b  8 .oPYo. .oPYo. o    o o8 ooYoYo. ',
+        '8 `b 8 8oooo8 8    8 Y.  .P  8 8\' 8  8 ',
+        '8  `b8 8.     8    8 `b..d\'  8 8  8  8 ',
+        '8   `8 `Yooo\' `YooP\'  `YP\'   8 8  8  8 ',
+        '..:::..:.....::.....:::...:::....:..:..',
+        ':::::::::::::::::::::::::::::::::::::::',
+        ':::::::::::::::::::::::::::::::::::::::',
     }
 
     local fortune = get_fortune()
@@ -86,12 +89,12 @@ local function open_dashboard()
 
     local startup_row = 0
     vim.api.nvim_buf_set_extmark(buf, ns, startup_row, 0, {
-        end_row = 6, -- "neovim started in"
-        hl_group = 'function',
+        end_row = 9,
+        hl_group = '@markup.raw',
     })
     vim.api.nvim_buf_set_extmark(buf, ns, #lines-1, 0, {
         end_row = #lines, -- "neovim started in"
-        hl_group = '@comment',
+        hl_group = '@markup.quote',
     })
 
     local win = vim.api.nvim_open_win(buf, true, {
