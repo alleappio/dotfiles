@@ -1,7 +1,7 @@
 -- Super key
 mainMod = 'SUPER' -- Sets "Windows" key as main modifier
 
-terminal = 'alacritty -e tmux'
+terminal = 'alacritty -e ~/.config/tmux/sessions/home.sh'
 fileManager = 'dolphin'
 menu = "~/.config/rofi/scripts/launcher.sh"
 poweroffMenu = "~/.config/rofi/scripts/powermenu.sh"
