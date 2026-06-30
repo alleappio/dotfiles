@@ -1,0 +1,15 @@
+@define-color transparent rgba(0, 0, 0, 0);/*transparent*/
+@define-color background #1a1510;
+@define-color foreground #bfbdb6;
+@define-color background_alt #23211b;
+@define-color black #23211b;
+@define-color red #f06b73;
+@define-color green #70bf56;
+@define-color yellow #fdb04c;
+@define-color blue #4fbfff;
+@define-color magenta #d0a1ff;
+@define-color cyan #93e2c8;
+@define-color white #c7c7c7;
+@define-color orange #ff8f40;
+@define-color primary @orange;/*primary*/
+@define-color secondary @blue;/*secondary*/
