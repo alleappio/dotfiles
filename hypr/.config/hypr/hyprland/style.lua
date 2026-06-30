@@ -2,8 +2,8 @@ require('hyprland.colors')
 
 hl.config({
     general = {
-        gaps_in = 5,
-        gaps_out = 10,
+        gaps_in = 0,
+        gaps_out = 0,
 
         border_size = 1,
 
@@ -26,8 +26,8 @@ hl.config({
     },
 
     decoration = {
-        rounding = 5,
-        rounding_power = 2,
+        rounding = 0,
+        rounding_power = 0,
 
         -- Change transparency of focused and unfocused windows
         active_opacity = 1.0,
