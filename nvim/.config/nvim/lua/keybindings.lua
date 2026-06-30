@@ -31,11 +31,13 @@ vim.keymap.set('n', '<leader>ft', '<cmd>Neotree toggle<CR>', { desc = 'Telescope
 -- git stuff
 vim.keymap.set('n', '<leader>g+', '<cmd>Gitsigns stage_hunk<cr>', { desc = 'Git: stage current hunk' })
 vim.keymap.set('n', '<leader>g-', '<cmd>Gitsigns undo_stage_hunk<cr>', { desc = 'Git: unstage current hunk' })
+vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', { desc = 'Git: preview current hunk' })
+vim.keymap.set('n', '<leader>gq', '<cmd>Gitsigns setqflist<cr>', { desc = 'Git: put hunks in quickfix list' })
 vim.keymap.set('n', '<leader>gl', '<cmd>ResolveOurs<cr>', { desc = 'Git: accept local changes in this conflict' })
 vim.keymap.set('n', '<leader>gr', '<cmd>ResolveTheirs<cr>', { desc = 'Git: accept remote changes in this conflict' })
 vim.keymap.set('n', '<leader>gb', '<cmd>ResolveBoth<cr>', { desc = 'Git: accept both changes in this conflict' })
 vim.keymap.set('n', '<leader>gn', '<cmd>ResolveNone<cr>', { desc = 'Git: accept no change in this conflict' })
-vim.keymap.set('n', '<leader>gq', '<cmd>ResolveList<cr>', { desc = 'Git: put conflict in quickfix list' })
+vim.keymap.set('n', '<leader>gQ', '<cmd>ResolveList<cr>', { desc = 'Git: put conflict in quickfix list' })
 
 -- lsp actions
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action, { desc = 'Lsp: lsp code actions' })
