@@ -1,0 +1,8 @@
+require("hyprland.variables")
+require("hyprland.execs")
+require("hyprland.monitors")
+require("hyprland.peripherals")
+require("hyprland.windowrules")
+require("hyprland.colors")
+require("hyprland.style")
+require("hyprland.binds")
