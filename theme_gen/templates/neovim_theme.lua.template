@@ -1,0 +1,7 @@
+vim.pack.add({{
+    "{neovim_theme_repo}",
+}})
+
+{neovim_theme_opts}
+vim.cmd.colorscheme("{neovim_theme_name}")
+

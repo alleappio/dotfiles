@@ -1,0 +1,28 @@
+# Colors (Gruvbox Material Medium Dark)
+
+# Default colors
+[colors.primary]
+background = '{background_color}'
+foreground = '{foreground_color}'
+
+# Normal colors
+[colors.normal]
+black = '{black_color}'
+red = '{red_color}'
+green = '{green_color}'
+yellow = '{yellow_color}'
+blue = '{blue_color}'
+magenta = '{magenta_color}'
+cyan = '{cyan_color}'
+white = '{white_color}'
+
+# Bright colors (same as normal colors)
+[colors.bright]
+black = '{black_color}'
+red = '{red_color}'
+green = '{green_color}'
+yellow = '{yellow_color}'
+blue = '{blue_color}'
+magenta = '{magenta_color}'
+cyan = '{cyan_color}'
+white = '{white_color}'

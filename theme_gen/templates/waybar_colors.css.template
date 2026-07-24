@@ -1,0 +1,10 @@
+/* --GRUVBOX COLORS--*/
+@define-color background {background_color};/*background*/
+@define-color transparent rgba(0, 0, 0, 0);/*transparent*/
+@define-color background-alt {background_alt_color};/*background-alt*/
+@define-color foreground {foreground_color};/*foreground*/
+@define-color green {green_color};/*green*/
+@define-color red {red_color};/*red*/
+@define-color blue {blue_color};/*blue*/
+@define-color primary @{primary_color_name};/*primary*/
+@define-color secondary @{secondary_color_name};/*secondary*/
