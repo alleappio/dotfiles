@@ -1,10 +1,11 @@
 * {
     background:     #1d2021;
-    background-alt: #32302f;
+    background-alt: #3c3836;
     foreground:     #d4be98;
     red:            #ea6962;
     blue:           #7daea3;
     green:          #a9b665;
+    orange:         #e78a43;
     purple:         #d3869b;
     primary:        var(blue);
     selected:       var(blue);
