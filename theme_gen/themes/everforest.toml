@@ -1,0 +1,22 @@
+background_color = "#272e33"
+foreground_color = "#d3c6aa"
+background_alt_color = "#414B50"
+black_color   = "#414b50"
+red_color     = "#e67e80"
+green_color   = "#a7c080"
+yellow_color  = "#dbbc7f"
+blue_color    = "#7fbbb3"
+magenta_color = "#d699b6"
+cyan_color    = "#83c092"
+white_color   = "#d3c6aa"
+orange_color  = "#E69875"
+
+primary_color_name = "green"
+secondary_color_name = "cyan"
+
+neovim_theme_repo = "http://github.com/sainnhe/everforest"
+neovim_theme_opts = [
+    'vim.g.everforest_enable_italic = true',
+    'vim.g.everforest_background = "hard"'
+]
+neovim_theme_name = "everforest"

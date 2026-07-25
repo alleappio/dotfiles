@@ -1,0 +1,20 @@
+background_color     = "#141415"
+foreground_color     = "#cdcdcd"
+background_alt_color = "#252530"
+black_color          = "#252530"
+red_color            = "#d8647e"
+green_color          = "#7fa563"
+yellow_color         = "#f3be7c"
+blue_color           = "#6e94b2"
+magenta_color        = "#bb9dbd"
+cyan_color           = "#aeaed1"
+white_color          = "#cdcdcd"
+orange_color         = "#f3be7c"
+
+primary_color_name = "magenta"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/vague-theme/vague.nvim"
+neovim_theme_opts = [
+]
+neovim_theme_name = "vague"
