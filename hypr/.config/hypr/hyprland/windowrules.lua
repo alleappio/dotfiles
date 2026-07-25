@@ -44,6 +44,7 @@ for _, b in ipairs(browsers) do
 end
 hl.window_rule({ workspace = 2, match = { class = 'helium' } })
 hl.window_rule({ workspace = 3, match = { class = 'BambuStudio' } })
+hl.window_rule({ workspace = 3, match = { class = 'orca-slicer' } })
 hl.window_rule({ workspace = 4, match = { class = 'org.telegram.desktop' } })
 hl.window_rule({ workspace = 9, match = { class = 'rviz2' } })
 hl.window_rule({ workspace = 10, match = { class = 'Spotify' } })
