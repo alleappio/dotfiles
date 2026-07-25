@@ -34,12 +34,15 @@ hl.window_rule({ float = true, center = true, size = { 800, 600 }, pin = true, m
 hl.window_rule({ float = true, center = true, size = { 800, 500 }, pin = true, match = { class = '^.*tui$' } })
 hl.window_rule({ float = true, center = true, pin = true, match = { class = '^.*float$' } })
 
+local browsers = { 'zen', 'librewolf', 'firefox', 'qutebrowser', 'helium' }
+
 hl.window_rule({ workspace = 1, match = { class = 'Alacritty' } })
 hl.window_rule({ workspace = 1, match = { class = 'com.mitchellh.ghostty' } })
-hl.window_rule({ workspace = 2, match = { class = 'firefox' } })
-hl.window_rule({ workspace = 2, match = { class = 'zen' } })
-hl.window_rule({ workspace = 2, match = { class = 'librewolf' } })
-hl.window_rule({ workspace = 2, match = { class = 'qutebrowser' } })
+for _, b in ipairs(browsers) do
+    print(b)
+    hl.window_rule({ workspace = 2, match = { class = b } })
+end
+hl.window_rule({ workspace = 2, match = { class = 'helium' } })
 hl.window_rule({ workspace = 3, match = { class = 'BambuStudio' } })
 hl.window_rule({ workspace = 4, match = { class = 'org.telegram.desktop' } })
 hl.window_rule({ workspace = 9, match = { class = 'rviz2' } })
