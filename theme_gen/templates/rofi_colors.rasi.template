@@ -5,6 +5,7 @@
     red:            {red_color};
     blue:           {blue_color};
     green:          {green_color};
+    orange:         {orange_color};
     purple:         {magenta_color};
     primary:        var({primary_color_name});
     selected:       var({primary_color_name});

@@ -1,0 +1,21 @@
+background_color = "#1a1510"
+foreground_color = "#bfbdb6"
+background_alt_color = "#23211b"
+black_color = "#23211b"
+red_color = "#f06b73"
+green_color = "#70bf56"
+yellow_color = "#fdb04c"
+blue_color = "#4fbfff"
+magenta_color = "#d0a1ff"
+cyan_color = "#93e2c8"
+white_color = "#c7c7c7"
+orange_color = "#ff8f40"
+
+primary_color_name = "orange"
+secondary_color_name = "red"
+
+neovim_theme_repo = "https://github.com/felipefdl/warm-burnout"
+neovim_theme_opts = [
+  'vim.opt.rtp:append(vim.pack.get({"warm-burnout"})[1].path .. "/nvim")',
+]
+neovim_theme_name = "warm-burnout-dark"

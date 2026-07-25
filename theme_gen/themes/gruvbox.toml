@@ -8,6 +8,7 @@ yellow_color = "#d8a657"
 blue_color = "#7daea3"
 magenta_color = "#d3869b"
 cyan_color = "#89b482"
+orange_color = "#e78a43"
 white_color = "#d4be98"
 
 primary_color_name = "blue"

@@ -2,6 +2,7 @@
 import sys
 import os
 import tomllib
+from pathlib import Path
 
 def help():
     print(f"Usage: {sys.argv[0]} (colorscheme)")
@@ -12,20 +13,26 @@ def hex_to_rgb(hex: str) -> str:
     r, g, b = int(hex[0:2], 16), int(hex[2:4], 16), int(hex[4:6], 16)
     return f"{r},{g},{b}"
 
+def check_output_file(file_path):
+    path = Path(file_path)
+
+    # Create parent directories if they don't exist
+    path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Create the file if it doesn't exist (touch)
+    path.touch(exist_ok=True)
+
+    return path
+
 def fill_template(template_file, colors, output_file):
     with open(template_file, "r") as f:
         template = f.read()
 
     output = template.format_map(colors)
 
+    check_output_file(output_file)
     with open(output_file, "w") as f:
         f.write(output)
-
-def gen_plasma_colors(colors):
-    plasma_template_file = f"{os.environ["HOME"]}/dotfiles/plasma/colors.colors.template"
-    plasma_output_file = f"{os.environ["HOME"]}/.local/share/color-schemes/{colors["scheme_id"]}.colors"
-
-    fill_template(plasma_template_file, colors, plasma_output_file)
 
 def main():
     if len(sys.argv) != 2:
@@ -35,9 +42,6 @@ def main():
     colorscheme_file = f"themes/{colorscheme_name}.toml"
     templates_dir = "templates"
     output_dir = f"outputs/{colorscheme_name}"
-    # if not os.path.isfile(colorscheme_file):
-    #     print("colorscheme {colorscheme} not found")
-    #     help()
 
     with open(colorscheme_file, "rb") as f:
         tot = tomllib.load(f)
@@ -51,8 +55,15 @@ def main():
             print(e)
             help()
 
-    colorscheme["accent_color"] = colorscheme[f"{colorscheme["primary_color_name"]}_color"]
+    colorscheme["primary_color_hex"] = colorscheme[f"{colorscheme["primary_color_name"]}_color"]
     colorscheme["neovim_theme_opts"] = "\n".join(colorscheme["neovim_theme_opts"])
+
+
+    colorscheme_cp = colorscheme.copy()
+    for i in colorscheme_cp:
+        if i.endswith("_color"):
+            colorscheme[f"{i}_strip_hashtag"] = colorscheme[i].lstrip("#")
+    del colorscheme_cp
 
     colors = {
         "scheme_id":          colorscheme_name,
@@ -66,7 +77,7 @@ def main():
         "yellow_rgb":              hex_to_rgb(colorscheme["yellow_color"]),
         "blue_rgb":                hex_to_rgb(colorscheme["blue_color"]),
         "purple_rgb":              hex_to_rgb(colorscheme["magenta_color"]),
-        "accent_rgb":              hex_to_rgb(colorscheme["accent_color"]),
+        "accent_rgb":              hex_to_rgb(colorscheme["primary_color_hex"]),
         "hover_rgb":               hex_to_rgb(colorscheme["background_alt_color"]),
     }
     colors = colors | colorscheme
@@ -80,10 +91,8 @@ def main():
         app_name = a[0].split("_")[0]
         extension = a[1]
         template_file = f"{templates_dir}/{i}"
-        output_file = f"{output_dir}/{".".join(a[:-1])}"
+        output_file = f"{output_dir}/{".".join(["/".join(a[0].split("_")), a[1]])}"
         print(f"Filling {app_name}.{extension} theme")
-        # print(f"template file: {template_file}")
-        # print(f"optput file: {output_file}")
         fill_template(template_file, colors, output_file)
 
 
