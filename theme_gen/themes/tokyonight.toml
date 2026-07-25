@@ -1,0 +1,19 @@
+background_color = "#1a1b26"
+foreground_color = "#c0caf5"
+background_alt_color = "#252530"
+black_color   = "#15161e"
+red_color     = "#f7768e"
+green_color   = "#9ece6a"
+yellow_color  = "#e0af68"
+blue_color    = "#7aa2f7"
+magenta_color = "#bb9af7"
+cyan_color    = "#7dcfff"
+white_color   = "#a9b1d6"
+orange_color = "#e0af68"
+
+primary_color_name = "magenta"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/folke/tokyonight.nvim"
+neovim_theme_opts = []
+neovim_theme_name = "tokyonight-night"

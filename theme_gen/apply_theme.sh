@@ -26,9 +26,9 @@ change_theme(){
     echo "updating tmux...";
     cp $theme_location/tmux/colors.conf $config_location/tmux/tmux-colors.conf;
 
-    # echo "updating wallpaper...";
-    # actual_file=$(ls "$config_location/wallpaper/$1/background_$1"*);
-    # cp "$actual_file" ~/.config/background;
+    echo "updating wallpaper...";
+    actual_file=$(ls "$HOME/dotfiles/wallpaper/$1/background_$1"*);
+    cp  "$actual_file" ~/.config/background;
 
     echo "updating waybar...";
     cp $theme_location/waybar/colors.css $config_location/waybar/colors.css;
