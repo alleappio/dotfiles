@@ -5,6 +5,5 @@ $red_color=rgb({red_color_strip_hashtag})
 $blue_color=rgb({blue_color_strip_hashtag})
 $magenta_color=rgb({magenta_color_strip_hashtag})
 $orange_color=rgb({orange_color_strip_hashtag})
-primary_color = {primary_color_name}_color
-secondary_color = {secondary_color_name}_color
-
+$primary_color=${primary_color_name}_color
+$secondary_color=${secondary_color_name}_color

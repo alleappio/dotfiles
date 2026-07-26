@@ -30,6 +30,7 @@ change_theme(){
 
     echo "updating wallpaper...";
     actual_file=$(ls "$HOME/dotfiles/wallpaper/$1/background_$1"*);
+    echo "applying $actual_file"
     cp  "$actual_file" ~/.config/background;
 
     echo "updating waybar...";
