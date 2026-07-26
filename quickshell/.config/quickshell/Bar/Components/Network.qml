@@ -9,13 +9,12 @@ RowLayout {
     id: root
     spacing: 6
 
-    property var wifiDevice: Networking.devices.values.find(d => d.type === DeviceType.Wifi)
-    property var ethDevice: Networking.devices.values.find(d => d.type === DeviceType.Wired)
-    property var wifiConn: wifiDevice.networks.values.find(n => n.connected)
-    property var ethConn: ethDevice.networks.values.find(n => n.connected)
-    property var active: ethDevice ? ethConn : wifiDevice ? wifiConn : null
-    property int activeDevice: ethConn ? 0 : wifiConn ? 1 : -1
-
+    property var wifiDevice: Networking.devices.values.find(d => d?.type === DeviceType.Wifi)
+    property var ethDevice: Networking.devices.values.find(d => d?.type === DeviceType.Wired)
+    property var wifiConn: wifiDevice?.networks?.values?.find(n => n.connected) ?? null
+    property var ethConn: ethDevice?.networks.values.find(n => n.connected)
+    readonly property var active: ethConn ? ethConn : wifiConn
+    readonly property int activeDevice: ethConn ? 0 : wifiConn ? 1 : -1
     readonly property real signal: active ? active.signalStrength : 0
     readonly property string icon: {
         if (activeDevice === 0) {
