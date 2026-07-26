@@ -26,7 +26,8 @@ local language_list ={
     "markdown",
     "markdown_inline",
     "zig",
-    "kotlin"
+    "kotlin",
+    "odin"
 }
 require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)

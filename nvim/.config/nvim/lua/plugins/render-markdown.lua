@@ -1,6 +1,9 @@
 vim.pack.add({
     'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+    -- 'https://github.com/noisesfromspace/touchup.nvim.git'
 })
+
+-- require("touchup").setup({})
 
 require('render-markdown').setup({
     completions = { lsp = { enabled = true } },
