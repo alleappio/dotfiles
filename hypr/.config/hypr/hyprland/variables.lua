@@ -7,12 +7,11 @@ menu = "~/.config/rofi/scripts/launcher.sh"
 poweroffMenu = "~/.config/rofi/scripts/powermenu.sh"
 
 reload_fn = function()
-    hl.dispatch(hl.dsp.exec_cmd('pkill waybar'))
-    hl.dispatch(hl.dsp.exec_cmd('pkill hyprpaper'))
-    hl.dispatch(hl.dsp.exec_cmd('waybar &'))
-    hl.dispatch(hl.dsp.exec_cmd('hyprpaper &'))
-    hl.dispatch(hl.dsp.exec_cmd('swaync-client -R &'))
-    hl.dispatch(hl.dsp.exec_cmd('swaync-client -rs &'))
+    -- hl.dispatch(hl.dsp.exec_cmd('pkill waybar'))
+    hl.dispatch(hl.dsp.exec_cmd('pkill hyprpaper; hyprpaper &'))
+    -- hl.dispatch(hl.dsp.exec_cmd('waybar &'))
+    -- hl.dispatch(hl.dsp.exec_cmd('swaync-client -R &'))
+    -- hl.dispatch(hl.dsp.exec_cmd('swaync-client -rs &'))
 end
 
 -- environment vars.
