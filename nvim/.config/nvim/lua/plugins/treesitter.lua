@@ -1,5 +1,6 @@
 vim.pack.add {
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter" }
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter-context"}
 }
 
 vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
@@ -27,11 +28,15 @@ local language_list ={
     "markdown_inline",
     "zig",
     "kotlin",
-    "odin"
+    "odin",
 }
 require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)
 
+require("treesitter-context").setup({
+    enable = true,
+    mode = "cursor"
+})
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = language_list,

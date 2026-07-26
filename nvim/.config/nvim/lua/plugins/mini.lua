@@ -1,7 +1,17 @@
 vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
+vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { link = 'MiniStatuslineModeNormal' })
+
 require('mini.icons').setup({})
+require('mini.snippets').setup({})
+require('mini.surround').setup({})
+require('mini.tabline').setup({})
+require('mini.trailspace').setup({})
+require('mini.pairs').setup({})
 local statusline = require('mini.statusline')
+local miniclue = require('mini.clue')
+local hipatterns = require('mini.hipatterns')
+local minifiles = require('mini.files')
 
 statusline.setup({
     content = {
@@ -27,12 +37,6 @@ statusline.setup({
     },
 })
 
-vim.api.nvim_set_hl(0, 'MiniTablineCurrent', {link = 'MiniStatuslineModeNormal'})
-require('mini.tabline').setup({})
-
-require('mini.trailspace').setup({})
-require('mini.pairs').setup({})
-local miniclue = require('mini.clue')
 miniclue.setup({
     triggers = {
         { mode = { 'n', 'x' }, keys = '<Leader>' },
@@ -45,7 +49,6 @@ miniclue.setup({
     delay = 1000,
 })
 
-local hipatterns = require('mini.hipatterns')
 hipatterns.setup({
     highlighters = {
         fixme = { pattern = 'FIXME', group = 'MiniHipatternsFixme' },
@@ -56,7 +59,7 @@ hipatterns.setup({
     },
 })
 
-require('mini.files').setup({
+minifiles.setup({
     mappings = {
         close = 'q',
         go_in = 'L',
@@ -73,5 +76,3 @@ require('mini.files').setup({
         trim_right = '>',
     },
 })
-
-require("mini.snippets").setup({})
