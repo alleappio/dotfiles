@@ -1,0 +1,20 @@
+pragma Singleton
+import QtQuick
+
+QtObject {{
+    readonly property color background: '{background_color}'
+    readonly property color foreground: '{foreground_color}'
+    readonly property color black: '{black_color}'
+    readonly property color red: '{red_color}'
+    readonly property color green: '{green_color}'
+    readonly property color yellow: '{yellow_color}'
+    readonly property color blue: '{blue_color}'
+    readonly property color magenta: '{magenta_color}'
+    readonly property color cyan: '{cyan_color}'
+    readonly property color orange: '{orange_color}'
+    readonly property color white: '{white_color}'
+    readonly property color primary: {primary_color_name}
+
+    readonly property int textRenderType: Text.NativeRendering
+    readonly property string fontFamily: "JetbrainsMono Nerd Font"
+}}

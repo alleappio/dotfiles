@@ -6,6 +6,7 @@
     blue:           #7daea3;
     green:          #a9b665;
     orange:         #e78a43;
+    magenta:         #d3869b;
     purple:         #d3869b;
     primary:        var(blue);
     selected:       var(blue);

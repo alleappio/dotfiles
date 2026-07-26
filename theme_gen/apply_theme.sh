@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 change_theme(){
     if [ -z "$1" ];then
         echo "no theme chosen";
@@ -33,6 +35,9 @@ change_theme(){
     echo "updating waybar...";
     cp $theme_location/waybar/colors.css $config_location/waybar/colors.css;
 
+    echo "updating quickshell...";
+    cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
+
     echo "updating plasma...";
     if [[ ! -e "$HOME/.local/share/color-schemes/$1.colors" ]];then
          cp $HOME/dotfiles/theme_gen/outputs/$1/plasma.colors $HOME/.local/share/color-schemes/$1.colors
@@ -51,7 +56,7 @@ change_theme(){
 }
 
 config_location="$HOME/.config";
-themes_location="outputs";
+themes_location="$HOME/dotfiles/theme_gen/outputs";
 options=($(ls --color=never $themes_location));
 
 choice=$1;

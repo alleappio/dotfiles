@@ -6,6 +6,7 @@
 @define-color green #a9b665;/*green*/
 @define-color red #ea6962;/*red*/
 @define-color blue #7daea3;/*blue*/
+@define-color magenta #d3869b;/*magenta*/
 @define-color orange #e78a43;/*orange*/
 @define-color primary @blue;/*primary*/
 @define-color secondary @green;/*secondary*/
