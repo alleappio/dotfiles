@@ -3,12 +3,12 @@
 rofi_cmd() {
 	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
 		-config ~/.config/rofi/config.rasi \
-                -p "Style" \
+                -p ">" \
                 -i \
 		-dmenu
 }
 
-items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nWallpaper picker'
+items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio\nWallpaper picker'
 
 output=$(printf "%b" "$items" | rofi_cmd)
 
@@ -33,10 +33,13 @@ case "$output" in
         ~/.config/rofi/scripts/wallpaper_picker.sh
         ;;
     "htop")
-        alacritty --class htoptui -e htop  
+        alacritty --class htoptui -e htop
         ;;
     "nmtui")
-        alacritty --class nmtui -e nmtui  
+        alacritty --class nmtui -e nmtui
+        ;;
+    "Audio")
+        pavucontrol-qt
         ;;
     *)
         exit 0

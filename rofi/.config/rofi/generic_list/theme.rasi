@@ -15,8 +15,8 @@ configuration {
     normal-foreground:           var(foreground);
     urgent-background:           var(background);
     urgent-foreground:           var(red);
-    selected-normal-background:  var(light-background);
-    selected-normal-foreground:  var(foreground);
+    selected-normal-background:  var(primary);
+    selected-normal-foreground:  var(background);
     selected-active-background:  var(light-background);
     selected-active-foreground:  var(green);
     active-background:           var(background);
@@ -34,12 +34,13 @@ window {
     padding:          5;
     background-color: var(background);
     border:           1;
-    border-radius:    5;
+    border-radius:    0;
     width: 600;
+    location: north west;
 }
 
 mainbox {
-    padding: 5px;
+    padding: 0px;
     border:  0;
     children: [ "inputbar", "listview" ];
     background-color: transparent;
@@ -49,15 +50,15 @@ mainbox {
 // INPUTBAR
 //
 inputbar {
-    padding: 10px ;
+    padding: 0px ;
     spacing: 5px ;
     text-color: var(foreground);
-    background-color: var(light-background);
+    background-color: transparent;
     //children:   [ "prompt","textbox-prompt-colon","entry","overlay","num-filtered-rows","num-rows","case-indicator" ];
     children: [ "prompt", "textbox-prompt-colon", "entry" ];
     border: 0px 0px 0px 0px ;
-    margin: 10px;
-    border-radius: 5px;
+    margin: 0px;
+    border-radius: 0px;
 }
 
 prompt {
@@ -79,7 +80,7 @@ entry {
     cursor: text;
     spacing: 0;
     placeholder-color: gray;
-    placeholder: "Search";
+    placeholder: "";
     background-color: transparent;
 }
 
@@ -116,21 +117,21 @@ case-indicator {
 listview {
     enabled: true;
     columns: 1;
-    lines: 6;
+    lines: 10;
     cycle: true;
     dynamic: true;
     scrollbar: false;
     scrollbar-width: 5;
     layout: vertical;
     reverse: false;
-    fixed-height: false;
-    fixed-columns: true;
-    
-    spacing: 5px;
+    fixed-height: true;
+    fixed-columns: false;
+
+    spacing: 0px;
     margin: 0px;
     padding: 0px;
     border: 0px solid;
-    border-radius: 1px;
+    border-radius: 0px;
     border-color: var(primary);
     background-color: transparent;
     text-color: var(foreground);
@@ -151,11 +152,11 @@ scrollbar {
 //
 element {
     enabled: true;
-    spacing: 10px;
-    margin: 0px 5px 0px 5px;
-    padding: 15px;
+    spacing: 0px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
     border: 0px solid;
-    border-radius: 5px;
+    border-radius: 0px;
     border-color: var(border-color);
     background-color: transparent;
     text-color: var(foreground);
