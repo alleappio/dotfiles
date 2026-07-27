@@ -33,7 +33,7 @@ configuration {
 window {
     padding:          5;
     background-color: var(background);
-    border:           1;
+    border:           0px 1px 1px 0px;
     border-radius:    0;
     width: 600;
     location: north west;

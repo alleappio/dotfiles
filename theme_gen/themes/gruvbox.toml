@@ -11,8 +11,8 @@ cyan_color = "#89b482"
 orange_color = "#e78a43"
 white_color = "#d4be98"
 
-primary_color_name = "blue"
-secondary_color_name = "green"
+primary_color_name = "green"
+secondary_color_name = "blue"
 
 neovim_theme_repo = "http://github.com/sainnhe/gruvbox-material"
 neovim_theme_opts = [

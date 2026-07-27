@@ -21,7 +21,7 @@ PopupWindow {
 
     // Position it (example: centered below your bar)
     anchor.rect.x: (parentWindow.width - width) / 2
-    anchor.rect.y: parentWindow.height + 8   // small gap
+    anchor.rect.y: parentWindow.height  // small gap
 
     // This runs immediately when the popup loses focus/input grab
     MouseArea {
@@ -33,6 +33,7 @@ PopupWindow {
     }
     Rectangle {
         anchors.fill: parent
+        anchors.topMargin: -1
         color: Theme.background
         border.color: Theme.primary
         ColumnLayout {
