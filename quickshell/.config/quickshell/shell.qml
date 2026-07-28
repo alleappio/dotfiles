@@ -16,10 +16,4 @@ ShellRoot {
         required property var modelData
         Bar {}
     }
-
-    Variants {
-        model: Quickshell.screens
-        required property var modelData
-        Notification {}
-    }
 }

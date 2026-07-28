@@ -6,10 +6,24 @@ import QtQuick.Layouts
 import qs.Theme
 import "config.js" as Config
 
-PanelWindow {
+PopupWindow {
     id: root
-    required property var modelData
-    screen: modelData
+    required property var parentWindow
+
+    // === REQUIRED FOR VISIBILITY ===
+    anchor.window: parentWindow   // This is the most important line
+    // You can also do: anchor { window: parentWindow }
+
+    visible: server.trackedNotifications.values.length > 0
+    screen: parentWindow ? parentWindow.screen : Quickshell.screens[0]
+    color: Theme.background
+    implicitWidth: 380
+    implicitHeight: Math.max(1, column.implicitHeight)
+
+    // Position it (example: centered below your bar)
+    anchor.rect.x: parentWindow.width - implicitWidth
+    anchor.rect.y: parentWindow.height  // small gap
+
     NotificationServer {
         id: server
         actionsSupported: true
@@ -19,44 +33,67 @@ PanelWindow {
             n.tracked = true;
         }
     }
-    anchors {
-        top: true
-        right: true
-    }
-    margins {
-        top: 35
-        right: 35
-    }
-
-    implicitWidth: 380
-    implicitHeight: Math.max(1, column.implicitHeight)
-    color: "transparent"
-
-    exclusionMode: ExclusionMode.Ignore
     ColumnLayout {
         id: column
         width: parent.width
-        spacing: 10
+        spacing: 0
 
         Repeater {
-            model: server.trackedNotifications
+            model: server.trackedNotifications.values
             delegate: Rectangle {
                 id: card
                 required property var modelData
 
                 Timer {
+                    id: timeoutTimer
                     running: card.modelData.urgency !== NotificationUrgency.Critical
                     interval: Config.notifications.timeout
-                    onTriggered: card.modelData.dismiss()
+                    repeat: false
+                    onTriggered: {
+                        if (card.modelData && card.modelData.tracked) {
+                            card.modelData.tracked = false;
+                        }
+                    }
+                }
+
+                Connections {
+                    target: card.modelData
+                    function onClosed() {
+                        timeoutTimer.stop();
+                    }
                 }
 
                 Layout.fillWidth: true
-                Layout.preferredHeight: 60
-                // Layout.preferredHeight: layout.implicitHeight+20
+                Layout.preferredHeight: layout.implicitHeight + 20
                 radius: 0
                 color: Theme.background
-                border.width: 1
-                border.color: modelData.urgency === NotificationUrgency.Critical ? Theme.red : Theme.primary
+                border.width: 0
+
+                readonly property color cardBorderColor: modelData.urgency === NotificationUrgency.Critical ? Theme.red : Theme.primary
+
+                Rectangle {
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.bottom: parent.bottom
+                    width: 1
+                    color: card.cardBorderColor
+                }
+
+                Rectangle {
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    anchors.bottom: parent.bottom
+                    width: 1
+                    color: card.cardBorderColor
+                }
+
+                Rectangle {
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    height: 1
+                    color: card.cardBorderColor
+                }
 
                 RowLayout {
                     id: layout
@@ -105,15 +142,17 @@ PanelWindow {
                     acceptedButtons: Qt.LeftButton | Qt.RightButton
 
                     onClicked: click => {
-                        console.log(card.modelData.actions);
-                        console.log(click);
+                        // console.log(card.modelData.actions);
+                        // console.log(click);
                         if (click.button == Qt.LeftButton) {
                             if (card.modelData.actions && card.modelData.actions.length > 0) {
-                                console.log("should work")
+                                // console.log("should work")
                                 card.modelData.actions[0].invoke();
                             }
                         } else if (click.button == Qt.RightButton) {
-                            card.modelData.dismiss();
+                            if (card.modelData && card.modelData.tracked) {
+                                card.modelData.tracked = false;
+                            }
                         }
                     }
                 }

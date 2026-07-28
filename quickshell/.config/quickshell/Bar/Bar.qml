@@ -5,6 +5,7 @@ import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
 import qs.Bar.Components
+import qs.Notification
 import qs.Theme
 
 PanelWindow {
@@ -26,6 +27,12 @@ PanelWindow {
         id: globalCalendar
         parentWindow: barWindow
     }
+
+    Notification {
+        id: notificationPopup
+        parentWindow: barWindow
+    }
+
     RowLayout {
 
         anchors.fill: parent
