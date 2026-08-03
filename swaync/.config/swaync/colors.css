@@ -1,11 +1,11 @@
-@define-color background #14171d;/*background*/
-@define-color background-alt #393B44;/*background-alt*/
-@define-color foreground #C5C9C7;/*foreground*/
-@define-color green #8a9a7b;/*green*/
-@define-color red #c4746e;/*red*/
-@define-color blue #8ba4b0;/*blue*/
-@define-color magenta #a292a3;/*magenta*/
-@define-color orange #b6927b;/*orange*/
-@define-color primary @blue;/*primary*/
-@define-color secondary @white;/*secondary*/
+@define-color background #1d2021;/*background*/
+@define-color background-alt #504945;/*background-alt*/
+@define-color foreground #ebdbb2;/*foreground*/
+@define-color green #98971a;/*green*/
+@define-color red #cc241d;/*red*/
+@define-color blue #458588;/*blue*/
+@define-color magenta #b16286;/*magenta*/
+@define-color orange #d65d0e;/*orange*/
+@define-color primary @orange;/*primary*/
+@define-color secondary @green;/*secondary*/
 

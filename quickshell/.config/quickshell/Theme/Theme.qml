@@ -2,18 +2,18 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property color background: '#14171d'
-    readonly property color foreground: '#C5C9C7'
-    readonly property color black: '#14171d'
-    readonly property color red: '#c4746e'
-    readonly property color green: '#8a9a7b'
-    readonly property color yellow: '#c4b28a'
-    readonly property color blue: '#8ba4b0'
-    readonly property color magenta: '#a292a3'
-    readonly property color cyan: '#8ea4a2'
-    readonly property color orange: '#b6927b'
-    readonly property color white: '#C5C9C7'
-    readonly property color primary: blue
+    readonly property color background: '#1d2021'
+    readonly property color foreground: '#ebdbb2'
+    readonly property color black: '#282828'
+    readonly property color red: '#cc241d'
+    readonly property color green: '#98971a'
+    readonly property color yellow: '#d79921'
+    readonly property color blue: '#458588'
+    readonly property color magenta: '#b16286'
+    readonly property color cyan: '#689d6a'
+    readonly property color orange: '#d65d0e'
+    readonly property color white: '#ebdbb2'
+    readonly property color primary: orange
 
     readonly property int textRenderType: Text.NativeRendering
     readonly property string fontFamily: "JetbrainsMono Nerd Font"

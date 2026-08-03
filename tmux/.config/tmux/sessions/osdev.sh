@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SESSION_NAME="quickshell"
-cd ~/.config/quickshell
+SESSION_NAME="osdev"
+cd ~/Projects/building_an_os/
 tmux has-session -t $SESSION_NAME 2>/dev/null
 
 if [ $? -ne 0 ]; then

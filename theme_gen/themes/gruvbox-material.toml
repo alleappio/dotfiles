@@ -1,0 +1,22 @@
+background_color = "#1d2021"
+foreground_color = "#d4be98"
+background_alt_color = "#3c3836"
+black_color = "#3c3836"
+red_color = "#ea6962"
+green_color = "#a9b665"
+yellow_color = "#d8a657"
+blue_color = "#7daea3"
+magenta_color = "#d3869b"
+cyan_color = "#89b482"
+orange_color = "#e78a43"
+white_color = "#d4be98"
+
+primary_color_name = "green"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "http://github.com/sainnhe/gruvbox-material"
+neovim_theme_opts = [
+  'vim.g.gruvbox_material_background = "hard"',
+  'vim.g.gruvbox_material_foreground = "material"'
+]
+neovim_theme_name = "gruvbox-material"
