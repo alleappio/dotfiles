@@ -142,11 +142,8 @@ PopupWindow {
                     acceptedButtons: Qt.LeftButton | Qt.RightButton
 
                     onClicked: click => {
-                        // console.log(card.modelData.actions);
-                        // console.log(click);
                         if (click.button == Qt.LeftButton) {
                             if (card.modelData.actions && card.modelData.actions.length > 0) {
-                                // console.log("should work")
                                 card.modelData.actions[0].invoke();
                             }
                         } else if (click.button == Qt.RightButton) {

@@ -7,6 +7,7 @@ import QtQuick.Layouts
 import qs.Bar.Components
 import qs.Notification
 import qs.Theme
+import qs.QuickInfo
 
 PanelWindow {
     id: barWindow
@@ -33,6 +34,11 @@ PanelWindow {
         parentWindow: barWindow
     }
 
+    QuickInfo {
+        id: quickInfo
+        parentWindow: barWindow
+    }
+
     RowLayout {
 
         anchors.fill: parent
@@ -49,7 +55,6 @@ PanelWindow {
             anchors.centerIn: parent
             Clock {
                 onClockClicked: globalPos => {
-                    console.log("Ahoi");
                     if (globalCalendar.visible) {
                         globalCalendar.visible = false;
                     } else {
@@ -62,10 +67,19 @@ PanelWindow {
         RowLayout {
             spacing: 20
             // SysTray {}
-            Cpu {}
-            Ram {}
-            PowerProfile {}
-            Network {}
+            // Cpu {}
+            // Ram {}
+            // PowerProfile {}
+            // Network {}
+            QuickInfoButton {
+                onInfoClicked: globalPos => {
+                    if (quickInfo.visible) {
+                        quickInfo.visible = false;
+                    } else {
+                        quickInfo.visible = true;
+                    }
+                }
+            }
             Volume {}
             Brightness {}
             Battery {}

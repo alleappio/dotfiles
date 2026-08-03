@@ -24,6 +24,13 @@ RowLayout {
                 family: "JetbrainsMono Nerd Font"
                 pixelSize: 15
             }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: click => {
+                    let disp = "hl.dsp.focus({workspace=%1})";
+                    Hyprland.dispatch(disp.arg(index+1));
+                }
+            }
         }
     }
 }

@@ -15,13 +15,6 @@ Text {
         pixelSize: 20
     }
 
-    // This makes the Text element clickable
-    TapHandler {
-        onTapped: {
-            console.log("Text was clicked!");
-            // Put your action here (e.g., executing a hyprland dispatch command)
-        }
-    }
     Process {
         id: powerMenuProc
         command: ["/home/alle/.config/rofi/scripts/powermenu.sh"]

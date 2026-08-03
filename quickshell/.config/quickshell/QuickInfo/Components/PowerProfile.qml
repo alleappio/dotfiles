@@ -22,11 +22,11 @@ RowLayout {
     }
     property string label: {
         if (powerProfile === 0)
-            return "Eco";
+            return "Power saver";
         if (powerProfile === 1)
-            return "Bal";
+            return "Balanced";
         if (powerProfile === 2)
-            return "Pow";
+            return "Performance";
     }
 
     Text {

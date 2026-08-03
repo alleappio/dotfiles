@@ -15,11 +15,6 @@ Text {
         pixelSize: 15
     }
 
-    TapHandler {
-        onTapped: {
-            console.log("Text was clicked!")
-        }
-    }
 
     Process {
         id: launcherProc

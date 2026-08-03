@@ -48,12 +48,10 @@ Item {
                         if (mouse.button === Qt.LeftButton) {
                             // Primary action (e.g., opens up Discord or Steam window)
                             modelData.activate();
-                            console.log("dioboia");
                         } else if (mouse.button === Qt.RightButton) {
                             // Secondary action: Opens the app's standard context menu natively
                             // We pass 0, 0 as offsets because it automatically pops up at cursor location
                             modelData.display(Quickshell.parentWindow, 0, 0);
-                            console.log("diocane");
                         }
                     }
                 }
