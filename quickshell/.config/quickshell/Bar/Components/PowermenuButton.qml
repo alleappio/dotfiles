@@ -11,7 +11,7 @@ Text {
     renderType: Theme.textRenderType
 
     font {
-        family: "JetbrainsMono Nerd Font"
+        family: Theme.fontFamily
         pixelSize: 20
     }
 

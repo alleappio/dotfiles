@@ -35,6 +35,6 @@ QtObject {
     // Process executor for setting value
     property Process setProcess: Process {}
     Component.onCompleted: {
-        getProcess.exec();
+        getProcess.running=true;
     }
 }

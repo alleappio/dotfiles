@@ -11,6 +11,7 @@ import qs.QuickInfo.Components
 PopupWindow {
     id: root
     required property var parentWindow
+    readonly property int elementHeight: 40
 
     anchor.window: parentWindow
 
@@ -18,7 +19,7 @@ PopupWindow {
     screen: parentWindow ? parentWindow.screen : Quickshell.screens[0]
     color: Theme.background
     implicitWidth: 380
-    implicitHeight: 200
+    implicitHeight: containerLayout.implicitHeight
 
     anchor.rect.x: parentWindow.width
     anchor.rect.y: parentWindow.height
@@ -96,6 +97,7 @@ PopupWindow {
                 id: statsLayout
                 Layout.fillWidth: parent // Fill the 380x380 panel completely
                 spacing: 0
+                Layout.preferredHeight: root.elementHeight // Define row height
 
                 Repeater {
                     id: rowRepeater
@@ -166,8 +168,8 @@ PopupWindow {
                     required property string modelData
                     // Let ColumnLayout manage positioning and height division
                     Layout.fillWidth: true
-                    Layout.fillHeight: true // Automatically divides panel.height / repeater.count
-
+                    // Layout.fillHeight: true // Automatically divides panel.height / repeater.count
+                    Layout.preferredHeight: root.elementHeight // Define fixed height per row
                     color: Theme.background
 
                     // Item Borders

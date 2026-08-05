@@ -40,9 +40,7 @@ change_theme(){
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
 
     echo "updating plasma...";
-    if [[ ! -e "$HOME/.local/share/color-schemes/$1.colors" ]];then
-         cp $HOME/dotfiles/theme_gen/outputs/$1/plasma.colors $HOME/.local/share/color-schemes/$1.colors
-    fi
+    cp $HOME/dotfiles/theme_gen/outputs/$1/plasma.colors $HOME/.local/share/color-schemes/$1.colors
 
     echo "reload services";
 

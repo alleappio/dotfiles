@@ -47,7 +47,7 @@ PopupWindow {
                 color: Theme.primary
                 renderType: Theme.textRenderType
                 font {
-                    family: "JetbrainsMono Nerd Font"
+                    family: Theme.fontFamily
                     pixelSize: 18
                     weight: Font.Bold
                 }
@@ -60,7 +60,7 @@ PopupWindow {
                     text: model.shortName
                     color: Theme.foreground
                     horizontalAlignment: Text.AlignHCenter
-                    font.family: "JetbrainsMono Nerd Font"
+                    font.family: Theme.fontFamily
                     font.pixelSize: 13
                 }
             }
@@ -86,7 +86,7 @@ PopupWindow {
                         return Theme.foreground;
                     }
                     font {
-                        family: "JetbrainsMono Nerd Font"
+                        family: Theme.fontFamily
                         pixelSize: 14
                     }
                 }

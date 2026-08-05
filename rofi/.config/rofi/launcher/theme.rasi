@@ -5,7 +5,7 @@
 @import "colors.rasi"
 
 configuration {
-    display-drun:               "Apps";
+    display-drun:               ">";
     display-run:                "Run";
     display-window:             "Windows";
     display-ssh:                "SSH";

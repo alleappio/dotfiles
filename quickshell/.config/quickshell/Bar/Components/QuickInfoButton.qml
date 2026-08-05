@@ -8,7 +8,7 @@ Text {
     id: root
 
     readonly property string icon: {
-        return String.fromCodePoint(0xF05A);
+        return String.fromCodePoint(0xEB94);
     }
 
     text: icon

@@ -28,7 +28,7 @@ RowLayout {
         renderType: Theme.textRenderType
 
         font {
-            family: "JetbrainsMono Nerd Font"
+            family: Theme.fontFamily
             pixelSize: 15
         }
     }
@@ -40,7 +40,7 @@ RowLayout {
 
         renderType: Theme.textRenderType
         font {
-            family: "JetbrainsMono Nerd Font"
+            family: Theme.fontFamily
             pixelSize: 15
         }
     }

@@ -1,0 +1,19 @@
+background_color     = "#1e1e2e"
+foreground_color     = "#cdd6f4"
+background_alt_color = "#45475a"
+black_color          = "#45475a"
+red_color            = "#f38ba8"
+green_color          = "#a6e3a1"
+yellow_color         = "#f9e2af"
+blue_color           = "#89b4fa"
+magenta_color        = "#f5c2e7"
+cyan_color           = "#94e2d5"
+white_color          = "#bac2de"
+orange_color         = "#fab387"
+
+primary_color_name = "magenta"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/catppuccin/nvim"
+neovim_theme_opts = []
+neovim_theme_name = "catppuccin-mocha"

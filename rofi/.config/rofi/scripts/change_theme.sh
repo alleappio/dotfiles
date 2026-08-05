@@ -3,7 +3,7 @@ options=($(ls $themes_location));
 
 rofi_cmd() {
 	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
-                -p "Themes" \
+                -p ">" \
 		-config ~/.config/rofi/config.rasi \
 		-dmenu
 }

@@ -21,7 +21,7 @@ RowLayout {
             renderType: Theme.textRenderType
             color: isUrgent ? Theme.red : (isFocused ? Theme.primary : (isActive ? Theme.foreground : Theme.black))
             font {
-                family: "JetbrainsMono Nerd Font"
+                family: Theme.fontFamily
                 pixelSize: 15
             }
             MouseArea {

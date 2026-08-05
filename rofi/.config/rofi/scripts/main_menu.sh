@@ -8,7 +8,7 @@ rofi_cmd() {
 		-dmenu
 }
 
-items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio\nWallpaper picker'
+items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio'
 
 output=$(printf "%b" "$items" | rofi_cmd)
 
@@ -28,9 +28,6 @@ case "$output" in
         ;;
     "powermenu")
         ~/.config/rofi/scripts/powermenu.sh
-        ;;
-    "Wallpaper picker")
-        ~/.config/rofi/scripts/wallpaper_picker.sh
         ;;
     "htop")
         alacritty --class htoptui -e htop

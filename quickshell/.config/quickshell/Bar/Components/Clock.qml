@@ -10,7 +10,7 @@ Text {
     signal clockClicked(var globalPos)
 
     font {
-        family: "JetbrainsMono Nerd Font"
+        family: Theme.fontFamily
         pixelSize: 15
     }
 
