@@ -11,17 +11,9 @@ vim.keymap.set('n', '<leader>ce', '<cmd>Copilot enable<CR>', { desc = 'Enable co
 vim.keymap.set('n', '<leader>cd', '<cmd>Copilot disable<CR>', { desc = 'Disable copilot suggestions' })
 vim.keymap.set('i', '<C-j>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false, desc = 'Accept Copilot suggestion' })
 
--- Open file explorer
--- vim.keymap.set('n', '<leader>e', function()
---     if vim.bo.filetype == 'oil' then
---         require('oil').close()
---     else
---         require('oil').open()
---     end
--- end, { desc = 'Open file explorer' })
-
+-- File explorer
 vim.keymap.set('n', '<leader>e', function(...)
-    if not MiniFiles.close() then MiniFiles.open(...) end
+    miniFilesToggle(...)
 end, {desc = "open mini file"})
 
 -- Telescope stuff
@@ -37,10 +29,11 @@ vim.keymap.set('n', '<leader>g+', '<cmd>Gitsigns stage_hunk<cr>', { desc = 'Git:
 vim.keymap.set('n', '<leader>g-', '<cmd>Gitsigns undo_stage_hunk<cr>', { desc = 'Git: unstage current hunk' })
 vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', { desc = 'Git: preview current hunk' })
 vim.keymap.set('n', '<leader>gq', '<cmd>Gitsigns setqflist<cr>', { desc = 'Git: put hunks in quickfix list' })
-vim.keymap.set('n', '<leader>gl', '<cmd>ResolveOurs<cr>', { desc = 'Git: accept local changes in this conflict' })
-vim.keymap.set('n', '<leader>gr', '<cmd>ResolveTheirs<cr>', { desc = 'Git: accept remote changes in this conflict' })
-vim.keymap.set('n', '<leader>gb', '<cmd>ResolveBoth<cr>', { desc = 'Git: accept both changes in this conflict' })
-vim.keymap.set('n', '<leader>gn', '<cmd>ResolveNone<cr>', { desc = 'Git: accept no change in this conflict' })
+vim.keymap.set('n', '<leader>gr', '<cmd>Gitsigns reset_hunk<cr>', { desc = 'Git: reset current hunk' })
+vim.keymap.set('n', '<leader>gal', '<cmd>ResolveOurs<cr>', { desc = 'Git: accept local changes in this conflict' })
+vim.keymap.set('n', '<leader>gar', '<cmd>ResolveTheirs<cr>', { desc = 'Git: accept remote changes in this conflict' })
+vim.keymap.set('n', '<leader>gab', '<cmd>ResolveBoth<cr>', { desc = 'Git: accept both changes in this conflict' })
+vim.keymap.set('n', '<leader>gan', '<cmd>ResolveNone<cr>', { desc = 'Git: accept no change in this conflict' })
 vim.keymap.set('n', '<leader>gQ', '<cmd>ResolveList<cr>', { desc = 'Git: put conflict in quickfix list' })
 
 -- lsp actions

@@ -1,6 +1,5 @@
 vim.pack.add({
     'https://github.com/github/copilot.vim',
-    'https://github.com/nvim-lua/plenary.nvim',
 })
 
 vim.g.copilot_no_tab_map = true

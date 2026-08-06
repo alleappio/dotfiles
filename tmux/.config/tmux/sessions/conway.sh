@@ -1,7 +1,8 @@
 #!/bin/bash
 
-SESSION_NAME="osdev"
-cd ~/Projects/building_an_os/
+SESSION_NAME="$(echo $0 | awk -F '/' '{print $(NF)}' | awk -F '.' '{print $1}')"
+
+cd ~/Projects/conways_game_of_life/
 tmux has-session -t $SESSION_NAME 2>/dev/null
 
 if [ $? -ne 0 ]; then

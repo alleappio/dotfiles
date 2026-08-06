@@ -76,3 +76,14 @@ minifiles.setup({
         trim_right = '>',
     },
 })
+
+function miniFilesToggle(...)
+    local cwf = vim.api.nvim_buf_get_name(0)
+    if MiniFiles.close() == nil then
+        if cwf ~= '' and not cwf:match('^ministarter:') and vim.bo.buftype == '' then
+            MiniFiles.open(cwf)
+        else
+            MiniFiles.open(...)
+        end
+    end
+end
