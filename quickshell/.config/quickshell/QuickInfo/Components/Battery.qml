@@ -18,7 +18,7 @@ RowLayout {
             return String.fromCodePoint(0xF0079);
         if (level <= 10)
             return String.fromCodePoint(0xF0083);
-        return String.fromCodePoint(0xF007A * Math.floor(level / 10) - 1);
+        return String.fromCodePoint(0xF007A + Math.floor(level / 10) - 1);
     }
 
     Text {
