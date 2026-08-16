@@ -92,6 +92,10 @@ PopupWindow {
                 id: batteryComponent
                 Battery {}
             }
+            Component {
+                id: pomodoroComponent
+                Pomodoro {}
+            }
 
             RowLayout {
                 id: statsLayout
@@ -160,7 +164,7 @@ PopupWindow {
             }
             Repeater {
                 id: columnRepeater
-                model: ["vol", "brig", "pow", "network"]
+                model: ["vol", "brig", "pow", "network", "pomodoro"]
 
                 Rectangle {
                     id: columnContainer
@@ -200,17 +204,20 @@ PopupWindow {
                     Loader {
                         id: colContentLoader
                         // Check if the current item is dynamic-width (volume or brightness)
-                        readonly property bool isSliderItem: columnContainer.modelData === "vol" || columnContainer.modelData === "brig"
+                        readonly property bool isFullWidthItem:
+                        columnContainer.modelData === "vol" ||
+                        columnContainer.modelData === "brig" ||
+                        columnContainer.modelData === "pomodoro"
 
                         // Fill full width for sliders, otherwise center the item
-                        anchors.left: isSliderItem ? parent.left : undefined
-                        anchors.right: isSliderItem ? parent.right : undefined
-                        anchors.leftMargin: isSliderItem ? 12 : 0
-                        anchors.rightMargin: isSliderItem ? 12 : 0
+                        anchors.left: isFullWidthItem ? parent.left : undefined
+                        anchors.right: isFullWidthItem ? parent.right : undefined
+                        anchors.leftMargin: isFullWidthItem ? 12 : 0
+                        anchors.rightMargin: isFullWidthItem ? 12 : 0
 
                         // Keep everything vertically centered
-                        anchors.centerIn: isSliderItem ? undefined : parent
-                        anchors.verticalCenter: isSliderItem ? parent.verticalCenter : undefined
+                        anchors.centerIn: isFullWidthItem ? undefined : parent
+                        anchors.verticalCenter: isFullWidthItem ? parent.verticalCenter : undefined
                         // Layout.fillWidth: true
                         sourceComponent: {
                             switch (columnContainer.modelData) {
@@ -222,6 +229,8 @@ PopupWindow {
                                 return volumeComponent;
                             case "brig":
                                 return brightnessComponent;
+                            case "pomodoro":
+                                return pomodoroComponent;
                             default:
                                 return null;
                             }
