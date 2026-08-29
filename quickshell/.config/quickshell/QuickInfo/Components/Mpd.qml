@@ -1,5 +1,6 @@
 import Quickshell
 import Quickshell.Io
+import Quickshell.Services.Mpris
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
@@ -9,31 +10,29 @@ RowLayout {
     id: root
     Layout.fillWidth: true
     spacing: 10
+    clip: true
 
-    property int phase: 0 // 0 = work, 1 = rest, 2 = long rest
-    readonly property string phase_string: {
-        switch (phase) {
-            case 0: return "Work";
-            case 1: return "Rest";
-            case 2: return "Long rest";
-            default: return "Work";
+    readonly property MprisPlayer activePlayer: {
+        const players = Mpris.players.values
+        if (!players || players.length === 0) return null
+
+        // 1. Look for a player that is currently playing
+        for (let i = 0; i < players.length; i++) {
+            if (players[i].isPlaying) {
+                return players[i]
+            }
         }
+
+        // 2. Fallback to the first available player if all are paused/stopped
+        return players[0]
     }
-    readonly property int workTime: 20 * 60       // 25 minutes
-    readonly property int shortBreak: 5 * 60      // 5 minutes
-    readonly property int longBreak: 15 * 60      // 15 minutes
-    property int timeRemaining: workTime
-    property bool running: false // 0 = work, 1 = rest, 2 = long rest
-    property int sessionCount: 0
-    readonly property string formattedTime: {
-        let minutes = Math.floor(timeRemaining / 60)
-        let seconds = timeRemaining % 60
-        return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`
-    }
+    readonly property string icon: String.fromCodePoint(0xF075A);
+    property string shownTitle: activePlayer.trackTitle
+    readonly property int speed: 40 // Pixels per second (lower = slower)
+    readonly property int pauseDuration: 1500 // Pause duration in ms at start/end
 
     Text {
-        text: String.fromCodePoint(0xE003);
-
+        text: root.icon
         color: Theme.foreground
 
         renderType: Theme.textRenderType
@@ -45,24 +44,18 @@ RowLayout {
     }
 
     Text {
-        text: phase_string
-
-        color: Theme.foreground
-
-        renderType: Theme.textRenderType
-        font {
-            family: Theme.fontFamily
-            pixelSize: 15
-            weight: 500
+        function truncateText(str, limit) {
+            if (!str) return ""
+            return str.length > limit ? str.slice(0, limit) + "…" : str
         }
-    }
-    Item {
+        id: titleLabel
+        text: root.shownTitle
+        color: Theme.foreground
+        elide: Text.ElideRight
+        clip: true
+
         Layout.fillWidth: true
-    }
-    Text {
-        text: formattedTime
-
-        color: Theme.foreground
+        Layout.maximumWidth: 200 // Controls maximum text expansion before eliding
 
         renderType: Theme.textRenderType
         font {
@@ -71,13 +64,14 @@ RowLayout {
             weight: 500
         }
     }
+
     Item {
         Layout.fillWidth: true
     }
 
     Button {
-        id: resetButton
-        text: String.fromCodePoint(0xF0465)
+        id: backButton
+        text: String.fromCodePoint(0xF013D)
         implicitWidth: 25
         implicitHeight: 25
         background: Rectangle {
@@ -97,10 +91,7 @@ RowLayout {
             }
         }
         onClicked: {
-            root.phase = 0
-            root.timeRemaining = workTime
-            root.sessionCount = 0
-            root.running = false
+            root.activePlayer.previous()
         }
         hoverEnabled: true
         MouseArea {
@@ -110,11 +101,11 @@ RowLayout {
         }
     }
     Button {
-        id: startButton
-        text: {
-            if(root.running)
-                return String.fromCodePoint(0xF03E4);
-            return String.fromCodePoint(0xF040A);
+        id: playButton
+        text:{
+            if (root.activePlayer.isPlaying)
+                return String.fromCodePoint(0xF03E4)
+            return String.fromCodePoint(0xF040A)
         }
         implicitWidth: 25
         implicitHeight: 25
@@ -135,7 +126,7 @@ RowLayout {
             }
         }
         onClicked: {
-            root.toggleTimer()
+            root.activePlayer.isPlaying = ! root.activePlayer.isPlaying
         }
         hoverEnabled: true
         MouseArea {
@@ -144,9 +135,8 @@ RowLayout {
             onClicked: parent.clicked() // Forward click event
         }
     }
-
     Button {
-        id: skipButton
+        id: forwardButton
         text: String.fromCodePoint(0xF013E)
         implicitWidth: 25
         implicitHeight: 25
@@ -167,7 +157,7 @@ RowLayout {
             }
         }
         onClicked: {
-            root.handlePhaseComplete()
+            root.activePlayer.next()
         }
         hoverEnabled: true
         MouseArea {
@@ -175,66 +165,5 @@ RowLayout {
             cursorShape: Qt.PointingHandCursor
             onClicked: parent.clicked() // Forward click event
         }
-    }
-
-    Timer {
-        id: pomodoroTimer
-        interval: 1000
-        repeat: true
-        running: root.running
-
-        onTriggered: {
-            if (root.timeRemaining > 0) {
-                root.timeRemaining -= 1
-            } else {
-                root.handlePhaseComplete()
-            }
-        }
-    }
-    function toggleTimer() {
-        root.running = !root.running
-    }
-
-    function resetTimer() {
-        root.running = false
-        if (root.phase === 0) root.timeRemaining = workTime
-        else if (root.phase === 1) root.timeRemaining = shortBreak
-        else root.timeRemaining = longBreak
-    }
-
-    function handlePhaseComplete() {
-        root.running = false
-
-        root.sendNotification()
-
-        if (root.phase === 0) {
-            root.sessionCount += 1
-            if (root.sessionCount % 4 === 0) {
-                root.phase = 2
-            } else {
-                root.phase = 1
-            }
-        } else {
-            root.phase = 0
-        }
-
-        root.resetTimer()
-
-        // Trigger desktop notification via Quickshell/Qt
-        // e.g., NotificationService.sendNotification("Pomodoro", "Time's up!")
-    }
-
-    Process {
-        id: notificationProcess
-        running: false
-    }
-    function sendNotification() {
-        notificationProcess.command = [
-            "notify-send",
-            "-a", "Pomodoro",      // App Name
-            "Pomodoro",
-            "Phase " + root.phase_string + " ended"
-        ]
-        notificationProcess.running = true
     }
 }

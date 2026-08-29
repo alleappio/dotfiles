@@ -9,11 +9,17 @@ import qs.Bar
 import qs.Bar.Components
 import qs.Notification
 import qs.Theme
+import qs.Wallpaper
 
 ShellRoot {
     Variants {
         model: Quickshell.screens
         required property var modelData
         Bar {}
+    }
+    Variants {
+        model: Quickshell.screens
+        required property var modelData
+        Wallpaper {}
     }
 }

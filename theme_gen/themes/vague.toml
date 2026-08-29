@@ -18,3 +18,4 @@ neovim_theme_repo = "https://github.com/vague-theme/vague.nvim"
 neovim_theme_opts = [
 ]
 neovim_theme_name = "vague"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/vague/background_vague.png"

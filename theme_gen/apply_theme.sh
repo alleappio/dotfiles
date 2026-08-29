@@ -39,16 +39,14 @@ change_theme(){
     echo "updating quickshell...";
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
 
-    echo "updating plasma...";
-    cp $HOME/dotfiles/theme_gen/outputs/$1/plasma.colors $HOME/.local/share/color-schemes/$1.colors
+    echo "updating gtk"
+    cp $theme_location/gtk4.css $config_location/gtk-4.0/gtk.css;
+    cp $theme_location/gtk3.css $config_location/gtk-3.0/gtk.css;
 
     echo "reload services";
 
     echo "reload hyprland...";
     hyprctl eval "reload_fn()"
-
-    echo "reload plasma...";
-    plasma-apply-colorscheme $1
 
     echo "reload alacritty...";
     touch ~/.config/alacritty/alacritty.toml

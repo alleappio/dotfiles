@@ -5,6 +5,7 @@
 @import "colors.rasi"
 
 configuration {
+    display-drun: ">";
     modes: "drun";
     show-icons: false;
 }
@@ -31,12 +32,12 @@ configuration {
     alternate-active-foreground: var(primary);
 }
 window {
-    padding:          5;
+    padding:          10;
     background-color: var(background);
-    border:           0px 0px 1px 1px;
+    border:           1px 1px 1px 1px;
     border-radius:    0;
-    width: 600;
-    location: north east;
+    width: 400;
+    // location: north east;
 }
 
 mainbox {
@@ -50,7 +51,7 @@ mainbox {
 // INPUTBAR
 //
 inputbar {
-    padding: 0px ;
+    padding: 5px ;
     spacing: 5px ;
     text-color: var(foreground);
     background-color: transparent;
@@ -129,7 +130,7 @@ listview {
 
     spacing: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 2px;
     border: 0px solid;
     border-radius: 0px;
     border-color: var(primary);
@@ -152,9 +153,9 @@ scrollbar {
 //
 element {
     enabled: true;
-    spacing: 0px;
+    spacing: 5px;
     margin: 0px 0px 0px 0px;
-    padding: 0px;
+    padding: 5px;
     border: 0px solid;
     border-radius: 0px;
     border-color: var(border-color);

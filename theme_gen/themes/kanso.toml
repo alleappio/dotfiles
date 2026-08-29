@@ -19,3 +19,4 @@ neovim_theme_opts = [
     "require('kanso').setup({background = {dark = 'ink'}})"
 ]
 neovim_theme_name = "kanso"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/kanso/background_kanso.png"

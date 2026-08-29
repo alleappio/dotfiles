@@ -19,3 +19,5 @@ neovim_theme_opts = [
   'vim.opt.rtp:append(vim.pack.get({"warm-burnout"})[1].path .. "/nvim")',
 ]
 neovim_theme_name = "warm-burnout-dark"
+
+wallpaper_path = "/home/alle/dotfiles/wallpaper/burnout/background_burnout.png"

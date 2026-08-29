@@ -96,6 +96,10 @@ PopupWindow {
                 id: pomodoroComponent
                 Pomodoro {}
             }
+            Component {
+                id: mediaComponent
+                Mpd {}
+            }
 
             RowLayout {
                 id: statsLayout
@@ -164,7 +168,7 @@ PopupWindow {
             }
             Repeater {
                 id: columnRepeater
-                model: ["vol", "brig", "pow", "network", "pomodoro"]
+                model: ["vol", "brig", "pow", "network", "pomodoro", "mpd"]
 
                 Rectangle {
                     id: columnContainer
@@ -207,7 +211,9 @@ PopupWindow {
                         readonly property bool isFullWidthItem:
                         columnContainer.modelData === "vol" ||
                         columnContainer.modelData === "brig" ||
-                        columnContainer.modelData === "pomodoro"
+                        columnContainer.modelData === "pomodoro" ||
+                        columnContainer.modelData === "mpd"
+
 
                         // Fill full width for sliders, otherwise center the item
                         anchors.left: isFullWidthItem ? parent.left : undefined
@@ -231,6 +237,8 @@ PopupWindow {
                                 return brightnessComponent;
                             case "pomodoro":
                                 return pomodoroComponent;
+                            case "mpd":
+                                return mediaComponent;
                             default:
                                 return null;
                             }

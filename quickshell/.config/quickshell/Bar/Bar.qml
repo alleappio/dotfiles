@@ -11,6 +11,7 @@ import qs.QuickInfo
 
 PanelWindow {
     id: barWindow
+    WlrLayershell.layer: WlrLayer.Top
 
     required property var modelData
     screen: modelData
@@ -71,6 +72,7 @@ PanelWindow {
             // Ram {}
             // PowerProfile {}
             // Network {}
+            Capslock {}
             QuickInfoButton {
                 onInfoClicked: globalPos => {
                     if (quickInfo.visible) {

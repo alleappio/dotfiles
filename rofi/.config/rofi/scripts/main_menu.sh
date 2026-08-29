@@ -8,7 +8,7 @@ rofi_cmd() {
 		-dmenu
 }
 
-items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio'
+items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio\nrmpc'
 
 output=$(printf "%b" "$items" | rofi_cmd)
 
@@ -36,7 +36,10 @@ case "$output" in
         alacritty --class nmtui -e nmtui
         ;;
     "Audio")
-        pavucontrol-qt
+        pavucontrol
+        ;;
+    "rmpc")
+        alacritty --class rmpctui -e rmpc
         ;;
     *)
         exit 0

@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SESSIONS_PATH=~/.config/tmux/sessions 
+SESSIONS_PATH=~/.config/tmux/sessions
 fzf_command() {
-    fzf --style=full --color='fg:white,pointer:blue,current-fg:white' --layout=reverse --border=sharp
+    fzf --color='fg:white,pointer:blue,current-fg:white' --layout=reverse
 }
 
 choice=$(ls --color=never $SESSIONS_PATH | fzf_command)

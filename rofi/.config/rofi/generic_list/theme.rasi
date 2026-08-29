@@ -5,7 +5,12 @@
 @import "colors.rasi"
 
 configuration {
-    modes: "drun";
+    display-drun:               ">";
+    display-run:                "Run";
+    display-window:             "Windows";
+    display-ssh:                "SSH";
+    drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format:              "{w}·{c}·{t}";
     show-icons: false;
 }
 * {
@@ -31,18 +36,18 @@ configuration {
     alternate-active-foreground: var(primary);
 }
 window {
-    padding:          5;
+    padding:          0;
     background-color: var(background);
-    border:           0px 1px 1px 0px;
+    border:           1px 1px 1px 1px;
     border-radius:    0;
-    width: 600;
-    location: north west;
+    width: 400;
+    // location: north;
 }
 
 mainbox {
-    padding: 0px;
+    padding: 0;
     border:  0;
-    children: [ "inputbar", "listview" ];
+    children: [ "inputbar", "message", "listview" ];
     background-color: transparent;
 }
 
@@ -50,7 +55,7 @@ mainbox {
 // INPUTBAR
 //
 inputbar {
-    padding: 0px ;
+    padding: 5px ;
     spacing: 5px ;
     text-color: var(foreground);
     background-color: transparent;
@@ -86,7 +91,7 @@ entry {
 
 num-filtered-rows {
     expand: false;
-    eanbled: true;
+    enabled: true;
     text-color: var(primary);
 }
 
@@ -117,19 +122,19 @@ case-indicator {
 listview {
     enabled: true;
     columns: 1;
-    lines: 10;
+    lines: 15;
     cycle: true;
-    dynamic: true;
+    dynamic: false;
     scrollbar: false;
     scrollbar-width: 5;
     layout: vertical;
     reverse: false;
-    fixed-height: true;
+    fixed-height: false;
     fixed-columns: false;
 
     spacing: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 2px;
     border: 0px solid;
     border-radius: 0px;
     border-color: var(primary);
@@ -152,9 +157,9 @@ scrollbar {
 //
 element {
     enabled: true;
-    spacing: 0px;
+    spacing: 5px;
     margin: 0px 0px 0px 0px;
-    padding: 0px;
+    padding: 5px;
     border: 0px solid;
     border-radius: 0px;
     border-color: var(border-color);
@@ -258,10 +263,10 @@ button selected {
 //
 message {
     enabled:                     true;
-    margin:                      5px;
+    margin:                      0px;
     padding:                     0px;
-    border:                      1px solid;
-    border-radius:               5px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
     border-color:                var(border-color);
     background-color:            transparent;
     text-color:                  var(foreground);

@@ -1,0 +1,264 @@
+/* ==========================================================================
+ * Dynamic GTK Theme Template
+ * ========================================================================== */
+
+@define-color background {background_color};
+@define-color background_alt {background_alt_color};
+@define-color foreground {foreground_color};
+
+@define-color black {black_color};
+@define-color red {red_color};
+@define-color green {green_color};
+@define-color yellow {yellow_color};
+@define-color blue {blue_color};
+@define-color magenta {magenta_color};
+@define-color cyan {cyan_color};
+@define-color orange {orange_color};
+@define-color white {white_color};
+
+/* --------------------------------------------------------------------------
+ * Semantic colors
+ * -------------------------------------------------------------------------- */
+
+@define-color accent @{primary_color_name};
+@define-color accent_hover @{primary_color_name};
+@define-color accent_active @{primary_color_name};
+
+@define-color window_bg @background;
+@define-color view_bg @background;
+@define-color header_bg @background;
+
+@define-color surface @background;
+@define-color surface_hover @background_alt;
+@define-color surface_active @{primary_color_name};
+
+@define-color text @foreground;
+@define-color text_muted @white;
+@define-color text_disabled @black;
+
+@define-color destructive @red;
+@define-color success @green;
+@define-color warning @yellow;
+
+@define-color border @black;
+@define-color border_focus @blue;
+
+/* --------------------------------------------------------------------------
+ * Libadwaita Engine Variables (Primary driver for GTK4 app styling)
+ * -------------------------------------------------------------------------- */
+
+@define-color accent_color @{primary_color_name};
+@define-color accent_bg_color @{primary_color_name};
+@define-color accent_fg_color @background;
+
+@define-color window_bg_color @background;
+@define-color window_fg_color @foreground;
+
+@define-color view_bg_color @background;
+@define-color view_fg_color @foreground;
+
+@define-color headerbar_bg_color @background;
+@define-color headerbar_fg_color @foreground;
+
+@define-color card_bg_color @background_alt;
+@define-color card_fg_color @foreground;
+
+@define-color popover_bg_color @background;
+@define-color popover_fg_color @foreground;
+
+@define-color sidebar_bg_color @background;
+@define-color sidebar_fg_color @foreground;
+@define-color sidebar_backdrop_color @background;
+
+
+/* ==========================================================================
+ * Global Core Rules
+ * ========================================================================== */
+
+* {{
+    color: @text;
+    background-clip: padding-box;
+    border-color: @border;
+}}
+
+window,
+.background {{
+    background-color: @window_bg;
+    color: @text;
+}}
+
+/* ==========================================================================
+ * Interactive Components (Buttons & Controls)
+ * ========================================================================== */
+
+button {{
+    background-color: @surface;
+    color: @text;
+    border: 1px solid @border;
+}}
+
+button:hover {{
+    background-color: @surface_hover;
+    border-color: @accent;
+    color: @foreground;
+}}
+
+button:active,
+button:checked {{
+    background-color: @accent;
+    color: @background;
+    border-color: @accent;
+}}
+
+button:disabled {{
+    background-color: @background_alt;
+    color: @text_disabled;
+    border-color: @border;
+}}
+
+button.suggested-action {{
+    background-color: @accent;
+    color: @background;
+    border-color: @accent;
+}}
+
+button.destructive-action {{
+    background-color: @destructive;
+    color: @background;
+    border-color: @destructive;
+}}
+
+entry,
+spinbutton,
+combobox {{
+    background-color: @surface;
+    color: @text;
+    border: 1px solid @border;
+}}
+
+entry:focus,
+spinbutton:focus,
+combobox:focus {{
+    border-color: @border_focus;
+}}
+
+/* ==========================================================================
+ * Selections & Hover States (Nautilus, Sidebar, Lists & Grids)
+ * ========================================================================== */
+
+/* Selection Highlight Across All Apps */
+selection,
+*:selected,
+.selected,
+row:selected,
+columnview row:selected,
+gridview > child:selected,
+flowboxchild:selected,
+sidebar row:selected,
+.navigation-sidebar row:selected {{
+    background-color: @accent !important;
+    color: @background !important;
+}}
+
+/* Universal Hovering for Lists, Grids, and Nav Bars */
+row:hover,
+row.activatable:hover,
+columnview row:hover,
+gridview > child:hover,
+flowboxchild:hover,
+sidebar row:hover,
+.navigation-sidebar row:hover {{
+    background-color: @surface_hover !important;
+    color: @foreground !important;
+}}
+
+/* Special Case: Inner Label Fix for Selected Items */
+row:selected *,
+gridview > child:selected *,
+columnview row:selected * {{
+    color: @background !important;
+}}
+
+/* ==========================================================================
+ * Menus, Popovers, & Headers
+ * ========================================================================== */
+
+headerbar {{
+    background-color: @header_bg;
+    color: @text;
+    border-bottom: 1px solid @border;
+    box-shadow: none;
+}}
+
+headerbar button {{
+    background-color: transparent;
+    border-color: transparent;
+}}
+
+headerbar button:hover {{
+    background-color: @surface_hover;
+}}
+
+popover,
+popover.background,
+menu,
+.menu {{
+    background-color: @surface;
+    color: @text;
+    border: 1px solid @border;
+}}
+
+menuitem:hover,
+.menuitem:hover {{
+    background-color: @accent;
+    color: @background;
+}}
+
+/* ==========================================================================
+ * Widgets & Accessories
+ * ========================================================================== */
+
+switch {{
+    background-color: @background_alt;
+    border: 1px solid @border;
+    border-radius: 999px;
+}}
+
+switch:checked {{
+    background-color: @accent;
+    border-color: @accent;
+}}
+
+switch slider {{
+    background-color: @foreground;
+    border-radius: 999px;
+}}
+
+switch:checked slider {{
+    background-color: @background;
+}}
+
+scale trough,
+progressbar trough {{
+    background-color: @background_alt;
+}}
+
+scale highlight,
+progressbar progress {{
+    background-color: @accent;
+}}
+
+scale slider {{
+    background-color: @foreground;
+    border: 1px solid @border;
+}}
+
+scrollbar slider {{
+    background-color: @background_alt;
+    min-width: 8px;
+    min-height: 8px;
+}}
+
+scrollbar slider:hover {{
+    background-color: @accent;
+}}

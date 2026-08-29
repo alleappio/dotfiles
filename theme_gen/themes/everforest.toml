@@ -20,3 +20,4 @@ neovim_theme_opts = [
     'vim.g.everforest_background = "hard"'
 ]
 neovim_theme_name = "everforest"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/everforest/background_everforest.png"

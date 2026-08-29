@@ -18,8 +18,10 @@ end, {desc = "open mini file"})
 
 -- Telescope stuff
 vim.keymap.set('n', '<leader>ff', telescope_find_files, { desc = 'Telescope: Find file' })
+vim.keymap.set('n', '<leader>fF', telescope_find_files_hidden, { desc = 'Telescope: Find file hidden' })
 vim.keymap.set('n', '<leader>fg', telescope_live_grep, { desc = 'Telescope: Live grep' })
-vim.keymap.set('n', '<leader>fk', telescope_keymaps, { desc = 'Telescope: Live grep' })
+vim.keymap.set('n', '<leader>fG', telescope_live_grep_hidden, { desc = 'Telescope: Live grep hidden' })
+vim.keymap.set('n', '<leader>fk', telescope_keymaps, { desc = 'Telescope: Find keymaps' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Telescope: Find buffers' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Telescope: Help tags' })
 vim.keymap.set('n', '<leader>ft', '<cmd>Neotree toggle<CR>', { desc = 'Telescope: Help tags' })

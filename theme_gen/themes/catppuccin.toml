@@ -17,3 +17,5 @@ secondary_color_name = "blue"
 neovim_theme_repo = "https://github.com/catppuccin/nvim"
 neovim_theme_opts = []
 neovim_theme_name = "catppuccin-mocha"
+
+wallpaper_path = "/home/alle/dotfiles/wallpaper/catppuccin/background_catppuccin.png"

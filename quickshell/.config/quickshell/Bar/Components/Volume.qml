@@ -78,7 +78,7 @@ RowLayout {
 
         Process {
             id: powerMenuProc
-            command: ["pavucontrol-qt"]
+            command: ["pavucontrol"]
         }
         // pavucontrol-qt
         onClicked: click => {

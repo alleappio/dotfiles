@@ -17,4 +17,6 @@ QtObject {
 
     readonly property int textRenderType: Text.NativeRendering
     readonly property string fontFamily: "JetbrainsMono Nerd Font"
+
+    readonly property string wallpaperPath: "/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png"
 }

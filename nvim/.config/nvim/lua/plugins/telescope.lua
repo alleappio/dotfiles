@@ -42,10 +42,17 @@ require('telescope').setup({
     },
 })
 
+
 function telescope_find_files()
+    telescope_builtin.find_files({ preview = false })
+end
+function telescope_find_files_hidden()
     telescope_builtin.find_files({ hidden = true, no_ignore = true, preview = false })
 end
 function telescope_live_grep()
+    telescope_builtin.live_grep({ preview = true})
+end
+function telescope_live_grep_hidden()
     telescope_builtin.live_grep({ hidden = true, no_ignore = true, preview = true})
 end
 function telescope_keymaps()

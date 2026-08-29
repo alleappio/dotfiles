@@ -29,9 +29,10 @@ QtObject {
     property Process getCpuProcess: Process {
         command: ["sh", "-c", "top -bn2 -d 0.5 | grep '%Cpu' | tail -n1 | awk '{print int(100 - $8)}'"]
         stdout: SplitParser {
-            onRead: (data) => {
+            onRead: data => {
                 let val = parseInt(data.trim());
-                if (!isNaN(val)) root.cpuUsage = val;
+                if (!isNaN(val))
+                    root.cpuUsage = val;
             }
         }
     }

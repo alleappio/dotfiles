@@ -1,2 +1,3 @@
 singleton BrightnessService 1.0 BrightnessService.qml
 singleton StatsService 1.0 StatsService.qml
+singleton CapsLockService 1.0 CapsLockService.qml
