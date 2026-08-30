@@ -47,7 +47,7 @@ def main():
         tot = tomllib.load(f)
         colorscheme = {}
         desc = {}
-        print(f"reading: {colorscheme_file}")
+        # print(f"reading: {colorscheme_file}")
         try:
             colorscheme = tot
             found = True
@@ -82,9 +82,9 @@ def main():
     }
     colors = colors | colorscheme
     templates = os.listdir(templates_dir)
-    print("templates found:")
-    for i in templates:
-        print(f"\t{i.split(".")[0]}")
+    # print("templates found:")
+    # for i in templates:
+    #     print(f"\t{i.split(".")[0]}")
     # gen_plasma_colors(colors)
     for i in templates:
         a = i.split(".")
@@ -92,7 +92,7 @@ def main():
         extension = a[1]
         template_file = f"{templates_dir}/{i}"
         output_file = f"{output_dir}/{".".join(["/".join(a[0].split("_")), a[1]])}"
-        print(f"Filling {app_name}.{extension} theme")
+        # print(f"Filling {app_name}.{extension} theme")
         fill_template(template_file, colors, output_file)
 
 

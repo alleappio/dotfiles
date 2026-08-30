@@ -20,4 +20,4 @@ neovim_theme_opts = [
 ]
 neovim_theme_name = "warm-burnout-dark"
 
-wallpaper_path = "/home/alle/dotfiles/wallpaper/burnout/background_burnout.png"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/burnout/background_burnout.jpg"

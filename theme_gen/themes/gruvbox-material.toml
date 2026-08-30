@@ -20,4 +20,4 @@ neovim_theme_opts = [
   'vim.g.gruvbox_material_foreground = "material"'
 ]
 neovim_theme_name = "gruvbox-material"
-wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox-material/background_gruvbox-material.png"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox-material/background_gruvbox-material.jpeg"
