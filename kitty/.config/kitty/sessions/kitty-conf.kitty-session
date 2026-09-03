@@ -1,0 +1,11 @@
+
+new_tab
+layout splits
+enabled_layouts splits,stack
+set_layout_state {"pairs": {"one": 6}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [6], "window_groups": [{"id": 6, "window_ids": [7]}]}}
+cd /home/alle/.config/kitty
+
+launch 'kitty-unserialize-data={"id": 7, "cmd_at_shell_startup": "vim kitty.conf "}'
+focus
+
+focus_tab 0

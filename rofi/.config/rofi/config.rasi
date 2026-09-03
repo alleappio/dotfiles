@@ -4,6 +4,7 @@ configuration {
     show-icons: true;
     icon-theme: "Breeze";
     terminal: "alacritty";
+    matching: "fuzzy";
 
   timeout {
       action: "kb-cancel";

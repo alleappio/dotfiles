@@ -1,0 +1,55 @@
+# Based on https://github.com/morhetz/gruvbox by morhetz <morhetz@gmail.com>
+# Adapted to kitty by wdomitrz <witekdomitrz@gmail.com>
+
+cursor                  {foreground_color}
+cursor_text_color       background
+
+url_color               {blue_color}
+
+visual_bell_color       {cyan_color}
+bell_border_color       {cyan_color}
+
+active_border_color     {primary_color_hex}
+inactive_border_color   {black_color}
+
+foreground              {foreground_color}
+background              {background_color}
+selection_foreground    {background_color}
+selection_background    {foreground_color}
+
+active_tab_foreground   {background_color}
+active_tab_background   {primary_color_hex}
+inactive_tab_foreground {foreground_color}
+inactive_tab_background {background_color}
+
+# black  (bg3/bg4)
+color0                  {black_color}
+color8                  {black_color}
+
+# red
+color1                  {red_color}
+color9                  {red_color}
+
+#: green
+color2                  {green_color}
+color10                 {green_color}
+
+# yellow
+color3                  {yellow_color}
+color11                 {yellow_color}
+
+# blue
+color4                  {blue_color}
+color12                 {blue_color}
+
+# purple
+color5                  {magenta_color}
+color13                 {magenta_color}
+
+# aqua
+color6                  {cyan_color}
+color14                 {cyan_color}
+
+# white (fg4/fg3)
+color7                  {foreground_color}
+color15                 {foreground_color}

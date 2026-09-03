@@ -21,6 +21,10 @@
       "rev": "d28a3f70721c79e3c5f6693057ae929f3d9c0a03",
       "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
     },
+    "kanso.nvim": {
+      "rev": "1afbbb449aa0254823dbe1932e3cbb51886ff9fe",
+      "src": "https://github.com/webhooked/kanso.nvim"
+    },
     "mason-lspconfig.nvim": {
       "rev": "40276c4df7e6bdce6801d6c035c6227f9115a855",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
@@ -68,6 +72,10 @@
     "telescope.nvim": {
       "rev": "40aedd8a68c78a656a10a8d62d80c54af59420fb",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "vague.nvim": {
+      "rev": "f9060fdaf7b20f68575d6f8214da6f1cf0c72825",
+      "src": "https://github.com/vague-theme/vague.nvim"
     }
   }
 }

@@ -19,6 +19,9 @@ change_theme(){
     echo "updating alacritty...";
     cp $theme_location/alacritty/theme.toml $config_location/alacritty/theme.toml;
 
+    echo "updating kitty...";
+    cp $theme_location/kitty/theme.conf $config_location/kitty/theme.conf;
+
     echo "updating nvim...";
     cp $theme_location/neovim/theme.lua $config_location/nvim/lua/plugins/theme.lua;
 
@@ -40,8 +43,8 @@ change_theme(){
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
 
     echo "updating gtk"
-    cp $theme_location/gtk4.css $config_location/gtk-4.0/gtk.css;
-    cp $theme_location/gtk3.css $config_location/gtk-3.0/gtk.css;
+    # cp $theme_location/gtk4.css $config_location/gtk-4.0/gtk.css;
+    # cp $theme_location/gtk3.css $config_location/gtk-3.0/gtk.css;
 
     echo "reload services";
 
