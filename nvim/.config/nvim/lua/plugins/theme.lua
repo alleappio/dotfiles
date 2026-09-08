@@ -1,7 +1,7 @@
 vim.pack.add({
-    "https://github.com/ellisonleao/gruvbox.nvim",
+    "https://github.com/webhooked/kanso.nvim",
 })
 
-require("gruvbox").setup({contrast="hard"})
-vim.cmd.colorscheme("gruvbox")
+require('kanso').setup({background = {dark = 'ink'}})
+vim.cmd.colorscheme("kanso")
 

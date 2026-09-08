@@ -9,12 +9,13 @@ change_theme(){
     clear;
     echo "Installing theme: $1";
     local theme_location="$themes_location/$1";
+
     echo "updating rofi...";
-    cp $theme_location/rofi/colors.rasi $config_location/rofi/colors.rasi;
+    cp $theme_location/rofi/global/theme.rasi $config_location/rofi/global/theme.rasi;
 
     echo "updating hypr...";
-    cp $theme_location/hypr/colors.conf $config_location/hypr/hyprland/colors.conf;
-    cp $theme_location/hypr/colors.lua $config_location/hypr/hyprland/colors.lua;
+    cp $theme_location/hypr/theme.conf $config_location/hypr/hyprland/theme.conf;
+    cp $theme_location/hypr/theme.lua $config_location/hypr/hyprland/theme.lua;
 
     echo "updating alacritty...";
     cp $theme_location/alacritty/theme.toml $config_location/alacritty/theme.toml;
@@ -25,9 +26,6 @@ change_theme(){
     echo "updating nvim...";
     cp $theme_location/neovim/theme.lua $config_location/nvim/lua/plugins/theme.lua;
 
-    echo "updating swaync...";
-    cp $theme_location/swaync/colors.css $config_location/swaync/colors.css;
-
     echo "updating tmux...";
     cp $theme_location/tmux/colors.conf $config_location/tmux/tmux-colors.conf;
 
@@ -36,15 +34,8 @@ change_theme(){
     echo "applying $actual_file"
     cp  "$actual_file" ~/.config/background;
 
-    echo "updating waybar...";
-    cp $theme_location/waybar/colors.css $config_location/waybar/colors.css;
-
     echo "updating quickshell...";
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
-
-    echo "updating gtk"
-    # cp $theme_location/gtk4.css $config_location/gtk-4.0/gtk.css;
-    # cp $theme_location/gtk3.css $config_location/gtk-3.0/gtk.css;
 
     echo "reload services";
 

@@ -7,40 +7,36 @@ require('mini.snippets').setup({})
 require('mini.surround').setup({})
 require('mini.tabline').setup({})
 require('mini.trailspace').setup({})
-require('mini.pairs').setup({})
-local statusline = require('mini.statusline')
+require('mini.statusline').setup({})
+local minipairs = require('mini.pairs')
 local miniclue = require('mini.clue')
 local hipatterns = require('mini.hipatterns')
 local minifiles = require('mini.files')
 
-statusline.setup({
-    content = {
-        active = function()
-            local mode, mode_hl = statusline.section_mode({ trunc_width = math.huge })
-            local git = statusline.section_git({ trunc_width = 40 })
-            local diff = statusline.section_diff({ trunc_width = 40 })
-            local diagnostics = statusline.section_diagnostics({ trunc_width = 75 })
-            local filename = statusline.section_filename({ trunc_width = 140 })
-            local fileinfo = statusline.section_fileinfo({ trunc_width = 120 })
-            local location = statusline.section_location({ trunc_width = 120 })
+minipairs.setup({})
 
-            return statusline.combine_groups({
-                { hl = mode_hl, strings = { mode } },
-                { hl = 'MiniStatuslineDevinfo', strings = { git, diff, diagnostics } },
-                '%<', -- Mark general truncate point
-                { hl = 'MiniStatuslineFilename', strings = { filename } },
-                '%=', -- End left alignment
-                { hl = 'MiniStatuslineFileinfo', strings = { fileinfo } },
-                { hl = mode_hl, strings = { location } },
-            })
-        end,
-    },
-})
+local lt_opts = {
+    action = 'open',
+    pair = '<>',
+    neigh_pattern = '\r.',
+    register = { cr = false },
+}
+MiniPairs.map('i', '<', lt_opts)
+
+local gt_opts = { action = 'close', pair = '<>', register = { cr = false } }
+MiniPairs.map('i', '>', gt_opts)
+
+-- Create symmetrical `$$` pair only in Tex files
+local map_tex = function()
+    MiniPairs.map_buf(0, 'i', '$', { action = 'closeopen', pair = '$$' })
+end
+vim.api.nvim_create_autocmd('FileType', { pattern = 'tex', callback = map_tex })
 
 miniclue.setup({
     triggers = {
         { mode = { 'n', 'x' }, keys = '<Leader>' },
         { mode = { 'n', 'x' }, keys = '"' },
+        { mode = { 'n', 'x' }, keys = 'g' },
         { mode = { 'i', 'c' }, keys = '<C-r>' },
     },
     clues = {

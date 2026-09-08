@@ -16,7 +16,7 @@ QtObject {{
     readonly property color primary: {primary_color_name}
 
     readonly property int textRenderType: Text.NativeRendering
-    readonly property string fontFamily: "JetbrainsMono Nerd Font"
+    readonly property string fontFamily: '{font}'
 
     readonly property string wallpaperPath: "{wallpaper_path}"
 }}

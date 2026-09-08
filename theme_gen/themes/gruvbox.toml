@@ -21,3 +21,5 @@ neovim_theme_opts = [
 neovim_theme_name = "gruvbox"
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png"
+
+font = "Iosevka Nerd Font"

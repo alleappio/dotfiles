@@ -21,5 +21,6 @@ require("plugins")
 require("vim-options")
 require("keybindings")
 require("terminal_emulator")
+-- require("autocompletion")
 
 require("mini-welcome")

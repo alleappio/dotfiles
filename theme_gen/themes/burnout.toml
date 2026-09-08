@@ -21,3 +21,5 @@ neovim_theme_opts = [
 neovim_theme_name = "warm-burnout-dark"
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/burnout/background_burnout.jpg"
+
+font = "Iosevka Nerd Font"

@@ -9,11 +9,16 @@ hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
 hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. ' + T', hl.dsp.layout('togglesplit')) -- dwindle only
-hl.bind(mainMod .. ' + SHIFT + L', hl.dsp.exec_cmd('hyprlock'))
+hl.bind(mainMod .. ' + CONTROL + L', hl.dsp.exec_cmd('hyprlock'))
 hl.bind(mainMod .. ' + P', hl.dsp.exec_cmd('hyprshot -m region'))
 hl.bind(mainMod .. ' + N', hl.dsp.exec_cmd('~/.config/rofi/scripts/main_menu.sh'))
 hl.bind(mainMod .. ' + SHIFT + N', hl.dsp.exec_cmd('swaync-client -t'))
 hl.bind(mainMod .. ' + SHIFT + R', reload_fn)
+
+-- groups
+hl.bind(mainMod .. ' + G', hl.dsp.group.toggle())
+hl.bind(mainMod .. ' + TAB', hl.dsp.group.next())
+hl.bind(mainMod .. ' + SHIFT + TAB', hl.dsp.group.prev())
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. ' + left', hl.dsp.focus({ direction = 'left' }))
@@ -25,6 +30,11 @@ hl.bind(mainMod .. ' + H', hl.dsp.focus({ direction = 'left' }))
 hl.bind(mainMod .. ' + L', hl.dsp.focus({ direction = 'right' }))
 hl.bind(mainMod .. ' + K', hl.dsp.focus({ direction = 'up' }))
 hl.bind(mainMod .. ' + J', hl.dsp.focus({ direction = 'down' }))
+
+hl.bind(mainMod .. ' + SHIFT + H', hl.dsp.window.move({ group_aware = true, direction = 'left' }))
+hl.bind(mainMod .. ' + SHIFT + L', hl.dsp.window.move({ group_aware = true, direction = 'right' }))
+hl.bind(mainMod .. ' + SHIFT + K', hl.dsp.window.move({ group_aware = true, direction = 'up' }))
+hl.bind(mainMod .. ' + SHIFT + J', hl.dsp.window.move({ group_aware = true, direction = 'down' }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

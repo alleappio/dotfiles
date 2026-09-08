@@ -2,7 +2,7 @@
  * rofi -dump-theme output.
  * Rofi version: 2.0.0
  **/
-@import "colors.rasi"
+@import "global/theme.rasi"
 
 configuration {
     display-drun: ">";

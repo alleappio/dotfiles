@@ -11,22 +11,6 @@ vim.pack.add({
 
 require('mason').setup()
 
-require('mason-lspconfig').setup({
-    ensure_installed = {
-        'lua_ls',
-        'stylua',
-        'rust_analyzer',
-        'pyright',
-        'bashls',
-        'clangd',
-        'docker_compose_language_service',
-        'dockerls',
-        'html',
-        'yamlls',
-        'kotlin_lsp'
-    },
-})
-
 local languages = {
     'lua_ls',
     'stylua',
@@ -38,13 +22,20 @@ local languages = {
     'dockerls',
     'html',
     'yamlls',
-    'kotlin_lsp',
     'qmlls',
 }
+
+require('mason-lspconfig').setup({
+    ensure_installed = languages
+})
+
 
 vim.lsp.config('lua_ls', {
     settings = {
         Lua = {
+            workspace = {
+                library = vim.api.nvim_get_runtime_file('', true),
+            },
             format = {
                 enable = false,
             },
@@ -56,27 +47,10 @@ vim.lsp.config('qmlls', {
     cmd = { 'qmlls6' },
 })
 
--- for _, language in ipairs(languages) do
---     vim.lsp.enable(language)
--- end
-
-require('blink.cmp').setup({
-
-    keymap = { preset = 'default' },
-
-    appearance = {
-        nerd_font_variant = 'mono',
-    },
-
-    completion = {
-        documentation = { auto_show = false },
-        menu = { border = 'none' },
-    },
-
-    sources = {
-        default = { 'buffer', 'path', 'snippets', 'lsp' },
-    },
-    fuzzy = {
-        implementation = 'prefer_rust',
-    },
+vim.lsp.config("kotlin_lsp", {
+    cmd = {
+        vim.fn.expand("~/.local/bin/intellij-server"),
+        "--stdio"
+    }
 })
+vim.lsp.enable("kotlin_lsp")

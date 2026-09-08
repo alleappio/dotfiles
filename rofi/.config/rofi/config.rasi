@@ -1,9 +1,9 @@
+@import "global/theme.rasi"
 configuration {
     modes: "drun,run,ssh,window";
-    font: "JetbrainsMono Nerd Font 12";
+    // font: var(font-family-and-size);
     show-icons: true;
-    icon-theme: "Breeze";
-    terminal: "alacritty";
+    terminal: "kitty";
     matching: "fuzzy";
 
   timeout {

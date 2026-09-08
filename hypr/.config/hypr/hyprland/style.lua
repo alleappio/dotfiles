@@ -1,4 +1,4 @@
-require('hyprland.colors')
+require('hyprland.theme')
 
 hl.config({
     general = {
@@ -45,6 +45,32 @@ hl.config({
     animations = {
         enabled = false,
     },
+
+    group = {
+        auto_group = true,
+        groupbar = {
+            height = 18,
+            font_family = font,
+            font_size = 15,
+            text_color = foreground_color,
+            text_color_inactive = foreground_color,
+            col = {
+                active = primary_color,
+                inactive = background_color,
+            },
+        },
+        col = {
+            border_active = primary_color,
+            border_inactive = background_color,
+        }
+    },
+
+    scrolling = {
+        fullscreen_on_one_column = true,
+    },
+
+    misc = {
+    }
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
@@ -55,23 +81,3 @@ hl.curve('almostLinear', { type = 'bezier', points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve('quick', { type = 'bezier', points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 hl.animation({ leaf = 'global', enabled = true, speed = 5, bezier = 'default' })
-
-hl.config({
-    dwindle = {
-        preserve_split = true, -- You probably want this
-    },
-})
-
--- See https://wiki.hypr.land/Configuring/Layouts/Master-Layout/ for more
-hl.config({
-    master = {
-        new_status = 'master',
-    },
-})
-
--- See https://wiki.hypr.land/Configuring/Layouts/Scrolling-Layout/ for more
-hl.config({
-    scrolling = {
-        fullscreen_on_one_column = true,
-    },
-})

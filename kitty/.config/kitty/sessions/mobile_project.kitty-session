@@ -1,0 +1,29 @@
+
+new_tab nvim
+layout splits
+enabled_layouts splits,stack
+set_layout_state {"pairs": {"one": 3}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [4], "window_groups": [{"id": 3, "window_ids": [4]}]}}
+cd /home/alle/Projects/RoboracerLabeler
+
+launch 'kitty-unserialize-data={"id": 4, "cmd_at_shell_startup": ["/usr/bin/nvim"]}'
+focus
+
+new_tab git
+layout splits
+enabled_layouts splits,stack
+set_layout_state {"pairs": {"one": 4}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [5], "window_groups": [{"id": 4, "window_ids": [5]}]}}
+cd /home/alle/Projects/RoboracerLabeler
+
+launch 'kitty-unserialize-data={"id": 5}'
+focus
+
+new_tab android-studio
+layout splits
+enabled_layouts splits,stack
+set_layout_state {"pairs": {"one": 5}, "opts": {"split_axis": "horizontal", "equalize_on_window_close": "n"}, "class": "Splits", "all_windows": {"active_group_idx": 0, "active_group_history": [], "window_groups": [{"id": 5, "window_ids": [6]}]}}
+cd /home/alle/apps/android-studio
+
+launch 'kitty-unserialize-data={"id": 6, "cmd_at_shell_startup": "./bin/studio "}'
+focus
+
+focus_tab 0

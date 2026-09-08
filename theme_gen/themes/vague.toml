@@ -19,3 +19,5 @@ neovim_theme_opts = [
 ]
 neovim_theme_name = "vague"
 wallpaper_path = "/home/alle/dotfiles/wallpaper/vague/background_vague.png"
+
+font = "Iosevka Nerd Font"

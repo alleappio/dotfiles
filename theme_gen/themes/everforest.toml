@@ -21,3 +21,5 @@ neovim_theme_opts = [
 ]
 neovim_theme_name = "everforest"
 wallpaper_path = "/home/alle/dotfiles/wallpaper/everforest/background_everforest.png"
+
+font = "Iosevka Nerd Font"

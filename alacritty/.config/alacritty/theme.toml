@@ -2,27 +2,34 @@
 
 # Default colors
 [colors.primary]
-background = '#1d2021'
-foreground = '#ebdbb2'
+background = '#14171d'
+foreground = '#C5C9C7'
 
 # Normal colors
 [colors.normal]
-black = '#282828'
-red = '#cc241d'
-green = '#98971a'
-yellow = '#d79921'
-blue = '#458588'
-magenta = '#b16286'
-cyan = '#689d6a'
-white = '#ebdbb2'
+black = '#14171d'
+red = '#c4746e'
+green = '#8a9a7b'
+yellow = '#c4b28a'
+blue = '#8ba4b0'
+magenta = '#a292a3'
+cyan = '#8ea4a2'
+white = '#C5C9C7'
 
 # Bright colors (same as normal colors)
 [colors.bright]
-black = '#282828'
-red = '#cc241d'
-green = '#98971a'
-yellow = '#d79921'
-blue = '#458588'
-magenta = '#b16286'
-cyan = '#689d6a'
-white = '#ebdbb2'
+black = '#14171d'
+red = '#c4746e'
+green = '#8a9a7b'
+yellow = '#c4b28a'
+blue = '#8ba4b0'
+magenta = '#a292a3'
+cyan = '#8ea4a2'
+white = '#C5C9C7'
+
+[font]
+normal = { family="Iosevka Nerd Font" }
+bold = { family="Iosevka Nerd Font" }
+italic = { family="Iosevka Nerd Font" }
+size = 11
+offset.y = 1

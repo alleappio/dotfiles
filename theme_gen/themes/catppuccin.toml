@@ -19,3 +19,5 @@ neovim_theme_opts = []
 neovim_theme_name = "catppuccin-mocha"
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/catppuccin/background_catppuccin.png"
+
+font = "Iosevka Nerd Font"

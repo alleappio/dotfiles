@@ -19,3 +19,5 @@ neovim_theme_opts = []
 neovim_theme_name = "tokyonight-night"
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/tokyonight/background_tokyonight.png"
+
+font = "Iosevka Nerd Font"
