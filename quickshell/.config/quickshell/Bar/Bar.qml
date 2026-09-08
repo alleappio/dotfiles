@@ -43,12 +43,12 @@ PanelWindow {
     RowLayout {
 
         anchors.fill: parent
-        anchors.leftMargin: 14
-        anchors.rightMargin: 14
+        anchors.leftMargin: 0
+        anchors.rightMargin: 0
 
         RowLayout {
             spacing: 10
-            Logo {}
+            // Logo {}
             Workspaces {}
         }
         Spacer {}
