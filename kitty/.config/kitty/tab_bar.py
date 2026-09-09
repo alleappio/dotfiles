@@ -11,6 +11,7 @@ from kitty.tab_bar import (
     as_rgb,
     draw_attributed_string,
     draw_tab_with_powerline,
+    draw_tab_with_separator,
 )
 from kitty.utils import color_as_int
 
@@ -31,9 +32,10 @@ def draw_tab(
     if tab.layout_name == "stack":
         screen.draw("\uf002 ")
 
-    draw_tab_with_powerline(
+    draw_tab_with_separator(
         draw_data, screen, tab, before, max_title_length, index, is_last, extra_data
     )
+
     if is_last:
         draw_right_status(draw_data, screen, tab)
     return screen.cursor.x
@@ -48,7 +50,8 @@ def draw_right_status(draw_data: DrawData, screen: Screen, tabBarData: TabBarDat
     ]
 
     # start from the number of separators (the number of elements)
-    to_draw_len = len(to_draw)*3
+    # to_draw_len = len(to_draw)*3
+    to_draw_len = len(to_draw)*2
 
     # add the length of the items
     for i in to_draw:
@@ -60,7 +63,7 @@ def draw_right_status(draw_data: DrawData, screen: Screen, tabBarData: TabBarDat
 
     screen.cursor.bg = as_rgb(color_as_int(opts.background))
     screen.cursor.fg = as_rgb(color_as_int(opts.active_tab_background))
-    screen.draw("\ue0b2")
+    # screen.draw("\ue0b2")
     screen.cursor.fg = as_rgb(color_as_int(opts.background))
     screen.cursor.bg = as_rgb(color_as_int(opts.active_tab_background))
     screen.cursor.bold = True
