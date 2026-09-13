@@ -29,6 +29,7 @@ local language_list ={
     "zig",
     "kotlin",
     "odin",
+    "just",
 }
 require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)

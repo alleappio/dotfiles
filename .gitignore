@@ -1,2 +1,3 @@
 theme_gen/output*
 *.qmlls.ini
+*.kitty-session

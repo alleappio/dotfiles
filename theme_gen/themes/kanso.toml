@@ -16,7 +16,14 @@ secondary_color_name = "white"
 
 neovim_theme_repo = "https://github.com/webhooked/kanso.nvim"
 neovim_theme_opts = [
-    "require('kanso').setup({background = {dark = 'ink'}})"
+    "require('kanso').setup({background = {dark = 'ink'}})",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel0', { link = 'RainbowDelimiterCyan' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel1', { link = 'RainbowDelimiterBlue' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel2', { link = 'RainbowDelimiterViolet' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel3', { link = 'RainbowDelimiterRed' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel4', { link = 'RainbowDelimiterOrange' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel5', { link = 'RainbowDelimiterYellow' })",
+    "vim.api.nvim_set_hl(0, 'RainbowLevel6', { link = 'RainbowDelimiterGreen' })",
 ]
 neovim_theme_name = "kanso"
 wallpaper_path = "/home/alle/dotfiles/wallpaper/kanso/background_kanso.jpg"

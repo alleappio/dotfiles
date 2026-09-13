@@ -1,0 +1,24 @@
+background_color     = "#181818"
+foreground_color     = "#e4e4e4"
+background_alt_color = "#282828"
+black_color          = "#282828"
+red_color            = "#f43841"
+green_color          = "#73d936"
+yellow_color         = "#ffdd33"
+blue_color           = "#96a6c8"
+magenta_color        = "#9e95c7"
+cyan_color           = "#95a99f"
+white_color          = "#e4e4e4"
+orange_color         = "#cc8c3c"
+
+primary_color_name = "yellow"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/blazkowolf/gruber-darker.nvim"
+neovim_theme_opts = [
+    "vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { link = 'MiniHipatternsHack' })",
+]
+neovim_theme_name = "gruber-darker"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/gruber/background_gruber.jpg"
+
+font = "Iosevka Nerd Font"

@@ -1,7 +1,7 @@
 vim.pack.add({
-    "https://github.com/webhooked/kanso.nvim",
+    "https://github.com/blazkowolf/gruber-darker.nvim",
 })
 
-require('kanso').setup({background = {dark = 'ink'}})
-vim.cmd.colorscheme("kanso")
+vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { link = 'MiniHipatternsHack' })
+vim.cmd.colorscheme("gruber-darker")
 

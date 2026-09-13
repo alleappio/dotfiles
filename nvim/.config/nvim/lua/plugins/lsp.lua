@@ -23,6 +23,9 @@ local languages = {
     'html',
     'yamlls',
     'qmlls',
+    'ols',
+    'kotlin_language_server',
+    -- 'kotlin_lsp',
 }
 
 require('mason-lspconfig').setup({
@@ -47,10 +50,10 @@ vim.lsp.config('qmlls', {
     cmd = { 'qmlls6' },
 })
 
-vim.lsp.config("kotlin_lsp", {
-    cmd = {
-        vim.fn.expand("~/.local/bin/intellij-server"),
-        "--stdio"
-    }
-})
-vim.lsp.enable("kotlin_lsp")
+-- vim.lsp.config("kotlin_lsp", {
+--     cmd = {
+--         vim.fn.expand("~/.local/bin/intellij-server"),
+--         "--stdio"
+--     }
+-- })
+-- vim.lsp.enable("kotlin_lsp")
