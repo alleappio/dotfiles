@@ -56,11 +56,11 @@ vim.o.ignorecase = true
 -- Override ignorecase if search pattern contains uppercase
 vim.o.smartcase = true
 
--- Open vertical splits to the right
-vim.o.splitright = true
-
 -- Open horizontal splits below
 vim.o.splitbelow = true
+
+-- Open vertical splits to the right
+vim.o.splitright = true
 
 -- Show confirmation dialog for unsaved changes
 vim.o.confirm = true

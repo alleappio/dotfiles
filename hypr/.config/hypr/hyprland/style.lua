@@ -49,6 +49,7 @@ hl.config({
     group = {
         auto_group = true,
         groupbar = {
+            gradients = false,
             height = 18,
             font_family = font,
             font_size = 15,
@@ -57,11 +58,15 @@ hl.config({
             col = {
                 active = primary_color,
                 inactive = background_color,
+                locked_active = primary_color,
+                locked_inactive = background_color,
             },
         },
         col = {
             border_active = primary_color,
             border_inactive = background_color,
+            border_locked_active = primary_color,
+            border_locked_inactive = background_color,
         }
     },
 
