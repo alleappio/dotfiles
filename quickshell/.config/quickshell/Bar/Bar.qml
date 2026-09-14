@@ -72,7 +72,6 @@ PanelWindow {
             // Ram {}
             // PowerProfile {}
             // Network {}
-            Capslock {}
             QuickInfoButton {
                 onInfoClicked: globalPos => {
                     if (quickInfo.visible) {
@@ -82,6 +81,7 @@ PanelWindow {
                     }
                 }
             }
+            Capslock {}
             Volume {}
             Brightness {}
             Battery {}

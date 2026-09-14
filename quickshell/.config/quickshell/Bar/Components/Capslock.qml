@@ -5,7 +5,7 @@ import qs.Theme
 Rectangle {
     visible: CapsLockService.capsLock
 
-    color: Theme.foreground
+    color: Theme.primary
 
     implicitWidth: 24
     implicitHeight: 24

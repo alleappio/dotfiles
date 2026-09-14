@@ -6,16 +6,26 @@ import Quickshell.Io
 
 Singleton {
     id: root
+
     property bool capsLock: false
 
-    FileView {
-        id: capsFile
-        path: "/sys/class/leds/input3::capslock/brightness"
-        onLoaded: {
-            root.capsLock = text().trim() === "1"
-        }
-        onLoadFailed: (error) => {
-            console.log("load failed:", error)
+    Process {
+        id: capsProcess
+
+        command: [
+            "sh", "-c",
+            "found=0; " +
+            "for f in /sys/class/leds/*capslock*/brightness; do " +
+            "    [ -f \"$f\" ] || continue; " +
+            "    [ \"$(cat \"$f\")\" = \"1\" ] && found=1; " +
+            "done; " +
+            "echo $found"
+        ]
+
+        stdout: StdioCollector {
+            onStreamFinished: {
+                root.capsLock = this.text.trim() === "1"
+            }
         }
     }
 
@@ -23,6 +33,6 @@ Singleton {
         interval: 500
         running: true
         repeat: true
-        onTriggered: capsFile.reload()
+        onTriggered: capsProcess.running = true
     }
 }
