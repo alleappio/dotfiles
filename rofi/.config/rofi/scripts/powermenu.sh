@@ -15,6 +15,7 @@ elif [[ $output == " Reboot" ]];then
     systemctl reboot
 elif [[ $output == "󰗽 Logout" ]];then
     hyprctl dispatch 'hl.dsp.exit()'
+    swaymsg exit
 else
     echo "exit"
 fi

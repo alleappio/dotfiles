@@ -6,6 +6,7 @@ Text {
     id: root
     color: Theme.foreground
     renderType: Theme.textRenderType
+    anchors.centerIn: parent
 
     signal clockClicked(var globalPos)
 

@@ -17,6 +17,9 @@ change_theme(){
     cp $theme_location/hypr/theme.conf $config_location/hypr/hyprland/theme.conf;
     cp $theme_location/hypr/theme.lua $config_location/hypr/hyprland/theme.lua;
 
+    echo "updating sway...";
+    cp $theme_location/sway/theme.conf $config_location/sway/theme.conf;
+
     echo "updating alacritty...";
     cp $theme_location/alacritty/theme.toml $config_location/alacritty/theme.toml;
 
@@ -39,8 +42,11 @@ change_theme(){
 
     echo "reload services";
 
-    echo "reload hyprland...";
-    hyprctl eval "reload_fn()"
+    # echo "reload hyprland...";
+    # hyprctl eval "reload_fn()"
+
+    echo "reload sway...";
+    swaymsg -q reload
 
     echo "reload alacritty...";
     touch ~/.config/alacritty/alacritty.toml

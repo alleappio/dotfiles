@@ -22,7 +22,7 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: 25
+    implicitHeight: 20
     color: Theme.background
 
     Calendar {
@@ -49,7 +49,7 @@ PanelWindow {
         RowLayout {
             spacing: 10
             // Logo {}
-            Workspaces {}
+            SwayWorkspaces {}
         }
         Spacer {}
         RowLayout {

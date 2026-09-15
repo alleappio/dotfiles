@@ -26,10 +26,17 @@ hl.bind(mainMod .. ' + right', hl.dsp.focus({ direction = 'right' }))
 hl.bind(mainMod .. ' + up', hl.dsp.focus({ direction = 'up' }))
 hl.bind(mainMod .. ' + down', hl.dsp.focus({ direction = 'down' }))
 
+local function in_group(direction, group_direction)
+    return hl.dsp.exec_cmd(
+        "hyprctl activewindow -j | jq -e '.grouped | length > 0'"
+    )
+end
+
 hl.bind(mainMod .. ' + H', hl.dsp.focus({ direction = 'left' }))
 hl.bind(mainMod .. ' + L', hl.dsp.focus({ direction = 'right' }))
 hl.bind(mainMod .. ' + K', hl.dsp.focus({ direction = 'up' }))
 hl.bind(mainMod .. ' + J', hl.dsp.focus({ direction = 'down' }))
+
 
 hl.bind(mainMod .. ' + SHIFT + H', hl.dsp.window.move({ group_aware = true, direction = 'left' }))
 hl.bind(mainMod .. ' + SHIFT + L', hl.dsp.window.move({ group_aware = true, direction = 'right' }))

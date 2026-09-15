@@ -49,33 +49,34 @@ hl.config({
     group = {
         auto_group = true,
         groupbar = {
-            gradients = false,
-            height = 18,
+            gradients = true,
+            height=15,
             font_family = font,
-            font_size = 15,
-            text_color = foreground_color,
+            font_size = 17,
+            text_color = background_color,
             text_color_inactive = foreground_color,
+            gaps_in = 0,
+            gaps_out = 0,
             col = {
                 active = primary_color,
                 inactive = background_color,
-                locked_active = primary_color,
+                locked_active = background_color,
                 locked_inactive = background_color,
             },
         },
         col = {
             border_active = primary_color,
             border_inactive = background_color,
-            border_locked_active = primary_color,
+            border_locked_active = background_color,
             border_locked_inactive = background_color,
-        }
+        },
     },
 
     scrolling = {
         fullscreen_on_one_column = true,
     },
 
-    misc = {
-    }
+    misc = {},
 })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
