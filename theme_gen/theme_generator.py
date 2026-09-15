@@ -55,7 +55,7 @@ def main():
             print(e)
             help()
 
-    colorscheme["primary_color_hex"] = colorscheme[f"{colorscheme["primary_color_name"]}_color"]
+    colorscheme["primary_color"] = colorscheme[f"{colorscheme["primary_color_name"]}_color"]
     colorscheme["neovim_theme_opts"] = "\n".join(colorscheme["neovim_theme_opts"])
 
 
@@ -77,7 +77,7 @@ def main():
         "yellow_rgb":              hex_to_rgb(colorscheme["yellow_color"]),
         "blue_rgb":                hex_to_rgb(colorscheme["blue_color"]),
         "purple_rgb":              hex_to_rgb(colorscheme["magenta_color"]),
-        "accent_rgb":              hex_to_rgb(colorscheme["primary_color_hex"]),
+        "accent_rgb":              hex_to_rgb(colorscheme["primary_color"]),
         "hover_rgb":               hex_to_rgb(colorscheme["background_alt_color"]),
     }
     colors = colors | colorscheme

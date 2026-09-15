@@ -3,7 +3,7 @@ configuration {
     modes: "drun,run,ssh,window";
     // font: var(font-family-and-size);
     show-icons: true;
-    terminal: "kitty";
+    terminal: "foot";
     matching: "fuzzy";
 
   timeout {

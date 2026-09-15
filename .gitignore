@@ -1,3 +1,4 @@
 theme_gen/output*
 *.qmlls.ini
 *.kitty-session
+tmux/.config/tmux/sessions/*

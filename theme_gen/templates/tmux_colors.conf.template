@@ -1,1 +1,1 @@
-set -g @primary "{primary_color_hex}"
+set -g @primary "{primary_color}"

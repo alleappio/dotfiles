@@ -12,7 +12,7 @@ url_color               {blue_color}
 visual_bell_color       {cyan_color}
 bell_border_color       {cyan_color}
 
-active_border_color     {primary_color_hex}
+active_border_color     {primary_color}
 inactive_border_color   {black_color}
 
 foreground              {foreground_color}
@@ -21,7 +21,7 @@ selection_foreground    {background_color}
 selection_background    {foreground_color}
 
 active_tab_foreground   {background_color}
-active_tab_background   {primary_color_hex}
+active_tab_background   {primary_color}
 inactive_tab_foreground {foreground_color}
 inactive_tab_background {background_color}
 

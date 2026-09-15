@@ -28,7 +28,7 @@ Text {
 
         Process {
             id: htopTuiProc
-            command: ["sh", "-c", "alacritty --class htoptui -e htop"]
+            command: ["sh", "-c", "foot -a htoptui htop"]
         }
         onClicked: click => {
             htopTuiProc.running = true;

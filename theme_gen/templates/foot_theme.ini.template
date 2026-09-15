@@ -1,0 +1,43 @@
+font={font}:size=12
+
+[colors-dark]
+background={background_color_strip_hashtag}
+foreground={foreground_color_strip_hashtag}
+
+cursor={background_color_strip_hashtag} {foreground_color_strip_hashtag}
+
+## Normal/regular colors (color palette 0-7)
+#regular0=black
+#regular1=red
+#regular2=green
+#regular3=yellow
+#regular4=blue
+#regular5=magenta
+#regular6=cyan
+#regular7=white
+regular0={black_color_strip_hashtag}
+regular1={red_color_strip_hashtag}
+regular2={green_color_strip_hashtag}
+regular3={yellow_color_strip_hashtag}
+regular4={blue_color_strip_hashtag}
+regular5={magenta_color_strip_hashtag}
+regular6={cyan_color_strip_hashtag}
+regular7={white_color_strip_hashtag}
+
+## Bright colors (color palette 8-15)
+# bright0=bright black
+# bright1=bright red
+# bright2=bright green
+# bright3=bright yellow
+# bright4=bright blue
+# bright5=bright magenta
+# bright6=bright cyan
+# bright7=bright white
+bright0={black_color_strip_hashtag}
+bright1={red_color_strip_hashtag}
+bright2={green_color_strip_hashtag}
+bright3={yellow_color_strip_hashtag}
+bright4={blue_color_strip_hashtag}
+bright5={magenta_color_strip_hashtag}
+bright6={cyan_color_strip_hashtag}
+bright7={white_color_strip_hashtag}

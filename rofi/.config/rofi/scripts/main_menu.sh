@@ -30,16 +30,16 @@ case "$output" in
         ~/.config/rofi/scripts/powermenu.sh
         ;;
     "htop")
-        alacritty --class htoptui -e htop
+        foot -a htoptui -w 640x640 htop
         ;;
     "nmtui")
-        alacritty --class nmtui -e nmtui
+        foot -a nmtui -w 640x640 nmtui
         ;;
     "Audio")
         pavucontrol
         ;;
     "rmpc")
-        alacritty --class rmpctui -e rmpc
+        foot -a -w 640x640 rmpc
         ;;
     *)
         exit 0
