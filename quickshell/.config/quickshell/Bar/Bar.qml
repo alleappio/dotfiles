@@ -22,7 +22,7 @@ PanelWindow {
         right: true
     }
 
-    implicitHeight: 20
+    implicitHeight: 22
     color: Theme.background
 
     Calendar {
