@@ -4,6 +4,7 @@ import os
 import tomllib
 from pathlib import Path
 
+THEMES_GEN_DIR = f"{os.environ["HOME"]}/dotfiles/theme_gen"
 def help():
     print(f"Usage: {sys.argv[0]} (colorscheme)")
     exit()
@@ -39,9 +40,9 @@ def main():
         help()
 
     colorscheme_name = sys.argv[1]
-    colorscheme_file = f"themes/{colorscheme_name}.toml"
-    templates_dir = "templates"
-    output_dir = f"outputs/{colorscheme_name}"
+    colorscheme_file = f"{THEMES_GEN_DIR}/themes/{colorscheme_name}.toml"
+    templates_dir = f"{THEMES_GEN_DIR}/templates"
+    output_dir = f"{THEMES_GEN_DIR}/outputs/{colorscheme_name}"
 
     with open(colorscheme_file, "rb") as f:
         tot = tomllib.load(f)

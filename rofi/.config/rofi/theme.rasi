@@ -1,0 +1,32 @@
+* {
+    background:     #181818;
+    background-alt: #282828;
+    foreground:     #e4e4e4;
+    red:            #f43841;
+    blue:           #96a6c8;
+    green:          #73d936;
+    yellow:         #ffdd33;
+    orange:         #cc8c3c;
+    magenta:        #9e95c7;
+    purple:         #9e95c7;
+    primary:        var(yellow);
+    selected:       var(yellow);
+    urgent:         var(red);
+    font: "Iosevka Nerd Font 14";
+
+    separatorcolor:              transparent;
+    border-color:                var(primary);
+    normal-background:           var(background);
+    alternate-active-background: var(background);
+    spacing:                     2;
+    selected-normal-foreground:  var(background);
+    active-foreground:           var(primary);
+    selected-active-background:  var(primary);
+    active-background:           var(background);
+    selected-normal-background:  var(primary);
+    alternate-normal-background: var(background);
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    alternate-urgent-foreground: var(red);
+    alternate-active-foreground: var(primary);
+}

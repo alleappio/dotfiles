@@ -1,14 +1,8 @@
 themes_location="$HOME/dotfiles/theme_gen/outputs";
 options=($(ls $themes_location));
 
-rofi_cmd() {
-	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
-                -p ">" \
-		-config ~/.config/rofi/config.rasi \
-		-dmenu
-}
-
-choice=$(printf '%s\n' "${options[@]}"|rofi_cmd );
+choice=$(printf '%s\n' "${options[@]}"|rofi -dmenu -p "> " -i);
 echo $choice
 
+~/dotfiles/theme_gen/theme_generator.py $choice
 ~/dotfiles/theme_gen/apply_theme.sh $choice

@@ -1,29 +1,21 @@
 #!/bin/bash
 
-rofi_cmd() {
-	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
-		-config ~/.config/rofi/config.rasi \
-                -p ">" \
-                -i \
-		-dmenu
-}
+items=$'launcher\nchange theme\npassword store\npowermenu\nnmtui\nhtop\naudio\nrmpc'
 
-items=$'Launcher\nChange theme\nPassword store\npowermenu\nnmtui\nhtop\nAudio\nrmpc'
-
-output=$(printf "%b" "$items" | rofi_cmd)
+output=$(printf "%b" "$items" | rofi -dmenu -p "> " -i)
 
 if [[ -z "$output" ]]; then
     exit 0
 fi
 
 case "$output" in
-    "Change theme")
+    "change theme")
         ~/.config/rofi/scripts/change_theme.sh
         ;;
-    "Launcher")
+    "launcher")
         ~/.config/rofi/scripts/launcher.sh
         ;;
-    "Password store")
+    "password store")
         ~/.config/rofi/scripts/password-store.sh
         ;;
     "powermenu")
@@ -35,7 +27,7 @@ case "$output" in
     "nmtui")
         foot -a nmtui -w 640x640 nmtui
         ;;
-    "Audio")
+    "audio")
         pavucontrol
         ;;
     "rmpc")

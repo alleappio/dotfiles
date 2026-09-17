@@ -2,21 +2,21 @@ pragma Singleton
 import QtQuick
 
 QtObject {
-    readonly property color background: '#1d2021'
-    readonly property color foreground: '#ebdbb2'
+    readonly property color background: '#181818'
+    readonly property color foreground: '#e4e4e4'
     readonly property color black: '#282828'
-    readonly property color red: '#cc241d'
-    readonly property color green: '#98971a'
-    readonly property color yellow: '#d79921'
-    readonly property color blue: '#458588'
-    readonly property color magenta: '#b16286'
-    readonly property color cyan: '#689d6a'
-    readonly property color orange: '#d65d0e'
-    readonly property color white: '#ebdbb2'
-    readonly property color primary: orange
+    readonly property color red: '#f43841'
+    readonly property color green: '#73d936'
+    readonly property color yellow: '#ffdd33'
+    readonly property color blue: '#96a6c8'
+    readonly property color magenta: '#9e95c7'
+    readonly property color cyan: '#95a99f'
+    readonly property color orange: '#cc8c3c'
+    readonly property color white: '#e4e4e4'
+    readonly property color primary: yellow
 
     readonly property int textRenderType: Text.NativeRendering
     readonly property string fontFamily: 'Iosevka Nerd Font'
 
-    readonly property string wallpaperPath: "/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png"
+    readonly property string wallpaperPath: "/home/alle/dotfiles/wallpaper/gruber/background_gruber.jpg"
 }

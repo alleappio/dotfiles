@@ -6,12 +6,11 @@ change_theme(){
         exit 1;
     fi
 
-    clear;
     echo "Installing theme: $1";
     local theme_location="$themes_location/$1";
 
     echo "updating rofi...";
-    cp $theme_location/rofi/global/theme.rasi $config_location/rofi/global/theme.rasi;
+    cp $theme_location/rofi/theme.rasi $config_location/rofi/theme.rasi;
 
     echo "updating sway...";
     cp $theme_location/sway/theme.conf $config_location/sway/theme.conf;
@@ -24,11 +23,6 @@ change_theme(){
 
     echo "updating tmux...";
     cp $theme_location/tmux/colors.conf $config_location/tmux/tmux-colors.conf;
-
-    # echo "updating wallpaper...";
-    # actual_file=$(ls "$HOME/dotfiles/wallpaper/$1/background_$1"*);
-    # echo "applying $actual_file"
-    # cp  "$actual_file" ~/.config/background;
 
     echo "updating quickshell...";
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;

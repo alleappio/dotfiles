@@ -1,0 +1,32 @@
+* {{
+    background:     {background_color};
+    background-alt: {background_alt_color};
+    foreground:     {foreground_color};
+    red:            {red_color};
+    blue:           {blue_color};
+    green:          {green_color};
+    yellow:         {yellow_color};
+    orange:         {orange_color};
+    magenta:        {magenta_color};
+    purple:         {magenta_color};
+    primary:        var({primary_color_name});
+    selected:       var({primary_color_name});
+    urgent:         var(red);
+    font: "{font} 14";
+
+    separatorcolor:              transparent;
+    border-color:                var(primary);
+    normal-background:           var(background);
+    alternate-active-background: var(background);
+    spacing:                     2;
+    selected-normal-foreground:  var(background);
+    active-foreground:           var(primary);
+    selected-active-background:  var(primary);
+    active-background:           var(background);
+    selected-normal-background:  var(primary);
+    alternate-normal-background: var(background);
+    selected-urgent-foreground:  var(background);
+    normal-foreground:           var(foreground);
+    alternate-urgent-foreground: var(red);
+    alternate-active-foreground: var(primary);
+}}

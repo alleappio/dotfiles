@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
 rofi_cmd() {
-	rofi -theme ~/.config/rofi/generic_list/theme.rasi \
-                -p ">" \
-		-config ~/.config/rofi/config.rasi \
-		-dmenu
+	rofi -p "> " -dmenu -i
 }
 
 shopt -s nullglob globstar

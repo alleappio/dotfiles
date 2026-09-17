@@ -227,7 +227,7 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Special key to take a screenshot with grim
-bindsym Print exec grim
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
 
 # bind workspaces
 workspace 1 output $external_display_1

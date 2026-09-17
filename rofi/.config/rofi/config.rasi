@@ -1,17 +1,37 @@
-@import "global/theme.rasi"
+@import "theme.rasi"
+
 configuration {
     modes: "drun,run,ssh,window";
-    // font: var(font-family-and-size);
     show-icons: true;
     terminal: "foot";
     matching: "fuzzy";
 
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+
+    display-drun:               "> ";
+    display-run:                "Run ";
+    display-window:             "Windows ";
+    display-ssh:                "SSH ";
+
+}
+
+timeout {
+  action: "kb-cancel";
+  delay:  0;
+}
+filebrowser {
+  directories-first: true;
+  sorting-method:    "name";
+}
+
+window {
+    width: 500;
+}
+
+inputbar {
+    children: [ "prompt", "entry" ];
+}
+
+listview {
+    dynamic: false;
+    fixed-height: false;
 }

@@ -6,14 +6,14 @@ rofi_cmd() {
 		-dmenu
 }
 
-items="⏻ Poweroff\n Reboot\n󰗽 Logout"
-output=$(echo -e $items|rofi_cmd)
+items="poweroff\nreboot\nlogout"
+output=$(echo -e $items|rofi -dmenu -i -p "> ")
 
-if [[ $output == "⏻ Poweroff" ]];then
+if [[ $output == "poweroff" ]];then
     poweroff
-elif [[ $output == " Reboot" ]];then
+elif [[ $output == "reboot" ]];then
     systemctl reboot
-elif [[ $output == "󰗽 Logout" ]];then
+elif [[ $output == "logout" ]];then
     hyprctl dispatch 'hl.dsp.exit()'
     swaymsg exit
 else
