@@ -24,8 +24,7 @@ local languages = {
     'yamlls',
     'qmlls',
     'ols',
-    'kotlin_language_server',
-    -- 'kotlin_lsp',
+    'texlab'
 }
 
 require('mason-lspconfig').setup({
