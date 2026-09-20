@@ -1,0 +1,27 @@
+background_color =      "#181616"
+foreground_color =      "#c5c9c5"
+background_alt_color =  "#0d0c0c"
+black_color     =       "#0d0c0c"
+red_color       =       "#c4746e"
+green_color     =       "#8a9a7b"
+yellow_color    =       "#c4b28a"
+blue_color      =       "#8ba4b0"
+magenta_color   =       "#a292a3"
+cyan_color      =       "#8ea4a2"
+orange_color    =       "#b6927b"
+white_color     =       "#c5c9c5"
+
+primary_color_name = "blue"
+secondary_color_name = "magenta"
+
+neovim_theme_repo = "https://github.com/rebelot/kanagawa.nvim"
+neovim_theme_opts = [
+    "require('kanagawa').setup({})",
+]
+neovim_theme_name = "kanagawa-dragon"
+
+wallpaper_path = "/home/alle/dotfiles/wallpaper/kanagawa/background_kanagawa.png"
+
+font = "Iosevka Nerd Font"
+
+

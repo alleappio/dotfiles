@@ -1,7 +1,11 @@
 vim.pack.add({
-    "https://github.com/blazkowolf/gruber-darker.nvim",
+    {
+        src="https://github.com/rose-pine/neovim.git",
+        name="rose-pine"
+    }
 })
 
-vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { link = 'MiniHipatternsHack' })
-vim.cmd.colorscheme("gruber-darker")
+require('rose-pine').setup()
+
+vim.cmd.colorscheme("rose-pine")
 

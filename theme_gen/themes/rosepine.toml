@@ -1,0 +1,25 @@
+background_color =      "#191724"
+foreground_color =      "#e0def4"
+background_alt_color =  "#1f1d2e"
+black_color     =       "#26233a"
+red_color       =       "#eb6f92"
+green_color     =       "#31748f"
+yellow_color    =       "#f6c177"
+blue_color      =       "#9ccfd8"
+magenta_color   =       "#c4a7e7"
+cyan_color      =       "#ebbcba"
+orange_color    =       "#ebbcba"
+white_color     =       "#e0def4"
+
+primary_color_name = "magenta"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/rose-pine/neovim.git"
+neovim_theme_opts = [
+    "require('rose-pine').setup()",
+]
+neovim_theme_name = "rose-pine"
+
+wallpaper_path = "/home/alle/dotfiles/wallpaper/rosepine/background_rosepine.jpg"
+
+font = "Iosevka Nerd Font"
