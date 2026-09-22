@@ -15,11 +15,11 @@ ShellRoot {
     Variants {
         model: Quickshell.screens
         required property var modelData
-        Bar {}
+        Wallpaper {}
     }
     Variants {
         model: Quickshell.screens
         required property var modelData
-        Wallpaper {}
+        Bar {}
     }
 }
