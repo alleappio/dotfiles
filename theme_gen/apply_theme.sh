@@ -27,6 +27,9 @@ change_theme(){
     echo "updating quickshell...";
     cp $theme_location/quickshell/Theme.qml $config_location/quickshell/Theme/Theme.qml;
 
+    echo "updating gtklock...";
+    cp $theme_location/gtklock/style.css $config_location/gtklock/style.css;
+
     echo "reload services";
 
     echo "reload sway...";
