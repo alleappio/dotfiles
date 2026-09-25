@@ -2,6 +2,7 @@
     background:     {background_color};
     background-alt: {background_alt_color};
     foreground:     {foreground_color};
+    black:            {black_color};
     red:            {red_color};
     blue:           {blue_color};
     green:          {green_color};
@@ -9,6 +10,7 @@
     orange:         {orange_color};
     magenta:        {magenta_color};
     purple:         {magenta_color};
+    white:            {white_color};
     primary:        var({primary_color_name});
     selected:       var({primary_color_name});
     urgent:         var(red);

@@ -1,12 +1,14 @@
 set $background_color {background_color}
 set $background_alt_color {background_alt_color}
 set $foreground_color {foreground_color}
+set $black_color {black_color}
 set $green_color {green_color}
 set $red_color {red_color}
 set $blue_color {blue_color}
 set $magenta_color {magenta_color}
 set $yellow_color {yellow_color}
 set $orange_color {orange_color}
+set $white_color {white_color}
 set $primary_color ${primary_color_name}_color
 set $secondary_color ${secondary_color_name}_color
 

@@ -25,6 +25,10 @@
       "rev": "5eb287fdbd523c3a1b3d01f304f43570e73e259b",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "gruber-darker": {
+      "rev": "35cb97959ef01f7193c94c404c13ddb3d4346654",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
+    },
     "gruber-darker.nvim": {
       "rev": "50fa4e583099729fcaaadc73a5afb74f7a91a625",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"

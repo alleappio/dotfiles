@@ -1,6 +1,6 @@
 #!/bin/bash
 
-items=$'launcher\nchange theme\npassword store\npowermenu\nnmtui\nhtop\naudio\nrmpc'
+items=$'launcher\nchange theme\nfiles\npassword store\npowermenu\nnmtui\nhtop\naudio\nrmpc'
 
 output=$(printf "%b" "$items" | rofi -dmenu -p "> " -i)
 
@@ -32,6 +32,9 @@ case "$output" in
         ;;
     "rmpc")
         foot -a -w 640x640 rmpc
+        ;;
+    "files")
+        nautilus
         ;;
     *)
         exit 0
