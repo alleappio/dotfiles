@@ -1,11 +1,11 @@
 vim.pack.add({
     {
-        src="https://github.com/rose-pine/neovim.git",
-        name="rose-pine"
+        src="https://github.com/vague-theme/vague.nvim",
+        name="vague"
     }
 })
 
-require('rose-pine').setup()
 
-vim.cmd.colorscheme("rose-pine")
+
+vim.cmd.colorscheme("vague")
 

@@ -1,18 +1,19 @@
 * {
-    background:     #191724;
-    background-alt: #1f1d2e;
-    foreground:     #e0def4;
-    black:            #26233a;
-    red:            #eb6f92;
-    blue:           #9ccfd8;
-    green:          #31748f;
-    yellow:         #f6c177;
-    orange:         #ebbcba;
-    magenta:        #c4a7e7;
-    purple:         #c4a7e7;
-    white:            #e0def4;
-    primary:        var(magenta);
-    selected:       var(magenta);
+    background:     #141415;
+    background-alt: #252530;
+    foreground:     #cdcdcd;
+    black:            #252530;
+    red:            #d8647e;
+    blue:           #6e94b2;
+    cyan:           #aeaed1;
+    green:          #7fa563;
+    yellow:         #f3be7c;
+    orange:         #f3be7c;
+    magenta:        #bb9dbd;
+    purple:         #bb9dbd;
+    white:            #cdcdcd;
+    primary:        var(cyan);
+    selected:       var(cyan);
     urgent:         var(red);
     font: "Iosevka Nerd Font 14";
 

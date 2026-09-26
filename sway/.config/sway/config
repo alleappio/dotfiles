@@ -23,8 +23,8 @@ set $term foot ~/.config/tmux/home.sh
 set $menu ~/.config/rofi/scripts/launcher.sh
 
 set $laptop_display "eDP-1"
-set $external_display_1 "HDMI-A-2"
-set $external_display_2 "DP-3"
+set $external_display_1 "Samsung Electric Company SAMSUNG Unknown"
+set $external_display_2 "LG Electronics M2062DP 0x01010101"
 
 # set $lock_screen swaylock -e -f -i $wallpaper_path -l --font $font --indicator-radius 150
 set $lock_screen gtklock -d

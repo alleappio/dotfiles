@@ -1,0 +1,23 @@
+background_color     = "#080808"
+foreground_color     = "#eeeeee"
+background_alt_color = "#323437"
+black_color          = "#323437"
+red_color            = "#ff5d5d"
+green_color          = "#8cc85f"
+yellow_color         = "#e3c78a"
+blue_color           = "#80a0ff"
+magenta_color        = "#cf87e8"
+cyan_color           = "#79dac8"
+white_color          = "#c6c6c6"
+orange_color         = "#e3c78a"
+
+primary_color_name = "blue"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/bluz71/vim-moonfly-colors"
+neovim_theme_opts = [
+]
+neovim_theme_name = "moonfly"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/vague/background_vague.png"
+
+font = "Iosevka Nerd Font"

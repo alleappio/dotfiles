@@ -1,0 +1,23 @@
+background_color     = "#1e1e1e"
+foreground_color     = "#ffffff"
+background_alt_color = "#171421"
+black_color          = "#241F31"
+red_color            = "#C01C28"
+green_color          = "#2EC27E"
+yellow_color         = "#F5C211"
+blue_color           = "#1E78E4"
+magenta_color        = "#9841BB"
+cyan_color           = "#0AB9DC"
+white_color          = "#C0BFBC"
+orange_color         = "#F5C211"
+
+primary_color_name = "blue"
+secondary_color_name = "blue"
+
+neovim_theme_repo = "https://github.com/Mofiqul/adwaita.nvim"
+neovim_theme_opts = [
+]
+neovim_theme_name = "adwaita"
+wallpaper_path = "/home/alle/dotfiles/wallpaper/adwaita/background_adwaita.png"
+
+font = "Iosevka Nerd Font"

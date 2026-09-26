@@ -5,6 +5,7 @@ set $black_color {black_color}
 set $green_color {green_color}
 set $red_color {red_color}
 set $blue_color {blue_color}
+set $cyan_color {cyan_color}
 set $magenta_color {magenta_color}
 set $yellow_color {yellow_color}
 set $orange_color {orange_color}

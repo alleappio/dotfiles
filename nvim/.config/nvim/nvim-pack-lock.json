@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "adwaita": {
+      "rev": "c607954f7b2cf56b24e921db0dab4749f3430a22",
+      "src": "https://github.com/Mofiqul/adwaita.nvim"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -72,6 +76,10 @@
     "mini.nvim": {
       "rev": "ac5dffcc52b8378fbb15efeb0497a83e57a0b01c",
       "src": "https://github.com/nvim-mini/mini.nvim"
+    },
+    "moonfly": {
+      "rev": "2c883835f5b7b380a0a9e80695c420f7efebdfe4",
+      "src": "https://github.com/bluz71/vim-moonfly-colors"
     },
     "nvim": {
       "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",

@@ -6,7 +6,7 @@ alacritty
 foot
 sway
 swayidle
-swaylock
+gtklock
 hyprpolkitagent
 grim
 pavucontrol
@@ -16,6 +16,9 @@ tree-sitter-cli
 nodejs
 npm
 rofi
-xdg-desktop-portal-hyprland
+xdg-desktop-portal
+xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
+librewolf
 archlinux-xdg-menu
 quickshell

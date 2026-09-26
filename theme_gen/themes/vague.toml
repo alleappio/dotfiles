@@ -11,7 +11,7 @@ cyan_color           = "#aeaed1"
 white_color          = "#cdcdcd"
 orange_color         = "#f3be7c"
 
-primary_color_name = "magenta"
+primary_color_name = "cyan"
 secondary_color_name = "blue"
 
 neovim_theme_repo = "https://github.com/vague-theme/vague.nvim"

@@ -5,6 +5,7 @@
     black:            {black_color};
     red:            {red_color};
     blue:           {blue_color};
+    cyan:           {cyan_color};
     green:          {green_color};
     yellow:         {yellow_color};
     orange:         {orange_color};
