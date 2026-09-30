@@ -1,15 +1,6 @@
 vim.pack.add({
-    -- 'https://github.com/rafamadriz/friendly-snippets',
     'https://github.com/neovim/nvim-lspconfig',
-    'https://github.com/mason-org/mason.nvim',
-    'https://github.com/mason-org/mason-lspconfig.nvim',
-    {
-        src = 'https://github.com/saghen/blink.cmp',
-        version = vim.version.range('v1.x'),
-    },
 })
-
-require('mason').setup()
 
 local languages = {
     'lua_ls',
@@ -25,12 +16,13 @@ local languages = {
     'qmlls',
     'ols',
     'texlab',
+    'marksman',
+    'cmake'
 }
 
-require('mason-lspconfig').setup({
-    ensure_installed = languages
-})
-
+for _,l in ipairs(languages) do
+    vim.lsp.config(l, {})
+end
 
 vim.lsp.config('lua_ls', {
     settings = {
@@ -49,10 +41,4 @@ vim.lsp.config('qmlls', {
     cmd = { 'qmlls6' },
 })
 
--- vim.lsp.config("kotlin_lsp", {
---     cmd = {
---         vim.fn.expand("~/.local/bin/intellij-server"),
---         "--stdio"
---     }
--- })
--- vim.lsp.enable("kotlin_lsp")
+vim.lsp.enable(languages)
