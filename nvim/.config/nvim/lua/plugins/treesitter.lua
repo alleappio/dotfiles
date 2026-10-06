@@ -36,8 +36,8 @@ require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)
 
 require("treesitter-context").setup({
-    enable = true,
-    mode = "cursor"
+    mode = "cursor",
+    multiline_threshold = 1
 })
 
 vim.api.nvim_create_autocmd('FileType', {

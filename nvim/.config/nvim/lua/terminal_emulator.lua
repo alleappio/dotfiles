@@ -29,6 +29,8 @@ M.create_split_window = function(opts)
     -- Get the new window that was just created
     local win = vim.api.nvim_get_current_win()
 
+    vim.cmd('wincmd J')
+
     -- Set the buffer in the new window
     vim.api.nvim_win_set_buf(win, buf)
 
