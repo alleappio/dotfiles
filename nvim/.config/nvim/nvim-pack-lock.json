@@ -9,6 +9,10 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
+    "catppuccin-mocha": {
+      "rev": "edefef779ab08ce1a4a404713e3012b0d202bd35",
+      "src": "https://github.com/catppuccin/nvim"
+    },
     "colibri.vim": {
       "rev": "ad82132e0cbbdfa194d722f15c2df8f0d04b5b71",
       "src": "https://github.com/archseer/colibri.vim"

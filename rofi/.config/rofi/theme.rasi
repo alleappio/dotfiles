@@ -12,8 +12,8 @@
     magenta:        #b16286;
     purple:         #b16286;
     white:            #ebdbb2;
-    primary:        var(blue);
-    selected:       var(blue);
+    primary:        var(orange);
+    selected:       var(orange);
     urgent:         var(red);
     font: "Iosevka Nerd Font 14";
 

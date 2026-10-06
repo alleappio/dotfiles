@@ -4,8 +4,8 @@ configuration {
     modes: "drun,run,ssh,window";
     show-icons: true;
     terminal: "foot";
-    matching: "fuzzy";
-
+    matching: "glob";
+    // drun-match-fields: "name";
 
     display-drun:               "> ";
     display-run:                "Run ";

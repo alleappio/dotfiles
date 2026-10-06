@@ -10,7 +10,7 @@
 @define-color cyan_color #689d6a;
 @define-color orange_color #d65d0e;
 @define-color white_color #ebdbb2;
-@define-color primary_color #458588;
+@define-color primary_color #d65d0e;
 
 *{
     font-family: Iosevka Nerd Font;

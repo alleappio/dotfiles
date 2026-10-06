@@ -9,3 +9,4 @@ require("gruvbox").setup({contrast="hard"})
 
 vim.cmd.colorscheme("gruvbox")
 
+vim.api.nvim_set_hl(0, 'SignColumn', { bg = nil })

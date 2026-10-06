@@ -11,7 +11,7 @@ cyan_color      = "#689d6a"
 orange_color    = "#d65d0e"
 white_color     = "#ebdbb2"
 
-primary_color_name = "blue"
+primary_color_name = "orange"
 secondary_color_name = "green"
 
 neovim_theme_repo = "https://github.com/ellisonleao/gruvbox.nvim"
@@ -19,6 +19,9 @@ neovim_theme_opts = [
     'require("gruvbox").setup({contrast="hard"})',
 ]
 neovim_theme_name = "gruvbox"
+neovim_hl_opts = [
+    "vim.api.nvim_set_hl(0, 'SignColumn', { bg = nil })",
+]
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png"
 

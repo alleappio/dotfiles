@@ -57,8 +57,9 @@ def main():
             help()
 
     colorscheme["primary_color"] = colorscheme[f"{colorscheme["primary_color_name"]}_color"]
-    colorscheme["neovim_theme_opts"] = "\n".join(colorscheme["neovim_theme_opts"])
-
+    for key in colorscheme:
+        if isinstance(colorscheme[key], list):
+            colorscheme[key] = "\n".join(colorscheme[key])
 
     colorscheme_cp = colorscheme.copy()
     for i in colorscheme_cp:

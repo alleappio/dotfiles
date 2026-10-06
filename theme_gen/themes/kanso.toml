@@ -17,6 +17,8 @@ secondary_color_name = "white"
 neovim_theme_repo = "https://github.com/webhooked/kanso.nvim"
 neovim_theme_opts = [
     "require('kanso').setup({background = {dark = 'ink'}})",
+]
+neovim_hl_opts = [
     "vim.api.nvim_set_hl(0, 'RainbowLevel0', { link = 'RainbowDelimiterCyan' })",
     "vim.api.nvim_set_hl(0, 'RainbowLevel1', { link = 'RainbowDelimiterBlue' })",
     "vim.api.nvim_set_hl(0, 'RainbowLevel2', { link = 'RainbowDelimiterViolet' })",

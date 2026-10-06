@@ -30,6 +30,7 @@ local language_list ={
     "kotlin",
     "odin",
     "just",
+    "go",
 }
 require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)

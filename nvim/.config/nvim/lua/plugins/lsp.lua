@@ -17,7 +17,9 @@ local languages = {
     'ols',
     'texlab',
     'marksman',
-    'cmake'
+    'cmake',
+    'zls',
+    'gopls'
 }
 
 for _,l in ipairs(languages) do

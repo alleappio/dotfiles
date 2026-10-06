@@ -9,3 +9,4 @@ vim.pack.add({{
 
 vim.cmd.colorscheme("{neovim_theme_name}")
 
+{neovim_hl_opts}
