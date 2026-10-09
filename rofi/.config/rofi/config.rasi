@@ -35,3 +35,8 @@ listview {
     dynamic: false;
     fixed-height: false;
 }
+
+prompt {
+    spacing:    0;
+    text-color: var(foreground);
+}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-items=$'launcher\nchange theme\nfiles\npassword store\npowermenu\nnmtui\nhtop\naudio\nrmpc'
+items=$'launcher\nchange theme\nfiles\npassword store\npowermenu\nnmtui\nvpn\nhtop\naudio\nrmpc'
 
 output=$(printf "%b" "$items" | rofi -dmenu -p "> " -i)
 
@@ -11,6 +11,9 @@ fi
 case "$output" in
     "change theme")
         ~/.config/rofi/scripts/change_theme.sh
+        ;;
+    "vpn")
+        ~/.config/rofi/scripts/vpn.sh
         ;;
     "launcher")
         ~/.config/rofi/scripts/launcher.sh

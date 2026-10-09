@@ -3,7 +3,7 @@ import QtQuick
 import qs.Theme
 
 Rectangle {
-    visible: CapsLockService.capsLock
+    visible: VpnService.isUp
 
     color: Theme.background
 
@@ -15,7 +15,7 @@ Rectangle {
 
         anchors.centerIn: parent
 
-        text: String.fromCodePoint(0xE672)
+        text: String.fromCodePoint(0xF383)
         color: Theme.foreground
 
         renderType: Theme.textRenderType
