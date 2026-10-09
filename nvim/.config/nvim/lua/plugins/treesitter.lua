@@ -42,7 +42,7 @@ require("treesitter-context").setup({
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = language_list,
-    callback = function() vim.treesitter.start() end,
+    callback = function() vim.treesitter.stop() end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {

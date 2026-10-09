@@ -22,6 +22,8 @@ local languages = {
     'gopls'
 }
 
+vim.lsp.semantic_tokens.enable(false)
+
 for _,l in ipairs(languages) do
     vim.lsp.config(l, {})
 end
