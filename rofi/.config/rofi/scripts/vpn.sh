@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 export SUDO_ASKPASS=/home/alle/.config/rofi/scripts/sudo-askpass.sh
-choice=$(printf "up\ndown" | rofi -dmenu -p "vpn: ")
 
-[[ -z $choice ]] && exit 0
+current="up"
 
-sudo -A tailscale $choice
+if tailscale status --json | grep -i running; then
+    sudo -A tailscale down
+    current="down"
+else
+    sudo -A tailscale up
+    current="up"
+fi
+
+notify-send VPN "Vpn $current"
