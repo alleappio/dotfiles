@@ -4,6 +4,10 @@
       "rev": "c607954f7b2cf56b24e921db0dab4749f3430a22",
       "src": "https://github.com/Mofiqul/adwaita.nvim.git"
     },
+    "alabaster": {
+      "rev": "b902c73fabefc13583bfc0c18b28950ea8f6244f",
+      "src": "https://github.com/dchinmay2/alabaster.nvim.git"
+    },
     "blink.cmp": {
       "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
@@ -85,6 +89,10 @@
       "rev": "561751e839b99a4baca36b9d963166b66d2536a6",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "minimalist": {
+      "rev": "d8fc21e78071453a5c27a9ed9aab98a15bd0a5d4",
+      "src": "https://github.com/kar9222/minimalist.nvim.git"
+    },
     "moonfly": {
       "rev": "2c883835f5b7b380a0a9e80695c420f7efebdfe4",
       "src": "https://github.com/bluz71/vim-moonfly-colors"
@@ -108,6 +116,10 @@
     "nvim-web-devicons": {
       "rev": "58447c1fca354bbf184425e4a8d01deecbd6f3c4",
       "src": "http://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oxocarbon": {
+      "rev": "cd6523a0836d6e8ee823d343149fd06c7b71fdde",
+      "src": "https://github.com/nyoom-engineering/oxocarbon.nvim.git"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",

@@ -13,10 +13,10 @@ QtObject {
     readonly property color cyan: '#689d6a'
     readonly property color orange: '#d65d0e'
     readonly property color white: '#ebdbb2'
-    readonly property color primary: orange
+    readonly property color primary: green
 
     readonly property int textRenderType: Text.NativeRendering
     readonly property string fontFamily: 'Iosevka Nerd Font'
 
-    readonly property string wallpaperPath: "/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png"
+    readonly property string wallpaperPath: "/home/alle/dotfiles/wallpaper/gruvbox/road2.jpeg"
 }

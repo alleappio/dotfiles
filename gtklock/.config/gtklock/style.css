@@ -10,14 +10,14 @@
 @define-color cyan_color #689d6a;
 @define-color orange_color #d65d0e;
 @define-color white_color #ebdbb2;
-@define-color primary_color #d65d0e;
+@define-color primary_color #98971a;
 
 *{
     font-family: Iosevka Nerd Font;
 }
 
 window {
-        background-image: url("/home/alle/dotfiles/wallpaper/gruvbox/background_gruvbox.png");
+        background-image: url("/home/alle/dotfiles/wallpaper/gruvbox/road2.jpeg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

@@ -29,6 +29,7 @@ vim.keymap.set('n', '<leader>ft', '<cmd>Neotree toggle<CR>', { desc = 'Telescope
 -- git stuff
 vim.keymap.set('n', '<leader>g+', '<cmd>Gitsigns stage_hunk<cr>', { desc = 'Git: stage current hunk' })
 vim.keymap.set('n', '<leader>g-', '<cmd>Gitsigns undo_stage_hunk<cr>', { desc = 'Git: unstage current hunk' })
+vim.keymap.set('n', '<leader>gg', ToggleGit, { desc = 'Git: preview current hunk' })
 vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', { desc = 'Git: preview current hunk' })
 vim.keymap.set('n', '<leader>gq', '<cmd>Gitsigns setqflist<cr>', { desc = 'Git: put hunks in quickfix list' })
 vim.keymap.set('n', '<leader>gr', '<cmd>Gitsigns reset_hunk<cr>', { desc = 'Git: reset current hunk' })

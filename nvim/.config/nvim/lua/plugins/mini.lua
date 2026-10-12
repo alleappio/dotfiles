@@ -13,6 +13,7 @@ local miniclue = require('mini.clue')
 local hipatterns = require('mini.hipatterns')
 local minifiles = require('mini.files')
 
+
 minipairs.setup({})
 
 local lt_opts = {

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rofi_cmd() {
 	rofi -theme ~/.config/rofi/powermenu/theme.rasi \
