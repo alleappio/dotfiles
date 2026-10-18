@@ -14,7 +14,7 @@ vim.keymap.set('i', '<C-j>', 'copilot#Accept("\\<CR>")', { expr = true, replace_
 -- File explorer
 vim.keymap.set('n', '<leader>e', function(...)
     miniFilesToggle(...)
-end, {desc = "open mini file"})
+end, { desc = 'open mini file' })
 
 -- Telescope stuff
 vim.keymap.set('n', '<leader>ff', telescope_find_files, { desc = 'Telescope: Find file' })
@@ -24,7 +24,6 @@ vim.keymap.set('n', '<leader>fG', telescope_live_grep_hidden, { desc = 'Telescop
 vim.keymap.set('n', '<leader>fk', telescope_keymaps, { desc = 'Telescope: Find keymaps' })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>', { desc = 'Telescope: Find buffers' })
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { desc = 'Telescope: Help tags' })
-vim.keymap.set('n', '<leader>ft', '<cmd>Neotree toggle<CR>', { desc = 'Telescope: Help tags' })
 
 -- git stuff
 vim.keymap.set('n', '<leader>g+', '<cmd>Gitsigns stage_hunk<cr>', { desc = 'Git: stage current hunk' })
@@ -33,11 +32,6 @@ vim.keymap.set('n', '<leader>gg', ToggleGit, { desc = 'Git: preview current hunk
 vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', { desc = 'Git: preview current hunk' })
 vim.keymap.set('n', '<leader>gq', '<cmd>Gitsigns setqflist<cr>', { desc = 'Git: put hunks in quickfix list' })
 vim.keymap.set('n', '<leader>gr', '<cmd>Gitsigns reset_hunk<cr>', { desc = 'Git: reset current hunk' })
-vim.keymap.set('n', '<leader>gcl', '<cmd>ResolveOurs<cr>', { desc = 'Git: accept local changes in this conflict' })
-vim.keymap.set('n', '<leader>gcr', '<cmd>ResolveTheirs<cr>', { desc = 'Git: accept remote changes in this conflict' })
-vim.keymap.set('n', '<leader>gcb', '<cmd>ResolveBoth<cr>', { desc = 'Git: accept both changes in this conflict' })
-vim.keymap.set('n', '<leader>gcn', '<cmd>ResolveNone<cr>', { desc = 'Git: accept no change in this conflict' })
-vim.keymap.set('n', '<leader>gcq', '<cmd>ResolveList<cr>', { desc = 'Git: put conflict in quickfix list' })
 
 -- lsp actions
 vim.keymap.set('n', 'grc', vim.diagnostic.open_float, { desc = 'Lsp: lsp diagnostics' })
@@ -66,4 +60,4 @@ vim.keymap.set('n', '<leader>u', '<cmd>Undotree<cr>', { desc = 'Undotree' })
 vim.keymap.set('n', '<leader>r', '<cmd>restart<cr>', { desc = 'Restart neovim' })
 
 -- whitespaces
-vim.keymap.set("n", '<leader>w', MiniTrailspace.trim, { desc = "trail whitespaces" })
+vim.keymap.set('n', '<leader>w', MiniTrailspace.trim, { desc = 'trail whitespaces' })

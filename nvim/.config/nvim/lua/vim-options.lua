@@ -1,6 +1,6 @@
 -- VIM OPTIONS
 -- Use system clipboard for all yank/delete/paste operations
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = 'unnamedplus'
 
 -- Convert tabs to spaces
 vim.opt.expandtab = true
@@ -21,7 +21,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 15
 
 -- Always show sign column to prevent text shifting
-vim.opt.signcolumn = "yes:2"
+vim.opt.signcolumn = 'yes:2'
 
 -- Automatically indent new lines based on previous line
 vim.opt.smartindent = true
@@ -36,19 +36,19 @@ vim.opt.autoread = true
 vim.opt.termguicolors = true
 
 -- Use dark background for color schemes
-vim.opt.background = "dark"
+vim.opt.background = 'dark'
 
 -- Always show tabline
 vim.opt.showtabline = 2
 
 -- Use global statusline for all windows
-vim.opt.laststatus = 3
+-- vim.opt.laststatus = 3
 
 -- Disable line wrapping
 vim.opt.wrap = false
 
 -- Use rounded borders for floating windows
-vim.opt.winborder = "rounded"
+vim.opt.winborder = 'single'
 
 -- Ignore case in search patterns
 vim.o.ignorecase = true
@@ -69,41 +69,32 @@ vim.o.confirm = true
 vim.opt.cursorline = true
 
 -- split on incremental commands (subsititute)
-vim.o.inccommand = "split"
+vim.o.inccommand = 'split'
 
 -- disable swapfile
 vim.o.swapfile = false
 
--- Clear search highlights on <Esc>
-vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+-- when in completion select the first item but do not select it
+vim.o.completeopt = 'menuone,noinsert,fuzzy'
 
--- Disable diagnostic display signs (they are annoying)
--- local severity = vim.diagnostic.severity
--- vim.diagnostic.enable = true
--- vim.diagnostic.config({
---     signs = {
---         text = {
---             -- [severity.ERROR] = "",
---             [severity.WARN] = "",
---             [severity.INFO] = "",
---             [severity.HINT] = "",
---         },
---     },
--- })
+-- Clear search highlights on <Esc>
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
-  callback = function() vim.hl.on_yank({higroup="Substitute", timeout=200}) end,
+    desc = 'Highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+    callback = function()
+        vim.hl.on_yank({ higroup = 'Substitute', timeout = 200 })
+    end,
 })
 
 -- Enable core.ui2
-require("vim._core.ui2").enable({
-    enable=true
+require('vim._core.ui2').enable({
+    enable = true,
 })
 
 -- native packages
-vim.cmd.packadd("nvim.undotree")
-vim.cmd.packadd("nvim.difftool")
-vim.cmd.packadd("nvim.tohtml")
+vim.cmd.packadd('nvim.undotree')
+vim.cmd.packadd('nvim.difftool')
+vim.cmd.packadd('nvim.tohtml')

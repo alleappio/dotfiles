@@ -2,38 +2,53 @@ vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
 vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { link = 'MiniStatuslineModeNormal' })
 
-require('mini.icons').setup({})
+require('mini.completion').setup({})
 require('mini.snippets').setup({})
-require('mini.surround').setup({})
 require('mini.tabline').setup({})
 require('mini.trailspace').setup({})
 require('mini.statusline').setup({})
-local minipairs = require('mini.pairs')
-local miniclue = require('mini.clue')
-local hipatterns = require('mini.hipatterns')
-local minifiles = require('mini.files')
+require('mini.pairs').setup({})
 
+require('mini.icons').setup({})
+MiniIcons.mock_nvim_web_devicons()
 
-minipairs.setup({})
+require('mini.move').setup({
+    mappings = {
+        -- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
+        left = '<S-h>',
+        right = '<S-l>',
+        down = '<S-j>',
+        up = '<S-k>',
 
-local lt_opts = {
-    action = 'open',
-    pair = '<>',
-    neigh_pattern = '\r.',
-    register = { cr = false },
-}
-MiniPairs.map('i', '<', lt_opts)
+        -- Move current line in Normal mode
+        line_left = '',
+        line_right = '',
+        line_down = '',
+        line_up = '',
+    },
+})
 
-local gt_opts = { action = 'close', pair = '<>', register = { cr = false } }
-MiniPairs.map('i', '>', gt_opts)
+require('mini.files').setup({
+    mappings = {
+        go_in_plus = 'l',
+    },
+})
 
--- Create symmetrical `$$` pair only in Tex files
-local map_tex = function()
-    MiniPairs.map_buf(0, 'i', '$', { action = 'closeopen', pair = '$$' })
-end
-vim.api.nvim_create_autocmd('FileType', { pattern = 'tex', callback = map_tex })
+require('mini.surround').setup({
+    mappings = {
+        add = '<leader>sa', -- Add surrounding in Normal and Visual modes
+        delete = '<leader>sd', -- Delete surrounding
+        find = '<leader>sf', -- Find surrounding (to the right)
+        find_left = '<leader>sF', -- Find surrounding (to the left)
+        highlight = '<leader>sh', -- Highlight surrounding
+        replace = '<leader>sr', -- Replace surrounding
 
-miniclue.setup({
+        suffix_last = 'l', -- Suffix to search with "prev" method
+        suffix_next = 'n', -- Suffix to search with "next" method
+    },
+})
+
+require('mini.clue').setup({
     triggers = {
         { mode = { 'n', 'x' }, keys = '<Leader>' },
         { mode = { 'n', 'x' }, keys = '"' },
@@ -41,36 +56,18 @@ miniclue.setup({
         { mode = { 'i', 'c' }, keys = '<C-r>' },
     },
     clues = {
-        miniclue.gen_clues.registers(),
+        require('mini.clue').gen_clues.registers(),
     },
     delay = 1000,
 })
 
-hipatterns.setup({
+require('mini.hipatterns').setup({
     highlighters = {
         fixme = { pattern = 'FIXME', group = 'MiniHipatternsFixme' },
         todo = { pattern = 'TODO', group = 'MiniHipatternsTodo' },
         note = { pattern = 'NOTE', group = 'MiniHipatternsNote' },
 
-        hex_color = hipatterns.gen_highlighter.hex_color(),
-    },
-})
-
-minifiles.setup({
-    mappings = {
-        close = 'q',
-        go_in = 'L',
-        go_in_plus = 'l',
-        go_out = 'h',
-        go_out_plus = 'H',
-        mark_goto = "'",
-        mark_set = 'm',
-        reset = '<BS>',
-        reveal_cwd = '@',
-        show_help = 'g?',
-        synchronize = '=',
-        trim_left = '<',
-        trim_right = '>',
+        hex_color = require('mini.hipatterns').gen_highlighter.hex_color(),
     },
 })
 

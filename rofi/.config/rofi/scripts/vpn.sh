@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export SUDO_ASKPASS=/home/alle/.config/rofi/scripts/sudo-askpass.sh
+export SUDO_ASKPASS=/home/alle/.config/rofi/utils/sudo-askpass.sh
 
 current="up"
 

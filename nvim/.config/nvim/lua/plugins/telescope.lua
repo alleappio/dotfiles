@@ -1,19 +1,16 @@
 vim.pack.add({
     'https://github.com/nvim-lua/plenary.nvim',
     'https://github.com/nvim-telescope/telescope.nvim',
-    'http://github.com/nvim-tree/nvim-web-devicons',
 })
 
-local actions = require('telescope.actions')
-local action_state = require('telescope.actions.state')
 local telescope_builtin = require('telescope.builtin')
-local telescope_themes = require('telescope.themes')
-
 require('telescope').setup({
     defaults = {
         mappings = {
             i = {
                 ['<C-y>'] = function(prompt_bufnr)
+                    local actions = require('telescope.actions')
+                    local action_state = require('telescope.actions.state')
                     local entry = action_state.get_selected_entry()
                     actions.close(prompt_bufnr)
                     local path = vim.fn.fnamemodify(entry.path or entry.filename, ':.')
@@ -22,39 +19,21 @@ require('telescope').setup({
                 end,
             },
         },
-
-        theme = "ivy",
-
-        sorting_strategy = "ascending",
-
-        layout_strategy = "bottom_pane",
-        layout_config = {
-          height = 25,
-        },
-
-        border = true,
-        borderchars = {
-          prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
-          results = { " " },
-          -- preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-          preview = { " ", "│", " ", "│", " ", " ", " ", " " },
-        },
     },
 })
 
-
 function telescope_find_files()
-    telescope_builtin.find_files({ preview = false })
+    telescope_builtin.find_files()
 end
 function telescope_find_files_hidden()
-    telescope_builtin.find_files({ hidden = true, no_ignore = true, preview = false })
+    telescope_builtin.find_files({ hidden = true })
 end
 function telescope_live_grep()
-    telescope_builtin.live_grep({ preview = true})
+    telescope_builtin.live_grep({})
 end
 function telescope_live_grep_hidden()
-    telescope_builtin.live_grep({ hidden = true, no_ignore = true, preview = true})
+    telescope_builtin.live_grep({ hidden = true, no_ignore = true })
 end
 function telescope_keymaps()
-    telescope_builtin.keymaps({ hidden = true, no_ignore = true, preview = true})
+    telescope_builtin.keymaps({ hidden = true, no_ignore = true })
 end

@@ -19,14 +19,10 @@ local languages = {
     'marksman',
     'cmake',
     'zls',
-    'gopls'
+    'gopls',
 }
 
 vim.lsp.semantic_tokens.enable(false)
-
-for _,l in ipairs(languages) do
-    vim.lsp.config(l, {})
-end
 
 vim.lsp.config('lua_ls', {
     settings = {

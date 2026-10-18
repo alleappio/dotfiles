@@ -1,54 +1,58 @@
-vim.pack.add {
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
-  { src = "https://github.com/nvim-treesitter/nvim-treesitter-context"}
-}
+vim.pack.add({
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
+})
 
-vim.api.nvim_create_autocmd('PackChanged', { callback = function(ev)
-  local name, kind = ev.data.spec.name, ev.data.kind
-  if name == 'nvim-treesitter' and kind == 'update' then
-    if not ev.data.active then vim.cmd.packadd('nvim-treesitter') end
-    vim.cmd('TSUpdate')
-  end
-end })
+vim.api.nvim_create_autocmd('PackChanged', {
+    callback = function(ev)
+        local name, kind = ev.data.spec.name, ev.data.kind
+        if name == 'nvim-treesitter' and kind == 'update' then
+            if not ev.data.active then
+                vim.cmd.packadd('nvim-treesitter')
+            end
+            vim.cmd('TSUpdate')
+        end
+    end,
+})
 
-local language_list ={
-    "cmake",
-    "c",
-    "lua",
-    "vim",
-    "vimdoc",
-    "query",
-    "javascript",
-    "html",
-    "cpp",
-    "python",
-    "rust",
-    "latex",
-    "markdown",
-    "markdown_inline",
-    "zig",
-    "kotlin",
-    "odin",
-    "just",
-    "go",
+local language_list = {
+    'cmake',
+    'c',
+    'lua',
+    'vim',
+    'vimdoc',
+    'query',
+    'javascript',
+    'html',
+    'cpp',
+    'python',
+    'rust',
+    'latex',
+    'markdown',
+    'markdown_inline',
+    'zig',
+    'kotlin',
+    'odin',
+    'just',
+    'go',
 }
 require('nvim-treesitter').setup({})
 require('nvim-treesitter').install(language_list)
 
-require("treesitter-context").setup({
-    mode = "cursor",
-    multiline_threshold = 1
+require('treesitter-context').setup({
+    multiline_threshold = 1,
 })
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = language_list,
-    callback = function() vim.treesitter.start() end,
+    callback = function()
+        vim.treesitter.start()
+    end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "markdown", "copilot-chat" },
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'markdown', 'copilot-chat' },
     callback = function(ev)
         vim.treesitter.start(ev.buf)
     end,
 })
-
