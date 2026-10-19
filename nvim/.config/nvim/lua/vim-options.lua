@@ -77,6 +77,9 @@ vim.o.swapfile = false
 -- when in completion select the first item but do not select it
 vim.o.completeopt = 'menuone,noinsert,fuzzy'
 
+-- show only 10 items in popup windows
+vim.o.pumheight = 10
+
 -- Clear search highlights on <Esc>
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
