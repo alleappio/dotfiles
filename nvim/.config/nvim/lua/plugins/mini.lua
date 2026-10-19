@@ -1,9 +1,8 @@
 vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
-vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { link = 'MiniStatuslineModeNormal' })
 
 require('mini.snippets').setup({})
-require('mini.tabline').setup({})
+-- require('mini.tabline').setup({})
 require('mini.trailspace').setup({})
 require('mini.statusline').setup({})
 require('mini.pairs').setup({})
