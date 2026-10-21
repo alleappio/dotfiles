@@ -1,13 +1,15 @@
 local terminal_emulator = require('terminal_emulator')
 
 -- Tabline navigation and close
-vim.keymap.set('n', '<C-h>', '<cmd>tabprevious<cr>', { desc = 'Tab: previous tab' })
-vim.keymap.set('n', '<C-l>', '<cmd>tabnext<cr>', { desc = 'Tab: next tab' })
-vim.keymap.set('n', '<C-c>', '<cmd>tabclose<cr>', { desc = 'Tab: close tab' })
-vim.keymap.set('n', '<C-t>', function()
+vim.keymap.set('n', '<C-h>', vim.cmd.bprevious, { desc = 'Tabline: previous buffer' })
+vim.keymap.set('n', '<C-l>', vim.cmd.bnext, { desc = 'Tab: next buffer' })
+vim.keymap.set('n', '<C-c>', vim.cmd.bd, { desc = 'Tab: kill buffer' })
+
+vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, { desc = 'Tab: new tab' })
+vim.keymap.set('n', '<leader>tN', function()
     vim.cmd.tabnew()
     telescope_find_files()
-end, { desc = 'Tab: new tab' })
+end, { desc = 'Tab: new tab with telescope' })
 
 -- Copilot
 vim.keymap.set({ 'n', 'v' }, '<leader>cc', '<cmd>CodeCompanionChat Toggle<CR>', { desc = 'Open copilot chat' })

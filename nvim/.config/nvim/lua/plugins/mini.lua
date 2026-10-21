@@ -1,21 +1,15 @@
 vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
-
 require('mini.snippets').setup({})
--- require('mini.tabline').setup({})
 require('mini.trailspace').setup({})
-require('mini.statusline').setup({})
+-- require('mini.statusline').setup({})
 require('mini.pairs').setup({})
 
 require('mini.icons').setup({})
 MiniIcons.mock_nvim_web_devicons()
-
-require('mini.completion').setup({
-    delay = {
-        completion = 0,
-    },
+require('mini.tabline').setup({
+    tabpage_section = 'right'
 })
-
 
 require('mini.move').setup({
     mappings = {

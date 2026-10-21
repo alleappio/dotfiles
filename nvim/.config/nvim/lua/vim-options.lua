@@ -48,7 +48,7 @@ vim.opt.showtabline = 2
 vim.opt.wrap = false
 
 -- Use rounded borders for floating windows
-vim.opt.winborder = 'single'
+vim.opt.winborder = 'none'
 
 -- Ignore case in search patterns
 vim.o.ignorecase = true
@@ -83,7 +83,7 @@ vim.o.pumheight = 10
 -- Clear search highlights on <Esc>
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.api.nvim_set_hl(0, 'TabLineSel', { link = 'MiniStatuslineModeNormal' })
+vim.api.nvim_set_hl(0, 'MiniTabLineCurrent', { link = 'MiniStatuslineModeNormal' })
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
