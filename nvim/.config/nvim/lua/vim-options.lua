@@ -83,7 +83,7 @@ vim.o.pumheight = 10
 -- Clear search highlights on <Esc>
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.api.nvim_set_hl(0, 'MiniTabLineCurrent', { link = 'MiniStatuslineModeNormal' })
+-- vim.api.nvim_set_hl(0, 'MiniTabLineCurrent', { link = 'MiniStatuslineModeNormal' })
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {

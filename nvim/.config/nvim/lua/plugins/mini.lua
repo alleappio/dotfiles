@@ -4,9 +4,11 @@ require('mini.snippets').setup({})
 require('mini.trailspace').setup({})
 -- require('mini.statusline').setup({})
 require('mini.pairs').setup({})
+require('mini.surround').setup()
 
 require('mini.icons').setup({})
 MiniIcons.mock_nvim_web_devicons()
+
 require('mini.tabline').setup({
     tabpage_section = 'right'
 })
@@ -33,7 +35,6 @@ require('mini.files').setup({
     },
 })
 
-require('mini.surround').setup()
 
 require('mini.clue').setup({
     triggers = {
