@@ -56,6 +56,10 @@ exec swayidle -w \
          timeout 600 'swaymsg "output * power off"' \
                      resume 'swaymsg "output * power on"' \
          before-sleep '$lock_screen'
+
+
+## Polkit
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when

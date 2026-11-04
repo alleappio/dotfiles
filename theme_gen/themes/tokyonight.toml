@@ -17,7 +17,9 @@ secondary_color_name = "blue"
 neovim_theme_repo = "https://github.com/folke/tokyonight.nvim"
 neovim_theme_opts = []
 neovim_theme_name = "tokyonight-night"
+neovim_hl_opts = []
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/tokyonight/background_tokyonight.png"
+
 
 font = "Iosevka Nerd Font"

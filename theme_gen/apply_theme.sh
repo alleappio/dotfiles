@@ -15,6 +15,9 @@ change_theme(){
     echo "updating sway...";
     cp $theme_location/sway/theme.conf $config_location/sway/theme.conf;
 
+    echo "updating mango...";
+    cp $theme_location/mango/theme.toml $config_location/mango/theme.toml;
+
     echo "updating foot...";
     cp $theme_location/foot/theme.ini $config_location/foot/theme.ini;
 

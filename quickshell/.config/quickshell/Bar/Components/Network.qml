@@ -63,7 +63,7 @@ RowLayout {
 
         Process {
             id: nmtuiProc
-            command: ["sh", "-c", "foot -a nmtui nmtui"]
+            command: ["sh", "-c", "foot -a nmtui -w 640x640 nmtui"]
         }
         onClicked: click => {
             nmtuiProc.running = true;

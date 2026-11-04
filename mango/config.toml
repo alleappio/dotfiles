@@ -1,0 +1,20 @@
+[var]
+term = "foot -e ~/.config/tmux/home.sh"
+menu = "~/.config/rofi/scripts/launcher.sh"
+powermenu = "~/.config/rofi/scripts/powermenu.sh"
+screen_lock = "gtklock -d"
+main_menu = "~/.config/rofi/scripts/main_menu.sh"
+screenshot = "grim -g \"$(slurp)\" - | wl-copy"
+
+[global]
+exec_once=["qs"]
+source=[
+    "/home/alle/.config/mango/theme.toml",
+    "/home/alle/.config/mango/appearance.toml",
+    "/home/alle/.config/mango/inputs.toml",
+    "/home/alle/.config/mango/layout_settings.toml",
+    "/home/alle/.config/mango/binds.toml",
+    "/home/alle/.config/mango/tag_rules.toml",
+    "/home/alle/.config/mango/monitor_rules.toml",
+    "/home/alle/.config/mango/window_rules.toml",
+]

@@ -1,0 +1,117 @@
+[bind.default]
+# Key Bindings
+# key name refer to `xev` or `wev` command output,
+# mod keys name: super,ctrl,alt,shift,none
+# reload config
+"SUPER+r" = "reload_config"
+
+# menu and terminal
+"SUPER+d" = "spawn,rofi -show drun"
+"SUPER+Return" = "spawn_shell,$term"
+"SUPER+n" = "spawn,$main_menu"
+"SUPER+p" = "spawn,$screenshot"
+"SUPER+ALT+l" = "spawn,$screen_lock"
+
+# exit
+"SUPER+SHIFT+e" = "quit"
+"SUPER+SHIFT+q" = "spawn,$powermenu"
+"SUPER+c" = "killclient,"
+
+# switch window focus
+"SUPER+Tab" = "focusstack,next"
+"SUPER+h" = "focusdir,left"
+"SUPER+l" = "focusdir,right"
+"SUPER+k" = "focusdir,up"
+"SUPER+j" = "focusdir,down"
+
+# move window
+"SUPER+SHIFT+k" = "move_client,up"
+"SUPER+SHIFT+j" = "move_client,down"
+"SUPER+SHIFT+h" = "move_client,left"
+"SUPER+SHIFT+l" = "move_client,right"
+
+# switch window status
+"SUPER+g" = "toggleglobal,"
+"ALT+Tab" = "togglejump,"
+"ALT+backslash" = "togglefloating,"
+"ALT+a" = "togglemaximizescreen,"
+"ALT+f" = "togglefullscreen,"
+"ALT+SHIFT+f" = "togglefakefullscreen,"
+"SUPER+i" = "minimized,"
+"SUPER+o" = "toggleoverlay,"
+"SUPER+SHIFT+I" = "restore_minimized"
+"ALT+z" = "toggle_scratchpad"
+
+# scroller layout
+# "ALT+e" = "set_proportion,1.0"
+"SUPER+SHIFT+s" = "switch_proportion_preset,"
+"alt+super+ctrl+Left" = "scroller_stack,left"
+"alt+super+ctrl+Right" = "scroller_stack,right"
+"alt+super+ctrl+Up" = "scroller_stack,up"
+"alt+super+ctrl+Down" = "scroller_stack,down"
+
+#dwindle layout(manual split mode)
+"alt+shift+Return" = "dwindle_toggle_split_direction"
+
+# tag switch
+"SUPER+1" = "view,1,0"
+"SUPER+2" = "view,2,0"
+"SUPER+3" = "view,3,0"
+"SUPER+4" = "view,4,0"
+"SUPER+5" = "view,5,0"
+"SUPER+6" = "view,6,0"
+"SUPER+7" = "view,7,0"
+"SUPER+8" = "view,8,0"
+"SUPER+9" = "view,9,0"
+
+# tag: move client to the tag and focus it
+# tagsilent: move client to the tag and not focus it
+"SUPER+SHIFT+1" = "tagsilent,1,0"
+"SUPER+SHIFT+2" = "tagsilent,2,0"
+"SUPER+SHIFT+3" = "tagsilent,3,0"
+"SUPER+SHIFT+4" = "tagsilent,4,0"
+"SUPER+SHIFT+5" = "tagsilent,5,0"
+"SUPER+SHIFT+6" = "tagsilent,6,0"
+"SUPER+SHIFT+7" = "tagsilent,7,0"
+"SUPER+SHIFT+8" = "tagsilent,8,0"
+"SUPER+SHIFT+9" = "tagsilent,9,0"
+
+# monitor switch
+"SUPER+CTRL+h" = "focusmon,left"
+"SUPER+CTRL+l" = "focusmon,right"
+"SUPER+CTRL+SHIFT+h" = "tagmon,left"
+"SUPER+CTRL+SHIFT+l" = "tagmon,right"
+
+# switch layouts
+"SUPER+f" = "setlayout,fair"
+"SUPER+m" = "setlayout,monocle"
+"SUPER+s" = "setlayout,scroller"
+
+[mousebind.default]
+# Mouse Button Bindings
+# btn_left and btn_right can't bind none mod key
+"SUPER+btn_left" = "moveresize,curmove"
+"btn_middle" = "togglemaximizescreen,0"
+"SUPER+btn_right" = "moveresize,curresize"
+
+[axisbind.default]
+
+# Axis Bindings
+"SUPER+UP" = "viewtoleft_have_client"
+"SUPER+DOWN" = "viewtoright_have_client"
+
+[gesturebind.default]
+
+# Gesture Bindings
+"none+left+3" = "focusdir,left"
+"none+right+3" = "focusdir,right"
+"none+up+3" = "focusdir,up"
+"none+down+3" = "focusdir,down"
+"none+right+4" = "viewprev_have_client"
+"none+left+4" = "viewnext_have_client"
+"none+up+4" = "enteroverview"
+"none+down+4" = "leaveoverview"
+
+# layout support:
+# tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
+

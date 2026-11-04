@@ -20,6 +20,9 @@ neovim_theme_opts = [
   'vim.g.gruvbox_material_foreground = "material"'
 ]
 neovim_theme_name = "gruvbox-material"
+neovim_hl_opts = [
+    "vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { link = MiniStatuslineModeNormal })",
+]
 wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox-material/background_gruvbox-material.jpeg"
 
 font = "Iosevka Nerd Font"

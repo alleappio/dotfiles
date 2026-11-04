@@ -1,0 +1,43 @@
+[[rule.window_rule]]
+app_id="foot"
+tags = 1
+
+[[rule.window_rule]]
+app_id="librewolf"
+tags = 2
+
+[[rule.window_rule]]
+app_id="BambuStudio"
+tags = 3
+
+[[rule.window_rule]]
+app_id="orca-slicer"
+tags = 3
+
+[[rule.window_rule]]
+app_id="org.telegram.desktop"
+tags = 4
+
+[[rule.window_rule]]
+app_id="org.polymc.PolyMC"
+tags = 5
+
+[[rule.window_rule]]
+app_id="Minecraft*"
+tags = 5
+
+[[rule.window_rule]]
+app_id="Spotify"
+tags = 5
+
+[[rule.window_rule]]
+app_id="rviz2"
+tags = 9
+
+[[rule.window_rule]]
+app_id="PlotJuggler"
+tags = 9
+
+[[rule.window_rule]]
+app_id=".*tui"
+is_floating=true

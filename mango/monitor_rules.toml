@@ -1,0 +1,17 @@
+[[rule.monitor_rule]]
+name = "^eDP-1$"
+disable=true
+
+[[rule.monitor_rule]]
+name = "^DP-[0-9]+$"
+width=1920
+height=1080
+refresh=60
+x=1920
+y=0
+
+[[rule.monitor_rule]]
+name = "^HDMI-A-2$"
+primary = true
+x=0
+y=0

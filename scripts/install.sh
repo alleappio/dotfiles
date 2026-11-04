@@ -1,11 +1,13 @@
 #!/bin/bash
 
+DOTFILES="/home/alle/dotfiles"
+
 git submodule update --init
 
 echo "installing required packages"
 yay -S --needed $(cat arch_pkglist.txt)
 
-cd /home/alle/dotfiles
+cd $DOTFILES
 
 echo "stowing bash"
 rm ~/.bashrc
@@ -23,8 +25,8 @@ stow nvim
 echo "stowing tmux"
 stow tmux
 
-echo "stowing kitty"
-stow kitty
+echo "stowing foot"
+stow foot
 
 echo "stowing waybar"
 stow waybar
@@ -32,18 +34,8 @@ stow waybar
 echo "stowing swaync"
 stow swaync
 
-echo "stowing hyprland"
-stow hypr
+echo "stowing sway"
+stow sway
 
 echo "stowing rofi"
 stow rofi
-
-echo "stowing systemd services"
-stow systemd
-systemctl --user daemon-reload
-systemctl --user enable ssh-agent
-systemctl --user start ssh-agent
-
-echo "Select a theme"
-chmod +x change_theme.sh
-./select_theme.sh gruvbox

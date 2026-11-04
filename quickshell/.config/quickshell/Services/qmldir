@@ -3,3 +3,4 @@ singleton StatsService 1.0 StatsService.qml
 singleton CapsLockService 1.0 CapsLockService.qml
 singleton VpnService 1.0 VpnService.qml
 singleton NotificationService 1.0 NotificationService.qml
+singleton MangoService 1.0 MangoService.qml

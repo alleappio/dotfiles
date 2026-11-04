@@ -19,6 +19,7 @@ neovim_theme_opts = [
     "require('rose-pine').setup()",
 ]
 neovim_theme_name = "rose-pine"
+neovim_hl_opts = []
 
 wallpaper_path = "/home/alle/dotfiles/wallpaper/rosepine/background_rosepine.jpg"
 

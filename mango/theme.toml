@@ -1,0 +1,19 @@
+[global]
+border_color = 0x1d2021ff
+root_color = 0x1d2021ff
+drop_color = 0x98971aff
+split_color = 0x458588ff
+focus_color = 0x458588ff
+maximized_screen_color = 0x458588ff
+urgent_color = 0xcc241dff
+scratchpad_color = 0x458588ff
+global_color = 0x1d2021ff
+overlay_color = 0x1d2021ff
+dim_focused_color = #000000ee
+dim_unfocused_color = #00000000
+
+tab_bar_decorate_fg_color	= 0xebdbb2ff
+tab_bar_decorate_bg_color	= 0x1d2021ff
+tab_bar_decorate_focus_fg_color	= 0x1d2021ff
+tab_bar_decorate_focus_bg_color	= 0x458588ff
+tab_bar_decorate_border_color	= 0x1d2021ff

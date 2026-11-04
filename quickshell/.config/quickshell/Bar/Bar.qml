@@ -49,7 +49,12 @@ PanelWindow {
         RowLayout {
             spacing: 10
             // Logo {}
-            SwayWorkspaces {}
+            MangoWorkspaces {
+                monitorName: barWindow.screen.name
+            }
+        }
+        MangoCurrentLayout {
+            monitorName: barWindow.screen.name
         }
         Spacer {}
         RowLayout {

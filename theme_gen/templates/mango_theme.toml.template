@@ -1,0 +1,19 @@
+[global]
+border_color = 0x{background_color_strip_hashtag}ff
+root_color = 0x{background_color_strip_hashtag}ff
+drop_color = 0x{green_color_strip_hashtag}ff
+split_color = 0x{primary_color_strip_hashtag}ff
+focus_color = 0x{primary_color_strip_hashtag}ff
+maximized_screen_color = 0x{primary_color_strip_hashtag}ff
+urgent_color = 0x{red_color_strip_hashtag}ff
+scratchpad_color = 0x{blue_color_strip_hashtag}ff
+global_color = 0x{background_color_strip_hashtag}ff
+overlay_color = 0x{background_color_strip_hashtag}ff
+dim_focused_color = #000000ee
+dim_unfocused_color = #00000000
+
+tab_bar_decorate_fg_color	= 0x{foreground_color_strip_hashtag}ff
+tab_bar_decorate_bg_color	= 0x{background_color_strip_hashtag}ff
+tab_bar_decorate_focus_fg_color	= 0x{background_color_strip_hashtag}ff
+tab_bar_decorate_focus_bg_color	= 0x{primary_color_strip_hashtag}ff
+tab_bar_decorate_border_color	= 0x{background_color_strip_hashtag}ff
