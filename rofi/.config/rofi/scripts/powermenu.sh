@@ -16,6 +16,7 @@ elif [[ $output == "reboot" ]];then
 elif [[ $output == "logout" ]];then
     hyprctl dispatch 'hl.dsp.exit()'
     swaymsg exit
+    mmsg dispatch quit
 else
     echo "exit"
 fi
