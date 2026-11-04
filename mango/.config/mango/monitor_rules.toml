@@ -1,6 +1,5 @@
 [[rule.monitor_rule]]
 name = "^eDP-1$"
-disable=true
 
 [[rule.monitor_rule]]
 name = "^DP-[0-9]+$"
