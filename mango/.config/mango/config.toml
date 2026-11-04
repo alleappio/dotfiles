@@ -18,3 +18,6 @@ source=[
     "/home/alle/.config/mango/monitor_rules.toml",
     "/home/alle/.config/mango/window_rules.toml",
 ]
+source_optional=[
+    "/home/alle/.config/mango/device_specifics.toml"
+]
