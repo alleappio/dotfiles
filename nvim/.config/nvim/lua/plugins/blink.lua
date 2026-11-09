@@ -10,7 +10,11 @@ require('blink.cmp').setup({
         documentation = { auto_show = true },
     },
 
+    snippets = {
+        preset = 'luasnip',
+    },
+
     sources = {
-        default = { 'buffer', 'path', 'snippets', 'lsp' },
+        default = { 'lsp', 'snippets', 'path', 'buffer' },
     },
 })

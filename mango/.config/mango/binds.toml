@@ -18,7 +18,7 @@
 "SUPER+c" = "killclient,"
 
 # switch window focus
-"SUPER+Tab" = "focusstack,next"
+# "SUPER+Tab" = "focusstack,next"
 "SUPER+h" = "focusdir,left"
 "SUPER+l" = "focusdir,right"
 "SUPER+k" = "focusdir,up"
@@ -32,7 +32,7 @@
 
 # switch window status
 "SUPER+g" = "toggleglobal,"
-"ALT+Tab" = "togglejump,"
+"SUPER+Tab" = "togglejump,"
 "ALT+backslash" = "togglefloating,"
 "ALT+a" = "togglemaximizescreen,"
 "ALT+f" = "togglefullscreen,"
@@ -115,3 +115,6 @@
 # layout support:
 # tile,scroller,grid,deck,monocle,center_tile,vertical_tile,vertical_scroller
 
+[switchbind.default]
+"fold"="disable_monitor,eDP-1"
+"unfold"="enable_monitor,eDP-1"

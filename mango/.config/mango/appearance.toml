@@ -18,6 +18,7 @@ focus_cross_monitor = true
 focus_direction_only_zone_overlap = 1
 focus_cross_tag = 0
 enable_floating_snap = 0
+exchange_cross_monitor = true
 snap_distance = 30
 float_full_to_top = 0
 cursor_size = 24

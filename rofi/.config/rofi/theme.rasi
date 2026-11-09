@@ -21,7 +21,6 @@
     border-color:                var(primary);
     normal-background:           var(background);
     alternate-active-background: var(background);
-    spacing:                     2;
     selected-normal-foreground:  var(background);
     active-foreground:           var(primary);
     selected-active-background:  var(primary);
