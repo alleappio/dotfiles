@@ -12,6 +12,7 @@
     magenta:        {magenta_color};
     purple:         {magenta_color};
     white:            {white_color};
+    gray:            {gray_color};
     primary:        var({primary_color_name});
     selected:       var({primary_color_name});
     urgent:         var(red);

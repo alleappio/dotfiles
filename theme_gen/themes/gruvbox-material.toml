@@ -1,6 +1,7 @@
 background_color = "#1d2021"
 foreground_color = "#d4be98"
 background_alt_color = "#3c3836"
+gray_color           = "#a89984"
 black_color = "#3c3836"
 red_color = "#ea6962"
 green_color = "#a9b665"
@@ -11,8 +12,8 @@ cyan_color = "#89b482"
 orange_color = "#e78a43"
 white_color = "#d4be98"
 
-primary_color_name = "green"
-secondary_color_name = "blue"
+primary_color_name = "gray"
+secondary_color_name = "gray"
 
 neovim_theme_repo = "http://github.com/sainnhe/gruvbox-material"
 neovim_theme_opts = [
@@ -20,9 +21,7 @@ neovim_theme_opts = [
   'vim.g.gruvbox_material_foreground = "material"'
 ]
 neovim_theme_name = "gruvbox-material"
-neovim_hl_opts = [
-    "vim.api.nvim_set_hl(0, 'MiniTablineCurrent', { link = MiniStatuslineModeNormal })",
-]
+neovim_hl_opts = []
 wallpaper_path = "/home/alle/dotfiles/wallpaper/gruvbox-material/background_gruvbox-material.jpeg"
 
 font = "Iosevka Nerd Font"

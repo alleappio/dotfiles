@@ -10,6 +10,7 @@
 @define-color cyan_color {cyan_color};
 @define-color orange_color {orange_color};
 @define-color white_color {white_color};
+@define-color gray_color {gray_color};
 @define-color primary_color {primary_color};
 
 *{{

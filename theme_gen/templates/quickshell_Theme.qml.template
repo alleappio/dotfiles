@@ -3,6 +3,7 @@ import QtQuick
 
 QtObject {{
     readonly property color background: '{background_color}'
+    readonly property color background_alt: '{background_alt_color}'
     readonly property color foreground: '{foreground_color}'
     readonly property color black: '{black_color}'
     readonly property color red: '{red_color}'
@@ -13,6 +14,7 @@ QtObject {{
     readonly property color cyan: '{cyan_color}'
     readonly property color orange: '{orange_color}'
     readonly property color white: '{white_color}'
+    readonly property color gray: '{gray_color}'
     readonly property color primary: {primary_color_name}
 
     readonly property int textRenderType: Text.NativeRendering
