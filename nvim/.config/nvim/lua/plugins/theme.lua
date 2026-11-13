@@ -1,12 +1,13 @@
 vim.pack.add({
     {
-        src="https://github.com/ellisonleao/gruvbox.nvim",
-        name="gruvbox"
+        src="http://github.com/sainnhe/gruvbox-material",
+        name="gruvbox-material"
     }
 })
 
-require("gruvbox").setup({contrast="hard"})
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_foreground = "material"
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("gruvbox-material")
 
-vim.api.nvim_set_hl(0, 'SignColumn', { bg = nil })
+

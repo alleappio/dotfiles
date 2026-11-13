@@ -6,7 +6,7 @@
 "SUPER+r" = "reload_config"
 
 # menu and terminal
-"SUPER+d" = "spawn,rofi -show drun"
+"SUPER+d" = "spawn,$launcher"
 "SUPER+Return" = "spawn_shell,$term"
 "SUPER+n" = "spawn,$main_menu"
 "SUPER+p" = "spawn,$screenshot"

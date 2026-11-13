@@ -5,6 +5,7 @@ powermenu = "~/.config/rofi/scripts/powermenu.sh"
 screen_lock = "gtklock -d"
 main_menu = "~/.config/rofi/scripts/main_menu.sh"
 screenshot = "grim -g \"$(slurp)\" - | wl-copy"
+launcher = "rofi -show drun"
 
 [global]
 exec_once=["qs"]

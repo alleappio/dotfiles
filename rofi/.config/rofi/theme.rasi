@@ -1,19 +1,20 @@
 * {
     background:     #1d2021;
-    background-alt: #504945;
-    foreground:     #ebdbb2;
-    black:            #282828;
-    red:            #cc241d;
-    blue:           #458588;
-    cyan:           #689d6a;
-    green:          #98971a;
-    yellow:         #d79921;
-    orange:         #d65d0e;
-    magenta:        #b16286;
-    purple:         #b16286;
-    white:            #ebdbb2;
-    primary:        var(blue);
-    selected:       var(blue);
+    background-alt: #3c3836;
+    foreground:     #d4be98;
+    black:            #3c3836;
+    red:            #ea6962;
+    blue:           #7daea3;
+    cyan:           #89b482;
+    green:          #a9b665;
+    yellow:         #d8a657;
+    orange:         #e78a43;
+    magenta:        #d3869b;
+    purple:         #d3869b;
+    white:            #d4be98;
+    gray:            #a89984;
+    primary:        var(gray);
+    selected:       var(gray);
     urgent:         var(red);
     font: "Iosevka Nerd Font 14";
 
@@ -21,6 +22,7 @@
     border-color:                var(primary);
     normal-background:           var(background);
     alternate-active-background: var(background);
+    spacing:                     2;
     selected-normal-foreground:  var(background);
     active-foreground:           var(primary);
     selected-active-background:  var(primary);

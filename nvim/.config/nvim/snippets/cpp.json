@@ -1,0 +1,7 @@
+{
+  "dbg_print": {
+    "prefix": "dbg_print",
+    "body": "std::cout << \"${1}: \" << $1 << std::endl;",
+    "description": "Debug print a variable"
+  }
+}

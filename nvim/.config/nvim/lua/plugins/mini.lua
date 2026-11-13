@@ -1,16 +1,17 @@
 vim.pack.add({ 'https://github.com/nvim-mini/mini.nvim' })
 
-require('mini.snippets').setup({})
 require('mini.trailspace').setup({})
--- require('mini.statusline').setup({})
 require('mini.pairs').setup({})
 require('mini.surround').setup()
 
 require('mini.icons').setup({})
 MiniIcons.mock_nvim_web_devicons()
 
-require('mini.tabline').setup({
-    tabpage_section = 'right'
+local miniSnippetsGenLoader = require('mini.snippets').gen_loader
+require('mini.snippets').setup({
+    snippets = {
+        miniSnippetsGenLoader.from_lang(),
+    },
 })
 
 require('mini.move').setup({
@@ -34,7 +35,6 @@ require('mini.files').setup({
         go_in_plus = 'l',
     },
 })
-
 
 require('mini.clue').setup({
     triggers = {
