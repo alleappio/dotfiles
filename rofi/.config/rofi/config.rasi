@@ -8,7 +8,7 @@
 configuration {
     modes: "drun,run,ssh,window";
     show-icons: false;
-    terminal: "foot";
+    terminal: "kitty";
     matching: "glob";
     // drun-match-fields: "name";
 

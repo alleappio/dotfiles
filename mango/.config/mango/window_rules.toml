@@ -3,6 +3,10 @@ app_id="foot"
 tags = 1
 
 [[rule.window_rule]]
+app_id="kitty"
+tags = 1
+
+[[rule.window_rule]]
 app_id="librewolf"
 tags = 2
 
@@ -20,6 +24,10 @@ tags = 4
 
 [[rule.window_rule]]
 app_id="org.polymc.PolyMC"
+tags = 5
+
+[[rule.window_rule]]
+app_id="lutris"
 tags = 5
 
 [[rule.window_rule]]
@@ -41,3 +49,5 @@ tags = 9
 [[rule.window_rule]]
 app_id=".*tui"
 is_floating=true
+width=640
+height=640

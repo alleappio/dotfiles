@@ -21,12 +21,8 @@ invirtualenv() {
   fi
 }
 
-bira() {
-  PS1="╭─\u@\h ${BLUE}\w${RESET} $GIT_STATUS $VENV_STATUS${RESET}\n╰─\$ "
-}
-
 custom() {
-  PS1="${BLUE}\w $GIT_STATUS$VENV_STATUS\n${GREEN}${RESET} "
+  PS1="${BLUE}\w $GIT_STATUS$VENV_STATUS\n${GREEN}\$${RESET} "
 }
 
 update_prompt () {

@@ -1,5 +1,5 @@
 [var]
-term = "foot -e ~/.config/tmux/home.sh"
+term = "kitty -e ~/.config/tmux/home.sh"
 menu = "~/.config/rofi/scripts/launcher.sh"
 powermenu = "~/.config/rofi/scripts/powermenu.sh"
 screen_lock = "gtklock -d"
@@ -8,7 +8,10 @@ screenshot = "grim -g \"$(slurp)\" - | wl-copy"
 launcher = "rofi -show drun"
 
 [global]
-exec_once=["qs"]
+exec_once=[
+    "qs",
+    "~/.config/mango/swayidle.sh"
+]
 source=[
     "/home/alle/.config/mango/theme.toml",
     "/home/alle/.config/mango/appearance.toml",

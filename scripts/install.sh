@@ -25,8 +25,8 @@ stow nvim
 echo "stowing tmux"
 stow tmux
 
-echo "stowing foot"
-stow foot
+echo "stowing kitty"
+stow kitty
 
 echo "stowing waybar"
 stow waybar

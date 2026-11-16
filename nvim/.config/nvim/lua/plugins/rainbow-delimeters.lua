@@ -24,5 +24,5 @@ if vim.tbl_isempty(vim.api.nvim_get_hl(0, { name = 'RainbowLevel0' })) then
 end
 
 require('rainbow-delimiters.setup').setup({
-    highlight = hl
+    highlight = hl,
 })

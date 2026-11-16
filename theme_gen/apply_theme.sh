@@ -21,6 +21,9 @@ change_theme(){
     echo "updating foot...";
     cp $theme_location/foot/theme.ini $config_location/foot/theme.ini;
 
+    echo "updating kitty...";
+    cp $theme_location/kitty/theme.conf $config_location/kitty/theme.conf;
+
     echo "updating nvim...";
     cp $theme_location/neovim/theme.lua $config_location/nvim/lua/plugins/theme.lua;
 
