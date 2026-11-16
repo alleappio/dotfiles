@@ -7,6 +7,7 @@ import QtQuick.Effects
 import Quickshell
 import Quickshell.Wayland
 import Quickshell.Services.Pam
+import Quickshell.Services.UPower
 import qs.Theme
 
 ShellRoot {
@@ -146,7 +147,7 @@ ShellRoot {
                             passwordCharacter: "*"
                             color: root.text
                             font.family: root.fontFamily
-                            font.pixelSize: 18
+                            font.pixelSize: 15
                             enabled: !root.authenticating
                             focus: true
 
@@ -179,6 +180,43 @@ ShellRoot {
                                 font: input.font
                             }
                         }
+                    }
+                }
+                RowLayout {
+                    id: batteryRow
+                    anchors.bottom: parent.bottom
+                    anchors.left: parent.left
+                    anchors.leftMargin: Math.max(48, parent.width * 0.06)
+                    anchors.bottomMargin: 50
+                    spacing: 6
+
+                    readonly property var device: UPower.displayDevice
+                    readonly property bool charging: device ? device.state === UPowerDeviceState.Charging : false
+                    readonly property int level: device ? Math.round(device.percentage * 100) : 0
+                    readonly property string icon: {
+                        if (charging)
+                            return String.fromCodePoint(0x0F1E6);
+                        if (level >= 100)
+                            return String.fromCodePoint(0xF0079);
+                        if (level <= 10)
+                            return String.fromCodePoint(0xF0083);
+                        return String.fromCodePoint(0xF007A + Math.floor(level / 10) - 1);
+                    }
+
+                    Text {
+                        text: batteryRow.icon
+                        color: batteryRow.charging ? Theme.green : batteryRow.level <= 15 ? Theme.red : batteryRow.level <= 30 ? Theme.yellow : Theme.foreground
+                        renderType: Theme.textRenderType
+                        font.family: Theme.fontFamily
+                        font.pixelSize: 20
+                    }
+
+                    Text {
+                        text: batteryRow.level + "%"
+                        color: batteryRow.charging ? Theme.green : batteryRow.level <= 15 ? Theme.red : batteryRow.level <= 30 ? Theme.yellow : Theme.foreground
+                        renderType: Theme.textRenderType
+                        font.family: Theme.fontFamily
+                        font.pixelSize: 20
                     }
                 }
             }
