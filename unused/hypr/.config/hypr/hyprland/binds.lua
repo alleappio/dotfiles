@@ -9,7 +9,7 @@ hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. ' + V', hl.dsp.window.float({ action = 'toggle' }))
 hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. ' + T', hl.dsp.layout('togglesplit')) -- dwindle only
-hl.bind(mainMod .. ' + CONTROL + L', hl.dsp.exec_cmd('hyprlock'))
+hl.bind(mainMod .. ' + CONTROL + L', hl.dsp.exec_cmd('~/.config/quickshell/lock.sh'))
 hl.bind(mainMod .. ' + P', hl.dsp.exec_cmd('hyprshot -m region'))
 hl.bind(mainMod .. ' + N', hl.dsp.exec_cmd('~/.config/rofi/scripts/main_menu.sh'))
 hl.bind(mainMod .. ' + SHIFT + N', hl.dsp.exec_cmd('swaync-client -t'))

@@ -2,7 +2,7 @@
 term = "kitty -e ~/.config/tmux/home.sh"
 menu = "~/.config/rofi/scripts/launcher.sh"
 powermenu = "~/.config/rofi/scripts/powermenu.sh"
-screen_lock = "gtklock -d"
+screen_lock = "~/.config/quickshell/lock.sh"
 main_menu = "~/.config/rofi/scripts/main_menu.sh"
 screenshot = "grim -g \"$(slurp)\" - | wl-copy"
 launcher = "rofi -show drun"
